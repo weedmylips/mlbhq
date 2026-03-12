@@ -2,6 +2,13 @@ import NodeCache from 'node-cache';
 
 const cache = new NodeCache({ stdTTL: 300, checkperiod: 60 });
 
+const IL_STATUSES = ['Injured', 'IL', '10-Day', '60-Day', 'Paternity', 'Bereavement', 'Restricted'];
+
+function isInjured(status) {
+  if (!status) return false;
+  return IL_STATUSES.some((s) => status.includes(s));
+}
+
 export default async function handler(req, res) {
   try {
     const teamId = req.query.teamId || 147;
@@ -9,11 +16,15 @@ export default async function handler(req, res) {
     const cached = cache.get(cacheKey);
     if (cached) return res.json(cached);
 
-    const url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/roster?rosterType=active&hydrate=person(stats(type=season,group=[hitting,pitching]))`;
-    const resp = await fetch(url);
-    const data = await resp.json();
+    const [activeResp, fullResp] = await Promise.all([
+      fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/roster?rosterType=active&hydrate=person(stats(type=season,group=[hitting,pitching]))`),
+      fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/roster?rosterType=fullRoster`),
+    ]);
 
-    const roster = (data.roster || []).map((entry) => {
+    const activeData = await activeResp.json();
+    const fullData = await fullResp.json();
+
+    const roster = (activeData.roster || []).map((entry) => {
       const person = entry.person || {};
       const stats = person.stats || [];
       const hittingStats = stats.find((s) => s.group?.displayName === 'hitting');
@@ -31,12 +42,22 @@ export default async function handler(req, res) {
       };
     });
 
+    const injured = (fullData.roster || [])
+      .filter((entry) => isInjured(entry.status?.description))
+      .map((entry) => ({
+        id: entry.person?.id,
+        name: entry.person?.fullName,
+        number: entry.jerseyNumber,
+        position: entry.position?.abbreviation,
+        status: entry.status?.description,
+      }));
+
     const batters = roster.filter(
       (p) => p.positionType !== 'Pitcher' || (p.hitting && !p.pitching)
     );
     const pitchers = roster.filter((p) => p.positionType === 'Pitcher');
 
-    const result = { batters, pitchers, full: roster };
+    const result = { batters, pitchers, full: roster, injured };
     cache.set(cacheKey, result, 300);
     res.json(result);
   } catch (err) {

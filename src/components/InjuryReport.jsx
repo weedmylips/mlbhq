@@ -14,9 +14,7 @@ export default function InjuryReport() {
     );
   }
 
-  const injured = (data?.full || []).filter(
-    (p) => p.status && p.status !== 'Active'
-  );
+  const injured = data?.injured || [];
 
   return (
     <div className="card">
