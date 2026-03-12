@@ -6,7 +6,7 @@ export default function RecentGames({ games = [] }) {
   const last5 = games.slice(0, 5);
 
   return (
-    <div className="card col-span-2">
+    <div className="card md:col-span-2">
       <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
         Recent Games
       </h3>

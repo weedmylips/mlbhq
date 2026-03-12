@@ -7,7 +7,7 @@ export default function NextGame({ game }) {
 
   if (!game) {
     return (
-      <div className="card col-span-2">
+      <div className="card md:col-span-2">
         <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
           Next Game
         </h3>
@@ -28,7 +28,7 @@ export default function NextGame({ game }) {
     : game.teams?.home?.probablePitcher;
 
   return (
-    <div className="card col-span-2">
+    <div className="card md:col-span-2">
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">
           Next Game
@@ -43,22 +43,22 @@ export default function NextGame({ game }) {
         </div>
       </div>
 
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <img src={team.logo} alt={team.abbr} className="w-12 h-12" />
-          <div>
-            <div className="font-bold">{team.name}</div>
-            <div className="text-xs text-gray-400">
-              {probPitcher?.fullName ? `P: ${probPitcher.fullName}` : ''}
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <img src={team.logo} alt={team.abbr} className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" />
+          <div className="min-w-0">
+            <div className="font-bold text-sm sm:text-base truncate">{team.abbr}</div>
+            <div className="text-xs text-gray-400 truncate">
+              {probPitcher?.fullName ? probPitcher.fullName.split(' ').pop() : ''}
             </div>
           </div>
         </div>
 
-        <div className="text-center">
+        <div className="text-center shrink-0">
           <div className="text-xs text-gray-500 uppercase">
             {isHome ? 'Home' : 'Away'}
           </div>
-          <div className="text-lg font-bold font-mono">
+          <div className="text-base sm:text-lg font-bold font-mono">
             {gameDate.toLocaleTimeString('en-US', {
               hour: 'numeric',
               minute: '2-digit',
@@ -67,20 +67,18 @@ export default function NextGame({ game }) {
           <div className="text-xs text-gray-500">vs</div>
         </div>
 
-        <div className="flex items-center gap-3">
-          <div className="text-right">
-            <div className="font-bold">
-              {opponentTeam?.name || opponentData?.team?.name}
-            </div>
-            <div className="text-xs text-gray-400">
-              {oppProbPitcher?.fullName ? `P: ${oppProbPitcher.fullName}` : ''}
+        <div className="flex items-center gap-2 min-w-0 justify-end">
+          <div className="text-right min-w-0">
+            <div className="font-bold text-sm sm:text-base truncate">{opponentTeam?.abbr || opponentData?.team?.abbreviation}</div>
+            <div className="text-xs text-gray-400 truncate">
+              {oppProbPitcher?.fullName ? oppProbPitcher.fullName.split(' ').pop() : ''}
             </div>
           </div>
           {opponentTeam && (
             <img
               src={opponentTeam.logo}
               alt={opponentTeam.abbr}
-              className="w-12 h-12"
+              className="w-10 h-10 sm:w-12 sm:h-12 shrink-0"
             />
           )}
         </div>

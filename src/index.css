@@ -29,7 +29,12 @@ body {
 .stat-number {
   font-family: ui-monospace, SFMono-Regular, 'SF Mono', monospace;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+@media (min-width: 640px) {
+  .stat-number {
+    font-size: 1.5rem;
+  }
 }
 
 .skeleton {
@@ -65,6 +70,13 @@ body {
 
 .team-glow {
   box-shadow: 0 0 12px var(--team-primary), 0 0 4px var(--team-primary);
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
 
 ::-webkit-scrollbar {

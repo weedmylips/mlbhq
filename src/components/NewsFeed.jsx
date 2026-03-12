@@ -79,7 +79,7 @@ export default function NewsFeed() {
   const { data: articles, isLoading, isError } = useNews(selectedTeamId);
 
   return (
-    <div className="card col-span-3">
+    <div className="card md:col-span-3">
       <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
         <Newspaper size={14} />
         {team.name} News

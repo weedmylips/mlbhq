@@ -36,19 +36,19 @@ export default function App() {
       <Header />
 
       {/* Nav tabs */}
-      <div className="border-b border-border px-6">
-        <div className="flex gap-1">
+      <div className="border-b border-border px-2 sm:px-6">
+        <div className="flex gap-0.5 overflow-x-auto scrollbar-none">
           {tabs.map(({ id, label, icon: Icon }) => (
             <button
               key={id}
               onClick={() => setActiveTab(id)}
-              className={`flex items-center gap-2 px-4 py-3 text-sm font-medium transition-colors relative ${
+              className={`flex items-center gap-1.5 px-3 sm:px-4 py-3 text-xs sm:text-sm font-medium transition-colors relative shrink-0 ${
                 activeTab === id
                   ? 'text-white'
                   : 'text-gray-500 hover:text-gray-300'
               }`}
             >
-              <Icon size={16} />
+              <Icon size={15} />
               {label}
               {activeTab === id && (
                 <span
@@ -62,7 +62,7 @@ export default function App() {
       </div>
 
       {/* Tab content */}
-      <div className="p-6 max-w-[1400px] mx-auto">
+      <div className="p-3 sm:p-6 max-w-[1400px] mx-auto">
         {activeTab === 'overview' && (
           <OverviewTab gamesData={gamesData} gamesLoading={gamesLoading} />
         )}
@@ -77,10 +77,10 @@ export default function App() {
 function OverviewTab({ gamesData, gamesLoading }) {
   if (gamesLoading) {
     return (
-      <div className="grid grid-cols-3 gap-4">
-        <div className="col-span-2 card"><div className="skeleton h-40 w-full" /></div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="md:col-span-2 card"><div className="skeleton h-40 w-full" /></div>
         <div className="card"><div className="skeleton h-40 w-full" /></div>
-        <div className="col-span-2 card"><div className="skeleton h-32 w-full" /></div>
+        <div className="md:col-span-2 card"><div className="skeleton h-32 w-full" /></div>
         <div className="card"><div className="skeleton h-32 w-full" /></div>
       </div>
     );
@@ -91,7 +91,7 @@ function OverviewTab({ gamesData, gamesLoading }) {
   const recentGames = gamesData?.recent || [];
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {/* Row 1 */}
       {liveGame ? (
         <LiveGame gamePk={liveGame.gamePk} />

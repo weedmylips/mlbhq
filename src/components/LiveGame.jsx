@@ -54,7 +54,7 @@ export default function LiveGame({ gamePk }) {
 
   if (isLoading || !data) {
     return (
-      <div className="card col-span-2">
+      <div className="card md:col-span-2">
         <div className="skeleton h-40 w-full" />
       </div>
     );
@@ -65,7 +65,7 @@ export default function LiveGame({ gamePk }) {
   const inningHalf = data.inningHalf === 'Top' ? '\u25B2' : '\u25BC';
 
   return (
-    <div className="card col-span-2">
+    <div className="card md:col-span-2">
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">
           Live Game

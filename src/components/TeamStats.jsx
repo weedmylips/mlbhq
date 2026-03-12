@@ -31,7 +31,7 @@ export default function TeamStats() {
         <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
           Team Batting
         </h3>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
           <StatBox label="AVG" value={data.hitting.avg} />
           <StatBox label="OPS" value={data.hitting.ops} />
           <StatBox label="HR" value={data.hitting.hr} />
@@ -44,7 +44,7 @@ export default function TeamStats() {
         <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
           Team Pitching
         </h3>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
           <StatBox label="ERA" value={data.pitching.era} />
           <StatBox label="WHIP" value={data.pitching.whip} />
           <StatBox label="K" value={data.pitching.k} />
