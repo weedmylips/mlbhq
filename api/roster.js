@@ -90,7 +90,7 @@ export default async function handler(req, res) {
           name: s.playerName,
           position: null,
           status: null,
-          note: null,
+          note: s.status || null,
           injury: s.injury || null,
           expectedReturn: s.expectedReturn || null,
         });

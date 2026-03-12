@@ -72,7 +72,7 @@ export default function InjuryReport() {
                     </div>
                     <div>
                       <span className="text-gray-500">Status: </span>
-                      {p.status || '—'}
+                      {p.note || p.status || '—'}
                     </div>
                   </div>
                 )}
