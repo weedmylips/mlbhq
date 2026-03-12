@@ -78,11 +78,11 @@ export async function scrapeTeamInjuries(newsSlug) {
     );
     await page.goto(
       `https://www.mlb.com/news/${newsSlug}-injuries-and-roster-moves`,
-      { waitUntil: 'networkidle2', timeout: 25000 }
+      { waitUntil: 'domcontentloaded', timeout: 30000 }
     );
 
-    // Wait for article body to appear
-    await page.waitForSelector('article, [class*="article"], main', { timeout: 10000 }).catch(() => {});
+    // Give React time to render the article body
+    await new Promise((r) => setTimeout(r, 5000));
 
     const text = await page.evaluate(() => {
       const el = document.querySelector('[class*="article-body"], [class*="ArticleBody"], article, main');
