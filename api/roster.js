@@ -42,15 +42,17 @@ export default async function handler(req, res) {
       };
     });
 
+    // TODO: Add Puppeteer scraping here for richer injury data (needs @sparticuz/chromium for Vercel)
     const injured = (fullData.roster || [])
       .filter((entry) => isInjured(entry.status?.description))
       .map((entry) => ({
         id: entry.person?.id,
         name: entry.person?.fullName,
-        number: entry.jerseyNumber,
         position: entry.position?.abbreviation,
         status: entry.status?.description,
         note: entry.note || null,
+        injury: entry.note || null,
+        expectedReturn: null,
       }));
 
     const batters = roster.filter(

@@ -1,5 +1,7 @@
 import { Router } from 'express';
 import { getCached, setCached } from '../cache.js';
+import { scrapeTeamInjuries } from '../injuryScraper.js';
+import { TEAM_NEWS_SLUGS } from '../teamSlugs.js';
 
 const router = Router();
 
@@ -43,16 +45,45 @@ router.get('/roster', async (req, res) => {
       };
     });
 
-    const injured = (fullData.roster || [])
+    const apiInjured = (fullData.roster || [])
       .filter((entry) => isInjured(entry.status?.description))
       .map((entry) => ({
         id: entry.person?.id,
         name: entry.person?.fullName,
-        number: entry.jerseyNumber,
         position: entry.position?.abbreviation,
         status: entry.status?.description,
         note: entry.note || null,
       }));
+
+    // Enrich with scraped injury data from mlb.com
+    const slug = TEAM_NEWS_SLUGS[Number(teamId)];
+    const scraped = slug ? await scrapeTeamInjuries(slug) : [];
+    const scrapedMap = new Map(scraped.map((s) => [s.playerName.toLowerCase(), s]));
+
+    const injured = apiInjured.map((p) => {
+      const match = scrapedMap.get(p.name.toLowerCase());
+      return {
+        ...p,
+        injury: match?.injury || p.note || null,
+        expectedReturn: match?.expectedReturn || null,
+      };
+    });
+
+    // Also add scraped players not in the API injured list
+    const apiNames = new Set(apiInjured.map((p) => p.name.toLowerCase()));
+    for (const s of scraped) {
+      if (!apiNames.has(s.playerName.toLowerCase()) && s.playerName) {
+        injured.push({
+          id: null,
+          name: s.playerName,
+          position: null,
+          status: s.status || null,
+          note: null,
+          injury: s.injury || null,
+          expectedReturn: s.expectedReturn || null,
+        });
+      }
+    }
 
     const batters = roster.filter(
       (p) => p.positionType !== 'Pitcher' || (p.hitting && !p.pitching)

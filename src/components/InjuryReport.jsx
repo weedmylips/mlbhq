@@ -64,14 +64,16 @@ export default function InjuryReport() {
                   <div className="bg-white/5 rounded-b px-3 pb-2 pt-1 text-xs text-gray-400 space-y-1">
                     <div>
                       <span className="text-gray-500">Injury: </span>
-                      {p.note || '—'}
+                      {p.injury || '—'}
                     </div>
-                    {p.number && (
-                      <div>
-                        <span className="text-gray-500">Jersey: </span>
-                        #{p.number}
-                      </div>
-                    )}
+                    <div>
+                      <span className="text-gray-500">Expected Return: </span>
+                      {p.expectedReturn || '—'}
+                    </div>
+                    <div>
+                      <span className="text-gray-500">Status: </span>
+                      {p.status || '—'}
+                    </div>
                   </div>
                 )}
               </div>
