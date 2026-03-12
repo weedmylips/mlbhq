@@ -89,7 +89,7 @@ router.get('/roster', async (req, res) => {
           id: null,
           name: s.playerName,
           position: null,
-          status: s.status || null,
+          status: null,
           note: null,
           injury: s.injury || null,
           expectedReturn: s.expectedReturn || null,

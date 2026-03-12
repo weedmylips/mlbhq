@@ -39,11 +39,11 @@ export default function InjuryReport() {
       ) : (
         <div className="space-y-1">
           {injured.map((p) => {
-            const isOpen = expanded.has(p.id);
+            const isOpen = expanded.has(p.name);
             return (
-              <div key={p.id} className="rounded overflow-hidden">
+              <div key={p.name} className="rounded overflow-hidden">
                 <button
-                  onClick={() => toggle(p.id)}
+                  onClick={() => toggle(p.name)}
                   className="w-full flex items-center justify-between py-1.5 px-1 text-sm text-left hover:bg-white/5 cursor-pointer rounded transition-colors"
                 >
                   <div className="flex items-center gap-2">
