@@ -1,10 +1,20 @@
+import { useState } from 'react';
 import { useRoster } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
-import { AlertCircle } from 'lucide-react';
+import { AlertCircle, ChevronDown } from 'lucide-react';
 
 export default function InjuryReport() {
   const { team } = useTeam();
   const { data, isLoading } = useRoster(team.id);
+  const [expanded, setExpanded] = useState(new Set());
+
+  const toggle = (id) => {
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+  };
 
   if (isLoading) {
     return (
@@ -27,21 +37,46 @@ export default function InjuryReport() {
           No players on the injured list
         </p>
       ) : (
-        <div className="space-y-2">
-          {injured.slice(0, 8).map((p) => (
-            <div
-              key={p.id}
-              className="flex items-center justify-between py-1 text-sm"
-            >
-              <div>
-                <span className="text-gray-300">{p.name}</span>
-                <span className="text-xs text-gray-500 ml-2">{p.position}</span>
+        <div className="space-y-1">
+          {injured.map((p) => {
+            const isOpen = expanded.has(p.id);
+            return (
+              <div key={p.id} className="rounded overflow-hidden">
+                <button
+                  onClick={() => toggle(p.id)}
+                  className="w-full flex items-center justify-between py-1.5 px-1 text-sm text-left hover:bg-white/5 cursor-pointer rounded transition-colors"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="text-gray-300">{p.name}</span>
+                    <span className="text-xs text-gray-500">{p.position}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-red-400 bg-red-400/10 px-2 py-0.5 rounded">
+                      {p.status}
+                    </span>
+                    <ChevronDown
+                      size={14}
+                      className={`text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                    />
+                  </div>
+                </button>
+                {isOpen && (
+                  <div className="bg-white/5 rounded-b px-3 pb-2 pt-1 text-xs text-gray-400 space-y-1">
+                    <div>
+                      <span className="text-gray-500">Injury: </span>
+                      {p.note || '—'}
+                    </div>
+                    {p.number && (
+                      <div>
+                        <span className="text-gray-500">Jersey: </span>
+                        #{p.number}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
-              <span className="text-xs text-red-400 bg-red-400/10 px-2 py-0.5 rounded">
-                {p.status}
-              </span>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>

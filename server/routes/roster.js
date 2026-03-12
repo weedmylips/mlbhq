@@ -51,6 +51,7 @@ router.get('/roster', async (req, res) => {
         number: entry.jerseyNumber,
         position: entry.position?.abbreviation,
         status: entry.status?.description,
+        note: entry.note || null,
       }));
 
     const batters = roster.filter(
