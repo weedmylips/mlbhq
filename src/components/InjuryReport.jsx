@@ -48,7 +48,9 @@ export default function InjuryReport() {
                 >
                   <div className="flex items-center gap-2">
                     <span className="text-gray-300">{p.name}</span>
-                    <span className="text-xs text-gray-500">{p.position}</span>
+                    {p.position && (
+                      <span className="text-xs text-gray-500">— {p.position}</span>
+                    )}
                   </div>
                   <div className="flex items-center gap-2">
                     {p.status && (
@@ -74,7 +76,11 @@ export default function InjuryReport() {
                     </div>
                     <div>
                       <span className="text-gray-500">Status: </span>
-                      {p.note || p.status || '—'}
+                      {p.note || '—'}
+                    </div>
+                    <div>
+                      <span className="text-gray-500">Official IL Status: </span>
+                      {p.status || '—'}
                     </div>
                   </div>
                 )}

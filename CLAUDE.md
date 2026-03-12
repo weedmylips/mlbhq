@@ -46,7 +46,19 @@ No test suite exists in this project.
 ### Injury data pipeline
 
 - **Build-time data**: `src/data/injuries.json` is committed to the repo and refreshed by GitHub Actions (`.github/workflows/scrape-injuries.yml`) every 6 hours
-- **Merging**: `server/routes/roster.js` and `api/roster.js` both call `mergeRosterData()` from `src/utils/rosterMerge.js` to combine MLB API injury data with the scraped JSON. Scraped-only players (day-to-day, spring training) get `status: null` (no badge) and `note: s.status` (shown in dropdown)
+- **Merging**: both `server/routes/roster.js` and `api/roster.js` call `mergeRosterData()` from `src/utils/rosterMerge.js`
+
+#### Merge priority in `rosterMerge.js`
+
+| Field | Source | Notes |
+|-------|--------|-------|
+| `status` (IL badge) | MLB API `status.code` → `mlbStatusToBadge()` | `D60`=60-Day IL, `D10`=10-Day IL, `D7`=7-Day IL, `DTD`=Day-To-Day. Falls back to description text, then `deriveILBadge()` for scraped-only players |
+| `injury` | Scraper `injury` field | Falls back to MLB API `note` |
+| `expectedReturn` | Scraper `expectedReturn` field | null if not scraped |
+| `note` | Scraper `status` paragraph | Long descriptive text shown in dropdown; falls back to MLB API `note` |
+
+- API-only players (no scraper match) get `injury`/`expectedReturn`/`note` from the MLB API's `note` field
+- Scraped-only players (not on official IL) get their badge from `deriveILBadge()` which parses `expectedReturn` text for "Day to day", "60-day", etc.
 
 ### Cache TTLs
 
