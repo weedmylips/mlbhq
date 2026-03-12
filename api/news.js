@@ -14,7 +14,9 @@ export default async function handler(req, res) {
     if (!resp.ok) throw new Error(`CMS fetch failed: ${resp.status}`);
     const data = await resp.json();
 
-    const articles = (data.items || []).slice(0, 8).map((item) => ({
+    const articles = (data.items || [])
+      .sort((a, b) => new Date(b.contentDate) - new Date(a.contentDate))
+      .slice(0, 8).map((item) => ({
       title: item.headline || '',
       summary: item.summary || '',
       link: `https://www.mlb.com/news/${item.slug}`,
