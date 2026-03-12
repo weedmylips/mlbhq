@@ -51,6 +51,16 @@ export function useStandings(leagueId) {
   });
 }
 
+export function useNews(teamId) {
+  return useQuery({
+    queryKey: ['news', teamId],
+    queryFn: () => fetchApi(`/api/news?teamId=${teamId}`),
+    refetchInterval: 900000,
+    enabled: !!teamId,
+    select: (data) => data.articles,
+  });
+}
+
 export function useWeather(lat, lng, venue) {
   return useQuery({
     queryKey: ['weather', lat, lng],
