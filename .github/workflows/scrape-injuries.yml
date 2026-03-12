@@ -1,0 +1,42 @@
+name: Scrape Injury Data
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # every 6 hours
+  workflow_dispatch:         # allow manual trigger
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium system dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            libatk1.0-0 libatk-bridge2.0-0 libcups2 libnspr4 libnss3 \
+            libxss1 libgbm1 libxkbcommon0 libxcomposite1 libxdamage1 \
+            libxrandr2 libxfixes3 libpangocairo-1.0-0 libpango-1.0-0 libcairo2
+
+      - name: Run injury scraper
+        run: npm run scrape-injuries
+
+      - name: Commit updated injury data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/injuries.json
+          git diff --staged --quiet || git commit -m "chore: update injury data [skip ci]"
+          git push

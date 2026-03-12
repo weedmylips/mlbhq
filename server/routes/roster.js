@@ -1,15 +1,28 @@
 import { Router } from 'express';
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 import { getCached, setCached } from '../cache.js';
-import { scrapeTeamInjuries } from '../injuryScraper.js';
-import { TEAM_NEWS_SLUGS } from '../teamSlugs.js';
 
 const router = Router();
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const INJURIES_PATH = join(__dirname, '../../src/data/injuries.json');
 
 const IL_STATUSES = ['Injured', 'IL', '10-Day', '60-Day', 'Paternity', 'Bereavement', 'Restricted'];
 
 function isInjured(status) {
   if (!status) return false;
   return IL_STATUSES.some((s) => status.includes(s));
+}
+
+function getScrapedInjuries(teamId) {
+  try {
+    const raw = readFileSync(INJURIES_PATH, 'utf8');
+    const data = JSON.parse(raw);
+    return data.teams?.[String(teamId)] || [];
+  } catch {
+    return [];
+  }
 }
 
 router.get('/roster', async (req, res) => {
@@ -55,9 +68,8 @@ router.get('/roster', async (req, res) => {
         note: entry.note || null,
       }));
 
-    // Enrich with scraped injury data from mlb.com
-    const slug = TEAM_NEWS_SLUGS[Number(teamId)];
-    const scraped = slug ? await scrapeTeamInjuries(slug) : [];
+    // Merge with scraped injury data from static JSON (updated by GitHub Actions cron)
+    const scraped = getScrapedInjuries(teamId);
     const scrapedMap = new Map(scraped.map((s) => [s.playerName.toLowerCase(), s]));
 
     const injured = apiInjured.map((p) => {
@@ -69,7 +81,7 @@ router.get('/roster', async (req, res) => {
       };
     });
 
-    // Also add scraped players not in the API injured list
+    // Add scraped players not in the API injured list (day-to-day, spring training, etc.)
     const apiNames = new Set(apiInjured.map((p) => p.name.toLowerCase()));
     for (const s of scraped) {
       if (!apiNames.has(s.playerName.toLowerCase()) && s.playerName) {

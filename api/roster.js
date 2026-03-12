@@ -1,12 +1,28 @@
 import NodeCache from 'node-cache';
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
 const cache = new NodeCache({ stdTTL: 300, checkperiod: 60 });
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const INJURIES_PATH = join(__dirname, '../src/data/injuries.json');
 
 const IL_STATUSES = ['Injured', 'IL', '10-Day', '60-Day', 'Paternity', 'Bereavement', 'Restricted'];
 
 function isInjured(status) {
   if (!status) return false;
   return IL_STATUSES.some((s) => status.includes(s));
+}
+
+function getScrapedInjuries(teamId) {
+  try {
+    const raw = readFileSync(INJURIES_PATH, 'utf8');
+    const data = JSON.parse(raw);
+    return data.teams?.[String(teamId)] || [];
+  } catch {
+    return [];
+  }
 }
 
 export default async function handler(req, res) {
@@ -42,8 +58,7 @@ export default async function handler(req, res) {
       };
     });
 
-    // TODO: Add Puppeteer scraping here for richer injury data (needs @sparticuz/chromium for Vercel)
-    const injured = (fullData.roster || [])
+    const apiInjured = (fullData.roster || [])
       .filter((entry) => isInjured(entry.status?.description))
       .map((entry) => ({
         id: entry.person?.id,
@@ -51,9 +66,36 @@ export default async function handler(req, res) {
         position: entry.position?.abbreviation,
         status: entry.status?.description,
         note: entry.note || null,
-        injury: entry.note || null,
-        expectedReturn: null,
       }));
+
+    // Merge with scraped injury data from static JSON (updated by GitHub Actions cron)
+    const scraped = getScrapedInjuries(teamId);
+    const scrapedMap = new Map(scraped.map((s) => [s.playerName.toLowerCase(), s]));
+
+    const injured = apiInjured.map((p) => {
+      const match = scrapedMap.get(p.name.toLowerCase());
+      return {
+        ...p,
+        injury: match?.injury || p.note || null,
+        expectedReturn: match?.expectedReturn || null,
+      };
+    });
+
+    // Add scraped players not in the API injured list (day-to-day, spring training, etc.)
+    const apiNames = new Set(apiInjured.map((p) => p.name.toLowerCase()));
+    for (const s of scraped) {
+      if (!apiNames.has(s.playerName.toLowerCase()) && s.playerName) {
+        injured.push({
+          id: null,
+          name: s.playerName,
+          position: null,
+          status: s.status || null,
+          note: null,
+          injury: s.injury || null,
+          expectedReturn: s.expectedReturn || null,
+        });
+      }
+    }
 
     const batters = roster.filter(
       (p) => p.positionType !== 'Pitcher' || (p.hitting && !p.pitching)
