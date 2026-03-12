@@ -5,6 +5,16 @@ function isInjured(status) {
   return IL_STATUSES.some((s) => status.includes(s));
 }
 
+// Derive a short IL badge label from scraped text fields
+function deriveILBadge(s) {
+  const text = `${s.status || ''} ${s.expectedReturn || ''}`.toLowerCase();
+  if (/60.day/.test(text)) return '60-Day IL';
+  if (/10.day\s*(il|injured)/.test(text)) return '10-Day IL';
+  if (/7.day\s*(il|injured)/.test(text)) return '7-Day IL';
+  if (/day.to.day/.test(text)) return 'Day-To-Day';
+  return 'IL';
+}
+
 /**
  * Parses raw MLB API roster responses and merges with scraped injury data.
  * @param {object} activeData - Response from the active roster API endpoint
@@ -61,7 +71,7 @@ export function mergeRosterData(activeData, fullData, scraped) {
         id: null,
         name: s.playerName,
         position: null,
-        status: null,
+        status: deriveILBadge(s),
         note: s.status || null,
         injury: s.injury || null,
         expectedReturn: s.expectedReturn || null,
