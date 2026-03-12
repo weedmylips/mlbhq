@@ -16,8 +16,8 @@ async function getBrowser() {
 }
 
 function parseInjuryArticle(text) {
-  // Extract the LATEST INJURIES section
-  const sectionMatch = text.match(/LATEST INJURIES\s*([\s\S]*?)(?:•\s*More|LATEST TRANSACTIONS|$)/);
+  // Extract the injuries section — some teams use "LATEST INJURIES", others "INJURY UPDATES"
+  const sectionMatch = text.match(/(?:LATEST INJURIES|INJURY UPDATES)\s*([\s\S]*?)(?:•\s*More|LATEST TRANSACTIONS|$)/);
   if (!sectionMatch) return [];
 
   const section = sectionMatch[1].trim();
@@ -34,7 +34,7 @@ function parseInjuryArticle(text) {
     // First line: "[POSITION] [Player Name]"
     // Position codes: 1B, 2B, 3B, SS, LF, CF, RF, OF, C, DH, SP, RP, LHP, RHP, etc.
     const firstLine = lines[0];
-    const playerMatch = firstLine.match(/^([A-Z]{1,3}(?:-[A-Z]{1,3})?)\s+(.+)/);
+    const playerMatch = firstLine.match(/^([A-Z0-9]{1,3}(?:-[A-Z0-9]{1,3})?)\s+(.+)/);
     if (!playerMatch) continue;
 
     const playerName = playerMatch[2].trim();
@@ -48,10 +48,10 @@ function parseInjuryArticle(text) {
       } else if (line.startsWith('Expected return:')) {
         expectedReturn = line.replace('Expected return:', '').trim();
       } else if (line.startsWith('Status:')) {
-        // Strip "(updated ...)" and "More >>" from the end of status
+        // Strip "(updated ...)" / "(Last updated: ...)" and "More >>" from status
         status = line
           .replace('Status:', '')
-          .replace(/\s*\(updated[^)]*\)\s*/g, '')
+          .replace(/\s*\((Last )?[Uu]pdated[^)]*\)\s*/g, '')
           .replace(/More\s*>>.*/, '')
           .trim();
       }

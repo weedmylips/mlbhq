@@ -22,7 +22,7 @@ function getScrapedInjuries(teamId) {
 export default async function handler(req, res) {
   try {
     const teamId = req.query.teamId || 147;
-    const cacheKey = `roster-v3-${teamId}`;
+    const cacheKey = `roster-v5-${teamId}`;
     const cached = cache.get(cacheKey);
     if (cached) return res.json(cached);
 

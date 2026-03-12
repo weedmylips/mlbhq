@@ -22,7 +22,7 @@ function getScrapedInjuries(teamId) {
 router.get('/roster', async (req, res) => {
   try {
     const teamId = req.query.teamId || 147;
-    const cacheKey = `roster-v3-${teamId}`;
+    const cacheKey = `roster-v5-${teamId}`;
     const cached = getCached(cacheKey);
     if (cached) return res.json(cached);
 

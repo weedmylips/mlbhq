@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-12T20:47:42.867Z",
+  "lastUpdated": "2026-03-12T21:14:17.499Z",
   "teams": {
     "108": [
       {
@@ -31,15 +31,33 @@
         "injury": "Right elbow inflammation",
         "expectedReturn": "Opening Day",
         "status": "Dealt with nerve issue and thoracic outlet syndrome symptoms in the offseason after ending 2025 on the injured list but believes he can manage it. Faced hitters on March 6 and said he expects to be ready for Opening Day."
+      },
+      {
+        "playerName": "Anthony Rendon",
+        "injury": "Left hip surgery",
+        "expectedReturn": "Expected retirement",
+        "status": "Underwent left hip surgery after attempting to rehab in the offseason and missed the 2025 season. Not going to play in '26 and had the last year of his contract deferred over several years. Will be placed on the 60-day IL once the club needs the roster spot."
       }
     ],
     "109": [],
     "110": [
       {
+        "playerName": "Ryan Mountcastle",
+        "injury": "Right hand soreness",
+        "expectedReturn": "Likely day to day",
+        "status": "Exited March 11 game vs. Pirates after getting hit by a pitch. X-rays negative for a fracture."
+      },
+      {
         "playerName": "Andrew Kittredge",
         "injury": "Right shoulder inflammation",
         "expectedReturn": "Likely after Opening Day",
         "status": "Threw first bullpen session on March 10. However, still has a low probability of being ready for Opening Day."
+      },
+      {
+        "playerName": "Jackson Holliday",
+        "injury": "Right hamate bone fracture",
+        "expectedReturn": "Potentially mid-April",
+        "status": "Underwent procedure to remove bone from right hand on Feb. 12. Stitches removed Feb. 23. Hitting ball off tee with two-handed swings as of March 7."
       },
       {
         "playerName": "Félix Bautista",
@@ -60,7 +78,44 @@
         "status": "Placed on the 60-day injured list on Feb. 14. No clear timeline for potential return yet."
       }
     ],
-    "111": [],
+    "111": [
+      {
+        "playerName": "Triston Casas",
+        "injury": "Ruptured left patellar tendon",
+        "expectedReturn": "May at earliest",
+        "status": "Casas said he won't progress enough to play Grapefruit League games. Waiting for clearance to run at full speed and slide."
+      },
+      {
+        "playerName": "Kutter Crawford",
+        "injury": "Right wrist subsheath tear",
+        "expectedReturn": "April or early May",
+        "status": "Will throw two innings of live batting practice on March 12. Could get in a game soon thereafter."
+      },
+      {
+        "playerName": "Patrick Sandoval",
+        "injury": "Left UCL repair",
+        "expectedReturn": "Mid-April to early May",
+        "status": "Having a deload week, and will throw extended bullpen session March 12 rather than throw to live hitters. Will resume facing hitters the week of March 16."
+      },
+      {
+        "playerName": "Romy Gonzalez",
+        "injury": "Left shoulder",
+        "expectedReturn": "Will miss significant time at start of season",
+        "status": "Set to see Dr. Jeffrey Dugas on March 10 in Alabama to decide whether he will need surgery. Had a PRP injection in early February, and has not participated in any baseball activity."
+      },
+      {
+        "playerName": "Brendan Rodgers",
+        "injury": "Right shoulder pain",
+        "expectedReturn": "2027, most likely",
+        "status": "Likely to require season-ending surgery, but is going to consult with Dr. Neal ElAttrache in Los Angeles for another opinion."
+      },
+      {
+        "playerName": "Tanner Houck",
+        "injury": "Torn ulnar collateral ligament right elbow/right flexor pronator strain",
+        "expectedReturn": "Late '26 or early '27",
+        "status": "Started gradual throwing program on flat ground in the second week of Spring Training."
+      }
+    ],
     "112": [
       {
         "playerName": "Porter Hodge",
@@ -75,6 +130,12 @@
         "status": "Resumed playing catch on March 3 after pausing his throwing program for 10 days. Could return to a mound later this month, but expected to open the season on the IL."
       },
       {
+        "playerName": "Jonathon Long",
+        "injury": "Left elbow",
+        "expectedReturn": "Day to day",
+        "status": "Sustained left elbow sprain in collision on defensive play at first base on Feb. 21. Was \"turning a corner\" in baseball activity as of March 8, per manager Craig Counsell."
+      },
+      {
         "playerName": "Shelby Miller",
         "injury": "Right elbow surgery",
         "expectedReturn": "2027",
@@ -85,6 +146,12 @@
         "injury": "Left elbow",
         "expectedReturn": "First half of 2026",
         "status": "Threw a bullpen session Feb. 27 and was medically cleared Feb. 28 by Dr. Keith Meister, who performed Steele's elbow surgery (left ulnar collateral ligament revision repair) on April 18, 2025."
+      },
+      {
+        "playerName": "Tyler Austin",
+        "injury": "Right knee",
+        "expectedReturn": "TBD",
+        "status": "Underwent a right patellar tendon debridement on Feb. 24. Cubs manager Craig Counsell said Austin could miss \"months\" while recovering."
       }
     ],
     "113": [
@@ -106,86 +173,178 @@
         "playerName": "Hunter Gaddis",
         "injury": "Right forearm tightness",
         "expectedReturn": "TBD",
-        "status": "Continuing throwing progression at 90-120 feet. Team anticipates him throwing off a mound in the coming days. (Last updated: March 9)"
+        "status": "Continuing throwing progression at 90-120 feet. Team anticipates him throwing off a mound in the coming days."
       },
       {
         "playerName": "Andrew Walters",
         "injury": "Right lat surgery",
         "expectedReturn": "Potentially May",
-        "status": "Throwing bullpen sessions and from 90-120 feet on flat ground. Expected to progress to throwing live batting practice in second half of March and miss the start of '26 season. (Last updated: March 5)"
+        "status": "Throwing bullpen sessions and from 90-120 feet on flat ground. Expected to progress to throwing live batting practice in second half of March and miss the start of '26 season."
       },
       {
         "playerName": "Austin Peterson",
         "injury": "Right triceps strain",
         "expectedReturn": "Mid to late April",
-        "status": "Suffered moderate grade strain during Feb. 24 appearance against the Dodgers that is expected to sideline him for 6-8 weeks. (Last updated: Feb. 28)"
+        "status": "Suffered moderate grade strain during Feb. 24 appearance against the Dodgers that is expected to sideline him for 6-8 weeks."
       }
     ],
-    "115": [],
+    "115": [
+      {
+        "playerName": "RJ Petit",
+        "injury": "Right elbow UCL strain",
+        "expectedReturn": "TBD",
+        "status": "A Rule 5 pick from the Tigers, Petit hasn't pitched since leaving a March 4 exhibition game against Team USA. Both he and the club are consulting with doctors about the next step."
+      },
+      {
+        "playerName": "McCade Brown",
+        "injury": "Right shoulder inflammation",
+        "expectedReturn": "Day to day",
+        "status": "Underwent an anti-inflammatory injection on March 1, and has thrown twice since -- without pain. Doesn't have a date to return to mound sessions."
+      },
+      {
+        "playerName": "Blaine Crim",
+        "injury": "Oblique strain",
+        "expectedReturn": "TBD",
+        "status": "Continues treatment and rehab but has not been cleared for baseball activities."
+      },
+      {
+        "playerName": "Pierson Ohl",
+        "injury": "Right UCL repair",
+        "expectedReturn": "2027",
+        "status": "Scheduled to undergo ligament transfer Tommy John surgery and internal brace procedure on March 4."
+      },
+      {
+        "playerName": "Jeff Criswell",
+        "injury": "Torn right elbow ligament",
+        "expectedReturn": "April",
+        "status": "Targeting the middle of April to return to game action. Hopes to face hitters before the end of Spring Training."
+      },
+      {
+        "playerName": "Kris Bryant",
+        "injury": "Lumbar degenerative disk disease",
+        "expectedReturn": "TBD",
+        "status": "Continues to undergo various treatments and therapies. Said he has been unable to progress to baseball activities."
+      }
+    ],
     "116": [
       {
         "playerName": "Beau Brieske",
         "injury": "Right rib cage tightness",
         "expectedReturn": "Mid-March",
-        "status": "Pitched in simulated game on March 10. (Updated March 10)"
+        "status": "Pitched in simulated game on March 10."
       },
       {
         "playerName": "Troy Melton",
         "injury": "Right elbow inflammation",
         "expectedReturn": "Hopefully end of May",
-        "status": "Placed on 60-day IL on March 10. Has not yet resumed throwing. Diagnosed with elbow inflammation after reporting general arm soreness and being examined by doctors. (Updated March 10)"
+        "status": "Placed on 60-day IL on March 10. Has not yet resumed throwing. Diagnosed with elbow inflammation after reporting general arm soreness and being examined by doctors."
       },
       {
         "playerName": "Scott Effross",
         "injury": "Left oblique strain",
         "expectedReturn": "TBD",
-        "status": "Reported abdominal tightness after last outing on March 7. Will rehab daily. (Updated March 10)"
+        "status": "Reported abdominal tightness after last outing on March 7. Will rehab daily."
       },
       {
         "playerName": "Trey Sweeney",
         "injury": "Right shoulder strain",
         "expectedReturn": "TBD",
-        "status": "Completing a hitting progression. Not yet throwing. (Updated March 10)"
+        "status": "Completing a hitting progression. Not yet throwing."
       },
       {
         "playerName": "Sawyer Gipson-Long",
         "injury": "Left oblique strain",
         "expectedReturn": "Opening Day 2026",
-        "status": "Threw a bullpen session on March 10. (Updated March 10)"
+        "status": "Threw a bullpen session on March 10."
       },
       {
         "playerName": "Hao-Yu Lee (Tigers' No. 6 prospect)",
         "injury": "Left oblique strain",
         "expectedReturn": "Early in Triple-A season",
-        "status": "Removed from Chinese Taipei roster for World Baseball Classic. Returned to Lakeland, Fla., on March 7 and underwent further tests on March 8. Optioned to Triple-A Toledo on March 9. (Updated March 9)"
+        "status": "Removed from Chinese Taipei roster for World Baseball Classic. Returned to Lakeland, Fla., on March 7 and underwent further tests on March 8. Optioned to Triple-A Toledo on March 9."
       },
       {
         "playerName": "Jackson Jobe",
         "injury": "Right UCL reconstruction",
         "expectedReturn": "Second half of 2026",
-        "status": "Playing catch out to 105 feet three times this week. Underwent Tommy John surgery on June 16. (Updated March 6)"
+        "status": "Playing catch out to 105 feet three times this week. Underwent Tommy John surgery on June 16."
       },
       {
         "playerName": "Bryce Rainer (MLB No. 35 overall prospect; Tigers' No. 3)",
         "injury": "Dislocated right shoulder",
         "expectedReturn": "Early in season",
-        "status": "Underwent season-ending surgery after dislocating his shoulder diving back to first base in a June 3 game for Single-A Lakeland. Continuing rehab process this Spring Training. Should be ready early in season. (Updated March 6)"
+        "status": "Underwent season-ending surgery after dislocating his shoulder diving back to first base in a June 3 game for Single-A Lakeland. Continuing rehab process this Spring Training. Should be ready early in season."
       },
       {
         "playerName": "Bailey Horn",
         "injury": "Left elbow arthroscopy",
         "expectedReturn": "TBD",
-        "status": "Completing a return-to-play throwing progression after undergoing arthroscopic surgery on elbow this offseason. (Updated Feb. 24)"
+        "status": "Completing a return-to-play throwing progression after undergoing arthroscopic surgery on elbow this offseason."
       },
       {
         "playerName": "Reese Olson",
         "injury": "Right shoulder surgery",
         "expectedReturn": "Spring Training 2027",
-        "status": "Underwent labrum repair surgery on right shoulder on Feb. 2, performed by Dr. Keith Meister, after offseason rehab program was unsuccessful. Expected to miss 2026 season but should be ready for Spring Training in 2027. (Updated Feb. 11)"
+        "status": "Underwent labrum repair surgery on right shoulder on Feb. 2, performed by Dr. Keith Meister, after offseason rehab program was unsuccessful. Expected to miss 2026 season but should be ready for Spring Training in 2027."
       }
     ],
-    "117": [],
+    "117": [
+      {
+        "playerName": "Cavan Biggio",
+        "injury": "Right elbow surgery",
+        "expectedReturn": "TBD",
+        "status": "Manager Joe Espada hopes Biggio will DH on March 14."
+      },
+      {
+        "playerName": "Enyel De Los Santos",
+        "injury": "Right knee strain",
+        "expectedReturn": "TBD",
+        "status": "Threw his second bullpen session of the spring March 10, and will next throw live batting practice March 14."
+      },
+      {
+        "playerName": "Josh Hader",
+        "injury": "Left biceps tendinitis",
+        "expectedReturn": "TBD",
+        "status": "Hader threw his first bullpen session March 10 after reporting to camp with biceps tendinitis. But he will begin the season on the injured list."
+      },
+      {
+        "playerName": "Nate Pearson",
+        "injury": "Right elbow",
+        "expectedReturn": "TBD",
+        "status": "Was brought along slowly from offseason elbow surgery, but experienced elbow soreness and had his throwing program slowed down. Threw his first bullpen on March 7."
+      },
+      {
+        "playerName": "Jeremy Peña",
+        "injury": "Right ring finger fracture",
+        "expectedReturn": "TBD",
+        "status": "Diagnosed March 5 with a fractured tip of his right ring finger, suffered during an exhibition game in the Dominican Republic on March 4. He will be reevaluated in two weeks."
+      },
+      {
+        "playerName": "Brandon Walter",
+        "injury": "Torn ulnar collateral ligament in left elbow",
+        "expectedReturn": "2027",
+        "status": "Underwent Tommy John surgery on Sept. 23."
+      },
+      {
+        "playerName": "Ronel Blanco",
+        "injury": "Torn ulnar collateral ligament in right elbow",
+        "expectedReturn": "2026",
+        "status": "Underwent surgery to repair his ulnar collateral ligament with an internal brace as well as a repair of the flexor tendon in his forearm on June 6."
+      },
+      {
+        "playerName": "Hayden Wesneski",
+        "injury": "Torn ulnar collateral ligament in right elbow",
+        "expectedReturn": "2026",
+        "status": "Underwent Tommy John surgery to repair the ulnar collateral ligament in his right elbow May 23."
+      }
+    ],
     "118": [
+      {
+        "playerName": "Michael Massey",
+        "injury": "Left calf strain",
+        "expectedReturn": "Day to day",
+        "status": "Suffered a low-grade calf strain during a defensive play on March 6. Shut down from game action for next week, but able to participate in some baseball activity."
+      },
       {
         "playerName": "Stephen Kolek",
         "injury": "Left oblique strain",
@@ -200,6 +359,12 @@
       }
     ],
     "119": [
+      {
+        "playerName": "Hyeseong Kim",
+        "injury": "Left hand",
+        "expectedReturn": "Possibly World Baseball Classic quarterfinals",
+        "status": "Hurt his hand while stealing a base vs. Team Chinese Taipei in the World Baseball Classic and was out of the lineup the following game vs. Australia. Per manager Dave Roberts, it's not considered serious."
+      },
       {
         "playerName": "Blake Snell",
         "injury": "Left shoulder",
@@ -236,31 +401,31 @@
         "playerName": "Jacob Young",
         "injury": "Right wrist contusion",
         "expectedReturn": "Day to day",
-        "status": "Began taking swings on March 10. Team wants to make sure he is healthy for Opening Day. (Last updated: March 10)"
+        "status": "Began taking swings on March 10. Team wants to make sure he is healthy for Opening Day."
       },
       {
         "playerName": "DJ Herz",
         "injury": "Left UCL sprain",
         "expectedReturn": "2026",
-        "status": "Continuing through throwing progression. (Last updated: March 4)"
+        "status": "Continuing through throwing progression."
       },
       {
         "playerName": "Trevor Williams",
         "injury": "Right elbow sprain",
         "expectedReturn": "2026",
-        "status": "Began throwing progression and completed 25 throws at 60 feet. (Last updated: March 4)"
+        "status": "Began throwing progression and completed 25 throws at 60 feet."
       },
       {
         "playerName": "Jarlin Susana (Nationals' No. 4 prospect, MLB No. 80)",
         "injury": "Right lat surgery",
         "expectedReturn": "2026",
-        "status": "Threw 15 pitches at a distance of 60 feet on Feb. 20; continuing arm care and throwing progression. (Last updated: Feb. 21)"
+        "status": "Threw 15 pitches at a distance of 60 feet on Feb. 20; continuing arm care and throwing progression."
       },
       {
         "playerName": "Travis Sykora (Nationals' No. 2 prospect, MLB No. 54)",
         "injury": "Right UCL reconstruction",
         "expectedReturn": "2027",
-        "status": "Threw 15 pitches at a distance of 60 feet on Feb. 20; continuing arm care and throwing progression. (Last updated: Feb. 21)"
+        "status": "Threw 15 pitches at a distance of 60 feet on Feb. 20; continuing arm care and throwing progression."
       }
     ],
     "121": [
@@ -323,16 +488,28 @@
     ],
     "134": [
       {
+        "playerName": "Brandon Lowe",
+        "injury": "Lower body tightness",
+        "expectedReturn": "Day to day",
+        "status": "Scratched from lineup on March 11, but was expected to go through normal practice session at LECOM Park."
+      },
+      {
+        "playerName": "Ronny Simon",
+        "injury": "Left shoulder labral surgery",
+        "expectedReturn": "Late March/early April",
+        "status": "Participating in all baseball activities. Ready to play in Grapefruit League games and begin ramping up toward regular season."
+      },
+      {
         "playerName": "Jared Jones",
         "injury": "Right UCL sprain",
         "expectedReturn": "Late May/early June",
-        "status": "Will continue to throw live BP as part of his rehab progression. Senior director of sports medicine Todd Tomczyk said Jones is meeting all the benchmarks. Goal is for Jones to be game-ready at the one-year mark post-surgery (May 21). (Last updated: Feb. 23)"
+        "status": "Will continue to throw live BP as part of his rehab progression. Senior director of sports medicine Todd Tomczyk said Jones is meeting all the benchmarks. Goal is for Jones to be game-ready at the one-year mark post-surgery (May 21)."
       },
       {
         "playerName": "Oddanier Mosqueda",
         "injury": "Left forearm discomfort",
         "expectedReturn": "By Opening Day",
-        "status": "Will not throw for a couple of weeks after experiencing swelling and soreness following a live workout on Feb. 22. Will miss playing for Team Venezuela in the World Baseball Classic, but the Pirates are hopeful he'll be ready by the start of the regular season. (Last updated: Feb. 23)"
+        "status": "Will not throw for a couple of weeks after experiencing swelling and soreness following a live workout on Feb. 22. Will miss playing for Team Venezuela in the World Baseball Classic, but the Pirates are hopeful he'll be ready by the start of the regular season."
       }
     ],
     "135": [
@@ -340,55 +517,55 @@
         "playerName": "Joe Musgrove",
         "injury": "Tommy John surgery",
         "expectedReturn": "Possibly Opening Day rotation",
-        "status": "After missing the 2025 season, Musgrove returned to the mound for an exhibition against Team Great Britain. But he's being slow-played this spring, and the Padres have eased back his workload. It's unclear if he'll be built up in time to make the Opening Day roster. (Last updated: March 10)"
+        "status": "After missing the 2025 season, Musgrove returned to the mound for an exhibition against Team Great Britain. But he's being slow-played this spring, and the Padres have eased back his workload. It's unclear if he'll be built up in time to make the Opening Day roster."
       },
       {
         "playerName": "Yuki Matsui",
         "injury": "Left groin strain",
         "expectedReturn": "Possibly Opening Day",
-        "status": "Matsui threw his first bullpen session on March 6 after he sustained the injury during a live batting practice session in February. He's yet to face hitters, and his status for Opening Day is in question. (Last updated: March 9)"
+        "status": "Matsui threw his first bullpen session on March 6 after he sustained the injury during a live batting practice session in February. He's yet to face hitters, and his status for Opening Day is in question."
       },
       {
         "playerName": "Matt Waldron",
         "injury": "Medical procedure",
         "expectedReturn": "Late April or May",
-        "status": "Waldron likely won't be built up enough to make the Opening Day roster. But he resumed throwing bullpens in early March, and manager Craig Stammen noted that he expects Waldron to return for an appearance or two in the Cactus League. (Last updated: March 9)"
+        "status": "Waldron likely won't be built up enough to make the Opening Day roster. But he resumed throwing bullpens in early March, and manager Craig Stammen noted that he expects Waldron to return for an appearance or two in the Cactus League."
       },
       {
         "playerName": "Jason Adam",
         "injury": "Left quadriceps tendon rupture",
         "expectedReturn": "Possibly Opening Day",
-        "status": "Adam, who underwent quadriceps surgery in September, has targeted Opening Day for a return. He faced hitters for the first time on Feb. 20 and began doing fielding drills in early March. (Last updated: March 9)"
+        "status": "Adam, who underwent quadriceps surgery in September, has targeted Opening Day for a return. He faced hitters for the first time on Feb. 20 and began doing fielding drills in early March."
       },
       {
         "playerName": "Jhony Brito",
         "injury": "Right elbow UCL surgery",
         "expectedReturn": "Midseason",
-        "status": "Brito underwent UCL internal brace surgery as well as a flexor tendon repair operation in April 2025. He was placed on the 60-day IL in February but has resumed throwing bullpens in Padres camp. (Last updated: March 7)"
+        "status": "Brito underwent UCL internal brace surgery as well as a flexor tendon repair operation in April 2025. He was placed on the 60-day IL in February but has resumed throwing bullpens in Padres camp."
       },
       {
         "playerName": "Sung-Mun Song",
         "injury": "Right oblique tightness",
         "expectedReturn": "Day to day",
-        "status": "Song exited the Padres' game on March 5 with lingering soreness stemming from an injury he sustained during the offseason. The Padres will be cautious, and Song's status for the Opening Day roster is unclear. (Last updated: March 6)"
+        "status": "Song exited the Padres' game on March 5 with lingering soreness stemming from an injury he sustained during the offseason. The Padres will be cautious, and Song's status for the Opening Day roster is unclear."
       },
       {
         "playerName": "Griffin Canning",
         "injury": "Left Achilles tear",
         "expectedReturn": "Late April or May",
-        "status": "Canning, whose 2025 season ended in June because of the injury, threw a high-intensity bullpen session on a back field on March 3. His next step could be facing hitters, though he hasn't yet been cleared for fielding drills. (Last updated: March 3)"
+        "status": "Canning, whose 2025 season ended in June because of the injury, threw a high-intensity bullpen session on a back field on March 3. His next step could be facing hitters, though he hasn't yet been cleared for fielding drills."
       },
       {
         "playerName": "Bryan Hoeing",
         "injury": "Right elbow discomfort",
         "expectedReturn": "TBD",
-        "status": "Hoeing was shut down after he felt discomfort in his throwing elbow during a live batting practice session in February. On March 2, he received a second opinion and, per manager Craig Stammen, was still weighing his next step. (Last updated: March 3)"
+        "status": "Hoeing was shut down after he felt discomfort in his throwing elbow during a live batting practice session in February. On March 2, he received a second opinion and, per manager Craig Stammen, was still weighing his next step."
       },
       {
         "playerName": "Yu Darvish",
         "injury": "Right UCL internal brace surgery",
         "expectedReturn": "2027",
-        "status": "Darvish underwent an internal brace procedure on his right elbow on Oct. 29, which comes with a recovery timetable of 12-15 months. He will miss the 2026 season and has considered voiding the final three years of his contract. (Last updated: Jan. 27)"
+        "status": "Darvish underwent an internal brace procedure on his right elbow on Oct. 29, which comes with a recovery timetable of 12-15 months. He will miss the 2026 season and has considered voiding the final three years of his contract."
       }
     ],
     "136": [
@@ -396,19 +573,19 @@
         "playerName": "Bryce Miller",
         "injury": "Left side oblique inflammation",
         "expectedReturn": "Opening Day status in jeopardy",
-        "status": "First full-effort bullpen cut short after discomfort during higher-intensity warmup pitches on March 11. Still cleared to play catch; will attempt another touch-and-feel bullpen in range of March 14-15. (Last updated: March 11) More »"
+        "status": "First full-effort bullpen cut short after discomfort during higher-intensity warmup pitches on March 11. Still cleared to play catch; will attempt another touch-and-feel bullpen in range of March 14-15.More »"
       },
       {
         "playerName": "Victor Robles",
         "injury": "Right shoulder soreness",
         "expectedReturn": "To the outfield, the week of March 16",
-        "status": "Returned to lineup for first time in seven days on March 8 at designated hitter. Could progress to outfield again if all goes well. Had been experiencing fatigue in the same shoulder that he fractured last April. (Last updated: March 8) More »"
+        "status": "Returned to lineup for first time in seven days on March 8 at designated hitter. Could progress to outfield again if all goes well. Had been experiencing fatigue in the same shoulder that he fractured last April.More »"
       },
       {
         "playerName": "Logan Evans",
         "injury": "Tommy John surgery",
         "expectedReturn": "2027",
-        "status": "Underwent surgery to repair his right ulnar collateral ligament in January, and will be out all season. (Last updated: Jan. 30) More »"
+        "status": "Underwent surgery to repair his right ulnar collateral ligament in January, and will be out all season.More »"
       }
     ],
     "137": [
@@ -416,49 +593,49 @@
         "playerName": "Reiver Sanmartin",
         "injury": "Right hip flexor strain",
         "expectedReturn": "Summer 2026",
-        "status": "Hurt his hip while fielding a grounder in Team Colombia's exhibition game on March 3. Evaluated by team orthopedist Dr. Ken Akizuki on March 4 and was later diagnosed with a high grade strain of his right hip flexor. (Last updated: March 9)"
+        "status": "Hurt his hip while fielding a grounder in Team Colombia's exhibition game on March 3. Evaluated by team orthopedist Dr. Ken Akizuki on March 4 and was later diagnosed with a high grade strain of his right hip flexor."
       },
       {
         "playerName": "Erik Miller",
         "injury": "Lower back tightness",
         "expectedReturn": "March",
-        "status": "Expected to see hitters soon and should be on the mound sometime in mid-March. (Last updated: March 9)"
+        "status": "Expected to see hitters soon and should be on the mound sometime in mid-March."
       },
       {
         "playerName": "Joel Peguero",
         "injury": "Left hamstring strain",
         "expectedReturn": "TBD",
-        "status": "Re-injured his hamstring on March 2; an MRI revealed a Grade 2 strain, which will likely make him questionable for Opening Day. (Last updated: March 4)"
+        "status": "Re-injured his hamstring on March 2; an MRI revealed a Grade 2 strain, which will likely make him questionable for Opening Day."
       },
       {
         "playerName": "Drew Gilbert",
         "injury": "Left shoulder impingement",
         "expectedReturn": "March",
-        "status": "Resumed hitting activities on March 4 but remains shut down from throwing. (Last updated: March 4)"
+        "status": "Resumed hitting activities on March 4 but remains shut down from throwing."
       },
       {
         "playerName": "Sam Hentges",
         "injury": "Left shoulder surgery/right knee surgery",
         "expectedReturn": "No timetable for return",
-        "status": "Missed entire 2025 season due to left shoulder surgery and then underwent right knee arthroscopy to address his meniscus in August. Expected to continue bullpen progression at camp but is questionable for Opening Day. (Last updated: Feb. 27)"
+        "status": "Missed entire 2025 season due to left shoulder surgery and then underwent right knee arthroscopy to address his meniscus in August. Expected to continue bullpen progression at camp but is questionable for Opening Day."
       },
       {
         "playerName": "Jason Foley",
         "injury": "Right shoulder surgery",
         "expectedReturn": "2026 midseason",
-        "status": "Underwent surgery to repair the anterior capsule in his right shoulder in May 2025. Started a bullpen progression on Feb. 10 and is throwing twice per week. (Last updated: Feb. 16)"
+        "status": "Underwent surgery to repair the anterior capsule in his right shoulder in May 2025. Started a bullpen progression on Feb. 10 and is throwing twice per week."
       },
       {
         "playerName": "Randy Rodríguez",
         "injury": "Right elbow sprain",
         "expectedReturn": "Late 2026 or early '27",
-        "status": "Expected to miss 12-14 months after undergoing Tommy John surgery with Dr. Keith Meister in Dallas on Sept. 24. Will begin a throwing progression in mid-March. (Last updated: Feb. 16)"
+        "status": "Expected to miss 12-14 months after undergoing Tommy John surgery with Dr. Keith Meister in Dallas on Sept. 24. Will begin a throwing progression in mid-March."
       },
       {
         "playerName": "Rowan Wick",
         "injury": "Tommy John surgery",
         "expectedReturn": "2027",
-        "status": "Expected to miss the entire 2026 season after undergoing Tommy John surgery in November 2025. (Last updated: Feb. 15)"
+        "status": "Expected to miss the entire 2026 season after undergoing Tommy John surgery in November 2025."
       }
     ],
     "138": [
@@ -466,25 +643,25 @@
         "playerName": "Iván Herrera",
         "injury": "Knee inflammation",
         "expectedReturn": "Day to day",
-        "status": "Was scheduled to start March 7, but was a late scratch. Team is giving it time for recovery to run its course, per manager Oliver Marmol. (Updated: March 8)"
+        "status": "Was scheduled to start March 7, but was a late scratch. Team is giving it time for recovery to run its course, per manager Oliver Marmol."
       },
       {
         "playerName": "Hunter Dobbins",
         "injury": "Torn right ACL",
         "expectedReturn": "TBD",
-        "status": "Dobbins is able to pitch but is being held out of agility drills. Underwent testing on his right knee recently and the results were what the Cardinals expected. Team is still mapping out the next steps of Dobbins' rehab. (Updated: Feb. 21)"
+        "status": "Dobbins is able to pitch but is being held out of agility drills. Underwent testing on his right knee recently and the results were what the Cardinals expected. Team is still mapping out the next steps of Dobbins' rehab."
       },
       {
         "playerName": "Lars Nootbaar",
         "injury": "Surgery on both heels",
         "expectedReturn": "Opening Day?",
-        "status": "Nootbaar underwent surgery on Oct. 7. He arrived at Cardinals camp on Feb. 18 and said there is no timetable for his return to game action. However, he has not yet been ruled out for Opening Day. (Updated: Feb. 19)"
+        "status": "Nootbaar underwent surgery on Oct. 7. He arrived at Cardinals camp on Feb. 18 and said there is no timetable for his return to game action. However, he has not yet been ruled out for Opening Day."
       },
       {
         "playerName": "Zack Thompson",
         "injury": "Left shoulder surgery",
         "expectedReturn": "TBD",
-        "status": "Thompson underwent surgery in August to clean up his left shoulder. He is on a throwing program, but he won't be cleared to pitch in games until some point in the regular season. (Updated: Feb. 13)"
+        "status": "Thompson underwent surgery in August to clean up his left shoulder. He is on a throwing program, but he won't be cleared to pitch in games until some point in the regular season."
       }
     ],
     "139": [
@@ -492,69 +669,75 @@
         "playerName": "Edwin Uceta",
         "injury": "Right shoulder soreness",
         "expectedReturn": "Possibly Opening Day",
-        "status": "Withdrew from World Baseball Classic on Feb. 15, then “didn’t feel great” when playing catch Feb. 19. Exam revealed inflammation. Received a cortisone injection on Feb. 20 and played catch from 60 feet on Feb. 28. Has been playing catch regularly. (Last updated March 11)"
+        "status": "Withdrew from World Baseball Classic on Feb. 15, then “didn’t feel great” when playing catch Feb. 19. Exam revealed inflammation. Received a cortisone injection on Feb. 20 and played catch from 60 feet on Feb. 28. Has been playing catch regularly."
       },
       {
         "playerName": "Steven Wilson",
         "injury": "Back soreness",
         "expectedReturn": "TBD",
-        "status": "Wilson has not pitched in Rays camp, as he is dealing with a back issue that required an injection. He is not expected to be ready for Opening Day. (Last updated Feb. 27)"
+        "status": "Wilson has not pitched in Rays camp, as he is dealing with a back issue that required an injection. He is not expected to be ready for Opening Day."
       },
       {
         "playerName": "Manuel Rodríguez",
         "injury": "Right flexor strain, elbow surgery",
         "expectedReturn": "Midseason 2026",
-        "status": "Underwent surgery to repair a right elbow flexor strain on Aug. 8. Hopes to return in June or July. Placed on 60-day IL on Feb. 10. (Last updated Feb. 10)"
+        "status": "Underwent surgery to repair a right elbow flexor strain on Aug. 8. Hopes to return in June or July. Placed on 60-day IL on Feb. 10."
       }
     ],
     "140": [
       {
+        "playerName": "Josh Jung",
+        "injury": "Adductor strain",
+        "expectedReturn": "March 10",
+        "status": "Scratched from the starting lineup in a Feb. 26 as a precaution because he felt “a little something” in his hamstring that morning. Subsequent MRI revealed an adductor strain and he will be without baseball activities for at least 10 days."
+      },
+      {
         "playerName": "Justin Foscue",
         "injury": "Right hamstring tightness",
         "expectedReturn": "March 10-14",
-        "status": "Left a Feb. 23 game against the Angels with right hamstring tightness. Additional testing showed a strain and he will be down for around two weeks. (Last updated: Feb 28)"
+        "status": "Left a Feb. 23 game against the Angels with right hamstring tightness. Additional testing showed a strain and he will be down for around two weeks."
       },
       {
         "playerName": "Kyle Higashioka",
         "injury": "Back tightness",
         "expectedReturn": "March 9",
-        "status": "Felt back tightness on Feb. 25 but resumed baseball activities two days later. (Last updated: Feb. 27)"
+        "status": "Felt back tightness on Feb. 25 but resumed baseball activities two days later."
       },
       {
         "playerName": "Cody Freeman",
         "injury": "Lumbar stress reaction",
         "expectedReturn": "Late March or early April",
-        "status": "Down 4-6 weeks minimum before re-evaluation. (Last updated: Feb. 21)"
+        "status": "Down 4-6 weeks minimum before re-evaluation."
       },
       {
         "playerName": "Winston Santos (Rangers' No. 5 prospect)",
         "injury": "Left hand fracture",
         "expectedReturn": "Late March, at the earliest",
-        "status": "Took a comebacker off the bat of Kyle Higashioka in batting practice and will be out for about four weeks. (Last updated: Feb. 21)"
+        "status": "Took a comebacker off the bat of Kyle Higashioka in batting practice and will be out for about four weeks."
       },
       {
         "playerName": "Cody Bradford",
         "injury": "Left UCL surgery",
         "expectedReturn": "Mid-May",
-        "status": "Has thrown multiple bullpens since the start of camp. Should be ready for a Minor League rehab assignment as the 2026 season opens. (Last updated: Feb. 20)"
+        "status": "Has thrown multiple bullpens since the start of camp. Should be ready for a Minor League rehab assignment as the 2026 season opens."
       },
       {
         "playerName": "Marc Church",
         "injury": "Right shoulder fatigue",
         "expectedReturn": "TBD",
-        "status": "Continuing to rehab a shoulder injury that kept him sidelined for much of 2025. Should begin throwing bullpens before the end of camp. (Last updated: Feb. 20)"
+        "status": "Continuing to rehab a shoulder injury that kept him sidelined for much of 2025. Should begin throwing bullpens before the end of camp."
       },
       {
         "playerName": "Jordan Montgomery",
         "injury": "Left UCL surgery",
         "expectedReturn": "Early August",
-        "status": "Signed to a Major League deal on Feb. 13, though is continuing to rehab from Tommy John surgery. Should be back on a big league mound around the Trade Deadline. (Last updated: Feb. 20)"
+        "status": "Signed to a Major League deal on Feb. 13, though is continuing to rehab from Tommy John surgery. Should be back on a big league mound around the Trade Deadline."
       },
       {
         "playerName": "Emiliano Teodo (Rangers' No. 17 prospect)",
         "injury": "Back soreness",
         "expectedReturn": "Start of Triple-A season",
-        "status": "Continuing to rehab a back injury that kept him sidelined for much of 2025. Behind in his throwing progression, but should return by the start of the Triple-A season. (Last updated: Feb. 20)"
+        "status": "Continuing to rehab a back injury that kept him sidelined for much of 2025. Behind in his throwing progression, but should return by the start of the Triple-A season."
       }
     ],
     "141": [
@@ -600,31 +783,31 @@
         "playerName": "David Festa",
         "injury": "Right shoulder impingement",
         "expectedReturn": "April",
-        "status": "Progressing through workouts and has begun throwing a medicine ball, focusing on shoulder strength, with no issues. Hopes to resume throwing the week of March 16. (Last updated: March 12)"
+        "status": "Progressing through workouts and has begun throwing a medicine ball, focusing on shoulder strength, with no issues. Hopes to resume throwing the week of March 16."
       },
       {
         "playerName": "Travis Adams",
         "injury": "Right elbow inflammation",
         "expectedReturn": "Late March",
-        "status": "Has resumed normal workouts and hopes to resume throwing by the end of the March 13-15 weekend. (Last updated: March 12)"
+        "status": "Has resumed normal workouts and hopes to resume throwing by the end of the March 13-15 weekend."
       },
       {
         "playerName": "Julian Merryweather",
         "injury": "Left hamstring strain",
         "expectedReturn": "Late March",
-        "status": "Threw a bullpen session on March 11 and plans to throw another on March 13. (Last updated: March 12)"
+        "status": "Threw a bullpen session on March 11 and plans to throw another on March 13."
       },
       {
         "playerName": "Walker Jenkins (MIN No. 1 prospect, No. 14 overall)",
         "injury": "Grade 1 left hamstring strain",
         "expectedReturn": "TBD",
-        "status": "Suffered injury on Feb. 28 and will be held out “for a bit.” (Last updated: March 1)"
+        "status": "Suffered injury on Feb. 28 and will be held out “for a bit.”"
       },
       {
         "playerName": "Pablo López",
         "injury": "“Significant tearing” in UCL in right elbow",
         "expectedReturn": "2027",
-        "status": "Underwent surgery on Feb. 25 to repair, rather than reconstruct, the UCL and will miss the season. (Last updated: Feb. 26) More >"
+        "status": "Underwent surgery on Feb. 25 to repair, rather than reconstruct, the UCL and will miss the season.More >"
       }
     ],
     "143": [
@@ -632,31 +815,37 @@
         "playerName": "Zack Wheeler",
         "injury": "Right upper extremity blood clot",
         "expectedReturn": "April-May",
-        "status": "Threw his fifth bullpen session on March 10, throwing approximately 46 pitches over two simulated innings. (Last updated: March 10)"
+        "status": "Threw his fifth bullpen session on March 10, throwing approximately 46 pitches over two simulated innings."
       },
       {
         "playerName": "Orion Kerkering",
         "injury": "Strained right hamstring (Grade 1)",
         "expectedReturn": "Before the end of camp",
-        "status": "Threw a live BP on March 10. Will throw another live BP on March 14. Remains on course to make the Opening Day roster. (Last updated: March 10)"
+        "status": "Threw a live BP on March 10. Will throw another live BP on March 14. Remains on course to make the Opening Day roster."
       },
       {
         "playerName": "Gabriel Rincones Jr. (Phillies' No. 8 prospect)",
         "injury": "Soreness/tendinitis in both knees",
         "expectedReturn": "TBD",
-        "status": "Had not played this spring before being optioned to Minor League camp on March 7. Had a PRP injection in the offseason, but he remains sidelined. (Last updated: March 10)"
+        "status": "Had not played this spring before being optioned to Minor League camp on March 7. Had a PRP injection in the offseason, but he remains sidelined."
       },
       {
         "playerName": "Max Lazar",
         "injury": "Abdominal/oblique issue",
         "expectedReturn": "TBD",
-        "status": "Left Team Israel in the World Baseball Classic after feeling something in his abdomen/oblique. Phillies manager Rob Thomson said it’s “very mild.” (Last updated: March 10)"
+        "status": "Left Team Israel in the World Baseball Classic after feeling something in his abdomen/oblique. Phillies manager Rob Thomson said it’s “very mild.”"
+      },
+      {
+        "playerName": "Keaton Anthony (Phillies' No. 30 prospect)",
+        "injury": "Broken bone in right foot",
+        "expectedReturn": "TBD",
+        "status": "Broke the second metatarsal in his right foot in a March 9 game in Ft. Myers. Expected to have surgery in the coming days."
       },
       {
         "playerName": "Aidan Miller",
         "injury": "Sore lower back",
         "expectedReturn": "TBD",
-        "status": "Sent to Philadelphia on March 6 to see another team doctor about his recurring back issue. Manager Rob Thomson said there is zero concern and the team is being \"super cautious.\" There is no timetable for return to action. (Last updated: March 7)"
+        "status": "Sent to Philadelphia on March 6 to see another team doctor about his recurring back issue. Manager Rob Thomson said there is zero concern and the team is being \"super cautious.\" There is no timetable for return to action."
       }
     ],
     "144": [
@@ -664,41 +853,127 @@
         "playerName": "Sean Murphy",
         "injury": "Right hip labral tear",
         "expectedReturn": "May",
-        "status": "Murphy took batting practice on the field on March 9. Atlanta is hoping the 2023 All-Star catcher returns from hip surgery during the first half of May. (Last updated: March 10)"
+        "status": "Murphy took batting practice on the field on March 9. Atlanta is hoping the 2023 All-Star catcher returns from hip surgery during the first half of May."
       },
       {
         "playerName": "Joey Wentz",
         "injury": "Torn right ACL",
         "expectedReturn": "2027",
-        "status": "Wentz will miss the 2026 season after a tearing his right ACL during a collision at first base during a Grapefruit League game on March 8. (Last updated: March 9)"
+        "status": "Wentz will miss the 2026 season after a tearing his right ACL during a collision at first base during a Grapefruit League game on March 8."
       },
       {
         "playerName": "Hurston Waldrep",
         "injury": "Right elbow inflammation",
         "expectedReturn": "Summer 2026",
-        "status": "Waldrep underwent arthroscopic surgery on Feb. 23 to have loose bodies removed from his right elbow. He could return in June or July, but the team isn’t putting a timetable on his return. (Last updated: Feb. 23)"
+        "status": "Waldrep underwent arthroscopic surgery on Feb. 23 to have loose bodies removed from his right elbow. He could return in June or July, but the team isn’t putting a timetable on his return."
       },
       {
         "playerName": "Spencer Schwellenbach",
         "injury": "Right elbow inflammation",
         "expectedReturn": "Summer 2026",
-        "status": "Schwellenbach underwent arthroscopic surgery to remove bone spurs from his elbow on Feb. 18. There is a chance he could return in June or July, but the team isn’t putting a timetable on his return. (Last updated: Feb. 18)"
+        "status": "Schwellenbach underwent arthroscopic surgery to remove bone spurs from his elbow on Feb. 18. There is a chance he could return in June or July, but the team isn’t putting a timetable on his return."
       },
       {
         "playerName": "Joe Jiménez",
         "injury": "Left knee surgery",
         "expectedReturn": "2026",
-        "status": "Jiménez missed 2025 while recovering from left knee surgery and he had a cleanup procedure in November. There is no timetable for his return. (Last updated: Feb. 10)"
+        "status": "Jiménez missed 2025 while recovering from left knee surgery and he had a cleanup procedure in November. There is no timetable for his return."
       },
       {
         "playerName": "AJ Smith-Shawver",
         "injury": "Tommy John surgery",
         "expectedReturn": "2026 or 2027 season",
-        "status": "Underwent surgery on his right elbow on June 9. (Last updated: Sept. 28)"
+        "status": "Underwent surgery on his right elbow on June 9."
       }
     ],
-    "145": [],
-    "146": [],
+    "145": [
+      {
+        "playerName": "Kyle Teel",
+        "injury": "Right hamstring strain",
+        "expectedReturn": "4-6 weeks",
+        "status": "Suffered a Grade 2 strain playing with Team Italy on March 10 in World Baseball Classic. Returning to White Sox on March 12 to continue treatment. Will open the season on IL."
+      },
+      {
+        "playerName": "Brooks Baldwin",
+        "injury": "Right elbow soreness",
+        "expectedReturn": "Day to day",
+        "status": "Baldwin has not played in a Cactus League game since March 6, when he sustained the injury throwing to bases, according to manager Will Venable, who described him as day to day."
+      },
+      {
+        "playerName": "Drew Thorpe",
+        "injury": "Tommy John surgery",
+        "expectedReturn": "2026",
+        "status": "Threw a pair of 20-pitch, all-fastball bullpens, with the second coming March 6. Felt great after both. Tendinitis kept him off the mound through the first three weeks of camp."
+      },
+      {
+        "playerName": "Wikelman González",
+        "injury": "Tightness in lower back",
+        "expectedReturn": "Day to day",
+        "status": "Exited with a 3-2 count on Pablo Reyes during the seventh inning of a Cactus League game with the Padres on March 3."
+      },
+      {
+        "playerName": "Ky Bush",
+        "injury": "Tommy John surgery",
+        "expectedReturn": "2026",
+        "status": "Placed on 60-day IL as he continues to recover from Tommy John surgery he underwent last year. Has thrown numerous times off the mound."
+      },
+      {
+        "playerName": "Tim Elko",
+        "injury": "Torn ACL in right knee",
+        "expectedReturn": "June-July 2026",
+        "status": "Underwent successful surgery to repair the torn ACL on Oct. 28. Estimated recovery time is eight months, per the team. Received non-roster invite to Spring Training."
+      },
+      {
+        "playerName": "Prelander Berroa",
+        "injury": "Grade 1 right elbow strain",
+        "expectedReturn": "2026",
+        "status": "Has been off the mound a few times and is feeling good in his recovery from Tommy John surgery he underwent March 7, 2025."
+      }
+    ],
+    "146": [
+      {
+        "playerName": "Maximo Acosta",
+        "injury": "Left oblique discomfort",
+        "expectedReturn": "TBD",
+        "status": "Scratched from March 11 lineup after stretching his side making a backhanded play during individual pregame work. According to manager Clayton McCullough, Acosta will get examined to determine the severity."
+      },
+      {
+        "playerName": "Adam Mazur",
+        "injury": "UCL reconstruction with an internal brace (hybrid)",
+        "expectedReturn": "2027",
+        "status": "Underwent surgery, which has a recovery period of 13-14 months, on March 11. Experienced the discomfort on a pitch during his March 2 outing."
+      },
+      {
+        "playerName": "Kyle Stowers",
+        "injury": "Right hamstring strain",
+        "expectedReturn": "March 14",
+        "status": "Barring setback, scheduled to start in the outfield on March 14. Ran full speed on March 10. Faced live pitching on March 6. Began running progression on March 5. Scratched from Feb. 28 game to undergo imaging for hamstring tightness. Initially felt discomfort on Feb. 25."
+      },
+      {
+        "playerName": "Graham Pauley",
+        "injury": "Right forearm discomfort",
+        "expectedReturn": "March 10",
+        "status": "Played five innings of defense on the back fields on March 9 but remains in no-throw status in games. Manager Clayton McCullough said it'll be \"a while\" before Pauley can play defense in a Grapefruit League game. Continues to DH and build up arm strength in a throwing program."
+      },
+      {
+        "playerName": "Thomas White (MLB No. 17 overall prospect)",
+        "injury": "Grade 1 right oblique strain",
+        "expectedReturn": "Late March/early April",
+        "status": "Reassigned to Minor League camp on March 3. Felt discomfort during his Grapefruit League debut on Feb. 26."
+      },
+      {
+        "playerName": "Aiva Arquette (MLB No. 47 overall prospect)",
+        "injury": "Core muscle surgery",
+        "expectedReturn": "Early/mid April",
+        "status": "Underwent core muscle surgery on Feb. 27. Sustained left groin injury during offseason workouts. Rested before arriving in Jupiter, where it flared up again."
+      },
+      {
+        "playerName": "Ronny Henriquez",
+        "injury": "Right elbow UCL reconstruction surgery with an associated internal brace",
+        "expectedReturn": "2027",
+        "status": "Placed on 60-day IL on Feb. 12. Underwent the hybrid procedure in December."
+      }
+    ],
     "147": [
       {
         "playerName": "Anthony Volpe",
