@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-12T21:14:17.499Z",
+  "lastUpdated": "2026-03-13T05:06:00.918Z",
   "teams": {
     "108": [
       {
@@ -80,6 +80,12 @@
     ],
     "111": [
       {
+        "playerName": "Romy Gonzalez",
+        "injury": "Left shoulder",
+        "expectedReturn": "Will miss significant time at start of season",
+        "status": "Underwent left shoulder arthroscopic debridement surgery on March 12 and was placed on 60-day injured list. Had a PRP injection in early February, and has not participated in any baseball activity."
+      },
+      {
         "playerName": "Triston Casas",
         "injury": "Ruptured left patellar tendon",
         "expectedReturn": "May at earliest",
@@ -96,12 +102,6 @@
         "injury": "Left UCL repair",
         "expectedReturn": "Mid-April to early May",
         "status": "Having a deload week, and will throw extended bullpen session March 12 rather than throw to live hitters. Will resume facing hitters the week of March 16."
-      },
-      {
-        "playerName": "Romy Gonzalez",
-        "injury": "Left shoulder",
-        "expectedReturn": "Will miss significant time at start of season",
-        "status": "Set to see Dr. Jeffrey Dugas on March 10 in Alabama to decide whether he will need surgery. Had a PRP injection in early February, and has not participated in any baseball activity."
       },
       {
         "playerName": "Brendan Rodgers",
@@ -156,6 +156,12 @@
     ],
     "113": [
       {
+        "playerName": "Caleb Ferguson",
+        "injury": "Mild right oblique strain",
+        "expectedReturn": "April",
+        "status": "An MRI revealed Ferguson's injury and he will not pitch for at least two weeks. He will undergo a second MRI in Cincinnati after camp breaks."
+      },
+      {
         "playerName": "Hunter Greene",
         "injury": "Right elbow surgery",
         "expectedReturn": "July",
@@ -173,7 +179,7 @@
         "playerName": "Hunter Gaddis",
         "injury": "Right forearm tightness",
         "expectedReturn": "TBD",
-        "status": "Continuing throwing progression at 90-120 feet. Team anticipates him throwing off a mound in the coming days."
+        "status": "Threw off mound in touch-and-feel session on March 12."
       },
       {
         "playerName": "Andrew Walters",
@@ -360,16 +366,16 @@
     ],
     "119": [
       {
+        "playerName": "Blake Snell",
+        "injury": "Left shoulder",
+        "expectedReturn": "Late April or early May",
+        "status": "Slow-played his offseason throwing program due to lingering discomfort. He threw a light bullpen session for the first time this spring on March 12."
+      },
+      {
         "playerName": "Hyeseong Kim",
         "injury": "Left hand",
         "expectedReturn": "Possibly World Baseball Classic quarterfinals",
         "status": "Hurt his hand while stealing a base vs. Team Chinese Taipei in the World Baseball Classic and was out of the lineup the following game vs. Australia. Per manager Dave Roberts, it's not considered serious."
-      },
-      {
-        "playerName": "Blake Snell",
-        "injury": "Left shoulder",
-        "expectedReturn": "Likely first half of 2026",
-        "status": "Slow-played his offseason throwing program due to lingering discomfort. He could throw off the mound for the first time this spring during the week of March 9, manager Dave Roberts said."
       },
       {
         "playerName": "Gavin Stone",
@@ -514,10 +520,28 @@
     ],
     "135": [
       {
+        "playerName": "Will Wagner",
+        "injury": "Pulled oblique",
+        "expectedReturn": "TBD",
+        "status": "Wagner sustained the injury in early March, and as a result has only appeared in five Cactus League games."
+      },
+      {
+        "playerName": "Bryan Hoeing",
+        "injury": "Right elbow flexor tendon",
+        "expectedReturn": "2027",
+        "status": "Hoeing elected to undergo surgery to repair the flexor tendon in his right elbow and will miss the 2026 season."
+      },
+      {
+        "playerName": "Sung-Mun Song",
+        "injury": "Right oblique tightness",
+        "expectedReturn": "Day to day",
+        "status": "Manager Craig Stammen said on March 12 that Song was doing defensive drills and baserunning and that he was “probably getting close” to swinging the bat again."
+      },
+      {
         "playerName": "Joe Musgrove",
         "injury": "Tommy John surgery",
-        "expectedReturn": "Possibly Opening Day rotation",
-        "status": "After missing the 2025 season, Musgrove returned to the mound for an exhibition against Team Great Britain. But he's being slow-played this spring, and the Padres have eased back his workload. It's unclear if he'll be built up in time to make the Opening Day roster."
+        "expectedReturn": "Possibly Opening Day",
+        "status": "After missing the 2025 season, Musgrove returned to the mound for an exhibition against Team Great Britain. But he's being slow-played this spring, with manager Craig Stammen saying Musgrove was “in a little bit of a holding pattern” on March 12."
       },
       {
         "playerName": "Yuki Matsui",
@@ -544,22 +568,10 @@
         "status": "Brito underwent UCL internal brace surgery as well as a flexor tendon repair operation in April 2025. He was placed on the 60-day IL in February but has resumed throwing bullpens in Padres camp."
       },
       {
-        "playerName": "Sung-Mun Song",
-        "injury": "Right oblique tightness",
-        "expectedReturn": "Day to day",
-        "status": "Song exited the Padres' game on March 5 with lingering soreness stemming from an injury he sustained during the offseason. The Padres will be cautious, and Song's status for the Opening Day roster is unclear."
-      },
-      {
         "playerName": "Griffin Canning",
         "injury": "Left Achilles tear",
         "expectedReturn": "Late April or May",
         "status": "Canning, whose 2025 season ended in June because of the injury, threw a high-intensity bullpen session on a back field on March 3. His next step could be facing hitters, though he hasn't yet been cleared for fielding drills."
-      },
-      {
-        "playerName": "Bryan Hoeing",
-        "injury": "Right elbow discomfort",
-        "expectedReturn": "TBD",
-        "status": "Hoeing was shut down after he felt discomfort in his throwing elbow during a live batting practice session in February. On March 2, he received a second opinion and, per manager Craig Stammen, was still weighing his next step."
       },
       {
         "playerName": "Yu Darvish",
@@ -590,34 +602,40 @@
     ],
     "137": [
       {
-        "playerName": "Reiver Sanmartin",
-        "injury": "Right hip flexor strain",
-        "expectedReturn": "Summer 2026",
-        "status": "Hurt his hip while fielding a grounder in Team Colombia's exhibition game on March 3. Evaluated by team orthopedist Dr. Ken Akizuki on March 4 and was later diagnosed with a high grade strain of his right hip flexor."
+        "playerName": "Hayden Birdsong",
+        "injury": "Right elbow soreness",
+        "expectedReturn": "TBD",
+        "status": "Experienced elbow soreness during his last Cactus League appearance against the Guardians on March 10 and is expected to undergo further testing to determine the severity of the injury."
       },
       {
         "playerName": "Erik Miller",
         "injury": "Lower back tightness",
-        "expectedReturn": "March",
-        "status": "Expected to see hitters soon and should be on the mound sometime in mid-March."
+        "expectedReturn": "March 13",
+        "status": "Expected to make his Cactus League debut against the Reds on March 13."
+      },
+      {
+        "playerName": "Reiver Sanmartin",
+        "injury": "Right hip flexor strain",
+        "expectedReturn": "Summer 2026",
+        "status": "Suffered a high grade strain of his right hip flexor while pitching for Team Colombia on March 3 and is expected to miss up to three months."
       },
       {
         "playerName": "Joel Peguero",
         "injury": "Left hamstring strain",
-        "expectedReturn": "TBD",
-        "status": "Re-injured his hamstring on March 2; an MRI revealed a Grade 2 strain, which will likely make him questionable for Opening Day."
+        "expectedReturn": "First half",
+        "status": "Re-injured his hamstring on March 2. An MRI revealed a Grade 2 strain, which will rule him out for Opening Day."
       },
       {
         "playerName": "Drew Gilbert",
         "injury": "Left shoulder impingement",
         "expectedReturn": "March",
-        "status": "Resumed hitting activities on March 4 but remains shut down from throwing."
+        "status": "Began a throwing program on March 8 and has been cleared to DH in Cactus League games."
       },
       {
         "playerName": "Sam Hentges",
         "injury": "Left shoulder surgery/right knee surgery",
         "expectedReturn": "No timetable for return",
-        "status": "Missed entire 2025 season due to left shoulder surgery and then underwent right knee arthroscopy to address his meniscus in August. Expected to continue bullpen progression at camp but is questionable for Opening Day."
+        "status": "Missed entire 2025 season due to left shoulder surgery and then underwent right knee arthroscopy to address his meniscus in August. Has been throwing bullpen sessions but is unlikely to be ready for Opening Day."
       },
       {
         "playerName": "Jason Foley",
@@ -891,13 +909,13 @@
         "playerName": "Kyle Teel",
         "injury": "Right hamstring strain",
         "expectedReturn": "4-6 weeks",
-        "status": "Suffered a Grade 2 strain playing with Team Italy on March 10 in World Baseball Classic. Returning to White Sox on March 12 to continue treatment. Will open the season on IL."
+        "status": "Suffered a Grade 2 strain playing with Team Italy on March 10 in World Baseball Classic. Officially returned to White Sox on March 12 to continue treatment. Will open the season on IL."
       },
       {
         "playerName": "Brooks Baldwin",
         "injury": "Right elbow soreness",
         "expectedReturn": "Day to day",
-        "status": "Baldwin has not played in a Cactus League game since March 6, when he sustained the injury throwing to bases, according to manager Will Venable, who described him as day to day."
+        "status": "Hasn't played in a Cactus League game since March 6, when he sustained the injury throwing to bases. Had imaging done on March 10, with something showing up in there, according to manager Will Venable. Will be checked out by specialists for further treatment."
       },
       {
         "playerName": "Drew Thorpe",
@@ -1009,27 +1027,21 @@
     "158": [
       {
         "playerName": "Quinn Priester",
-        "injury": "Right wrist soreness",
+        "injury": "Right wrist/arm discomfort",
         "expectedReturn": "April",
-        "status": "Scheduled to see a specialist in Dallas on March 12 for more information about the source of his lingering discomfort. Brewers are still hopeful about an April return."
+        "status": "Diagnosed with an issue \"in that T.O.S. [thoracic outlet syndrome] family\" after visiting with a vascular specialist, according to Pat Murphy. The Brewers are hopeful it can be treated without surgery."
       },
       {
         "playerName": "Logan Henderson",
         "injury": "Mild right elbow soreness",
         "expectedReturn": "Day to day",
-        "status": "Listed as probable starter March 9, but reported mild soreness in same elbow that landed him on IL in 2025. Mound session scheduled March 12. Potential game action March 15."
+        "status": "Listed as probable starter March 9, but reported mild soreness in same elbow that landed him on IL in 2025. Barring another setback, could pitch in a game on March 15."
       },
       {
         "playerName": "Akil Baddoo",
         "injury": "Left quad strain",
-        "expectedReturn": "Day to day",
-        "status": "Injured running to first base on March 9. Was scheduled to see Dr. William Raasch on March 11 to chart a comeback."
-      },
-      {
-        "playerName": "Jett Williams",
-        "injury": "Left quad strain",
-        "expectedReturn": "March 12",
-        "status": "Suffered Grade 1 quad strain legging out a triple against the Padres on Feb. 23. Expected back in action on March 12 against the Guardians, per manager Pat Murphy."
+        "expectedReturn": "Mid-April",
+        "status": "Injured running to first base on March 9, and an MRI revealed a more serious injury than initially believed."
       },
       {
         "playerName": "Steward Berroa",
