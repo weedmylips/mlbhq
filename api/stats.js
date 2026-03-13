@@ -2,23 +2,106 @@ import NodeCache from 'node-cache';
 
 const cache = new NodeCache({ stdTTL: 300, checkperiod: 60 });
 
+function ordinalRank(n) {
+  if (!n) return null;
+  const s = ['th', 'st', 'nd', 'rd'];
+  const v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+
+function getRank(splits, teamId, statField, lowerIsBetter) {
+  const valid = splits.filter(s => s.stat?.[statField] != null);
+  const sorted = [...valid].sort((a, b) => {
+    const va = parseFloat(a.stat[statField]) || 0;
+    const vb = parseFloat(b.stat[statField]) || 0;
+    return lowerIsBetter ? va - vb : vb - va;
+  });
+  const idx = sorted.findIndex(s => String(s.team?.id) === String(teamId));
+  return idx >= 0 ? ordinalRank(idx + 1) : null;
+}
+
+function abbrevName(fullName) {
+  if (!fullName) return '';
+  const parts = fullName.split(' ');
+  if (parts.length < 2) return fullName;
+  return `${parts[0][0]}. ${parts.slice(1).join(' ')}`;
+}
+
 export default async function handler(req, res) {
   try {
     const teamId = req.query.teamId || 147;
-    const cacheKey = `stats-${teamId}`;
+    const leagueId = req.query.leagueId || 103;
+    const cacheKey = `stats-${teamId}-${leagueId}`;
     const cached = cache.get(cacheKey);
     if (cached) return res.json(cached);
 
-    const [hittingResp, pitchingResp] = await Promise.all([
+    const [hittingResp, pitchingResp, allHittingResp, allPitchingResp, playerHittingResp, playerPitchingResp] = await Promise.all([
       fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=2025`),
       fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=2025`),
+      fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=2025&leagueIds=${leagueId}&sportId=1`),
+      fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=2025&leagueIds=${leagueId}&sportId=1`),
+      fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=2025&teamId=${teamId}&playerPool=All&sportId=1`),
+      fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=2025&teamId=${teamId}&playerPool=All&sportId=1`),
     ]);
 
-    const hittingData = await hittingResp.json();
-    const pitchingData = await pitchingResp.json();
+    const [hittingData, pitchingData, allHittingData, allPitchingData, playerHittingData, playerPitchingData] = await Promise.all([
+      hittingResp.json(),
+      pitchingResp.json(),
+      allHittingResp.json(),
+      allPitchingResp.json(),
+      playerHittingResp.json(),
+      playerPitchingResp.json(),
+    ]);
 
     const hittingStat = hittingData.stats?.[0]?.splits?.[0]?.stat || {};
     const pitchingStat = pitchingData.stats?.[0]?.splits?.[0]?.stat || {};
+
+    const allHittingSplits = allHittingData.stats?.[0]?.splits || [];
+    const allPitchingSplits = allPitchingData.stats?.[0]?.splits || [];
+
+    const hittingRanks = allHittingSplits.length > 0 ? {
+      avg: getRank(allHittingSplits, teamId, 'avg', false),
+      ops: getRank(allHittingSplits, teamId, 'ops', false),
+      hr: getRank(allHittingSplits, teamId, 'homeRuns', false),
+      runs: getRank(allHittingSplits, teamId, 'runs', false),
+      sb: getRank(allHittingSplits, teamId, 'stolenBases', false),
+      rbi: getRank(allHittingSplits, teamId, 'rbi', false),
+    } : null;
+
+    const pitchingRanks = allPitchingSplits.length > 0 ? {
+      era: getRank(allPitchingSplits, teamId, 'era', true),
+      whip: getRank(allPitchingSplits, teamId, 'whip', true),
+      k: getRank(allPitchingSplits, teamId, 'strikeOuts', false),
+      saves: getRank(allPitchingSplits, teamId, 'saves', false),
+      wins: getRank(allPitchingSplits, teamId, 'wins', false),
+      losses: getRank(allPitchingSplits, teamId, 'losses', true),
+    } : null;
+
+    const playerHittingSplits = playerHittingData.stats?.[0]?.splits || [];
+    const topBatters = playerHittingSplits
+      .filter(s => (s.stat?.atBats || 0) >= 5)
+      .sort((a, b) => parseFloat(b.stat?.ops || 0) - parseFloat(a.stat?.ops || 0))
+      .slice(0, 5)
+      .map(s => ({
+        name: abbrevName(s.player?.fullName),
+        avg: s.stat?.avg || '.000',
+        hr: s.stat?.homeRuns || 0,
+        rbi: s.stat?.rbi || 0,
+      }));
+
+    const playerPitchingSplits = playerPitchingData.stats?.[0]?.splits || [];
+    const topPitchers = playerPitchingSplits
+      .filter(s => parseFloat(s.stat?.inningsPitched || 0) >= 1)
+      .sort((a, b) => parseFloat(a.stat?.era || 99) - parseFloat(b.stat?.era || 99))
+      .slice(0, 5)
+      .map(s => ({
+        name: abbrevName(s.player?.fullName),
+        era: s.stat?.era || '-.--',
+        wins: s.stat?.wins || 0,
+        losses: s.stat?.losses || 0,
+        k: s.stat?.strikeOuts || 0,
+        ip: s.stat?.inningsPitched || '0.0',
+      }));
 
     const result = {
       hitting: {
@@ -42,6 +125,10 @@ export default async function handler(req, res) {
         ip: pitchingStat.inningsPitched || '0.0',
         avg: pitchingStat.avg || '.000',
       },
+      hittingRanks,
+      pitchingRanks,
+      topBatters,
+      topPitchers,
     };
 
     cache.set(cacheKey, result, 300);

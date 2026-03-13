@@ -33,12 +33,12 @@ export function useRoster(teamId) {
   });
 }
 
-export function useTeamStats(teamId) {
+export function useTeamStats(teamId, leagueId) {
   return useQuery({
-    queryKey: ['stats', teamId],
-    queryFn: () => fetchApi(`/api/stats?teamId=${teamId}`),
+    queryKey: ['stats', teamId, leagueId],
+    queryFn: () => fetchApi(`/api/stats?teamId=${teamId}&leagueId=${leagueId}`),
     refetchInterval: 300000,
-    enabled: !!teamId,
+    enabled: !!teamId && !!leagueId,
   });
 }
 
