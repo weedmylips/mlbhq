@@ -21,36 +21,49 @@ export default function GameSummaryPanel({ gamePk }) {
     );
   }
 
-  const { teams, pitchers, topHitters } = data;
+  const { innings = [], teams, pitchers, topHitters } = data;
   const away = teams?.away;
   const home = teams?.home;
 
   return (
     <div className="mt-2 pt-2 border-t border-white/10 space-y-3 text-xs">
 
-      {/* Line score */}
-      <table className="w-full">
-        <thead>
-          <tr className="text-gray-500 uppercase tracking-wider text-[10px]">
-            <th className="text-left font-normal pb-0.5 w-1/2"></th>
-            <th className="text-right font-normal pb-0.5 w-8">R</th>
-            <th className="text-right font-normal pb-0.5 w-8">H</th>
-            <th className="text-right font-normal pb-0.5 w-8">E</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[away, home].map((t) =>
-            t ? (
-              <tr key={t.team?.id} className="text-gray-300">
-                <td className="text-left font-semibold py-0.5">{t.team?.abbreviation}</td>
-                <td className="text-right font-bold w-8">{t.runs}</td>
-                <td className="text-right w-8">{t.hits}</td>
-                <td className="text-right w-8">{t.errors}</td>
-              </tr>
-            ) : null
-          )}
-        </tbody>
-      </table>
+      {/* Inning-by-inning line score */}
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-max">
+          <thead>
+            <tr className="text-gray-500 uppercase tracking-wider text-[10px]">
+              <th className="text-left font-normal pb-0.5 pr-2 w-10"></th>
+              {innings.map((inn) => (
+                <th key={inn.num} className="text-right font-normal pb-0.5 w-5">{inn.num}</th>
+              ))}
+              <th className="text-right font-bold pb-0.5 pl-2 w-6">R</th>
+              <th className="text-right font-normal pb-0.5 w-6">H</th>
+              <th className="text-right font-normal pb-0.5 w-6">E</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { side: 'away', team: away },
+              { side: 'home', team: home },
+            ].map(({ side, team }) =>
+              team ? (
+                <tr key={side} className="text-gray-300">
+                  <td className="text-left font-semibold py-0.5 pr-2">{team.team?.abbreviation}</td>
+                  {innings.map((inn) => (
+                    <td key={inn.num} className="text-right w-5">
+                      {inn[side] ?? '–'}
+                    </td>
+                  ))}
+                  <td className="text-right font-bold pl-2 w-6">{team.runs}</td>
+                  <td className="text-right w-6">{team.hits}</td>
+                  <td className="text-right w-6">{team.errors}</td>
+                </tr>
+              ) : null
+            )}
+          </tbody>
+        </table>
+      </div>
 
       {/* Pitchers */}
       {pitchers?.length > 0 && (

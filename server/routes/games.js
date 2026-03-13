@@ -117,9 +117,11 @@ router.get('/boxscore', async (req, res) => {
     const cached = getCached(cacheKey);
     if (cached) return res.json(cached);
 
-    const url = `https://statsapi.mlb.com/api/v1/game/${gamePk}/boxscore`;
-    const resp = await fetch(url);
-    const data = await resp.json();
+    const [bsResp, lsResp] = await Promise.all([
+      fetch(`https://statsapi.mlb.com/api/v1/game/${gamePk}/boxscore`),
+      fetch(`https://statsapi.mlb.com/api/v1/game/${gamePk}/linescore`),
+    ]);
+    const [data, linescore] = await Promise.all([bsResp.json(), lsResp.json()]);
 
     const teams = data.teams || {};
 
@@ -143,6 +145,11 @@ router.get('/boxscore', async (req, res) => {
     };
 
     const result = {
+      innings: (linescore.innings || []).map((inn) => ({
+        num: inn.num,
+        away: inn.away?.runs ?? null,
+        home: inn.home?.runs ?? null,
+      })),
       teams: {
         away: teamSummary('away'),
         home: teamSummary('home'),
