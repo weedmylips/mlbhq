@@ -167,7 +167,7 @@ export default function GameSummaryPanel({ gamePk }) {
       </div>
 
       {/* Team columns — away left, home right */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
         <TeamStatsColumn side="away" pitchers={pitchers} topHitters={topHitters} />
         <TeamStatsColumn side="home" pitchers={pitchers} topHitters={topHitters} />
       </div>
