@@ -8,6 +8,7 @@ import statsRouter from './routes/stats.js';
 import weatherRouter from './routes/weather.js';
 import newsRouter from './routes/news.js';
 import h2hRouter from './routes/h2h.js';
+import hotcoldRouter from './routes/hotcold.js';
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use('/api', statsRouter);
 app.use('/api', weatherRouter);
 app.use('/api', newsRouter);
 app.use('/api', h2hRouter);
+app.use('/api', hotcoldRouter);
 
 app.listen(PORT, () => {
   console.log(`MLB Dashboard API running on port ${PORT}`);

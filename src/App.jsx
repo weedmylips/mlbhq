@@ -13,7 +13,7 @@ import Schedule from './components/Schedule';
 import Standings from './components/Standings';
 import RosterTable from './components/RosterTable';
 import NewsFeed from './components/NewsFeed';
-import TeamUpdates from './components/TeamUpdates';
+import HotCold from './components/HotCold';
 import { LayoutDashboard, Users, CalendarDays, BarChart3 } from 'lucide-react';
 
 const tabs = [
@@ -102,7 +102,7 @@ function OverviewTab({ gamesData, gamesLoading }) {
 
       {/* Row 2 */}
       <RecentGames games={recentGames} />
-      <TeamUpdates />
+      <HotCold />
 
       {/* Row 3 */}
       <TeamStats />

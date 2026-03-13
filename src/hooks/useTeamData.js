@@ -79,6 +79,15 @@ export function useH2H(teamId, opponentId) {
   });
 }
 
+export function useHotCold(teamId) {
+  return useQuery({
+    queryKey: ['hotcold', teamId],
+    queryFn: () => fetchApi(`/api/hotcold?teamId=${teamId}`),
+    refetchInterval: 300000,
+    enabled: !!teamId,
+  });
+}
+
 export function useWeather(lat, lng, venue) {
   return useQuery({
     queryKey: ['weather', lat, lng],
