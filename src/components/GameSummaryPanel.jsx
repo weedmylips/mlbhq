@@ -2,30 +2,30 @@ import { useBoxScore } from '../hooks/useTeamData';
 
 const DECISION_COLORS = { W: 'text-green-400', L: 'text-red-400', SV: 'text-blue-400' };
 
-const STAT_HEADER_CLASSES = 'text-right font-normal pb-0.5 w-8';
-const STAT_CELL_CLASSES = 'text-right w-8';
+const TH = 'text-right font-normal pb-0.5 px-2';
+const TD = 'text-right px-2';
 
 function PitchingTable({ pitcherData }) {
   if (!pitcherData?.pitchers?.length) return null;
   return (
     <div>
       <p className="text-gray-400 font-semibold mb-0.5">{pitcherData.abbr}</p>
-      <table className="w-full">
+      <table>
         <thead>
           <tr className="text-gray-500 uppercase tracking-wider text-[10px]">
-            <th className="text-left font-normal pb-0.5"></th>
-            <th className={STAT_HEADER_CLASSES}>IP</th>
-            <th className={STAT_HEADER_CLASSES}>H</th>
-            <th className={STAT_HEADER_CLASSES}>ER</th>
-            <th className={STAT_HEADER_CLASSES}>BB</th>
-            <th className={STAT_HEADER_CLASSES}>K</th>
+            <th className="text-left font-normal pb-0.5 pr-3 min-w-[90px]"></th>
+            <th className={TH}>IP</th>
+            <th className={TH}>H</th>
+            <th className={TH}>ER</th>
+            <th className={TH}>BB</th>
+            <th className={TH}>K</th>
           </tr>
         </thead>
         <tbody>
           {pitcherData.pitchers.map((p, i) => (
             <tr key={i} className="text-gray-300">
-              <td className="text-left py-0.5 pr-2">
-                <span className="truncate block max-w-[110px]">
+              <td className="text-left py-0.5 pr-3">
+                <span className="truncate block max-w-[90px]">
                   {p.decision && (
                     <span className={`font-bold mr-1 ${DECISION_COLORS[p.decision] ?? ''}`}>
                       {p.decision}
@@ -34,11 +34,11 @@ function PitchingTable({ pitcherData }) {
                   {p.name.split(' ').slice(-1)[0]}
                 </span>
               </td>
-              <td className={`${STAT_CELL_CLASSES} font-mono`}>{p.stats.ip}</td>
-              <td className={STAT_CELL_CLASSES}>{p.stats.h}</td>
-              <td className={STAT_CELL_CLASSES}>{p.stats.er}</td>
-              <td className={STAT_CELL_CLASSES}>{p.stats.bb}</td>
-              <td className={STAT_CELL_CLASSES}>{p.stats.so}</td>
+              <td className={`${TD} font-mono`}>{p.stats.ip}</td>
+              <td className={TD}>{p.stats.h}</td>
+              <td className={TD}>{p.stats.er}</td>
+              <td className={TD}>{p.stats.bb}</td>
+              <td className={TD}>{p.stats.so}</td>
             </tr>
           ))}
         </tbody>
@@ -52,30 +52,30 @@ function HittingTable({ hitterData }) {
   return (
     <div>
       <p className="text-gray-400 font-semibold mb-0.5">{hitterData.abbr}</p>
-      <table className="w-full">
+      <table>
         <thead>
           <tr className="text-gray-500 uppercase tracking-wider text-[10px]">
-            <th className="text-left font-normal pb-0.5"></th>
-            <th className={STAT_HEADER_CLASSES}>AB</th>
-            <th className={STAT_HEADER_CLASSES}>H</th>
-            <th className={STAT_HEADER_CLASSES}>RBI</th>
-            <th className={STAT_HEADER_CLASSES}>HR</th>
-            <th className={STAT_HEADER_CLASSES}>BB</th>
+            <th className="text-left font-normal pb-0.5 pr-3 min-w-[90px]"></th>
+            <th className={TH}>AB</th>
+            <th className={TH}>H</th>
+            <th className={TH}>RBI</th>
+            <th className={TH}>HR</th>
+            <th className={TH}>BB</th>
           </tr>
         </thead>
         <tbody>
           {hitterData.hitters.map((h, i) => (
             <tr key={i} className="text-gray-300">
-              <td className="text-left py-0.5 pr-2">
-                <span className="truncate block max-w-[110px]">
+              <td className="text-left py-0.5 pr-3">
+                <span className="truncate block max-w-[90px]">
                   {h.name.split(' ').slice(-1)[0]}
                 </span>
               </td>
-              <td className={STAT_CELL_CLASSES}>{h.ab}</td>
-              <td className={STAT_CELL_CLASSES}>{h.h}</td>
-              <td className={STAT_CELL_CLASSES}>{h.rbi}</td>
-              <td className={STAT_CELL_CLASSES}>{h.hr}</td>
-              <td className={STAT_CELL_CLASSES}>{h.bb}</td>
+              <td className={TD}>{h.ab}</td>
+              <td className={TD}>{h.h}</td>
+              <td className={TD}>{h.rbi}</td>
+              <td className={TD}>{h.hr}</td>
+              <td className={TD}>{h.bb}</td>
             </tr>
           ))}
         </tbody>
@@ -107,62 +107,69 @@ export default function GameSummaryPanel({ gamePk }) {
   const away = teams?.away;
   const home = teams?.home;
 
+  const hasPitching = pitchers?.away?.pitchers?.length > 0 || pitchers?.home?.pitchers?.length > 0;
+  const hasHitting = topHitters?.away?.hitters?.length > 0 || topHitters?.home?.hitters?.length > 0;
+
   return (
-    <div className="mt-2 pt-2 border-t border-white/10 space-y-3 text-xs">
+    <div className="mt-2 pt-2 border-t border-white/10 text-xs">
 
-      {/* Inning-by-inning line score */}
-      <div className="overflow-x-auto">
-        <table className="w-full min-w-max">
-          <thead>
-            <tr className="text-gray-500 uppercase tracking-wider text-[10px]">
-              <th className="text-left font-normal pb-0.5 pr-2 w-10"></th>
-              {innings.map((inn) => (
-                <th key={inn.num} className="text-right font-normal pb-0.5 w-5">{inn.num}</th>
-              ))}
-              <th className="text-right font-bold pb-0.5 pl-2 w-6">R</th>
-              <th className="text-right font-normal pb-0.5 w-6">H</th>
-              <th className="text-right font-normal pb-0.5 w-6">E</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              { side: 'away', team: away },
-              { side: 'home', team: home },
-            ].map(({ side, team }) =>
-              team ? (
-                <tr key={side} className="text-gray-300">
-                  <td className="text-left font-semibold py-0.5 pr-2">{team.team?.abbreviation}</td>
-                  {innings.map((inn) => (
-                    <td key={inn.num} className="text-right w-5">{inn[side] ?? '–'}</td>
-                  ))}
-                  <td className="text-right font-bold pl-2 w-6">{team.runs}</td>
-                  <td className="text-right w-6">{team.hits}</td>
-                  <td className="text-right w-6">{team.errors}</td>
-                </tr>
-              ) : null
-            )}
-          </tbody>
-        </table>
+      {/* Desktop: 3-column grid. Mobile: stacked. */}
+      <div className="md:grid md:grid-cols-[auto_1fr_1fr] md:gap-6 space-y-3 md:space-y-0">
+
+        {/* Column 1 — Line score */}
+        <div className="overflow-x-auto">
+          <table>
+            <thead>
+              <tr className="text-gray-500 uppercase tracking-wider text-[10px]">
+                <th className="text-left font-normal pb-0.5 pr-2 w-10"></th>
+                {innings.map((inn) => (
+                  <th key={inn.num} className="text-right font-normal pb-0.5 px-1 min-w-[16px]">{inn.num}</th>
+                ))}
+                <th className="text-right font-bold pb-0.5 pl-2 px-1">R</th>
+                <th className="text-right font-normal pb-0.5 px-1">H</th>
+                <th className="text-right font-normal pb-0.5 px-1">E</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { side: 'away', team: away },
+                { side: 'home', team: home },
+              ].map(({ side, team }) =>
+                team ? (
+                  <tr key={side} className="text-gray-300">
+                    <td className="text-left font-semibold py-0.5 pr-2">{team.team?.abbreviation}</td>
+                    {innings.map((inn) => (
+                      <td key={inn.num} className="text-right px-1">{inn[side] ?? '–'}</td>
+                    ))}
+                    <td className="text-right font-bold pl-2 px-1">{team.runs}</td>
+                    <td className="text-right px-1">{team.hits}</td>
+                    <td className="text-right px-1">{team.errors}</td>
+                  </tr>
+                ) : null
+              )}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Column 2 — Pitching */}
+        {hasPitching && (
+          <div className="space-y-2">
+            <p className="text-gray-500 uppercase tracking-wider text-[10px] font-bold">Pitching</p>
+            <PitchingTable pitcherData={pitchers?.away} />
+            <PitchingTable pitcherData={pitchers?.home} />
+          </div>
+        )}
+
+        {/* Column 3 — Hitting */}
+        {hasHitting && (
+          <div className="space-y-2">
+            <p className="text-gray-500 uppercase tracking-wider text-[10px] font-bold">Top Hitters</p>
+            <HittingTable hitterData={topHitters?.away} />
+            <HittingTable hitterData={topHitters?.home} />
+          </div>
+        )}
+
       </div>
-
-      {/* Pitching — two team sections */}
-      {(pitchers?.away?.pitchers?.length > 0 || pitchers?.home?.pitchers?.length > 0) && (
-        <div className="space-y-2">
-          <p className="text-gray-500 uppercase tracking-wider text-[10px] font-bold">Pitching</p>
-          <PitchingTable pitcherData={pitchers?.away} />
-          <PitchingTable pitcherData={pitchers?.home} />
-        </div>
-      )}
-
-      {/* Hitting — two team sections */}
-      {(topHitters?.away?.hitters?.length > 0 || topHitters?.home?.hitters?.length > 0) && (
-        <div className="space-y-2">
-          <p className="text-gray-500 uppercase tracking-wider text-[10px] font-bold">Top Hitters</p>
-          <HittingTable hitterData={topHitters?.away} />
-          <HittingTable hitterData={topHitters?.home} />
-        </div>
-      )}
-
     </div>
   );
 }
