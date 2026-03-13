@@ -70,6 +70,15 @@ export function useBoxScore(gamePk) {
   });
 }
 
+export function useH2H(teamId, opponentId) {
+  return useQuery({
+    queryKey: ['h2h', teamId, opponentId],
+    queryFn: () => fetchApi(`/api/h2h?teamId=${teamId}&opponentId=${opponentId}`),
+    enabled: !!teamId && !!opponentId,
+    staleTime: 300000,
+  });
+}
+
 export function useWeather(lat, lng, venue) {
   return useQuery({
     queryKey: ['weather', lat, lng],

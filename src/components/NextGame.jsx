@@ -1,5 +1,6 @@
 import { getTeamById } from '../data/teams';
 import { useTeam } from '../context/TeamContext';
+import { useH2H } from '../hooks/useTeamData';
 import { Calendar } from 'lucide-react';
 
 export default function NextGame({ game }) {
@@ -26,6 +27,8 @@ export default function NextGame({ game }) {
   const oppProbPitcher = isHome
     ? game.teams?.away?.probablePitcher
     : game.teams?.home?.probablePitcher;
+
+  const { data: h2h } = useH2H(team.id, opponentData?.team?.id);
 
   return (
     <div className="card md:col-span-2">
@@ -83,6 +86,18 @@ export default function NextGame({ game }) {
           )}
         </div>
       </div>
+
+      {h2h && h2h.gamesPlayed > 0 && (
+        <div className="mt-3 pt-2 border-t border-white/5 text-center text-xs text-gray-500">
+          <span className="font-mono font-bold text-gray-300">{h2h.wins}-{h2h.losses}</span>
+          {' '}vs {opponentTeam?.abbr} this season
+        </div>
+      )}
+      {h2h && h2h.gamesPlayed === 0 && (
+        <div className="mt-3 pt-2 border-t border-white/5 text-center text-xs text-gray-500">
+          First meeting this season
+        </div>
+      )}
     </div>
   );
 }
