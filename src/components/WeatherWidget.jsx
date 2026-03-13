@@ -1,16 +1,35 @@
-import { useWeather } from '../hooks/useTeamData';
+import { useWeather, useGames } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
+import { getTeamById } from '../data/teams';
 import { Cloud, Thermometer, Wind, Droplets } from 'lucide-react';
 
 export default function WeatherWidget() {
   const { team } = useTeam();
-  const { data, isLoading } = useWeather(
-    team.stadiumLat,
-    team.stadiumLng,
-    team.stadium
-  );
+  const { data: gamesData, isLoading: gamesLoading } = useGames(team.id);
 
-  if (isLoading) {
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const todayGame = gamesData?.live
+    ?? gamesData?.allGames?.find(g => g.gameDate?.slice(0, 10) === todayStr);
+
+  const homeTeam = todayGame ? getTeamById(todayGame.teams?.home?.team?.id) : null;
+  const venueLat = homeTeam?.stadiumLat;
+  const venueLng = homeTeam?.stadiumLng;
+  const venueName = homeTeam?.stadium;
+
+  const { data, isLoading: weatherLoading } = useWeather(venueLat, venueLng, venueName);
+
+  if (gamesLoading) {
+    return (
+      <div className="card">
+        <div className="skeleton h-32 w-full" />
+      </div>
+    );
+  }
+
+  // No game today — hide the widget entirely
+  if (!todayGame) return null;
+
+  if (weatherLoading) {
     return (
       <div className="card">
         <div className="skeleton h-32 w-full" />
@@ -23,14 +42,14 @@ export default function WeatherWidget() {
       <div className="card">
         <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
           <Cloud size={14} />
-          Stadium Weather
+          Gameday Weather
         </h3>
         <p className="text-gray-500 text-sm text-center py-4">
           {data?.unavailable
             ? 'Set OPENWEATHER_API_KEY in .env'
             : 'Weather unavailable'}
         </p>
-        <p className="text-xs text-gray-600 text-center">{team.stadium}</p>
+        <p className="text-xs text-gray-600 text-center">{venueName}</p>
       </div>
     );
   }
@@ -38,7 +57,7 @@ export default function WeatherWidget() {
   return (
     <div className="card">
       <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2 text-center">
-        Stadium Weather
+        Gameday Weather
       </h3>
       <p className="text-xs text-gray-500 mb-3 text-center">{data.venue}</p>
       <div className="flex flex-col items-center gap-1 mb-3">
