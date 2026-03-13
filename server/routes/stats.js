@@ -92,7 +92,11 @@ router.get('/stats', async (req, res) => {
 
     const playerPitchingSplits = playerPitchingData.stats?.[0]?.splits || [];
     const topPitchers = playerPitchingSplits
-      .filter(s => parseFloat(s.stat?.inningsPitched || 0) >= 1)
+      .filter(s => {
+        const gs = s.stat?.gamesStarted || 0;
+        const gp = s.stat?.gamesPlayed || s.stat?.gamesPitched || 1;
+        return gs >= 1 && gs / gp >= 0.4;
+      })
       .sort((a, b) => parseFloat(a.stat?.era || 99) - parseFloat(b.stat?.era || 99))
       .slice(0, 5)
       .map(s => ({

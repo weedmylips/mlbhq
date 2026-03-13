@@ -7,7 +7,7 @@ function StatBox({ label, value, rank, leagueAbbr }) {
       <div className="stat-number text-xl">{value}</div>
       <div className="text-[10px] text-gray-500 uppercase tracking-wider">{label}</div>
       {rank && leagueAbbr && (
-        <div className="text-[9px] text-[var(--team-primary)] font-semibold mt-0.5 leading-tight">
+        <div className="text-[9px] text-white font-semibold mt-0.5 leading-tight">
           {rank} in {leagueAbbr}
         </div>
       )}
