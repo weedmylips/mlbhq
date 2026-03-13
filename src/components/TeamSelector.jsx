@@ -32,12 +32,14 @@ export default function TeamSelector() {
                   selectedTeamId === t.id ? 'team-glow ring-2 ring-[var(--team-primary)] bg-white/10' : ''
                 }`}
               >
-                <img
-                  src={t.logo}
-                  alt={t.abbr}
-                  className="w-8 h-8 object-contain"
-                  loading="lazy"
-                />
+                <div className="w-8 h-8 rounded-md bg-white/20 flex items-center justify-center p-0.5">
+                  <img
+                    src={t.logo}
+                    alt={t.abbr}
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
                 <span className="text-[10px] text-gray-400 mt-0.5">{t.abbr}</span>
               </button>
             ))}
