@@ -5,7 +5,6 @@ function mlbStatusToBadge(code) {
     D10: '10-Day IL',
     D7: '7-Day IL',
     DTD: 'Day-To-Day',
-    RST: 'Restricted List',
     IN: 'Ineligible List',
     SU: 'Suspended',
   };
@@ -13,10 +12,10 @@ function mlbStatusToBadge(code) {
 }
 
 // IL-related status codes from the MLB API
-const IL_CODES = new Set(['D60', 'D10', 'D7', 'DTD', 'RST', 'IN', 'SU']);
+const IL_CODES = new Set(['D60', 'D10', 'D7', 'DTD', 'IN', 'SU']);
 
 // Text-based fallback for codes not in IL_CODES
-const IL_KEYWORDS = ['Injured', 'IL', '10-Day', '60-Day', 'Paternity', 'Bereavement', 'Restricted'];
+const IL_KEYWORDS = ['Injured', 'IL', '10-Day', '60-Day', 'Paternity', 'Bereavement'];
 function isInjuredByText(description) {
   if (!description) return false;
   return IL_KEYWORDS.some((k) => description.includes(k));
@@ -80,6 +79,9 @@ export function mergeRosterData(activeData, fullData, scraped) {
       note: entry.note || null,
     }));
 
+  // Build name→position lookup from active roster for scraped-only player fallback
+  const activePositionByName = new Map(roster.map((p) => [p.name.toLowerCase(), p.position]));
+
   // Merge with scraped injury data from static JSON (updated by GitHub Actions cron)
   const scrapedMap = new Map(scraped.map((s) => [s.playerName.toLowerCase(), s]));
 
@@ -101,7 +103,7 @@ export function mergeRosterData(activeData, fullData, scraped) {
       injured.push({
         id: null,
         name: s.playerName,
-        position: null,
+        position: activePositionByName.get(s.playerName.toLowerCase()) || null,
         status: deriveILBadge(s),
         note: s.status || null,
         injury: s.injury || null,
