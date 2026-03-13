@@ -41,18 +41,35 @@ export default function TeamUpdates() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    if (!handle) return;
+    if (!handle || !containerRef.current) return;
 
-    const load = () => window.twttr?.widgets?.load(containerRef.current);
+    containerRef.current.innerHTML = '';
 
-    if (window.twttr) {
-      load();
-    } else if (!document.getElementById('twitter-widget-script')) {
+    const createWidget = () => {
+      if (!containerRef.current) return;
+      window.twttr.widgets.createTimeline(
+        { sourceType: 'profile', screenName: handle },
+        containerRef.current,
+        {
+          theme: 'dark',
+          chrome: 'noheader nofooter noborders transparent',
+          tweetLimit: 5,
+          dnt: true,
+        }
+      );
+    };
+
+    if (!window.twttr) {
+      window.twttr = { _e: [], ready: (f) => window.twttr._e.push(f) };
+    }
+
+    window.twttr.ready(createWidget);
+
+    if (!document.getElementById('twitter-widget-script')) {
       const script = document.createElement('script');
       script.id = 'twitter-widget-script';
       script.src = 'https://platform.twitter.com/widgets.js';
       script.async = true;
-      script.onload = load;
       document.body.appendChild(script);
     }
   }, [team.id, handle]);
@@ -64,16 +81,8 @@ export default function TeamUpdates() {
         Team Updates
       </h3>
       {handle ? (
-        <div ref={containerRef} key={team.id}>
-          <a
-            className="twitter-timeline"
-            href={`https://twitter.com/${handle}`}
-            data-theme="dark"
-            data-chrome="noheader nofooter noborders transparent"
-            data-tweet-limit="5"
-          >
-            Loading {team.name} updates&hellip;
-          </a>
+        <div ref={containerRef} className="min-h-[200px] flex items-center justify-center">
+          <span className="text-gray-600 text-xs">Loading updates&hellip;</span>
         </div>
       ) : (
         <p className="text-gray-500 text-sm text-center py-4">No feed available.</p>
