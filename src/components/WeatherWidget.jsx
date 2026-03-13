@@ -37,31 +37,31 @@ export default function WeatherWidget() {
 
   return (
     <div className="card">
-      <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">
+      <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2 text-center">
         Stadium Weather
       </h3>
-      <p className="text-xs text-gray-500 mb-3">{data.venue}</p>
-      <div className="flex items-center gap-3 mb-3">
+      <p className="text-xs text-gray-500 mb-3 text-center">{data.venue}</p>
+      <div className="flex flex-col items-center gap-1 mb-3">
         <img
           src={`https://openweathermap.org/img/wn/${data.icon}@2x.png`}
           alt={data.condition}
           className="w-12 h-12"
         />
-        <div>
+        <div className="text-center">
           <div className="stat-number text-2xl">{data.temp}&deg;F</div>
           <div className="text-xs text-gray-400">{data.condition}</div>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-2 text-xs text-gray-400">
-        <div className="flex items-center gap-1">
+        <div className="flex items-center justify-center gap-1">
           <Thermometer size={12} />
           Feels {data.feelsLike}&deg;F
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center justify-center gap-1">
           <Wind size={12} />
           {data.wind} mph
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center justify-center gap-1 col-span-2">
           <Droplets size={12} />
           {data.humidity}% humidity
         </div>

@@ -1,17 +1,9 @@
 import { useTeam } from '../context/TeamContext';
 import { useGames } from '../hooks/useTeamData';
-import { Clock } from 'lucide-react';
-import { useState, useEffect } from 'react';
 
 export default function Header() {
   const { team } = useTeam();
   const { data } = useGames(team.id);
-  const [time, setTime] = useState(new Date());
-
-  useEffect(() => {
-    const interval = setInterval(() => setTime(new Date()), 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   const hasLive = !!data?.live;
 
@@ -47,17 +39,6 @@ export default function Header() {
             </span>
           </div>
         </div>
-      </div>
-      <div
-        className="hidden sm:flex items-center gap-2 text-sm opacity-80 shrink-0"
-        style={{ color: team.textColor }}
-      >
-        <Clock size={16} />
-        {time.toLocaleTimeString('en-US', {
-          hour: 'numeric',
-          minute: '2-digit',
-          second: '2-digit',
-        })}
       </div>
     </div>
   );
