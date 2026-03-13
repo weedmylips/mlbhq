@@ -53,7 +53,7 @@ function LeagueSection({ leagueId, data, selectedTeam }) {
                           />
                         )}
                         <span className={isSelected ? 'font-bold' : ''}>
-                          {teamData?.name || t.teamName}
+                          {teamData ? teamData.name.slice(teamData.city.length).trim() : t.teamName}
                         </span>
                       </div>
                     </td>
