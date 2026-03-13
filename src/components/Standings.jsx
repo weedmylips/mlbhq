@@ -28,7 +28,9 @@ export default function Standings() {
       {data.map((division) => (
         <div key={division.divisionId} className="card overflow-x-auto">
           <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
-            {division.division}
+            {division.division ||
+              getTeamById(division.teams[0]?.teamId)?.division ||
+              'Division'}
           </h3>
           <table className="w-full text-sm">
             <thead>
