@@ -29,39 +29,44 @@ export default async function handler(req, res) {
       };
     }
 
-    function pitcherStats(playerId) {
-      for (const side of ['away', 'home']) {
-        const players = teams[side]?.players || {};
-        const key = `ID${playerId}`;
-        if (players[key]) {
-          const p = players[key];
-          const s = p.stats?.pitching || {};
-          return {
-            name: p.person?.fullName || '',
-            stats: {
-              ip: s.inningsPitched ?? '0.0',
-              h: s.hits ?? 0,
-              er: s.earnedRuns ?? 0,
-              bb: s.baseOnBalls ?? 0,
-              so: s.strikeOuts ?? 0,
-            },
-          };
-        }
-      }
-      return null;
-    }
-
     const decisions = data.decisions || {};
+    const decisionMap = {
+      ...(decisions.winner ? { [decisions.winner.id]: 'W' } : {}),
+      ...(decisions.loser ? { [decisions.loser.id]: 'L' } : {}),
+      ...(decisions.save ? { [decisions.save.id]: 'SV' } : {}),
+    };
+
     const result = {
       teams: {
         away: teamSummary('away'),
         home: teamSummary('home'),
       },
-      decisions: {
-        winner: decisions.winner ? pitcherStats(decisions.winner.id) : null,
-        loser: decisions.loser ? pitcherStats(decisions.loser.id) : null,
-        save: decisions.save ? pitcherStats(decisions.save.id) : null,
-      },
+      pitchers: (() => {
+        const list = [];
+        for (const side of ['away', 'home']) {
+          const t = teams[side] || {};
+          const abbr = t.team?.abbreviation || '';
+          const players = t.players || {};
+          for (const id of (t.pitchers || [])) {
+            const p = players[`ID${id}`];
+            if (!p) continue;
+            const s = p.stats?.pitching || {};
+            list.push({
+              name: p.person?.fullName || '',
+              teamAbbr: abbr,
+              decision: decisionMap[id] || null,
+              stats: {
+                ip: s.inningsPitched ?? '0.0',
+                h: s.hits ?? 0,
+                er: s.earnedRuns ?? 0,
+                bb: s.baseOnBalls ?? 0,
+                so: s.strikeOuts ?? 0,
+              },
+            });
+          }
+        }
+        return list;
+      })(),
       topHitters: (() => {
         const hitters = [];
         for (const side of ['away', 'home']) {
