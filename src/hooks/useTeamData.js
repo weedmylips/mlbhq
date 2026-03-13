@@ -61,6 +61,15 @@ export function useNews(teamId) {
   });
 }
 
+export function useBoxScore(gamePk) {
+  return useQuery({
+    queryKey: ['boxscore', gamePk],
+    queryFn: () => fetchApi(`/api/boxscore?gamePk=${gamePk}`),
+    enabled: !!gamePk,
+    staleTime: 300000,
+  });
+}
+
 export function useWeather(lat, lng, venue) {
   return useQuery({
     queryKey: ['weather', lat, lng],
