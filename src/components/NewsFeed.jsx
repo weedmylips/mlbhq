@@ -13,63 +13,37 @@ function relativeTime(isoString) {
 }
 
 function ArticleCard({ article, team }) {
-  const hasThumbnail = !!article.thumbnail;
-
   return (
     <a
       href={article.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-colors"
+      className="flex flex-col bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-colors p-3"
     >
-      <div className="h-28 overflow-hidden bg-black/20 flex items-center justify-center shrink-0">
-        {hasThumbnail ? (
-          <img
-            src={article.thumbnail}
-            alt=""
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              e.target.style.display = 'none';
-              e.target.nextSibling.style.display = 'flex';
-            }}
-          />
-        ) : null}
-        <div
-          className="w-full h-full items-center justify-center"
-          style={{ display: hasThumbnail ? 'none' : 'flex' }}
-        >
-          <img src={team.logo} alt="" className="w-10 h-10 opacity-20" />
-        </div>
+      <div className="flex items-center gap-2 mb-2">
+        <img src={team.logo} alt="" className="w-4 h-4" />
+        <span className="text-xs text-gray-500">{relativeTime(article.pubDate)}</span>
       </div>
-      <div className="p-3 flex flex-col flex-1">
-        <div className="flex items-center gap-2 mb-2">
-          <img src={team.logo} alt="" className="w-4 h-4" />
-          <span className="text-xs text-gray-500">{relativeTime(article.pubDate)}</span>
-        </div>
-        <p className="text-sm text-gray-200 font-medium leading-snug line-clamp-2 mb-1">
-          {article.title}
-        </p>
-        {article.summary && (
-          <p className="text-xs text-gray-500 line-clamp-2 flex-1">{article.summary}</p>
-        )}
-        <span className="text-xs mt-2 block" style={{ color: 'var(--team-accent)' }}>
-          Read more &rarr;
-        </span>
-      </div>
+      <p className="text-sm text-gray-200 font-medium leading-snug line-clamp-2 mb-1">
+        {article.title}
+      </p>
+      {article.summary && (
+        <p className="text-xs text-gray-500 line-clamp-3 flex-1">{article.summary}</p>
+      )}
+      <span className="text-xs mt-2 block" style={{ color: 'var(--team-accent)' }}>
+        Read more &rarr;
+      </span>
     </a>
   );
 }
 
 function SkeletonCard() {
   return (
-    <div className="flex flex-col bg-white/5 rounded-lg overflow-hidden">
-      <div className="skeleton h-28 w-full" />
-      <div className="p-3 space-y-2">
-        <div className="skeleton h-3 w-24 rounded" />
-        <div className="skeleton h-4 w-full rounded" />
-        <div className="skeleton h-4 w-3/4 rounded" />
-        <div className="skeleton h-3 w-full rounded" />
-      </div>
+    <div className="flex flex-col bg-white/5 rounded-lg p-3 space-y-2">
+      <div className="skeleton h-3 w-24 rounded" />
+      <div className="skeleton h-4 w-full rounded" />
+      <div className="skeleton h-4 w-3/4 rounded" />
+      <div className="skeleton h-3 w-full rounded" />
     </div>
   );
 }
