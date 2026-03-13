@@ -78,10 +78,6 @@ export default function InjuryReport() {
                       <span className="text-gray-500">Status: </span>
                       {p.note || '—'}
                     </div>
-                    <div>
-                      <span className="text-gray-500">Official IL Status: </span>
-                      {p.status || '—'}
-                    </div>
                   </div>
                 )}
               </div>
