@@ -88,6 +88,7 @@ router.get('/live', async (req, res) => {
           second: !!linescore.offense?.second,
           third: !!linescore.offense?.third,
         },
+        innings: linescore.innings || [],
         currentBatter: linescore.offense?.batter || null,
         currentPitcher: linescore.defense?.pitcher || null,
         lastPlay: plays.currentPlay?.result?.description || '',

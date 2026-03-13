@@ -49,6 +49,48 @@ function CountDisplay({ balls, strikes, outs }) {
   );
 }
 
+function LineScore({ innings, away, home, awayTeam, homeTeam }) {
+  if (!innings || innings.length === 0) return null;
+  const awayAbbr = awayTeam?.abbr || away?.team?.abbreviation || 'AWY';
+  const homeAbbr = homeTeam?.abbr || home?.team?.abbreviation || 'HME';
+
+  return (
+    <div className="overflow-x-auto mt-4">
+      <table className="mx-auto text-xs">
+        <thead>
+          <tr className="text-gray-500 uppercase tracking-wider text-[10px]">
+            <th className="text-left font-normal pb-0.5 pr-3 w-10"></th>
+            {innings.map((inn) => (
+              <th key={inn.num} className="text-right font-normal pb-0.5 px-1 min-w-[16px]">{inn.num}</th>
+            ))}
+            <th className="text-right font-bold pb-0.5 pl-3 px-1">R</th>
+            <th className="text-right font-normal pb-0.5 px-1">H</th>
+            <th className="text-right font-normal pb-0.5 px-1">E</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[
+            { side: 'away', abbr: awayAbbr, team: away },
+            { side: 'home', abbr: homeAbbr, team: home },
+          ].map(({ side, abbr, team }) => (
+            <tr key={side} className="text-gray-300">
+              <td className="text-left font-semibold py-0.5 pr-3">{abbr}</td>
+              {innings.map((inn) => (
+                <td key={inn.num} className="text-right px-1">
+                  {inn[side]?.runs ?? '–'}
+                </td>
+              ))}
+              <td className="text-right font-bold pl-3 px-1">{team?.runs ?? 0}</td>
+              <td className="text-right px-1">{team?.hits ?? 0}</td>
+              <td className="text-right px-1">{team?.errors ?? 0}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export default function LiveGame({ gamePk }) {
   const { data, isLoading } = useLiveGame(gamePk);
 
@@ -63,6 +105,18 @@ export default function LiveGame({ gamePk }) {
   const awayTeam = getTeamById(data.away?.team?.id);
   const homeTeam = getTeamById(data.home?.team?.id);
   const inningHalf = data.inningHalf === 'Top' ? '\u25B2' : '\u25BC';
+
+  // Top = away batting, home pitching; Bottom = home batting, away pitching
+  const isTopHalf = data.inningHalf === 'Top';
+  const batterName = data.currentBatter?.fullName?.split(' ').at(-1) ?? null;
+  const pitcherName = data.currentPitcher?.fullName?.split(' ').at(-1) ?? null;
+
+  const awaySubtext = isTopHalf
+    ? (batterName ? `AB: ${batterName}` : 'Batting')
+    : (pitcherName ? `P: ${pitcherName}` : 'Pitching');
+  const homeSubtext = isTopHalf
+    ? (pitcherName ? `P: ${pitcherName}` : 'Pitching')
+    : (batterName ? `AB: ${batterName}` : 'Batting');
 
   return (
     <div className="card md:col-span-2">
@@ -86,7 +140,7 @@ export default function LiveGame({ gamePk }) {
             <div className="font-bold text-lg">
               {data.away?.team?.teamName || 'Away'}
             </div>
-            <div className="text-xs text-gray-400">Away</div>
+            <div className="text-xs text-gray-400">{awaySubtext}</div>
           </div>
         </div>
 
@@ -103,7 +157,7 @@ export default function LiveGame({ gamePk }) {
             <div className="font-bold text-lg">
               {data.home?.team?.teamName || 'Home'}
             </div>
-            <div className="text-xs text-gray-400">Home</div>
+            <div className="text-xs text-gray-400">{homeSubtext}</div>
           </div>
           {homeTeam && (
             <img src={homeTeam.logo} alt={homeTeam.abbr} className="w-12 h-12" />
@@ -119,6 +173,14 @@ export default function LiveGame({ gamePk }) {
         />
         <BaseRunners runners={data.runners || {}} />
       </div>
+
+      <LineScore
+        innings={data.innings}
+        away={data.away}
+        home={data.home}
+        awayTeam={awayTeam}
+        homeTeam={homeTeam}
+      />
 
       {data.lastPlay && (
         <p className="text-sm text-gray-400 mt-3 text-center italic">
