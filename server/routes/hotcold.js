@@ -75,7 +75,7 @@ router.get('/hotcold', async (req, res) => {
         },
         period: `${startDate} – ${endDate}`,
       };
-    }, 600);
+    }, 7200);
     res.json(result);
   } catch (err) {
     console.error('Hot/cold error:', err.message);

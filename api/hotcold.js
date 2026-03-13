@@ -1,6 +1,6 @@
 import { createCache } from './_cache.js';
 
-const { getOrFetch } = createCache(600, 60);
+const { getOrFetch } = createCache(7200, 60);
 
 function abbrevName(fullName) {
   if (!fullName) return '';
@@ -74,7 +74,7 @@ export default async function handler(req, res) {
         },
         period: `${startDate} – ${endDate}`,
       };
-    }, 600);
+    }, 7200);
     res.json(result);
   } catch (err) {
     console.error('Hot/cold error:', err.message);

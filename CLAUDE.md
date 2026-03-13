@@ -69,6 +69,7 @@ No test suite exists in this project.
 | Roster, stats, standings | 300s |
 | Weather | 600s |
 | News | 900s |
+| Hot/Cold players | 7200s |
 
 ### Deployment
 
