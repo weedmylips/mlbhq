@@ -154,56 +154,47 @@ router.get('/boxscore', async (req, res) => {
         away: teamSummary('away'),
         home: teamSummary('home'),
       },
-      pitchers: (() => {
-        const list = [];
-        for (const side of ['away', 'home']) {
-          const t = teams[side] || {};
-          const abbr = t.team?.abbreviation || '';
-          const players = t.players || {};
-          for (const id of (t.pitchers || [])) {
-            const p = players[`ID${id}`];
-            if (!p) continue;
-            const s = p.stats?.pitching || {};
-            list.push({
-              name: p.person?.fullName || '',
-              teamAbbr: abbr,
-              decision: decisionMap[id] || null,
-              stats: {
-                ip: s.inningsPitched ?? '0.0',
-                h: s.hits ?? 0,
-                er: s.earnedRuns ?? 0,
-                bb: s.baseOnBalls ?? 0,
-                so: s.strikeOuts ?? 0,
-              },
-            });
-          }
-        }
-        return list;
-      })(),
-      topHitters: (() => {
-        const hitters = [];
-        for (const side of ['away', 'home']) {
-          const t = teams[side] || {};
-          const abbr = t.team?.abbreviation || '';
-          const players = t.players || {};
-          for (const p of Object.values(players)) {
-            const s = p.stats?.batting || {};
-            if ((s.atBats ?? 0) === 0) continue;
-            hitters.push({
-              name: p.person?.fullName || '',
-              teamAbbr: abbr,
-              ab: s.atBats ?? 0,
+      pitchers: Object.fromEntries(['away', 'home'].map((side) => {
+        const t = teams[side] || {};
+        const players = t.players || {};
+        const list = (t.pitchers || []).flatMap((id) => {
+          const p = players[`ID${id}`];
+          if (!p) return [];
+          const s = p.stats?.pitching || {};
+          return [{
+            name: p.person?.fullName || '',
+            decision: decisionMap[id] || null,
+            stats: {
+              ip: s.inningsPitched ?? '0.0',
               h: s.hits ?? 0,
-              rbi: s.rbi ?? 0,
-              hr: s.homeRuns ?? 0,
+              er: s.earnedRuns ?? 0,
               bb: s.baseOnBalls ?? 0,
-            });
-          }
-        }
-        return hitters
-          .sort((a, b) => b.rbi - a.rbi || b.h - a.h)
-          .slice(0, 5);
-      })(),
+              so: s.strikeOuts ?? 0,
+            },
+          }];
+        });
+        return [side, { abbr: t.team?.abbreviation || '', pitchers: list }];
+      })),
+      topHitters: Object.fromEntries(['away', 'home'].map((side) => {
+        const t = teams[side] || {};
+        const players = t.players || {};
+        const hitters = Object.values(players).flatMap((p) => {
+          const s = p.stats?.batting || {};
+          if ((s.atBats ?? 0) === 0) return [];
+          return [{
+            name: p.person?.fullName || '',
+            ab: s.atBats ?? 0,
+            h: s.hits ?? 0,
+            rbi: s.rbi ?? 0,
+            hr: s.homeRuns ?? 0,
+            bb: s.baseOnBalls ?? 0,
+          }];
+        });
+        return [side, {
+          abbr: t.team?.abbreviation || '',
+          hitters: hitters.sort((a, b) => b.rbi - a.rbi || b.h - a.h).slice(0, 5),
+        }];
+      })),
     };
 
     setCached(cacheKey, result, 300);
