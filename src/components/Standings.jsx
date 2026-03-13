@@ -2,29 +2,14 @@ import { useStandings } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 import { getTeamById } from '../data/teams';
 
-export default function Standings() {
-  const { team } = useTeam();
-  const leagueId = team.league === 'AL' ? 103 : 104;
-  const { data, isLoading } = useStandings(leagueId);
+const LEAGUE_NAMES = { 103: 'American League', 104: 'National League' };
 
-  if (isLoading) {
-    return (
-      <div className="card">
-        <div className="skeleton h-64 w-full" />
-      </div>
-    );
-  }
-
-  if (!data || data.length === 0) {
-    return (
-      <div className="card">
-        <p className="text-gray-500 text-center py-6">Standings unavailable</p>
-      </div>
-    );
-  }
-
+function LeagueSection({ leagueId, data, selectedTeam }) {
   return (
     <div className="space-y-4">
+      <h2 className="text-base font-bold text-gray-300 uppercase tracking-widest px-1">
+        {LEAGUE_NAMES[leagueId]}
+      </h2>
       {data.map((division) => (
         <div key={division.divisionId} className="card overflow-x-auto">
           <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
@@ -48,7 +33,7 @@ export default function Standings() {
             <tbody>
               {division.teams.map((t) => {
                 const teamData = getTeamById(t.teamId);
-                const isSelected = t.teamId === team.id;
+                const isSelected = t.teamId === selectedTeam.id;
                 return (
                   <tr
                     key={t.teamId}
@@ -111,6 +96,41 @@ export default function Standings() {
           </table>
         </div>
       ))}
+    </div>
+  );
+}
+
+export default function Standings() {
+  const { team } = useTeam();
+  const primaryLeagueId = team.league === 'AL' ? 103 : 104;
+  const secondaryLeagueId = team.league === 'AL' ? 104 : 103;
+  const { data: primaryData, isLoading: primaryLoading } = useStandings(primaryLeagueId);
+  const { data: secondaryData, isLoading: secondaryLoading } = useStandings(secondaryLeagueId);
+
+  if (primaryLoading || secondaryLoading) {
+    return (
+      <div className="card">
+        <div className="skeleton h-64 w-full" />
+      </div>
+    );
+  }
+
+  if (!primaryData?.length && !secondaryData?.length) {
+    return (
+      <div className="card">
+        <p className="text-gray-500 text-center py-6">Standings unavailable</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-8">
+      {primaryData?.length > 0 && (
+        <LeagueSection leagueId={primaryLeagueId} data={primaryData} selectedTeam={team} />
+      )}
+      {secondaryData?.length > 0 && (
+        <LeagueSection leagueId={secondaryLeagueId} data={secondaryData} selectedTeam={team} />
+      )}
     </div>
   );
 }
