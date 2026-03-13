@@ -1,6 +1,6 @@
-import NodeCache from 'node-cache';
+import { createCache } from './_cache.js';
 
-const cache = new NodeCache({ stdTTL: 300, checkperiod: 60 });
+const { getOrFetch } = createCache(900, 60);
 
 function ordinalRank(n) {
   if (!n) return null;
@@ -32,110 +32,107 @@ export default async function handler(req, res) {
     const teamId = req.query.teamId || 147;
     const leagueId = req.query.leagueId || 103;
     const cacheKey = `stats-${teamId}-${leagueId}`;
-    const cached = cache.get(cacheKey);
-    if (cached) return res.json(cached);
+    const result = await getOrFetch(cacheKey, async () => {
+      const [hittingResp, pitchingResp, allHittingResp, allPitchingResp, playerHittingResp, playerPitchingResp] = await Promise.all([
+        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=2025`),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=2025`),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=2025&leagueIds=${leagueId}&sportId=1`),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=2025&leagueIds=${leagueId}&sportId=1`),
+        fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=2025&teamId=${teamId}&playerPool=All&sportId=1`),
+        fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=2025&teamId=${teamId}&playerPool=All&sportId=1`),
+      ]);
 
-    const [hittingResp, pitchingResp, allHittingResp, allPitchingResp, playerHittingResp, playerPitchingResp] = await Promise.all([
-      fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=2025`),
-      fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=2025`),
-      fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=2025&leagueIds=${leagueId}&sportId=1`),
-      fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=2025&leagueIds=${leagueId}&sportId=1`),
-      fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=2025&teamId=${teamId}&playerPool=All&sportId=1`),
-      fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=2025&teamId=${teamId}&playerPool=All&sportId=1`),
-    ]);
+      const [hittingData, pitchingData, allHittingData, allPitchingData, playerHittingData, playerPitchingData] = await Promise.all([
+        hittingResp.json(),
+        pitchingResp.json(),
+        allHittingResp.json(),
+        allPitchingResp.json(),
+        playerHittingResp.json(),
+        playerPitchingResp.json(),
+      ]);
 
-    const [hittingData, pitchingData, allHittingData, allPitchingData, playerHittingData, playerPitchingData] = await Promise.all([
-      hittingResp.json(),
-      pitchingResp.json(),
-      allHittingResp.json(),
-      allPitchingResp.json(),
-      playerHittingResp.json(),
-      playerPitchingResp.json(),
-    ]);
+      const hittingStat = hittingData.stats?.[0]?.splits?.[0]?.stat || {};
+      const pitchingStat = pitchingData.stats?.[0]?.splits?.[0]?.stat || {};
 
-    const hittingStat = hittingData.stats?.[0]?.splits?.[0]?.stat || {};
-    const pitchingStat = pitchingData.stats?.[0]?.splits?.[0]?.stat || {};
+      const allHittingSplits = allHittingData.stats?.[0]?.splits || [];
+      const allPitchingSplits = allPitchingData.stats?.[0]?.splits || [];
 
-    const allHittingSplits = allHittingData.stats?.[0]?.splits || [];
-    const allPitchingSplits = allPitchingData.stats?.[0]?.splits || [];
+      const hittingRanks = allHittingSplits.length > 0 ? {
+        avg: getRank(allHittingSplits, teamId, 'avg', false),
+        ops: getRank(allHittingSplits, teamId, 'ops', false),
+        hr: getRank(allHittingSplits, teamId, 'homeRuns', false),
+        runs: getRank(allHittingSplits, teamId, 'runs', false),
+        sb: getRank(allHittingSplits, teamId, 'stolenBases', false),
+        rbi: getRank(allHittingSplits, teamId, 'rbi', false),
+      } : null;
 
-    const hittingRanks = allHittingSplits.length > 0 ? {
-      avg: getRank(allHittingSplits, teamId, 'avg', false),
-      ops: getRank(allHittingSplits, teamId, 'ops', false),
-      hr: getRank(allHittingSplits, teamId, 'homeRuns', false),
-      runs: getRank(allHittingSplits, teamId, 'runs', false),
-      sb: getRank(allHittingSplits, teamId, 'stolenBases', false),
-      rbi: getRank(allHittingSplits, teamId, 'rbi', false),
-    } : null;
+      const pitchingRanks = allPitchingSplits.length > 0 ? {
+        era: getRank(allPitchingSplits, teamId, 'era', true),
+        whip: getRank(allPitchingSplits, teamId, 'whip', true),
+        k: getRank(allPitchingSplits, teamId, 'strikeOuts', false),
+        saves: getRank(allPitchingSplits, teamId, 'saves', false),
+        wins: getRank(allPitchingSplits, teamId, 'wins', false),
+        losses: getRank(allPitchingSplits, teamId, 'losses', true),
+      } : null;
 
-    const pitchingRanks = allPitchingSplits.length > 0 ? {
-      era: getRank(allPitchingSplits, teamId, 'era', true),
-      whip: getRank(allPitchingSplits, teamId, 'whip', true),
-      k: getRank(allPitchingSplits, teamId, 'strikeOuts', false),
-      saves: getRank(allPitchingSplits, teamId, 'saves', false),
-      wins: getRank(allPitchingSplits, teamId, 'wins', false),
-      losses: getRank(allPitchingSplits, teamId, 'losses', true),
-    } : null;
+      const playerHittingSplits = playerHittingData.stats?.[0]?.splits || [];
+      const topBatters = playerHittingSplits
+        .filter(s => (s.stat?.atBats || 0) >= 5)
+        .sort((a, b) => parseFloat(b.stat?.ops || 0) - parseFloat(a.stat?.ops || 0))
+        .slice(0, 5)
+        .map(s => ({
+          name: abbrevName(s.player?.fullName),
+          avg: s.stat?.avg || '.000',
+          hr: s.stat?.homeRuns || 0,
+          rbi: s.stat?.rbi || 0,
+        }));
 
-    const playerHittingSplits = playerHittingData.stats?.[0]?.splits || [];
-    const topBatters = playerHittingSplits
-      .filter(s => (s.stat?.atBats || 0) >= 5)
-      .sort((a, b) => parseFloat(b.stat?.ops || 0) - parseFloat(a.stat?.ops || 0))
-      .slice(0, 5)
-      .map(s => ({
-        name: abbrevName(s.player?.fullName),
-        avg: s.stat?.avg || '.000',
-        hr: s.stat?.homeRuns || 0,
-        rbi: s.stat?.rbi || 0,
-      }));
+      const playerPitchingSplits = playerPitchingData.stats?.[0]?.splits || [];
+      const topPitchers = playerPitchingSplits
+        .filter(s => {
+          const gs = s.stat?.gamesStarted || 0;
+          const gp = s.stat?.gamesPlayed || s.stat?.gamesPitched || 1;
+          return gs >= 1 && gs / gp >= 0.4;
+        })
+        .sort((a, b) => parseFloat(a.stat?.era || 99) - parseFloat(b.stat?.era || 99))
+        .slice(0, 5)
+        .map(s => ({
+          name: abbrevName(s.player?.fullName),
+          era: s.stat?.era || '-.--',
+          wins: s.stat?.wins || 0,
+          losses: s.stat?.losses || 0,
+          k: s.stat?.strikeOuts || 0,
+          ip: s.stat?.inningsPitched || '0.0',
+        }));
 
-    const playerPitchingSplits = playerPitchingData.stats?.[0]?.splits || [];
-    const topPitchers = playerPitchingSplits
-      .filter(s => {
-        const gs = s.stat?.gamesStarted || 0;
-        const gp = s.stat?.gamesPlayed || s.stat?.gamesPitched || 1;
-        return gs >= 1 && gs / gp >= 0.4;
-      })
-      .sort((a, b) => parseFloat(a.stat?.era || 99) - parseFloat(b.stat?.era || 99))
-      .slice(0, 5)
-      .map(s => ({
-        name: abbrevName(s.player?.fullName),
-        era: s.stat?.era || '-.--',
-        wins: s.stat?.wins || 0,
-        losses: s.stat?.losses || 0,
-        k: s.stat?.strikeOuts || 0,
-        ip: s.stat?.inningsPitched || '0.0',
-      }));
-
-    const result = {
-      hitting: {
-        avg: hittingStat.avg || '.000',
-        ops: hittingStat.ops || '.000',
-        hr: hittingStat.homeRuns || 0,
-        runs: hittingStat.runs || 0,
-        sb: hittingStat.stolenBases || 0,
-        hits: hittingStat.hits || 0,
-        rbi: hittingStat.rbi || 0,
-        obp: hittingStat.obp || '.000',
-        slg: hittingStat.slg || '.000',
-      },
-      pitching: {
-        era: pitchingStat.era || '0.00',
-        whip: pitchingStat.whip || '0.00',
-        k: pitchingStat.strikeOuts || 0,
-        saves: pitchingStat.saves || 0,
-        wins: pitchingStat.wins || 0,
-        losses: pitchingStat.losses || 0,
-        ip: pitchingStat.inningsPitched || '0.0',
-        avg: pitchingStat.avg || '.000',
-      },
-      hittingRanks,
-      pitchingRanks,
-      topBatters,
-      topPitchers,
-    };
-
-    cache.set(cacheKey, result, 300);
+      return {
+        hitting: {
+          avg: hittingStat.avg || '.000',
+          ops: hittingStat.ops || '.000',
+          hr: hittingStat.homeRuns || 0,
+          runs: hittingStat.runs || 0,
+          sb: hittingStat.stolenBases || 0,
+          hits: hittingStat.hits || 0,
+          rbi: hittingStat.rbi || 0,
+          obp: hittingStat.obp || '.000',
+          slg: hittingStat.slg || '.000',
+        },
+        pitching: {
+          era: pitchingStat.era || '0.00',
+          whip: pitchingStat.whip || '0.00',
+          k: pitchingStat.strikeOuts || 0,
+          saves: pitchingStat.saves || 0,
+          wins: pitchingStat.wins || 0,
+          losses: pitchingStat.losses || 0,
+          ip: pitchingStat.inningsPitched || '0.0',
+          avg: pitchingStat.avg || '.000',
+        },
+        hittingRanks,
+        pitchingRanks,
+        topBatters,
+        topPitchers,
+      };
+    }, 900);
     res.json(result);
   } catch (err) {
     console.error('Stats error:', err.message);

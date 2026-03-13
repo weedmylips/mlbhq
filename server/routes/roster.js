@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-import { getCached, setCached } from '../cache.js';
+import { getOrFetch } from '../cache.js';
 import { mergeRosterData } from '../../src/utils/rosterMerge.js';
 
 const router = Router();
@@ -23,20 +23,18 @@ router.get('/roster', async (req, res) => {
   try {
     const teamId = req.query.teamId || 147;
     const cacheKey = `roster-v5-${teamId}`;
-    const cached = getCached(cacheKey);
-    if (cached) return res.json(cached);
+    const result = await getOrFetch(cacheKey, async () => {
+      const [activeResp, fullResp] = await Promise.all([
+        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/roster?rosterType=active&hydrate=person(stats(type=season,group=[hitting,pitching]))`),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/roster?rosterType=fullRoster`),
+      ]);
 
-    const [activeResp, fullResp] = await Promise.all([
-      fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/roster?rosterType=active&hydrate=person(stats(type=season,group=[hitting,pitching]))`),
-      fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/roster?rosterType=fullRoster`),
-    ]);
+      const activeData = await activeResp.json();
+      const fullData = await fullResp.json();
+      const scraped = getScrapedInjuries(teamId);
 
-    const activeData = await activeResp.json();
-    const fullData = await fullResp.json();
-    const scraped = getScrapedInjuries(teamId);
-
-    const result = mergeRosterData(activeData, fullData, scraped);
-    setCached(cacheKey, result, 300);
+      return mergeRosterData(activeData, fullData, scraped);
+    }, 600);
     res.json(result);
   } catch (err) {
     console.error('Roster error:', err.message);
