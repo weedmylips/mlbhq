@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-14T13:57:38.443Z",
+  "lastUpdated": "2026-03-14T19:17:35.994Z",
   "teams": {
     "108": [
       {
@@ -41,12 +41,6 @@
     ],
     "109": [],
     "110": [
-      {
-        "playerName": "Ryan Mountcastle",
-        "injury": "Right hand soreness",
-        "expectedReturn": "March 14",
-        "status": "Exited March 11 game vs. Pirates after getting hit by a pitch. X-rays negative for a fracture. Set to return March 14."
-      },
       {
         "playerName": "Andrew Kittredge",
         "injury": "Right shoulder inflammation",
@@ -170,10 +164,16 @@
     ],
     "114": [
       {
+        "playerName": "George Valera",
+        "injury": "Left calf strain",
+        "expectedReturn": "Week of March 16",
+        "status": "Has \"mild\" calf strain, per manager Stephen Vogt. Able to do some baseball activity but will not play for a few more days. Last played March 9."
+      },
+      {
         "playerName": "Hunter Gaddis",
         "injury": "Right forearm tightness",
         "expectedReturn": "TBD",
-        "status": "Threw around 15 pitches in bullpen session on March 12."
+        "status": "Threw around 15 pitches in bullpen session on March 12. Scheduled to throw another bullpen on March 15."
       },
       {
         "playerName": "Andrew Walters",
@@ -494,10 +494,10 @@
     ],
     "134": [
       {
-        "playerName": "Brandon Lowe",
-        "injury": "Lower body tightness",
-        "expectedReturn": "Day to day",
-        "status": "Scratched from lineup on March 11, but was expected to go through normal practice session at LECOM Park."
+        "playerName": "Chris Devenski",
+        "injury": "Unspecified head injury",
+        "expectedReturn": "TBD",
+        "status": "Struck in the side of the head on Friday night by a 103 mph comebacker in the seventh inning. Left the field under his own power, being treated and evaluated by Pirates medical staff."
       },
       {
         "playerName": "Ronny Simon",
@@ -514,7 +514,7 @@
       {
         "playerName": "Oddanier Mosqueda",
         "injury": "Left forearm discomfort",
-        "expectedReturn": "By Opening Day",
+        "expectedReturn": "by Opening Day",
         "status": "Will not throw for a couple of weeks after experiencing swelling and soreness following a live workout on Feb. 22. Will miss playing for Team Venezuela in the World Baseball Classic, but the Pirates are hopeful he'll be ready by the start of the regular season."
       }
     ],
@@ -680,8 +680,8 @@
       {
         "playerName": "Edwin Uceta",
         "injury": "Right shoulder soreness",
-        "expectedReturn": "Possibly Opening Day",
-        "status": "Withdrew from World Baseball Classic on Feb. 15, then “didn’t feel great” when playing catch Feb. 19. Exam revealed inflammation. Received a cortisone injection on Feb. 20 and played catch from 60 feet on Feb. 28. Has been playing catch regularly."
+        "expectedReturn": "Early April",
+        "status": "“Didn’t feel great” when playing catch Feb. 19. Received a cortisone injection on Feb. 20. Threw a bullpen on March 14. Live BP planned around March 24-26, with a rehab assignment around the end of the month."
       },
       {
         "playerName": "Steven Wilson",
@@ -807,7 +807,7 @@
         "playerName": "Julian Merryweather",
         "injury": "Left hamstring strain",
         "expectedReturn": "Late March",
-        "status": "Threw a bullpen session on March 11 and plans to throw another on March 13."
+        "status": "Threw a bullpen session on March 11 and was scheduled to throw another on March 13."
       },
       {
         "playerName": "Walker Jenkins (MIN No. 1 prospect, No. 14 overall)",
@@ -956,12 +956,6 @@
         "status": "Underwent surgery, which has a recovery period of 13-14 months, on March 11. Experienced the discomfort on a pitch during his March 2 outing."
       },
       {
-        "playerName": "Kyle Stowers",
-        "injury": "Right hamstring strain",
-        "expectedReturn": "March 14",
-        "status": "Barring setback, scheduled to start in the outfield on March 14. Ran full speed on March 10. Faced live pitching on March 6. Began running progression on March 5. Scratched from Feb. 28 game to undergo imaging for hamstring tightness. Initially felt discomfort on Feb. 25."
-      },
-      {
         "playerName": "Graham Pauley",
         "injury": "Right forearm discomfort",
         "expectedReturn": "March 10",
@@ -988,16 +982,16 @@
     ],
     "147": [
       {
+        "playerName": "Carlos Rodón",
+        "injury": "Loose bodies, bone spur in left elbow",
+        "expectedReturn": "April/May",
+        "status": "Tossed 30 pitches in live batting practice on March 14 after a 20-pitch session on March 9 -- his first time facing live hitters since October elbow surgery. Rodón could appear in at least one Grapefruit League game."
+      },
+      {
         "playerName": "Anthony Volpe",
         "injury": "Left shoulder labrum tear",
         "expectedReturn": "No earlier than May",
         "status": "Is hitting overhand tosses and could advance to live at-bats on or around April 1. Volpe is participating in all defensive and baserunning drills and began diving on his left shoulder in early March. Underwent arthroscopic surgery Oct. 12."
-      },
-      {
-        "playerName": "Carlos Rodón",
-        "injury": "Loose bodies, bone spur in left elbow",
-        "expectedReturn": "April/May",
-        "status": "Tossed 20 pitches in live batting practice on March 9, marking his first session against live hitters since October elbow surgery. Rodón could appear in at least one Grapefruit League game and is expected to be built between 40-50 pitches by Opening Day. Manager Aaron Boone indicated March 9 that an April return remains in play."
       },
       {
         "playerName": "Gerrit Cole",
