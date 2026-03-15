@@ -1,12 +1,18 @@
 {
-  "lastUpdated": "2026-03-14T19:17:35.994Z",
+  "lastUpdated": "2026-03-15T05:45:13.767Z",
   "teams": {
     "108": [
+      {
+        "playerName": "Zach Neto",
+        "injury": "Left hand discomfort",
+        "expectedReturn": "Day to day",
+        "status": "Appeared to injure his hand while sliding into home plate in sixth inning of March 14 game against Seattle. Will receive further evaluation, per manager Kurt Suzuki."
+      },
       {
         "playerName": "Robert Stephenson",
         "injury": "Right elbow inflammation",
         "expectedReturn": "TBD",
-        "status": "Suffered “little setback,” per manager Kurt Suzuki; will undergo additional tests and be reevaluated. Dealt with nerve issue and thoracic outlet syndrome symptoms in offseason after ending 2025 on IL. Availability for Opening Day now in jeopardy."
+        "status": "Will fly to Texas next week to be evaluated by Dr. Keith Meister. “There is a concern for the state of my UCL right now,” said Stephenson, who now hopes he’ll be “able to pitch this year.”"
       },
       {
         "playerName": "Vaughn Grissom",
@@ -112,6 +118,12 @@
     ],
     "112": [
       {
+        "playerName": "Jonathon Long",
+        "injury": "Left elbow",
+        "expectedReturn": "Day to day",
+        "status": "Sustained left elbow sprain in collision on defensive play at first base on Feb. 21. Returned to Cactus League game action as a designated hitter on March 14."
+      },
+      {
         "playerName": "Justin Steele",
         "injury": "Left elbow",
         "expectedReturn": "First half of 2026",
@@ -122,12 +134,6 @@
         "injury": "Left forearm (radial nerve irritation)",
         "expectedReturn": "April",
         "status": "Resumed playing catch on March 3 after pausing his throwing program for 10 days. Could return to a mound as soon as March 16, but expected to open the season on the IL."
-      },
-      {
-        "playerName": "Jonathon Long",
-        "injury": "Left elbow",
-        "expectedReturn": "Day to day",
-        "status": "Sustained left elbow sprain in collision on defensive play at first base on Feb. 21. Has resumed regular workouts and faced live pitching on March 13."
       },
       {
         "playerName": "Porter Hodge",
@@ -190,22 +196,28 @@
     ],
     "115": [
       {
-        "playerName": "RJ Petit",
-        "injury": "Right elbow UCL strain",
-        "expectedReturn": "TBD",
-        "status": "A Rule 5 pick from the Tigers, Petit hasn't pitched since leaving a March 4 exhibition game against Team USA. Both he and the club are consulting with doctors about the next step."
-      },
-      {
-        "playerName": "McCade Brown",
-        "injury": "Right shoulder inflammation",
+        "playerName": "Zac Veen",
+        "injury": "Illness/right knee contusion",
         "expectedReturn": "Day to day",
-        "status": "Underwent an anti-inflammatory injection on March 1, and has thrown twice since -- without pain. Doesn't have a date to return to mound sessions."
+        "status": "Injured his knee while sliding trying to make a catch in the outfield."
       },
       {
         "playerName": "Blaine Crim",
         "injury": "Oblique strain",
         "expectedReturn": "TBD",
-        "status": "Continues treatment and rehab but has not been cleared for baseball activities."
+        "status": "Recently resumed taking batting practice."
+      },
+      {
+        "playerName": "RJ Petit",
+        "injury": "Right elbow UCL strain",
+        "expectedReturn": "TBD",
+        "status": "Rule 5 pick from the Tigers hasn't pitched since leaving a March 4 exhibition game against Team USA. Both he and the club are consulting with doctors about the next step."
+      },
+      {
+        "playerName": "McCade Brown",
+        "injury": "Right shoulder inflammation",
+        "expectedReturn": "Day to day",
+        "status": "Underwent an anti-inflammatory injection on March 1 and has thrown twice since, without pain. Doesn't have a date to return to mound sessions."
       },
       {
         "playerName": "Pierson Ohl",
@@ -290,22 +302,16 @@
     ],
     "117": [
       {
-        "playerName": "Cavan Biggio",
-        "injury": "Right elbow surgery",
+        "playerName": "Josh Hader",
+        "injury": "Left biceps tendinitis",
         "expectedReturn": "TBD",
-        "status": "Manager Joe Espada hopes Biggio will DH on March 14."
+        "status": "Hader threw 15 pitches in his second bullpen March 13 after reporting to camp with biceps tendinitis. Will begin the season on the injured list."
       },
       {
         "playerName": "Enyel De Los Santos",
         "injury": "Right knee strain",
         "expectedReturn": "TBD",
         "status": "Threw his second bullpen session of the spring March 10, and will next throw live batting practice March 14."
-      },
-      {
-        "playerName": "Josh Hader",
-        "injury": "Left biceps tendinitis",
-        "expectedReturn": "TBD",
-        "status": "Hader threw his first bullpen session March 10 after reporting to camp with biceps tendinitis. But he will begin the season on the injured list."
       },
       {
         "playerName": "Nate Pearson",
@@ -343,7 +349,13 @@
         "playerName": "Jonathan India",
         "injury": "Right groin tightness",
         "expectedReturn": "Day to day",
-        "status": "Exited after two innings March 13 against the D-backs after feeling tightness in his right groin, but concern level was low. Will be assessed further March 14."
+        "status": "Exited after two innings March 13 against the D-backs after feeling tightness in his right groin, but felt fine March 14. Will have three days off as a precaution."
+      },
+      {
+        "playerName": "Stephen Kolek",
+        "injury": "Left oblique strain",
+        "expectedReturn": "Day to day",
+        "status": "Suffered Grade 1+ oblique strain on Feb. 25. Began playing catch again March 5 and is up to 75 feet with a little higher intensity."
       },
       {
         "playerName": "Isaac Collins",
@@ -356,12 +368,6 @@
         "injury": "Left calf strain",
         "expectedReturn": "Day to day",
         "status": "Suffered a low-grade calf strain during a defensive play on March 6. Shut down from game action for next week, but able to participate in some baseball activity."
-      },
-      {
-        "playerName": "Stephen Kolek",
-        "injury": "Left oblique strain",
-        "expectedReturn": "Day to day",
-        "status": "Suffered Grade 1+ oblique strain on Feb. 25. Began playing catch again March 5 and is up to 60 feet. Will progress to next steps based on when symptoms cease."
       },
       {
         "playerName": "Alec Marsh",
@@ -439,7 +445,19 @@
         "playerName": "Francisco Lindor",
         "injury": "Stress reaction in left hamate bone",
         "expectedReturn": "Likely Opening Day",
-        "status": "Began taking outdoor batting practice on March 13, advancing to a full slate of baseball activities. Remains on track to be ready for Opening Day following Feb. 11 surgery."
+        "status": "Began taking outdoor batting practice on March 13 and has been playing in Minor League games. Should make his Grapefruit League debut within the next week. Remains on track to be ready for Opening Day following Feb. 11 surgery."
+      },
+      {
+        "playerName": "Justin Hagenman",
+        "injury": "Fractured rib",
+        "expectedReturn": "Possibly June",
+        "status": "Fractured a rib during a March 5 game against the Nationals. Exact timetable unknown, but will miss at least two months with what manager Carlos Mendoza called a \"significant\" injury."
+      },
+      {
+        "playerName": "Grae Kessinger",
+        "injury": "Left hamstring",
+        "expectedReturn": "Late May/Early June",
+        "status": "Injured his leg running to first base in a Feb. 27 game. Underwent hamstring tendon surgery in early March and is expected to miss 8-12 weeks."
       },
       {
         "playerName": "A.J. Minter",
@@ -458,12 +476,6 @@
         "injury": "Left shoulder soreness",
         "expectedReturn": "Day to day",
         "status": "Was scratched from his scheduled Grapefruit League start on March 9 after reporting some shoulder fatigue. Will continue to throw in non-game action."
-      },
-      {
-        "playerName": "Grae Kessinger",
-        "injury": "Left hamstring",
-        "expectedReturn": "Late May/Early June",
-        "status": "Kessinger suffered an injury on Feb. 27, and manager Carlos Mendoza announced March 1 that an MRI revealed “a pretty significant injury.” Surgery is “on the table,” according to Mendoza, who said Kessinger’s recovery time will be 8-12 weeks."
       },
       {
         "playerName": "Dedniel Núñez",
@@ -601,6 +613,12 @@
       }
     ],
     "137": [
+      {
+        "playerName": "Parks Harber",
+        "injury": "Right hamstring strain",
+        "expectedReturn": "TBD",
+        "status": "Departed the Giants' 8-7 loss to the D-backs on March 14 after hurting his hamstring while attempting to advance from first to third base in the bottom of the seventh."
+      },
       {
         "playerName": "Hayden Birdsong",
         "injury": "Right elbow soreness",
@@ -827,13 +845,13 @@
         "playerName": "Zack Wheeler",
         "injury": "Right upper extremity blood clot",
         "expectedReturn": "April-May",
-        "status": "Scheduled to throw first live batting practice March 14. Threw his fifth bullpen session March 10, approximately 46 pitches over two simulated innings."
+        "status": "Threw his first live batting practice session on March 14 and said it went well. Wheeler said he will throw another live BP at some point in the coming days, likely a simulated two-inning game."
       },
       {
         "playerName": "Orion Kerkering",
         "injury": "Strained right hamstring (Grade 1)",
         "expectedReturn": "Potentially by Opening Day",
-        "status": "Scheduled to throw a second live batting practice March 14. Threw his first March 10. Manager Rob Thomson said Kerkering “possibly” could be ready by Opening Day."
+        "status": "Threw live batting practice on March 14. Expects to pitch in a Grapefruit League game on March 17 and hopes to pitch in three games before the end of camp. Thinks it’s a “good possibility” he will be ready for Opening Day."
       },
       {
         "playerName": "Aidan Miller (Phillies' No. 1 prospect, No. 23 overall)",
@@ -899,6 +917,12 @@
       }
     ],
     "145": [
+      {
+        "playerName": "Mike Vasil",
+        "injury": "Right elbow soreness",
+        "expectedReturn": "Day to day",
+        "status": "Left his March 14 start with a trainer after throwing a pitch with two outs in the fourth inning. Will undergo further examination."
+      },
       {
         "playerName": "Kyle Teel",
         "injury": "Right hamstring strain",
