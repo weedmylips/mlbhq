@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-15T19:19:21.905Z",
+  "lastUpdated": "2026-03-16T06:00:59.930Z",
   "teams": {
     "108": [
       {
@@ -19,12 +19,6 @@
         "injury": "Left hand soreness",
         "expectedReturn": "Day to day",
         "status": "Exited in the first inning after striking out in his first at-bat March 11. Was replaced at shortstop in the bottom of the first for precautionary reasons."
-      },
-      {
-        "playerName": "Josh Lowe",
-        "injury": "Left oblique discomfort",
-        "expectedReturn": "Mid-March",
-        "status": "Injured on a throw to the infield on Feb. 25. Believes he'll be ready for Opening Day. Faced live pitching on March 11 and nearing playing in Minor League games before return to Cactus League action."
       },
       {
         "playerName": "Ben Joyce",
@@ -82,8 +76,8 @@
       {
         "playerName": "Marcelo Mayer",
         "injury": "Left knee soreness",
-        "expectedReturn": "Day to day",
-        "status": "Was scratched just before the March 15 game with left knee soreness."
+        "expectedReturn": "March 17",
+        "status": "Was scratched just before the March 15 game. Manager Alex Cora said Mayer's knee felt sore before the game and the team kept him out of the lineup. He should be back on March 17."
       },
       {
         "playerName": "Romy Gonzalez",
@@ -181,6 +175,12 @@
       }
     ],
     "114": [
+      {
+        "playerName": "José Ramírez",
+        "injury": null,
+        "expectedReturn": "Day to day",
+        "status": "Jammed left shoulder on slide into third base on March 15 and has some inflammation. Considered day to day."
+      },
       {
         "playerName": "Hunter Gaddis",
         "injury": "Right forearm tightness",
@@ -416,16 +416,16 @@
     ],
     "120": [
       {
+        "playerName": "Jacob Young",
+        "injury": "Right wrist contusion",
+        "expectedReturn": "Day to day",
+        "status": "Began taking swings on March 10. Faced Foster Griffin in an intrasquad game on March 15 and felt good."
+      },
+      {
         "playerName": "DJ Herz",
         "injury": "Left UCL sprain",
         "expectedReturn": "2026",
         "status": "Threw off the mound for the first time on March 13."
-      },
-      {
-        "playerName": "Jacob Young",
-        "injury": "Right wrist contusion",
-        "expectedReturn": "Day to day",
-        "status": "Began taking swings on March 10. Team wants to make sure he is healthy for Opening Day."
       },
       {
         "playerName": "Trevor Williams",
@@ -594,6 +594,12 @@
     ],
     "136": [
       {
+        "playerName": "J.P. Crawford",
+        "injury": "Right shoulder soreness",
+        "expectedReturn": "Will be reassessed on March 17",
+        "status": "Was out of the lineup for the fourth game in a row on March 15 vs. Reds, as issue resurfaced. Club will wait until after off-day on March 16 to reassess."
+      },
+      {
         "playerName": "Bryce Miller",
         "injury": "Left side oblique inflammation",
         "expectedReturn": "Opening Day status in jeopardy",
@@ -719,19 +725,13 @@
         "playerName": "Josh Jung",
         "injury": "Adductor strain",
         "expectedReturn": "Mid-March",
-        "status": "Jung's recovery has been a little slower than initially expected. Took groundballs on March 13 and is expected to appear in a Minor League game over the weekend."
-      },
-      {
-        "playerName": "Justin Foscue",
-        "injury": "Right hamstring tightness",
-        "expectedReturn": "March 10-14",
-        "status": "Left a Feb. 23 game against the Angels with right hamstring tightness. Additional testing showed a strain and he will be down for around two weeks."
+        "status": "Went 1-for-3 with a double and a walk on the backfields in Surprise, Ariz., on March 15. Skip Schumaker said he could be in the main game against the White Sox the following day."
       },
       {
         "playerName": "Kyle Higashioka",
         "injury": "Back tightness",
-        "expectedReturn": "March 9",
-        "status": "Felt back tightness on Feb. 25 but resumed baseball activities two days later."
+        "expectedReturn": "Mid-March",
+        "status": "Has not played since March 5 due to back spasms, but resumed taking swings on March 13. Skip Schumaker is hopeful he can return to the lineup against the White Sox on March 16."
       },
       {
         "playerName": "Cody Freeman",
@@ -845,13 +845,13 @@
         "playerName": "Zack Wheeler",
         "injury": "Right upper extremity blood clot",
         "expectedReturn": "April-May",
-        "status": "Threw his first live batting practice session on March 14 and said it went well. Wheeler said he will throw another live BP at some point in the coming days, likely a simulated two-inning game."
+        "status": "Threw his first live batting practice session on March 14 and said it went well. Wheeler said he will throw another live BP on March 17, likely a simulated two-inning game."
       },
       {
         "playerName": "Orion Kerkering",
         "injury": "Strained right hamstring (Grade 1)",
         "expectedReturn": "Potentially by Opening Day",
-        "status": "Threw live batting practice on March 14. Expects to pitch in a Grapefruit League game on March 17 and hopes to pitch in three games before the end of camp. Thinks it’s a “good possibility” he will be ready for Opening Day."
+        "status": "He will pitch in his first spring game March 17, but it could be in a Minors game instead of a Grapefruit League game. Kerkering plans to pitch in three games before the end of camp. Based on his performance, he could be ready for Opening Day."
       },
       {
         "playerName": "Aidan Miller (Phillies' No. 1 prospect, No. 23 overall)",
