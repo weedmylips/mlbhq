@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-17T15:44:30.173Z",
+  "lastUpdated": "2026-03-17T20:02:17.248Z",
   "teams": {
     "108": [
       {
@@ -74,10 +74,16 @@
     ],
     "111": [
       {
-        "playerName": "Marcelo Mayer",
-        "injury": "Left knee soreness",
-        "expectedReturn": "March 17",
-        "status": "Was scratched just before the March 15 game. Manager Alex Cora said Mayer's knee felt sore before the game and the team kept him out of the lineup. He should be back on March 17."
+        "playerName": "Kutter Crawford",
+        "injury": "Right wrist subsheath tear",
+        "expectedReturn": "April or early May",
+        "status": "Continues to throw live batting practice. Waiting to get cleared for game action."
+      },
+      {
+        "playerName": "Patrick Sandoval",
+        "injury": "Left UCL repair",
+        "expectedReturn": "Mid-April to early May",
+        "status": "Continues to throw live BP. Not cleared for game action"
       },
       {
         "playerName": "Romy Gonzalez",
@@ -90,18 +96,6 @@
         "injury": "Ruptured left patellar tendon",
         "expectedReturn": "May at earliest",
         "status": "Casas said he won't progress enough to play Grapefruit League games. Waiting for clearance to run at full speed and slide."
-      },
-      {
-        "playerName": "Kutter Crawford",
-        "injury": "Right wrist subsheath tear",
-        "expectedReturn": "April or early May",
-        "status": "Will throw two innings of live batting practice on March 12. Could get in a game soon thereafter."
-      },
-      {
-        "playerName": "Patrick Sandoval",
-        "injury": "Left UCL repair",
-        "expectedReturn": "Mid-April to early May",
-        "status": "Having a deload week, and will throw extended bullpen session March 12 rather than throw to live hitters. Will resume facing hitters the week of March 16."
       },
       {
         "playerName": "Brendan Rodgers",
@@ -246,40 +240,46 @@
     ],
     "116": [
       {
+        "playerName": "Beau Brieske",
+        "injury": "Left adductor strain",
+        "expectedReturn": "Hopefully April",
+        "status": "Suffered a groin strain while doing a routine workout off the mound. Will not be ready for the start of the season."
+      },
+      {
         "playerName": "Troy Melton",
         "injury": "Right elbow inflammation",
         "expectedReturn": "Hopefully end of May",
-        "status": "Began a throwing program this week. Placed on 60-day IL on March 10."
+        "status": "Began a throwing program the week of March 9. Placed on 60-day IL on March 10."
       },
       {
         "playerName": "Trey Sweeney",
         "injury": "Right shoulder strain",
         "expectedReturn": "TBD",
-        "status": "Began a throwing progression on March 12. Completing a hitting progression."
+        "status": "Began a throwing progression on March 12. Completing a hitting progression and defensive drills."
       },
       {
         "playerName": "Sawyer Gipson-Long",
         "injury": "Left oblique strain",
-        "expectedReturn": "Opening Day 2026",
-        "status": "Threw a live batting practice session on March 13."
+        "expectedReturn": "Hopefully April",
+        "status": "Scheduled to throw his second live batting practice session on March 18."
       },
       {
         "playerName": "Bailey Horn",
         "injury": "Left elbow arthroscopy",
         "expectedReturn": "TBD",
-        "status": "Threw his first bullpen session on March 13."
+        "status": "Threw his latest bullpen session on March 17."
       },
       {
         "playerName": "Jackson Jobe",
         "injury": "Right UCL reconstruction",
         "expectedReturn": "Second half of 2026",
-        "status": "Played catch out to 105 feet three times this week. Underwent Tommy John surgery on June 16."
+        "status": "Playing catch out to 120 feet three times the week of March 16. Underwent Tommy John surgery on June 16."
       },
       {
         "playerName": "Scott Effross",
         "injury": "Left oblique strain",
         "expectedReturn": "TBD",
-        "status": "Reported abdominal tightness after last outing on March 7. Will rehab daily."
+        "status": "Began a throwing program the week of March 16. Reported abdominal tightness after last outing on March 7."
       },
       {
         "playerName": "Hao-Yu Lee (Tigers' No. 6 prospect)",
@@ -436,6 +436,12 @@
     ],
     "121": [
       {
+        "playerName": "Francisco Lindor",
+        "injury": "Stress reaction in left hamate bone",
+        "expectedReturn": "Likely Opening Day",
+        "status": "Made his Grapefruit League debut on March 15, 4 1/2 weeks after Feb. 11 surgery. Played again on March 17. Remains on track to be ready for Opening Day."
+      },
+      {
         "playerName": "A.J. Minter",
         "injury": "Left lat surgery",
         "expectedReturn": "Early May",
@@ -446,12 +452,6 @@
         "injury": "Fractured rib",
         "expectedReturn": "Possibly June",
         "status": "Fractured a rib during a March 5 game against the Nationals. Will need 4-8 weeks to recover, after which he can commence his buildup."
-      },
-      {
-        "playerName": "Francisco Lindor",
-        "injury": "Stress reaction in left hamate bone",
-        "expectedReturn": "Likely Opening Day",
-        "status": "Made his Grapefruit League debut on March 15, 4 1/2 weeks after Feb. 11 surgery. Remains on track to be ready for Opening Day."
       },
       {
         "playerName": "Robert Stock",
@@ -478,14 +478,7 @@
         "status": "Will miss all of 2026 recovering from surgery but is under team control through 2029."
       }
     ],
-    "133": [
-      {
-        "playerName": "Lawrence Butler",
-        "injury": "Right knee surgery",
-        "expectedReturn": "Mid-spring",
-        "status": "Continues to take at-bats on the Minor League side of camp as he builds towards a running progression. Could make his Cactus League debut next week."
-      }
-    ],
+    "133": [],
     "134": [
       {
         "playerName": "Chris Devenski",
@@ -572,14 +565,14 @@
       {
         "playerName": "J.P. Crawford",
         "injury": "Right shoulder soreness",
-        "expectedReturn": "Will be reassessed on March 17",
-        "status": "Was out of the lineup for the fourth game in a row on March 15 vs. Reds, as issue resurfaced. Club will wait until after off-day on March 16 to reassess."
+        "expectedReturn": "TBD",
+        "status": "Was out of the lineup for the fifth straight game on March 17, when he met with Dr. Keith Meister to ensure treatment is proceeding appropriately."
       },
       {
         "playerName": "Bryce Miller",
         "injury": "Left side oblique inflammation",
         "expectedReturn": "Opening Day status in jeopardy",
-        "status": "First full-effort bullpen cut short after discomfort during higher-intensity warmup pitches on March 11. Still cleared to play catch; will attempt another touch-and-feel bullpen in range of March 14-15.More »"
+        "status": "First full-effort bullpen cut short after discomfort during higher-intensity warmup pitches on March 11. Scheduled to throw a full bullpen session without limitations on March 17.More »"
       },
       {
         "playerName": "Victor Robles",
@@ -895,9 +888,9 @@
     "145": [
       {
         "playerName": "Mike Vasil",
-        "injury": "Right elbow soreness",
-        "expectedReturn": "Day to day",
-        "status": "Left his March 14 start with a trainer after throwing a pitch with two outs in the fourth inning. Will undergo further examination."
+        "injury": "Tommy John surgery",
+        "expectedReturn": "12 to 18 months",
+        "status": "Exited March 14 start with right elbow soreness. Will undergo season-ending Tommy John surgery in the coming weeks; the procedure will be performed by Dr. Keith Meister."
       },
       {
         "playerName": "Kyle Teel",
