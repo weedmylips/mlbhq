@@ -1,12 +1,18 @@
 {
-  "lastUpdated": "2026-03-17T20:02:17.248Z",
+  "lastUpdated": "2026-03-18T05:22:31.288Z",
   "teams": {
     "108": [
       {
-        "playerName": "Zach Neto",
-        "injury": "Left wrist sprain",
+        "playerName": "Ben Joyce",
+        "injury": "Right shoulder surgery",
+        "expectedReturn": "Early 2026 season",
+        "status": "Underwent labrum surgery on May 14. Has been throwing bullpens without any issues with his latest coming on March 17, but appears likely to start the season on the injured list."
+      },
+      {
+        "playerName": "Caden Dana",
+        "injury": "Mononucleosis",
         "expectedReturn": "Day to day",
-        "status": "Injured his wrist while sliding into home plate during the March 14 game against Seattle. Said on March 15 that he “dodged a bullet” and could return as soon as March 17 but more likely March 18."
+        "status": "Diagnosed on Jan. 31 but was able to throw and eat normally while dealing with fatigue. Behind the other pitchers, but has been throwing bullpens with no issues and will progress to facing hitters next but was optioned to Triple-A Salt Lake on March 16."
       },
       {
         "playerName": "Robert Stephenson",
@@ -19,18 +25,6 @@
         "injury": "Left hand soreness",
         "expectedReturn": "Day to day",
         "status": "Exited in the first inning after striking out in his first at-bat March 11. Was replaced at shortstop in the bottom of the first for precautionary reasons."
-      },
-      {
-        "playerName": "Ben Joyce",
-        "injury": "Right shoulder surgery",
-        "expectedReturn": "Early 2026 season",
-        "status": "Underwent labrum surgery on May 14. Has been throwing bullpens without any issues with his latest one coming on March 10, but appears likely to start the season on the injured list."
-      },
-      {
-        "playerName": "Caden Dana",
-        "injury": "Mononucleosis",
-        "expectedReturn": "Day to day",
-        "status": "Diagnosed on Jan. 31 but was able to throw and eat normally while dealing with fatigue. Behind the other pitchers, but has been throwing bullpens with no issues and will progress to facing hitters next."
       },
       {
         "playerName": "Anthony Rendon",
@@ -115,7 +109,7 @@
         "playerName": "Seiya Suzuki",
         "injury": "Right knee",
         "expectedReturn": "TBD",
-        "status": "Exited Japan’s WBC quarterfinal loss to Venezuela in the first inning due to “right knee discomfort.” Rejoined the Cubs on March 16 and was set to have an MRI to gather more info on his injury."
+        "status": "MRI exam revealed a posterior cruciate ligament sprain considered \"minor in nature,\" per manager Craig Counsell. The outfielder (injured in Japan's quarterfinal loss to Venezuela) will increase activity in coming days to gauge his progress."
       },
       {
         "playerName": "Jordan Wicks",
@@ -133,7 +127,7 @@
         "playerName": "Porter Hodge",
         "injury": "Right flexor strain",
         "expectedReturn": "April",
-        "status": "Manager Craig Counsell noted on March 8 that Hodge will be shut down from throwing for a couple weeks before being re-evaluated. The righty is expected to open the season on the IL."
+        "status": "Manager Craig Counsell noted on March 8 that Hodge will be shut down from throwing for a couple weeks before being re-evaluated. Expected to open the season on the IL."
       },
       {
         "playerName": "Shelby Miller",
@@ -164,22 +158,22 @@
     ],
     "114": [
       {
+        "playerName": "George Valera",
+        "injury": "Left calf strain",
+        "expectedReturn": "Week of March 16",
+        "status": "Has \"mild\" calf strain, per manager Stephen Vogt. Feeling better, and is hitting, running and throwing."
+      },
+      {
         "playerName": "José Ramírez",
         "injury": null,
         "expectedReturn": "Day to day",
-        "status": "Feeling better on March 16 after jammed left shoulder on slide into third base on March 15. Has some inflammation but no plans for imaging. Considered day to day."
+        "status": "Feeling better after jamming left shoulder on slide into third base on March 15. Has some inflammation but no plans for imaging. Considered day to day."
       },
       {
         "playerName": "Hunter Gaddis",
         "injury": "Right forearm tightness",
         "expectedReturn": "TBD",
         "status": "Scheduled to throw live batting practice on March 18. Threw bullpen sessions on March 12 and 15."
-      },
-      {
-        "playerName": "George Valera",
-        "injury": "Left calf strain",
-        "expectedReturn": "Week of March 16",
-        "status": "Has \"mild\" calf strain, per manager Stephen Vogt. Feeling better, and is hitting and throwing, but is not running yet. Will not play for a few more days."
       },
       {
         "playerName": "Andrew Walters",
@@ -196,22 +190,22 @@
     ],
     "115": [
       {
-        "playerName": "Zac Veen",
-        "injury": "Illness/right knee contusion",
-        "expectedReturn": "Day to day",
-        "status": "Injured his knee while sliding trying to make a catch in the outfield."
-      },
-      {
         "playerName": "Blaine Crim",
         "injury": "Oblique strain",
         "expectedReturn": "TBD",
-        "status": "Recently resumed taking batting practice."
+        "status": "Swinging a bat and doing all activities, and could play in a game before Spring Training is over."
       },
       {
         "playerName": "RJ Petit",
         "injury": "Right elbow UCL strain",
         "expectedReturn": "TBD",
-        "status": "Rule 5 pick from the Tigers hasn't pitched since leaving a March 4 exhibition game against Team USA. Both he and the club are consulting with doctors about the next step."
+        "status": "Will travel to Texas this week to visit noted orthopedic surgeon Dr. Keith Meister."
+      },
+      {
+        "playerName": "Zac Veen",
+        "injury": "Illness/right knee contusion",
+        "expectedReturn": "Day to day",
+        "status": "Injured his knee while sliding trying to make a catch in the outfield."
       },
       {
         "playerName": "McCade Brown",
@@ -346,22 +340,16 @@
     ],
     "118": [
       {
-        "playerName": "Jonathan India",
-        "injury": "Right groin tightness",
-        "expectedReturn": "Day to day",
-        "status": "Exited after two innings March 13 against D-backs after feeling tightness in his right groin. Felt fine March 14. Manager Matt Quatraro expects India back in the lineup March 17."
-      },
-      {
         "playerName": "Isaac Collins",
         "injury": "Back/left side tightness",
         "expectedReturn": "Day to day",
-        "status": "Felt tightness following March 10 game. Will be held out of lineup next few days as precaution. Collins will play defense in a Minor League game March 15, then be reevaluated."
+        "status": "Felt tightness following March 10 game. Participated in full workout outside on March 17 and will be reevaluated."
       },
       {
         "playerName": "Michael Massey",
         "injury": "Left calf strain",
         "expectedReturn": "Day to day",
-        "status": "Suffered low-grade calf strain during a defensive play March 6. Massey is scheduled to hit in Minor League games March 15 and March 17."
+        "status": "Suffered low-grade calf strain during a defensive play March 6. Recorded six plate appearances in a Minor League game March 17."
       },
       {
         "playerName": "Stephen Kolek",
@@ -377,6 +365,12 @@
       }
     ],
     "119": [
+      {
+        "playerName": "Evan Phillips",
+        "injury": "Recovery from Tommy John surgery",
+        "expectedReturn": "Second half of 2026",
+        "status": "Underwent Tommy John surgery in June 2025. He threw his first full bullpen session to a squatting catcher on March 17."
+      },
       {
         "playerName": "Gavin Stone",
         "injury": "Recovery from right shoulder surgery",
@@ -400,12 +394,6 @@
         "injury": "Recovery from right shoulder surgery",
         "expectedReturn": "Possibly late April",
         "status": "Underwent shoulder debridement procedure in September 2025. Has progressed to throwing full bullpen sessions."
-      },
-      {
-        "playerName": "Evan Phillips",
-        "injury": "Recovery from Tommy John surgery",
-        "expectedReturn": "Second half of 2026",
-        "status": "Underwent Tommy John surgery in June 2025. Began throwing off the mound to a standing catcher in late February, with the goal of progressing to full bullpen sessions during March."
       }
     ],
     "120": [
