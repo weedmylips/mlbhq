@@ -1,7 +1,13 @@
 {
-  "lastUpdated": "2026-03-18T15:56:39.791Z",
+  "lastUpdated": "2026-03-18T19:56:36.269Z",
   "teams": {
     "108": [
+      {
+        "playerName": "Vaughn Grissom",
+        "injury": "Left hand soreness",
+        "expectedReturn": "Possibly late March",
+        "status": "Exited in the first inning after striking out in his first at-bat March 11. Had a cortisone shot in his hand on March 17 and could open the season on the injured list."
+      },
       {
         "playerName": "Ben Joyce",
         "injury": "Right shoulder surgery",
@@ -9,22 +15,10 @@
         "status": "Underwent labrum surgery on May 14. Has been throwing bullpens without any issues with his latest coming on March 17, but appears likely to start the season on the injured list."
       },
       {
-        "playerName": "Caden Dana",
-        "injury": "Mononucleosis",
-        "expectedReturn": "Day to day",
-        "status": "Diagnosed on Jan. 31 but was able to throw and eat normally while dealing with fatigue. Behind the other pitchers, but has been throwing bullpens with no issues and will progress to facing hitters next but was optioned to Triple-A Salt Lake on March 16."
-      },
-      {
         "playerName": "Robert Stephenson",
         "injury": "Right elbow inflammation",
         "expectedReturn": "TBD",
         "status": "Will fly to Texas next week to be evaluated by Dr. Keith Meister. “There is a concern for the state of my UCL right now,” said Stephenson, who now hopes he’ll be “able to pitch this year.”"
-      },
-      {
-        "playerName": "Vaughn Grissom",
-        "injury": "Left hand soreness",
-        "expectedReturn": "Day to day",
-        "status": "Exited in the first inning after striking out in his first at-bat March 11. Was replaced at shortstop in the bottom of the first for precautionary reasons."
       },
       {
         "playerName": "Anthony Rendon",
@@ -144,16 +138,16 @@
     ],
     "113": [
       {
+        "playerName": "Hunter Greene",
+        "injury": "Right elbow surgery",
+        "expectedReturn": "July",
+        "status": "Greene had arthroscopic surgery March 11 to remove bone chips and loose bodies from his right elbow. Shutdown from throwing for six weeks, he is expected to miss 14-16 weeks."
+      },
+      {
         "playerName": "Caleb Ferguson",
         "injury": "Mild right oblique strain",
         "expectedReturn": "April",
         "status": "An MRI revealed Ferguson's injury and he will not pitch for at least two weeks. He will undergo a second MRI in Cincinnati after camp breaks."
-      },
-      {
-        "playerName": "Hunter Greene",
-        "injury": "Right elbow surgery",
-        "expectedReturn": "July",
-        "status": "Greene was scheduled to have arthroscopic surgery March 11 to remove bone chips and loose bodies from his right elbow. He is expected to miss 14-16 weeks."
       }
     ],
     "114": [
@@ -554,13 +548,13 @@
         "playerName": "J.P. Crawford",
         "injury": "Right shoulder soreness",
         "expectedReturn": "TBD",
-        "status": "Was out of the lineup for the fifth straight game on March 17, when he met with Dr. Keith Meister to ensure treatment is proceeding appropriately."
+        "status": "According to manager Dan Wilson, Crawford received a cortisone injection and “will be down for a couple of days.” Uncertain if he will be ready by Opening Day."
       },
       {
         "playerName": "Bryce Miller",
         "injury": "Left side oblique inflammation",
         "expectedReturn": "Opening Day status in jeopardy",
-        "status": "First full-effort bullpen cut short after discomfort during higher-intensity warmup pitches on March 11. Scheduled to throw a full bullpen session without limitations on March 17.More »"
+        "status": "Threw 30-pitch bullpen session with no issues on March 17. Manager Dan Wilson said Miller will throw “maybe another couple bullpen sessions where he’s not feeling it, and we’ll kind of go from there.”More »"
       },
       {
         "playerName": "Victor Robles",
@@ -577,16 +571,16 @@
     ],
     "137": [
       {
+        "playerName": "Parks Harber",
+        "injury": "Right hamstring strain",
+        "expectedReturn": "Late April or early May",
+        "status": "Departed March 14 game after hurting the hamstring while attempting to advance from first to third base. Will miss four to six weeks after an MRI revealed a Grade 2 hamstring strain."
+      },
+      {
         "playerName": "Hayden Birdsong",
         "injury": "Grade 2 right forearm/UCL sprain",
         "expectedReturn": "TBD",
-        "status": "Weighing treatment options and will visit Dr. Keith Meister in Dallas to get a second opinion."
-      },
-      {
-        "playerName": "Parks Harber",
-        "injury": "Right hamstring strain",
-        "expectedReturn": "TBD",
-        "status": "Departed March 14 game after hurting the hamstring while attempting to advance from first to third base. Was scheduled to undergo an MRI on March 16."
+        "status": "Weighing treatment options after visiting Dr. Keith Meister in Dallas for a second opinion."
       },
       {
         "playerName": "Joel Peguero",
@@ -712,9 +706,9 @@
     "141": [
       {
         "playerName": "José Berríos",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": null,
-        "status": "Popped up when Berríos underwent MRI exam for the WBC. Follow-up MRI showed \"different inflammation\" from a year ago, but no ligaments are involved. Will visit Dr. Meister on Tuesday."
+        "injury": "Right elbow stress fracture",
+        "expectedReturn": "Will open season on IL",
+        "status": "Diagnosed with stress fracture in right elbow. Will take a few days off while the Blue Jays monitor the fracture, but the expectation is that he will soon be able to pitch through it."
       },
       {
         "playerName": "Ricky Tiedemann (Blue Jays' No. 5 prospect)",
