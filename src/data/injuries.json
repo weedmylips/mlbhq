@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-19T14:39:35.129Z",
+  "lastUpdated": "2026-03-19T19:56:31.800Z",
   "teams": {
     "108": [
       {
@@ -711,6 +711,12 @@
     ],
     "141": [
       {
+        "playerName": "Trey Yesavage",
+        "injury": "Right shoulder impingement",
+        "expectedReturn": "Will open season on IL",
+        "status": "Reported to camp with issue. Hasn’t been shut down from throwing. Last pitched March 16 in a Minor League game."
+      },
+      {
         "playerName": "José Berríos",
         "injury": "Right elbow stress fracture",
         "expectedReturn": "Will open season on IL",
@@ -790,13 +796,13 @@
         "playerName": "Zack Wheeler",
         "injury": "Right upper extremity blood clot",
         "expectedReturn": "April-May",
-        "status": "Threw his second live batting practice session of the spring on March 18 in a simulated two-inning game and said it went well."
+        "status": "He will pitch in a Minor League game on March 23 at Carpenter Complex. It will be his first game action of the spring. Wheeler threw his second live batting practice session of the spring on March 18 in a simulated two-inning game."
       },
       {
         "playerName": "Orion Kerkering",
         "injury": "Strained right hamstring (Grade 1)",
         "expectedReturn": "Potentially by Opening Day",
-        "status": "He will pitch in his first spring game March 17, but it could be in a Minors game instead of a Grapefruit League game. Kerkering plans to pitch in three games before the end of camp. Based on his performance, he could be ready for Opening Day."
+        "status": "Will pitch in his first Grapefruit League game on March 20. Kerkering still has a chance to be ready for Opening Day."
       },
       {
         "playerName": "Aidan Miller (Phillies' No. 1 prospect, No. 23 overall)",
@@ -957,16 +963,16 @@
     ],
     "147": [
       {
+        "playerName": "Carlos Rodón",
+        "injury": "Loose bodies, bone spur in left elbow",
+        "expectedReturn": "April/May",
+        "status": "Threw 35 pitches in live batting practice on March 19, his second time facing live hitters since October elbow surgery. Will not appear in a Grapefruit League game, and will remain behind in Tampa to continue working when the team begins the season."
+      },
+      {
         "playerName": "Gerrit Cole",
         "injury": "Right elbow ligament tear",
         "expectedReturn": "May/June",
         "status": "Made Grapefruit League start vs. Red Sox on March 18, throwing 10 pitches and averaging 97.1 mph with his fastball. Will continue to pitch in game situations, including Minor League games, over the next several weeks."
-      },
-      {
-        "playerName": "Carlos Rodón",
-        "injury": "Loose bodies, bone spur in left elbow",
-        "expectedReturn": "April/May",
-        "status": "Tossed 30 pitches in live batting practice on March 14 after a 20-pitch session on March 9 -- his first time facing live hitters since October elbow surgery. Rodón could appear in at least one Grapefruit League game."
       },
       {
         "playerName": "Anthony Volpe",
