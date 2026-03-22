@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-21T19:04:21.056Z",
+  "lastUpdated": "2026-03-22T05:12:41.406Z",
   "teams": {
     "108": [
       {
@@ -41,6 +41,12 @@
     ],
     "109": [],
     "110": [
+      {
+        "playerName": "Keegan Akin",
+        "injury": "Adductor discomfort",
+        "expectedReturn": "TBD",
+        "status": "Felt discomfort while warming up in bullpen during Grapefruit League finale on March 21. Severity of the injury not yet known."
+      },
       {
         "playerName": "Heston Kjerstad",
         "injury": "Right hamstring tightness",
@@ -126,8 +132,8 @@
       {
         "playerName": "Seiya Suzuki",
         "injury": "Right knee",
-        "expectedReturn": "Day to day",
-        "status": "MRI exam revealed a posterior cruciate ligament sprain. The outfielder (injured in Japan's quarterfinal loss to Venezuela) has resumed light throwing and hitting as Cubs determine if an IL stint is necessary."
+        "expectedReturn": "April",
+        "status": "Injured on March 14 in the World Baseball Classic, Suzuki has resumed hitting and throwing. He is expected to miss Opening Day, but the Cubs are holding off on an IL decision for the time being."
       },
       {
         "playerName": "Jordan Wicks",
@@ -162,6 +168,12 @@
     ],
     "113": [
       {
+        "playerName": "Caleb Ferguson",
+        "injury": "Mild right oblique strain",
+        "expectedReturn": "April",
+        "status": "Ferguson is scheduled to undergo a second MRI in Cincinnati on March 25 to confirm if he's healing well. If doctors like his progress, the lefty could begin a throwing program."
+      },
+      {
         "playerName": "Brady Singer",
         "injury": "Right index finger blister",
         "expectedReturn": "March 23",
@@ -172,12 +184,6 @@
         "injury": "Right elbow surgery",
         "expectedReturn": "July",
         "status": "Had arthroscopic surgery March 11 to remove bone chips and loose bodies from right elbow. Shutdown from throwing for six weeks, he is expected to miss 14-16 weeks."
-      },
-      {
-        "playerName": "Caleb Ferguson",
-        "injury": "Mild right oblique strain",
-        "expectedReturn": "April",
-        "status": "MRI revealed Ferguson's injury and he will not pitch for at least two weeks. Will undergo a second MRI in Cincinnati after camp breaks."
       }
     ],
     "114": [
@@ -257,6 +263,12 @@
       }
     ],
     "116": [
+      {
+        "playerName": "Gleyber Torres",
+        "injury": "Lower back tightness",
+        "expectedReturn": "March 23",
+        "status": "Scratched from lineup on March 21. Expected to play March 23."
+      },
       {
         "playerName": "Jake Rogers",
         "injury": "Mild concussion",
@@ -454,6 +466,12 @@
     ],
     "121": [
       {
+        "playerName": "Mike Tauchman",
+        "injury": "Left knee soreness",
+        "expectedReturn": "TBA",
+        "status": "Exited the March 21 game after four innings due to knee discomfort and underwent an MRI. Potential readiness for Opening Day unclear."
+      },
+      {
         "playerName": "Francisco Lindor",
         "injury": "Stress reaction in left hamate bone",
         "expectedReturn": "Likely Opening Day",
@@ -584,7 +602,7 @@
         "playerName": "J.P. Crawford",
         "injury": "Right shoulder soreness",
         "expectedReturn": "Opening Day hopeful",
-        "status": "Received a cortisone injection and “will be down for a couple of days,” per manager Dan Wilson, after which Mariners will reassess his status for the final week of Cactus League games -- and if he'll be ready by Opening Day.More »"
+        "status": "Took swings in the batting cage for the third straight day on March 21, upon returning from Texas after a consultation with Dr. Keith Meister, which included a cortisone shot. Still unclear how much work he's done throwing.More »"
       },
       {
         "playerName": "Bryce Miller",
@@ -601,16 +619,16 @@
     ],
     "137": [
       {
+        "playerName": "Hayden Birdsong",
+        "injury": "Grade 2 right forearm/UCL sprain (60-day IL)",
+        "expectedReturn": "2027",
+        "status": "Will undergo season-ending Tommy John surgery with Dr. Keith Meister on March 25.Read more >>"
+      },
+      {
         "playerName": "Harrison Bader",
         "injury": "Left hamstring tightness",
         "expectedReturn": "Day to day",
         "status": "Hasn't played since March 16, but the Giants are optimistic he'll be ready for Opening Night on March 25."
-      },
-      {
-        "playerName": "Hayden Birdsong",
-        "injury": "Grade 2 right forearm/UCL sprain",
-        "expectedReturn": "2027",
-        "status": "Will undergo season-ending Tommy John surgery with Dr. Keith Meister next week.Read more >>"
       },
       {
         "playerName": "Parks Harber",
@@ -779,6 +797,12 @@
     ],
     "142": [
       {
+        "playerName": "Austin Martin",
+        "injury": "Concussion",
+        "expectedReturn": "March 22",
+        "status": "Expected to return to the lineup on March 22.More >"
+      },
+      {
         "playerName": "Travis Adams",
         "injury": "Right elbow inflammation",
         "expectedReturn": "April",
@@ -789,12 +813,6 @@
         "injury": "Right shoulder impingement",
         "expectedReturn": "April",
         "status": "Has begun playing catch; threw at 60 feet on March 19 and 75 feet on March 20."
-      },
-      {
-        "playerName": "Austin Martin",
-        "injury": "Concussion",
-        "expectedReturn": "Late March",
-        "status": "Went through a workout, including some baseball activities, on March 19. Team is encouraged about his progress.More >"
       },
       {
         "playerName": "Pablo López",
@@ -887,6 +905,12 @@
     ],
     "145": [
       {
+        "playerName": "Kyle Teel",
+        "injury": "Right hamstring strain",
+        "expectedReturn": "Early April",
+        "status": "Ran some light sprints on March 20, while also hitting. Doing all the catching he needs to do with no pain. Hopes to return some time after the April 2 home opener, but no official timetable."
+      },
+      {
         "playerName": "Brooks Baldwin",
         "injury": "Right elbow soreness",
         "expectedReturn": "Day to day",
@@ -903,12 +927,6 @@
         "injury": "Tommy John surgery",
         "expectedReturn": "12 to 18 months",
         "status": "Exited March 14 start with right elbow soreness. Will undergo season-ending Tommy John surgery in the coming weeks; the procedure will be performed by Dr. Keith Meister."
-      },
-      {
-        "playerName": "Kyle Teel",
-        "injury": "Right hamstring strain",
-        "expectedReturn": "4-6 weeks",
-        "status": "Suffered a Grade 2 strain playing with Team Italy on March 10 in World Baseball Classic. Officially returned to White Sox on March 12 to continue treatment. Will open the season on IL."
       },
       {
         "playerName": "Ky Bush",
@@ -1013,10 +1031,16 @@
     ],
     "158": [
       {
+        "playerName": "Quinn Priester",
+        "injury": "Neurogenic thoracic outlet syndrome",
+        "expectedReturn": "No sooner than late April/early May",
+        "status": "Was \"really happy\" with a March 21 bullpen session and will remain in Arizona to continue a throwing program."
+      },
+      {
         "playerName": "Rob Zastryzny",
         "injury": "Left shoulder strain",
         "expectedReturn": "Early April",
-        "status": "Diagnosed with a left rhomboid strain while pitching in the World Baseball Classic. Aiming for bullpen session March 21 or 22."
+        "status": "Diagnosed with a left rhomboid strain while pitching in the World Baseball Classic and will open the season on the injured list."
       },
       {
         "playerName": "Craig Yoho",
@@ -1025,22 +1049,10 @@
         "status": "Suffered right soleus injury on March 12. Aiming for April 15 return to games."
       },
       {
-        "playerName": "Logan Henderson",
-        "injury": "Mild right elbow soreness",
-        "expectedReturn": "Day to day",
-        "status": "Scheduled for multi-inning appearance in a game on March 20."
-      },
-      {
         "playerName": "Akil Baddoo",
         "injury": "Left quad strain",
         "expectedReturn": "June",
         "status": "Injured running to first base on March 9, and an MRI revealed a more serious injury than initially believed."
-      },
-      {
-        "playerName": "Quinn Priester",
-        "injury": "Neurogenic thoracic outlet syndrome",
-        "expectedReturn": "No sooner than late April/early May",
-        "status": "Continuing to ramp up throwing program; scheduled for a bullpen session on March 21."
       },
       {
         "playerName": "Steward Berroa",
