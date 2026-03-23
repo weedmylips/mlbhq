@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-23T15:40:39.271Z",
+  "lastUpdated": "2026-03-23T20:00:57.540Z",
   "teams": {
     "108": [
       {
@@ -139,7 +139,7 @@
         "playerName": "Seiya Suzuki",
         "injury": "Right knee",
         "expectedReturn": "April",
-        "status": "Injured March 14 in the World Baseball Classic. Resumed hitting and throwing. Has modified knee brace to wear while playing. Will miss Opening Day. No official IL decision yet."
+        "status": "Injured March 14 in the World Baseball Classic. Resumed hitting and throwing. Has modified knee brace to wear while playing. Will begin the season on the 10-day IL."
       },
       {
         "playerName": "Jordan Wicks",
@@ -449,25 +449,25 @@
         "playerName": "DJ Herz",
         "injury": "Left UCL sprain",
         "expectedReturn": "2026",
-        "status": "Threw off the mound for the first time on March 13."
+        "status": "Progressing through throwing program; threw a bullpen session on March 20."
       },
       {
         "playerName": "Trevor Williams",
         "injury": "Right elbow sprain",
         "expectedReturn": "2026",
-        "status": "Began throwing progression and completed 25 throws at 60 feet."
+        "status": "Continuing throwing progression; throwing on flat ground at 125 feet."
       },
       {
         "playerName": "Jarlin Susana (Nationals' No. 4 prospect, MLB No. 80)",
         "injury": "Right lat surgery",
         "expectedReturn": "2026",
-        "status": "Threw 15 pitches at a distance of 60 feet on Feb. 20; continuing arm care and throwing progression."
+        "status": "Threw 15 pitches at a distance of 60 feet on Feb. 20; continuing throwing progressing, with flat ground throwing three times a week."
       },
       {
         "playerName": "Travis Sykora (Nationals' No. 2 prospect, MLB No. 54)",
         "injury": "Right UCL reconstruction",
         "expectedReturn": "2027",
-        "status": "Threw 15 pitches at a distance of 60 feet on Feb. 20; continuing arm care and throwing progression."
+        "status": "Continuing throwing progression, including throwing on flat ground three times a week."
       }
     ],
     "121": [
@@ -546,25 +546,25 @@
         "playerName": "Sung-Mun Song",
         "injury": "Right oblique tightness",
         "expectedReturn": "Mid-April",
-        "status": "Sustained an oblique injury during the offseason, then aggravated it during a game on March 5. Returned on March 22 in a Triple-A game but will open the season on the IL and soon begin a rehab assignment."
+        "status": "Sustained an oblique injury during the offseason, then aggravated it during a game on March 5. Returned on March 22 in a Triple-A game but will open the season on the IL and expected to need a rehab assignment."
       },
       {
         "playerName": "Jason Adam",
         "injury": "Left quadriceps tendon rupture",
         "expectedReturn": "Possibly Opening Day",
-        "status": "Underwent quadriceps surgery in September and has long targeted Opening Day for his return. Pitched a 1-2-3 inning on March 20 and should appear in one more Cactus League game, leaving Opening Day as a distinct possibility."
+        "status": "Underwent quadriceps surgery in September and has long targeted Opening Day for his return. Pitched a 1-2-3 inning on March 20."
       },
       {
         "playerName": "Griffin Canning",
         "injury": "Left Achilles tear",
         "expectedReturn": "Late April or May",
-        "status": "Faced the Mariners in a \"B\" Game on a back field on March 20, his first game-like setting since his 2025 season ended in June because of the injury. Pitched a scoreless inning with three strikeouts."
+        "status": "Faced the Mariners in a \"B\" game on a back field on March 20, his first game-like setting since his 2025 season ended in June because of the injury. Pitched a scoreless inning with three strikeouts."
       },
       {
         "playerName": "Yuki Matsui",
         "injury": "Left groin strain",
         "expectedReturn": "Mid-April",
-        "status": "Missed the World Baseball Classic due to the injury and will begin the season on the IL, but is expected to face hitters on the back fields in the coming days."
+        "status": "Missed the World Baseball Classic due to the injury and will begin the season on the IL, but is expected to face hitters on the back fields in Arizona."
       },
       {
         "playerName": "Matt Waldron",
@@ -588,7 +588,7 @@
         "playerName": "Will Wagner",
         "injury": "Pulled oblique",
         "expectedReturn": "TBD",
-        "status": "Sustained the injury in early March, and as a result has only appeared in five Cactus League games."
+        "status": "Sustained the injury in early March and as a result only appeared in five Cactus League games."
       },
       {
         "playerName": "Jhony Brito",
@@ -700,6 +700,12 @@
       }
     ],
     "139": [
+      {
+        "playerName": "Gavin Lux",
+        "injury": "Right shoulder impingement",
+        "expectedReturn": "Possibly mid-April",
+        "status": "Dealt with soreness throughout camp, first \"general\" and in his oblique then in his shoulder. Felt \"OK\" after throwing and playing on March 22. Visited Dr. Koco Eaton on March 23."
+      },
       {
         "playerName": "Taylor Walls",
         "injury": "Rib tip syndrome, right oblique strain",
@@ -826,7 +832,13 @@
         "playerName": "Orion Kerkering",
         "injury": "Strained right hamstring (Grade 1)",
         "expectedReturn": "As early as April 7",
-        "status": "Will pitch in a Minor League game on March 23."
+        "status": "Pitched in a Minor League game on March 23 in Clearwater. It was his third appearance of the spring."
+      },
+      {
+        "playerName": "Zack Wheeler",
+        "injury": "Right upper extremity blood clot",
+        "expectedReturn": "April",
+        "status": "He pitched a two-inning simulated game at Carpenter Complex in Clearwater on March 23. It went well. It was his first game of the spring. He might need only three or four more starts before he is ready to rejoin the rotation."
       },
       {
         "playerName": "Aidan Miller (Phillies' No. 1 prospect, No. 23 overall)",
@@ -839,12 +851,6 @@
         "injury": "Soreness/tendinitis in both knees",
         "expectedReturn": "TBD",
         "status": "Did not play this spring before being optioned to Minor League camp on March 7. Has been swinging at bat as of March 22."
-      },
-      {
-        "playerName": "Zack Wheeler",
-        "injury": "Right upper extremity blood clot",
-        "expectedReturn": "April-May",
-        "status": "He will pitch in a Minor League game on March 23 at Carpenter Complex. It will be his first game action of the spring. Wheeler threw his second live batting practice session of the spring on March 18 in a simulated two-inning game."
       },
       {
         "playerName": "Max Lazar",
