@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-23T08:39:31.673Z",
+  "lastUpdated": "2026-03-23T15:40:39.271Z",
   "teams": {
     "108": [
       {
@@ -854,6 +854,12 @@
       }
     ],
     "144": [
+      {
+        "playerName": "Spencer Strider",
+        "injury": "Left oblique strain",
+        "expectedReturn": "Second half of April",
+        "status": "Strider felt some discomfort after his March 17 start in a Minor League game. The Braves are hopeful they prevented a significant tear. But while there's hope the pitcher will miss just a couple weeks, there's always uncertainty surrounding oblique strains."
+      },
       {
         "playerName": "Ha-Seong Kim",
         "injury": "Torn tendon in right middle finger",
