@@ -85,16 +85,18 @@ export function mergeRosterData(activeData, fullData, scraped) {
   // Merge with scraped injury data from static JSON (updated by GitHub Actions cron)
   const scrapedMap = new Map(scraped.map((s) => [s.playerName.toLowerCase(), s]));
 
-  const injured = apiInjured.map((p) => {
-    const match = scrapedMap.get(p.name.toLowerCase());
-    return {
-      ...p,
-      injury: match?.injury || p.note || null,
-      expectedReturn: match?.expectedReturn || null,
-      // Long status paragraph from scraper; fall back to brief MLB API note
-      note: match?.status || p.note || null,
-    };
-  });
+  const injured = apiInjured
+    .map((p) => {
+      const match = scrapedMap.get(p.name.toLowerCase());
+      return {
+        ...p,
+        injury: match?.injury || p.note || null,
+        expectedReturn: match?.expectedReturn || null,
+        // Long status paragraph from scraper; fall back to brief MLB API note
+        note: match?.status || p.note || null,
+      };
+    })
+    .filter((p) => p.injury !== null);
 
   // Add scraped players not in the API injured list (day-to-day, spring training, etc.)
   const apiNames = new Set(apiInjured.map((p) => p.name.toLowerCase()));

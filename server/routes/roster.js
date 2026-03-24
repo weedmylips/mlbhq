@@ -26,7 +26,7 @@ router.get('/roster', async (req, res) => {
     const result = await getOrFetch(cacheKey, async () => {
       const [activeResp, fullResp] = await Promise.all([
         fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/roster?rosterType=active&hydrate=person(stats(type=season,group=[hitting,pitching]))`),
-        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/roster?rosterType=fullRoster`),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/roster?rosterType=40Man`),
       ]);
 
       const activeData = await activeResp.json();
