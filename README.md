@@ -22,14 +22,6 @@ npm install
    cp .env.example .env
    ```
 
-2. **OpenWeatherMap API Key** (optional, for stadium weather):
-   - Sign up at [openweathermap.org](https://openweathermap.org/api)
-   - Get a free API key (Current Weather is free tier)
-   - Add it to `.env`:
-     ```
-     OPENWEATHER_API_KEY=your_actual_key
-     ```
-
 ## Running Locally
 
 ```bash

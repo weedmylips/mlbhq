@@ -88,12 +88,3 @@ export function useHotCold(teamId) {
   });
 }
 
-export function useWeather(lat, lng, venue) {
-  return useQuery({
-    queryKey: ['weather', lat, lng],
-    queryFn: () =>
-      fetchApi(`/api/weather?lat=${lat}&lng=${lng}&venue=${encodeURIComponent(venue)}`),
-    refetchInterval: 600000,
-    enabled: !!lat && !!lng,
-  });
-}

@@ -67,7 +67,6 @@ No test suite exists in this project.
 | Live game | 15s |
 | Games/schedule | 60s (live), 300s (no game) |
 | Roster, stats, standings | 300s |
-| Weather | 600s |
 | News | 900s |
 | Hot/Cold players | 7200s |
 
@@ -75,4 +74,3 @@ No test suite exists in this project.
 
 - `vercel.json` rewrites: `/api/*` passes through to serverless functions in `api/`, everything else → `index.html`
 - The `api/` directory mirrors `server/routes/` for Vercel serverless — both must stay in sync
-- `OPENWEATHER_API_KEY` env var is optional; weather widget silently hides if absent

@@ -8,7 +8,6 @@ import NextGame from './components/NextGame';
 import RecentGames from './components/RecentGames';
 import TeamStats from './components/TeamStats';
 import InjuryReport from './components/InjuryReport';
-import WeatherWidget from './components/WeatherWidget';
 import Schedule from './components/Schedule';
 import Standings from './components/Standings';
 import RosterTable from './components/RosterTable';
@@ -98,7 +97,6 @@ function OverviewTab({ gamesData, gamesLoading }) {
       ) : (
         <NextGame game={nextGame} />
       )}
-      <WeatherWidget />
 
       {/* Row 2 */}
       <RecentGames games={recentGames} />
