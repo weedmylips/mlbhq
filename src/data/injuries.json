@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-23T20:00:57.540Z",
+  "lastUpdated": "2026-03-24T05:16:08.392Z",
   "teams": {
     "108": [
       {
@@ -43,21 +43,21 @@
     "110": [
       {
         "playerName": "Luis Vázquez",
-        "injury": "Cut right thumb",
+        "injury": "Right thumb fracture",
         "expectedReturn": "TBD",
-        "status": "Hit by pitch in exhibition game vs. Nationals on March 22. Required stitches on right thumb. Will undergo X-rays on March 23 as a precaution."
+        "status": "Hit by pitch in March exhibition game and required stitches. X-rays later revealed right thumb fracture. No recovery timeline announced."
       },
       {
         "playerName": "Keegan Akin",
         "injury": "Adductor discomfort",
         "expectedReturn": "TBD",
-        "status": "Felt discomfort while warming up in bullpen during Grapefruit League finale on March 21. Will undergo imaging to determine severity of the injury on March 23."
+        "status": "Felt discomfort while warming up in bullpen on March 21. Was scheduled to undergo imaging in Baltimore on March 23."
       },
       {
         "playerName": "Heston Kjerstad",
         "injury": "Right hamstring tightness",
         "expectedReturn": "TBD",
-        "status": "Sustained injury during March 19 Grapefruit League game. Scheduled to undergo imaging in Baltimore on March 23."
+        "status": "Sustained injury during March 19 Grapefruit League game. Was scheduled to undergo imaging in Baltimore on March 23."
       },
       {
         "playerName": "Dylan Beavers",
@@ -174,10 +174,16 @@
     ],
     "113": [
       {
+        "playerName": "Hunter Greene",
+        "injury": "Right elbow surgery",
+        "expectedReturn": "July",
+        "status": "Had arthroscopic surgery March 11 to remove bone chips and loose bodies from elbow. Shut down from throwing for six weeks; expected to miss 14-16 weeks. Placed on 60-day IL March 23."
+      },
+      {
         "playerName": "Nick Lodolo",
         "injury": "Blister on left index finger",
         "expectedReturn": "TBD",
-        "status": "Exited final Cactus League start on Sunday after 10 pitches due to blister. Has dealt with blister on same finger each of past two seasons."
+        "status": "Exited final Cactus League start on Sunday after 10 pitches due to blister. Has dealt with blister on same finger each of past two seasons. Scheduled to play catch on March 24."
       },
       {
         "playerName": "Caleb Ferguson",
@@ -190,26 +196,26 @@
         "injury": "Right index finger blister",
         "expectedReturn": "March 23",
         "status": "Prematurely exited March 18 start as a precaution, blaming excessive Arizona heat for being a factor in blister's development. Noted it has already healed; should still start on March 23 in exhibition game."
-      },
-      {
-        "playerName": "Hunter Greene",
-        "injury": "Right elbow surgery",
-        "expectedReturn": "July",
-        "status": "Had arthroscopic surgery March 11 to remove bone chips and loose bodies from right elbow. Shutdown from throwing for six weeks, he is expected to miss 14-16 weeks."
       }
     ],
     "114": [
       {
+        "playerName": "Austin Hedges",
+        "injury": "Hit by pitch on right hand",
+        "expectedReturn": "TBD",
+        "status": "Hit on hand in ninth inning of 7-0 win over D-backs on March 23 and immediately exited. Set to get scans on March 24."
+      },
+      {
         "playerName": "George Valera",
         "injury": "Left calf strain",
-        "expectedReturn": "Week of March 16",
-        "status": "Cleared for all baseball activities but \"highly likely\" to open season on injured list, per manager Stephen Vogt."
+        "expectedReturn": "Early April",
+        "status": "Played in Minor League game on March 23 as build-up continues. Will open season on injured list, but team hopeful it's a short stay."
       },
       {
         "playerName": "Hunter Gaddis",
         "injury": "Right forearm tightness",
-        "expectedReturn": "TBD",
-        "status": "\"Highly likely\" to open season on injured list, per Stephen Vogt. Threw in Minor League game March 21 after throwing live BP March 18. Threw bullpen sessions March 12 and 15."
+        "expectedReturn": "April",
+        "status": "Set to throw in second Minor League game on March 24, after appearance on March 21. Will open season on injured list."
       },
       {
         "playerName": "Andrew Walters",
@@ -276,16 +282,16 @@
     ],
     "116": [
       {
+        "playerName": "Beau Brieske",
+        "injury": "Left adductor strain",
+        "expectedReturn": "End of May",
+        "status": "Suffered a groin strain while doing a routine workout off the mound. Placed on 60-day IL on March 23."
+      },
+      {
         "playerName": "Gleyber Torres",
         "injury": "Lower back tightness",
         "expectedReturn": "March 23",
-        "status": "Scratched from lineup on March 21. Expected to play March 23."
-      },
-      {
-        "playerName": "Jake Rogers",
-        "injury": "Mild concussion",
-        "expectedReturn": "Possibly Opening Day",
-        "status": "Placed in MLB concussion protocol. Hit in cage, ran and caught a bullpen session on March 21. Received stitches and diagnosed with mild concussion after being struck in face by his own bat while hitting in the cage."
+        "status": "Back in the lineup on March 23 after being scratched on March 21."
       },
       {
         "playerName": "Troy Melton",
@@ -310,12 +316,6 @@
         "injury": "Left oblique strain",
         "expectedReturn": "Start in Triple-A season",
         "status": "Played in Minor League Spring Training game on March 18."
-      },
-      {
-        "playerName": "Beau Brieske",
-        "injury": "Left adductor strain",
-        "expectedReturn": "Hopefully April",
-        "status": "Suffered a groin strain while doing a routine workout off the mound. Will not be ready for the start of the season."
       },
       {
         "playerName": "Trey Sweeney",
@@ -414,6 +414,12 @@
     ],
     "119": [
       {
+        "playerName": "Blake Snell",
+        "injury": "Left shoulder",
+        "expectedReturn": "Late May",
+        "status": "Slow-played his offseason throwing program due to lingering discomfort. He has resumed throwing bullpen sessions at a light intensity level."
+      },
+      {
         "playerName": "Evan Phillips",
         "injury": "Recovery from Tommy John surgery",
         "expectedReturn": "Second half of 2026",
@@ -430,12 +436,6 @@
         "injury": "Recovery from right shoulder surgery",
         "expectedReturn": "Possibly first half of 2026",
         "status": "Velocity is down from where it is expected to be, so the Dodgers are slow-playing him. He is ramping up to greater distances in his catch play."
-      },
-      {
-        "playerName": "Blake Snell",
-        "injury": "Left shoulder",
-        "expectedReturn": "Late April or early May",
-        "status": "Slow-played his offseason throwing program due to lingering discomfort. He has resumed throwing bullpen sessions at a light intensity level."
       },
       {
         "playerName": "Brock Stewart",
@@ -552,7 +552,7 @@
         "playerName": "Jason Adam",
         "injury": "Left quadriceps tendon rupture",
         "expectedReturn": "Possibly Opening Day",
-        "status": "Underwent quadriceps surgery in September and has long targeted Opening Day for his return. Pitched a 1-2-3 inning on March 20."
+        "status": "Underwent quadriceps surgery in September and has long targeted Opening Day for his return. Pitched a 1-2-3 inning on March 20 and 23."
       },
       {
         "playerName": "Griffin Canning",
@@ -628,7 +628,7 @@
         "playerName": "Harrison Bader",
         "injury": "Left hamstring tightness",
         "expectedReturn": "Day to day",
-        "status": "Went through a workout March 22 and is expected to be on the Giants' roster for Opening Night on March 25."
+        "status": "Participated in pregame batting practice March 23, following a workout the day before. Manager Tony Vitello expects Bader to be on the Giants' roster for Opening Night on March 25."
       },
       {
         "playerName": "Hayden Birdsong",
@@ -736,7 +736,7 @@
         "playerName": "Cody Bradford",
         "injury": "Left UCL surgery",
         "expectedReturn": "Mid-May",
-        "status": "Began facing hitters in live batting practice. Should be ready for a Minor League rehab assignment as the 2026 season opens."
+        "status": "Threw 25 pitches during live batting practice at Globe Life Field on March 23. Manager Skip Schumaker called it an “exciting” development, noting Bradford looked in control of his pitches."
       },
       {
         "playerName": "Cody Freeman",
