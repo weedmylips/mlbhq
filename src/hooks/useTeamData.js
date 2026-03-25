@@ -136,6 +136,24 @@ export function useHotCold(teamId) {
   });
 }
 
+export function useAnalytics(teamId) {
+  return useQuery({
+    queryKey: ['analytics', teamId],
+    queryFn: () => fetchApi(`/api/analytics?teamId=${teamId}`),
+    refetchInterval: 300000,
+    enabled: !!teamId,
+  });
+}
+
+export function useSituational(teamId) {
+  return useQuery({
+    queryKey: ['situational', teamId],
+    queryFn: () => fetchApi(`/api/situational?teamId=${teamId}`),
+    refetchInterval: 300000,
+    enabled: !!teamId,
+  });
+}
+
 export function useBvp(batterId, pitcherId) {
   return useQuery({
     queryKey: ['bvp', batterId, pitcherId],

@@ -416,6 +416,128 @@ async function handleBvp(req, res) {
   res.json(result);
 }
 
+// --- Analytics ---
+const analyticsCache = createCache(900, 120);
+const C_FIP = 3.10;
+
+function computeAdvanced(stat, isPitching) {
+  const result = {};
+  if (isPitching) {
+    const ip = parseFloat(stat.inningsPitched) || 0;
+    const hr = stat.homeRuns ?? 0;
+    const bb = stat.baseOnBalls ?? 0;
+    const hbp = stat.hitByPitch ?? 0;
+    const k = stat.strikeOuts ?? 0;
+    const h = stat.hits ?? 0;
+    const bf = stat.battersFaced ?? stat.atBats ?? 0;
+    result.fip = ip > 0 ? (((13 * hr) + (3 * (bb + hbp)) - (2 * k)) / ip + C_FIP).toFixed(2) : null;
+    result.kPct = bf > 0 ? ((k / bf) * 100).toFixed(1) : null;
+    result.bbPct = bf > 0 ? ((bb / bf) * 100).toFixed(1) : null;
+    const sf = stat.sacFlies ?? 0;
+    const denom = bf - k - hr + sf;
+    result.babip = denom > 0 ? ((h - hr) / denom).toFixed(3) : null;
+    result.hr9 = ip > 0 ? ((hr * 9) / ip).toFixed(2) : null;
+    result.goAo = stat.groundOutsToAirouts ?? null;
+    result.era = stat.era ?? null;
+    result.whip = stat.whip ?? null;
+    result.k = k; result.bb = bb; result.ip = stat.inningsPitched;
+    result.wins = stat.wins ?? 0; result.losses = stat.losses ?? 0;
+  } else {
+    const ab = stat.atBats ?? 0;
+    const h = stat.hits ?? 0;
+    const hr = stat.homeRuns ?? 0;
+    const bb = stat.baseOnBalls ?? 0;
+    const hbp = stat.hitByPitch ?? 0;
+    const sf = stat.sacFlies ?? 0;
+    const k = stat.strikeOuts ?? 0;
+    const pa = stat.plateAppearances ?? (ab + bb + hbp + sf);
+    const slg = parseFloat(stat.slg) || 0;
+    const avg = parseFloat(stat.avg) || 0;
+    result.iso = (slg - avg).toFixed(3);
+    result.kPct = pa > 0 ? ((k / pa) * 100).toFixed(1) : null;
+    result.bbPct = pa > 0 ? ((bb / pa) * 100).toFixed(1) : null;
+    const denom = ab - k - hr + sf;
+    result.babip = denom > 0 ? ((h - hr) / denom).toFixed(3) : null;
+    const ubb = bb - (stat.intentionalWalks ?? 0);
+    const singles = h - (stat.doubles ?? 0) - (stat.triples ?? 0) - hr;
+    const woba_num = 0.69*ubb + 0.72*hbp + 0.88*singles + 1.24*(stat.doubles??0) + 1.56*(stat.triples??0) + 2.01*hr;
+    const woba_denom = ab + bb - (stat.intentionalWalks??0) + sf + hbp;
+    result.woba = woba_denom > 0 ? (woba_num / woba_denom).toFixed(3) : null;
+    result.avg = stat.avg ?? null; result.obp = stat.obp ?? null;
+    result.slg = stat.slg ?? null; result.ops = stat.ops ?? null;
+    result.hr = hr; result.sb = stat.stolenBases ?? 0;
+    result.rbi = stat.rbi ?? 0; result.runs = stat.runs ?? 0;
+  }
+  return result;
+}
+
+function abbrevNameAnalytics(fullName) {
+  if (!fullName) return '';
+  const parts = fullName.split(' ');
+  return parts.length < 2 ? fullName : `${parts[0][0]}. ${parts.slice(1).join(' ')}`;
+}
+
+async function handleAnalytics(req, res) {
+  const teamId = req.query.teamId || 147;
+  const cacheKey = `analytics-${teamId}`;
+  const result = await analyticsCache.getOrFetch(cacheKey, async () => {
+    let season = new Date().getFullYear();
+    async function fetchData(s) {
+      return Promise.all([
+        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${s}`).then(r=>r.json()),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=${s}`).then(r=>r.json()),
+        fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`).then(r=>r.json()),
+        fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`).then(r=>r.json()),
+      ]);
+    }
+    let [hD, pD, phD, ppD] = await fetchData(season);
+    if (!hD.stats?.length) { season--; [hD, pD, phD, ppD] = await fetchData(season); }
+    const teamHitting = hD.stats?.[0]?.splits?.[0]?.stat || {};
+    const teamPitching = pD.stats?.[0]?.splits?.[0]?.stat || {};
+    const batters = (phD.stats?.[0]?.splits || [])
+      .filter(s => (s.stat?.plateAppearances || s.stat?.atBats || 0) >= 20)
+      .map(s => ({ name: abbrevNameAnalytics(s.player?.fullName), playerId: s.player?.id, ...computeAdvanced(s.stat, false) }))
+      .sort((a, b) => parseFloat(b.woba || 0) - parseFloat(a.woba || 0));
+    const pitchers = (ppD.stats?.[0]?.splits || [])
+      .filter(s => parseFloat(s.stat?.inningsPitched || 0) >= 10)
+      .map(s => ({ name: abbrevNameAnalytics(s.player?.fullName), playerId: s.player?.id, ...computeAdvanced(s.stat, true) }))
+      .sort((a, b) => parseFloat(a.fip || 99) - parseFloat(b.fip || 99));
+    return { teamHitting: computeAdvanced(teamHitting, false), teamPitching: computeAdvanced(teamPitching, true), batters, pitchers };
+  }, 900);
+  res.json(result);
+}
+
+// --- Situational ---
+const situationalCache = createCache(1800, 120);
+const SIT_CODES = [
+  { code: 'risp', label: 'RISP' },
+  { code: 'bases_loaded', label: 'Bases Loaded' },
+  { code: 'men_on', label: 'Men On' },
+  { code: 'bases_empty', label: 'Bases Empty' },
+];
+
+async function handleSituational(req, res) {
+  const teamId = req.query.teamId || 147;
+  const cacheKey = `situational-${teamId}`;
+  const result = await situationalCache.getOrFetch(cacheKey, async () => {
+    const season = new Date().getFullYear();
+    const fetches = SIT_CODES.map(async (sit) => {
+      const url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${season}&situationCodes=${sit.code}`;
+      const resp = await fetch(url);
+      const data = await resp.json();
+      const stat = data.stats?.[0]?.splits?.[0]?.stat || null;
+      return {
+        code: sit.code, label: sit.label,
+        stat: stat ? { avg: stat.avg??'-', obp: stat.obp??'-', slg: stat.slg??'-', ops: stat.ops??'-',
+          hr: stat.homeRuns??0, rbi: stat.rbi??0, hits: stat.hits??0, ab: stat.atBats??0,
+          bb: stat.baseOnBalls??0, k: stat.strikeOuts??0 } : null,
+      };
+    });
+    return Promise.all(fetches);
+  }, 1800);
+  res.json(result);
+}
+
 // --- Router ---
 const handlers = {
   player: handlePlayer,
@@ -425,6 +547,8 @@ const handlers = {
   highlights: handleHighlights,
   scoreboard: handleScoreboard,
   bvp: handleBvp,
+  analytics: handleAnalytics,
+  situational: handleSituational,
 };
 
 export default async function handler(req, res) {

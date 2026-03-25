@@ -16,10 +16,11 @@ import HotCold from './components/HotCold';
 import TransactionsFeed from './components/TransactionsFeed';
 import TeamLeaders from './components/TeamLeaders';
 import Scoreboard from './components/Scoreboard';
+import AdvancedStats from './components/AdvancedStats';
 import PitchingRotation from './components/PitchingRotation';
 import RecordBreakdown from './components/RecordBreakdown';
 import PlayerComparison from './components/PlayerComparison';
-import { LayoutDashboard, Users, CalendarDays, BarChart3, Trophy, Tv2 } from 'lucide-react';
+import { LayoutDashboard, Users, CalendarDays, BarChart3, Trophy, Tv2, FlaskConical } from 'lucide-react';
 
 const tabs = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
@@ -27,6 +28,7 @@ const tabs = [
   { id: 'schedule', label: 'Schedule', icon: CalendarDays },
   { id: 'standings', label: 'Standings', icon: BarChart3 },
   { id: 'leaders', label: 'Leaders', icon: Trophy },
+  { id: 'analytics', label: 'Analytics', icon: FlaskConical },
   { id: 'scores', label: 'Scores', icon: Tv2 },
 ];
 
@@ -82,6 +84,7 @@ export default function App() {
         {activeTab === 'schedule' && <Schedule />}
         {activeTab === 'standings' && <Standings />}
         {activeTab === 'leaders' && <TeamLeaders />}
+        {activeTab === 'analytics' && <AdvancedStats />}
         {activeTab === 'scores' && <Scoreboard />}
       </div>
 

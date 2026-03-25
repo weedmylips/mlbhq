@@ -7,6 +7,8 @@
     { "source": "/api/highlights", "destination": "/api/extra?route=highlights" },
     { "source": "/api/scoreboard", "destination": "/api/extra?route=scoreboard" },
     { "source": "/api/bvp", "destination": "/api/extra?route=bvp" },
+    { "source": "/api/analytics", "destination": "/api/extra?route=analytics" },
+    { "source": "/api/situational", "destination": "/api/extra?route=situational" },
     { "source": "/api/:path*", "destination": "/api/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
