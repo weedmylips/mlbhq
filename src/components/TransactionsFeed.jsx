@@ -36,7 +36,7 @@ export default function TransactionsFeed() {
       <div className="card md:col-span-3">
         <div className="flex items-center gap-2 mb-3">
           <ArrowRightLeft size={14} className="text-gray-400" />
-          <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">
+          <h3 className="text-sm font-bold team-section-header uppercase tracking-wider">
             Transactions
           </h3>
         </div>
@@ -51,7 +51,7 @@ export default function TransactionsFeed() {
     <div className="card md:col-span-3">
       <div className="flex items-center gap-2 mb-3">
         <ArrowRightLeft size={14} className="text-gray-400" />
-        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">
+        <h3 className="text-sm font-bold team-section-header uppercase tracking-wider">
           Transactions
         </h3>
         <span className="text-[10px] text-gray-600 ml-auto">Last 30 days</span>
@@ -62,7 +62,7 @@ export default function TransactionsFeed() {
           return (
             <div
               key={t.id}
-              className="flex items-start gap-2 py-2 border-b border-white/5 last:border-0"
+              className="flex items-start gap-2 py-2 border-b team-divider last:border-0"
             >
               <span className="text-[11px] text-gray-500 shrink-0 w-12 pt-0.5 font-mono">
                 {formatDate(t.date)}

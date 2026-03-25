@@ -18,7 +18,7 @@ function ArticleCard({ article, team }) {
       href={article.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-colors p-3"
+      className="flex flex-col bg-[rgba(var(--team-primary-rgb),0.04)] rounded-lg overflow-hidden hover:bg-[rgba(var(--team-primary-rgb),0.08)] transition-colors p-3"
     >
       <div className="flex items-center gap-2 mb-2">
         <img src={team.logo} alt="" className="w-4 h-4" />
@@ -54,7 +54,7 @@ export default function NewsFeed() {
 
   return (
     <div className="card md:col-span-3">
-      <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+      <h3 className="text-sm font-bold team-section-header uppercase tracking-wider mb-3 flex items-center gap-2">
         <Newspaper size={14} />
         {team.name} News
       </h3>
@@ -66,7 +66,7 @@ export default function NewsFeed() {
             href={`https://www.mlb.com/${team.abbr.toLowerCase()}/news`}
             target="_blank"
             rel="noopener noreferrer"
-            className="col-span-4 flex items-center gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+            className="col-span-4 flex items-center gap-3 p-4 bg-[rgba(var(--team-primary-rgb),0.04)] rounded-lg hover:bg-[rgba(var(--team-primary-rgb),0.08)] transition-colors"
           >
             <img src={team.logo} alt="" className="w-8 h-8" />
             <div>

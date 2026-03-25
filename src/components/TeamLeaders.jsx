@@ -8,7 +8,7 @@ function LeaderCategory({ category }) {
   if (!category.leaders?.length) return null;
 
   return (
-    <div className="bg-white/[0.02] rounded-lg p-3">
+    <div className="bg-[rgba(var(--team-primary-rgb),0.03)] rounded-lg p-3">
       <h4 className="text-[11px] font-bold text-[var(--team-accent)] uppercase tracking-wider mb-2">
         {category.label}
       </h4>
@@ -54,7 +54,7 @@ function SectionHeader({ icon: Icon, label }) {
       <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">
         {label}
       </h3>
-      <div className="flex-1 h-px bg-white/5" />
+      <div className="flex-1 h-px bg-[var(--team-divider)]" />
     </div>
   );
 }

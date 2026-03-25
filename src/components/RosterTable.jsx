@@ -8,7 +8,7 @@ function ExpandableRow({ player, children, isExpanded, onToggle }) {
     <>
       <tr
         className={`border-b border-white/5 cursor-pointer transition-colors ${
-          isExpanded ? 'bg-white/[0.06]' : 'hover:bg-white/5'
+          isExpanded ? 'bg-[rgba(var(--team-primary-rgb),0.06)]' : 'team-hover'
         }`}
         onClick={onToggle}
       >
@@ -49,7 +49,7 @@ export default function RosterTable() {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
       {/* Batters */}
       <div className="card overflow-x-auto">
-        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-bold team-section-header uppercase tracking-wider mb-3">
           Position Players
         </h3>
         <table className="w-full text-sm">
@@ -110,7 +110,7 @@ export default function RosterTable() {
 
       {/* Pitchers */}
       <div className="card overflow-x-auto">
-        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-bold team-section-header uppercase tracking-wider mb-3">
           Pitchers
         </h3>
         <table className="w-full text-sm">

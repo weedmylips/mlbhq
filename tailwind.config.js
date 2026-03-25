@@ -8,9 +8,9 @@ export default {
         mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       colors: {
-        surface: '#0a0a0f',
-        card: 'rgba(12,12,24,0.9)',
-        border: '#1e1e2e',
+        surface: 'var(--team-page-bg)',
+        card: 'var(--team-card-bg)',
+        border: 'var(--team-card-border)',
       },
     },
   },

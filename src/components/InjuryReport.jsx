@@ -28,7 +28,7 @@ export default function InjuryReport() {
 
   return (
     <div className="card">
-      <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+      <h3 className="text-sm font-bold team-section-header uppercase tracking-wider mb-3 flex items-center gap-2">
         <AlertCircle size={14} className="text-red-400" />
         Injury Report
       </h3>
@@ -44,7 +44,7 @@ export default function InjuryReport() {
               <div key={p.name} className="rounded overflow-hidden">
                 <button
                   onClick={() => toggle(p.name)}
-                  className="w-full flex items-center justify-between py-1.5 px-1 text-sm text-left hover:bg-white/5 cursor-pointer rounded transition-colors"
+                  className="w-full flex items-center justify-between py-1.5 px-1 text-sm text-left team-hover cursor-pointer rounded transition-colors"
                 >
                   <div className="flex items-center gap-2">
                     <span className="text-gray-300">{p.name}</span>
@@ -65,7 +65,7 @@ export default function InjuryReport() {
                   </div>
                 </button>
                 {isOpen && (
-                  <div className="bg-white/5 rounded-b px-3 pb-2 pt-1 text-xs text-gray-400 space-y-1">
+                  <div className="bg-[rgba(var(--team-primary-rgb),0.04)] rounded-b px-3 pb-2 pt-1 text-xs text-gray-400 space-y-1">
                     <div>
                       <span className="text-gray-500">Injury: </span>
                       {p.injury || '—'}

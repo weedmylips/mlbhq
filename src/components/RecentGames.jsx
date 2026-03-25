@@ -15,7 +15,7 @@ function GameRow({ game, teamId }) {
   const gameDate = new Date(game.gameDate);
 
   return (
-    <div className="rounded bg-white/5">
+    <div className="rounded bg-[rgba(var(--team-primary-rgb),0.04)]">
       <button
         className="w-full flex items-center justify-between py-1.5 px-2 text-left"
         onClick={() => setExpanded((v) => !v)}
@@ -68,7 +68,7 @@ export default function RecentGames({ games = [] }) {
 
   return (
     <div className="card md:col-span-2">
-      <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
+      <h3 className="text-sm font-bold team-section-header uppercase tracking-wider mb-3">
         Recent Games
       </h3>
       {last5.length === 0 ? (

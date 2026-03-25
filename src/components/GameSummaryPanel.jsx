@@ -111,7 +111,7 @@ export default function GameSummaryPanel({ gamePk }) {
 
   if (isLoading) {
     return (
-      <div className="mt-2 pt-2 border-t border-white/10 text-center text-xs text-gray-500 py-2">
+      <div className="mt-2 pt-2 border-t team-divider text-center text-xs text-gray-500 py-2">
         Loading game summary…
       </div>
     );
@@ -119,7 +119,7 @@ export default function GameSummaryPanel({ gamePk }) {
 
   if (isError || !data) {
     return (
-      <div className="mt-2 pt-2 border-t border-white/10 text-xs text-gray-500 py-1">
+      <div className="mt-2 pt-2 border-t team-divider text-xs text-gray-500 py-1">
         Could not load game summary.
       </div>
     );
@@ -130,7 +130,7 @@ export default function GameSummaryPanel({ gamePk }) {
   const home = teams?.home;
 
   return (
-    <div className="mt-2 pt-2 border-t border-white/10 text-xs space-y-4">
+    <div className="mt-2 pt-2 border-t team-divider text-xs space-y-4">
 
       {/* Line score — centered */}
       <div className="flex justify-center overflow-x-auto">
