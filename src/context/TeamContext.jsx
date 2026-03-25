@@ -5,11 +5,11 @@ const TeamContext = createContext(null);
 
 const DEFAULT_TEAM_ID = 147; // NYY
 
-function hexToRgb(hex) {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-  return `${r}, ${g}, ${b}`;
+function luminance(hex) {
+  const r = parseInt(hex.slice(1, 3), 16) / 255;
+  const g = parseInt(hex.slice(3, 5), 16) / 255;
+  const b = parseInt(hex.slice(5, 7), 16) / 255;
+  return 0.299 * r + 0.587 * g + 0.114 * b;
 }
 
 export function TeamProvider({ children }) {
@@ -29,8 +29,9 @@ export function TeamProvider({ children }) {
     root.style.setProperty('--team-primary', team.primary);
     root.style.setProperty('--team-accent', team.accent);
     root.style.setProperty('--team-text', team.textColor);
-    root.style.setProperty('--team-primary-rgb', hexToRgb(team.primary));
-    root.style.setProperty('--team-accent-rgb', hexToRgb(team.accent));
+    // Pick the brighter of primary/accent so it's always visible on dark backgrounds
+    const highlight = luminance(team.primary) > luminance(team.accent) ? team.primary : team.accent;
+    root.style.setProperty('--team-highlight', highlight);
   }, [team]);
 
   return (

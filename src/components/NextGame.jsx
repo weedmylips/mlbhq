@@ -10,7 +10,7 @@ export default function NextGame({ game }) {
   if (!game) {
     return (
       <div className="card md:col-span-2">
-        <h3 className="text-sm font-bold team-section-header uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
           Next Game
         </h3>
         <p className="text-gray-500 text-center py-6">No upcoming games scheduled</p>
@@ -34,7 +34,7 @@ export default function NextGame({ game }) {
   return (
     <div className="card md:col-span-2">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-bold team-section-header uppercase tracking-wider">
+        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">
           Next Game
         </h3>
         <div className="flex items-center gap-1 text-xs text-gray-400">
@@ -89,13 +89,13 @@ export default function NextGame({ game }) {
       </div>
 
       {h2h && h2h.gamesPlayed > 0 && (
-        <div className="mt-3 pt-2 border-t team-divider text-center text-xs text-gray-500">
+        <div className="mt-3 pt-2 border-t border-white/5 text-center text-xs text-gray-500">
           <span className="font-mono font-bold text-gray-300">{h2h.wins}-{h2h.losses}</span>
           {' '}vs {opponentTeam?.abbr} this season
         </div>
       )}
       {h2h && h2h.gamesPlayed === 0 && (
-        <div className="mt-3 pt-2 border-t team-divider text-center text-xs text-gray-500">
+        <div className="mt-3 pt-2 border-t border-white/5 text-center text-xs text-gray-500">
           First meeting this season
         </div>
       )}

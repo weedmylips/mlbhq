@@ -8,8 +8,8 @@ function LeaderCategory({ category }) {
   if (!category.leaders?.length) return null;
 
   return (
-    <div className="bg-[rgba(var(--team-primary-rgb),0.03)] rounded-lg p-3">
-      <h4 className="text-[11px] font-bold team-section-header uppercase tracking-wider mb-2">
+    <div className="bg-white/[0.02] rounded-lg p-3">
+      <h4 className="text-[11px] font-bold text-[var(--team-highlight)] uppercase tracking-wider mb-2">
         {category.label}
       </h4>
       <div className="space-y-1.5">
@@ -17,7 +17,7 @@ function LeaderCategory({ category }) {
             <div key={leader.playerId || i} className="flex items-center gap-2">
               <span
                 className={`text-[10px] w-3 text-right shrink-0 font-mono ${
-                  i === 0 ? 'text-[var(--team-section-header)]' : 'text-gray-600'
+                  i === 0 ? 'text-[var(--team-highlight)]' : 'text-gray-600'
                 }`}
               >
                 {leader.rank}
@@ -50,11 +50,11 @@ function LeaderCategory({ category }) {
 function SectionHeader({ icon: Icon, label }) {
   return (
     <div className="flex items-center gap-2 mb-3">
-      <Icon size={14} className="text-[var(--team-section-header)]" />
+      <Icon size={14} className="text-[var(--team-highlight)]" />
       <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">
         {label}
       </h3>
-      <div className="flex-1 h-px bg-[var(--team-divider)]" />
+      <div className="flex-1 h-px bg-white/5" />
     </div>
   );
 }

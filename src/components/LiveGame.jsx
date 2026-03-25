@@ -6,7 +6,7 @@ function BaseRunners({ runners }) {
   const baseStyle = (active) =>
     `w-5 h-5 rotate-45 border-2 ${
       active
-        ? 'bg-[var(--team-accent)] border-[var(--team-accent)]'
+        ? 'bg-[var(--team-highlight)] border-[var(--team-highlight)]'
         : 'border-gray-600 bg-transparent'
     }`;
 

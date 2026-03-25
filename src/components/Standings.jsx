@@ -12,7 +12,7 @@ function TeamRow({ t, isSelected }) {
       className={`border-b border-white/5 ${
         isSelected
           ? 'bg-[var(--team-primary)]/10 team-glow'
-          : 'team-hover'
+          : 'hover:bg-white/5'
       }`}
     >
       <td className="py-2 pr-4">
@@ -64,7 +64,7 @@ function TeamRow({ t, isSelected }) {
 function DivisionTable({ division, selectedTeam }) {
   return (
     <div className="card overflow-x-auto">
-      <h3 className="text-sm font-bold team-section-header uppercase tracking-wider mb-3">
+      <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
         {division.division ||
           getTeamById(division.teams[0]?.teamId)?.division ||
           'Division'}
@@ -111,7 +111,7 @@ function WildCardTable({ leagueId, data, selectedTeam }) {
 
   return (
     <div className="card overflow-x-auto">
-      <h2 className="text-sm font-bold team-section-header uppercase tracking-wider mb-3">
+      <h2 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
         {LEAGUE_NAMES[leagueId]} Wild Card
       </h2>
       <table className="w-full text-sm">
@@ -334,7 +334,7 @@ function LeagueSection({ leagueId, data, selectedTeam, viewType }) {
 
   return (
     <div className="space-y-4">
-      <h2 className="text-base font-bold team-section-header uppercase tracking-widest px-1">
+      <h2 className="text-base font-bold text-gray-300 uppercase tracking-widest px-1">
         {LEAGUE_NAMES[leagueId]}
       </h2>
       {data.map((division) => (
@@ -383,7 +383,7 @@ export default function Standings() {
             onClick={() => setViewType('division')}
             className={`px-4 py-1.5 text-sm font-medium rounded-md transition-all ${
               viewType === 'division'
-                ? 'bg-[var(--team-primary)]/20 text-[var(--team-accent)] border border-[var(--team-primary)]/30'
+                ? 'bg-[var(--team-primary)]/20 text-[var(--team-highlight)] border border-[var(--team-primary)]/30'
                 : 'text-gray-400 hover:text-gray-300'
             }`}
           >
@@ -393,7 +393,7 @@ export default function Standings() {
             onClick={() => setViewType('wildCard')}
             className={`px-4 py-1.5 text-sm font-medium rounded-md transition-all ${
               viewType === 'wildCard'
-                ? 'bg-[var(--team-primary)]/20 text-[var(--team-accent)] border border-[var(--team-primary)]/30'
+                ? 'bg-[var(--team-primary)]/20 text-[var(--team-highlight)] border border-[var(--team-primary)]/30'
                 : 'text-gray-400 hover:text-gray-300'
             }`}
           >

@@ -45,7 +45,7 @@ export default function TeamStats() {
   return (
     <>
       <div className="card">
-        <h3 className="text-sm font-bold team-section-header uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
           Team Batting
         </h3>
         <div className="grid grid-cols-3 gap-2 sm:gap-3">
@@ -57,8 +57,8 @@ export default function TeamStats() {
           <StatBox label="RBI" value={data.hitting.rbi} rank={data.hittingRanks?.rbi} leagueAbbr={leagueAbbr} />
         </div>
         {data.topBatters?.length > 0 && (
-          <div className="mt-3 pt-3 border-t team-divider">
-            <div className="text-[10px] text-[var(--team-muted-text)] uppercase tracking-wider mb-1.5">Top Batters</div>
+          <div className="mt-3 pt-3 border-t border-gray-700/50">
+            <div className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">Top Batters</div>
             <div>
               {data.topBatters.map((p, i) => (
                 <PlayerRow
@@ -72,7 +72,7 @@ export default function TeamStats() {
         )}
       </div>
       <div className="card">
-        <h3 className="text-sm font-bold team-section-header uppercase tracking-wider mb-3">
+        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
           Team Pitching
         </h3>
         <div className="grid grid-cols-3 gap-2 sm:gap-3">
@@ -84,8 +84,8 @@ export default function TeamStats() {
           <StatBox label="L" value={data.pitching.losses} rank={data.pitchingRanks?.losses} leagueAbbr={leagueAbbr} />
         </div>
         {data.topPitchers?.length > 0 && (
-          <div className="mt-3 pt-3 border-t team-divider">
-            <div className="text-[10px] text-[var(--team-muted-text)] uppercase tracking-wider mb-1.5">Top Pitchers</div>
+          <div className="mt-3 pt-3 border-t border-gray-700/50">
+            <div className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">Top Pitchers</div>
             <div>
               {data.topPitchers.map((p, i) => (
                 <PlayerRow

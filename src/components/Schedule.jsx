@@ -84,14 +84,14 @@ function ScheduleGameRow({ game, teamId }) {
 
   if (isLive) {
     return (
-      <div className="py-2 px-3 rounded text-sm bg-[rgba(var(--team-primary-rgb),0.03)]">
+      <div className="py-2 px-3 rounded text-sm bg-white/[0.02]">
         {rowContent}
       </div>
     );
   }
 
   return (
-    <div className="rounded text-sm bg-[rgba(var(--team-primary-rgb),0.04)] team-hover">
+    <div className="rounded text-sm bg-white/5">
       <button
         className="w-full py-2 px-3 text-left"
         onClick={() => setExpanded((v) => !v)}
@@ -138,12 +138,12 @@ export default function Schedule() {
 
   return (
     <div className="card">
-      <h3 className="text-sm font-bold team-section-header uppercase tracking-wider mb-4">
+      <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">
         Schedule
       </h3>
       {Object.entries(grouped).map(([month, monthGames]) => (
         <div key={month} className="mb-4">
-          <h4 className="text-xs font-bold text-[var(--team-accent)] uppercase mb-2">
+          <h4 className="text-xs font-bold text-[var(--team-highlight)] uppercase mb-2">
             {month}
           </h4>
           <div className="space-y-1">

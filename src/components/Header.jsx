@@ -16,7 +16,9 @@ export default function Header() {
       }}
     >
       <div className="flex items-center gap-4">
-        <img src={team.logo} alt={team.name} className="w-10 h-10 sm:w-14 sm:h-14 shrink-0" style={{ filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.3)) drop-shadow(0 1px 3px rgba(0,0,0,0.4))' }} />
+        <div className="w-10 h-10 sm:w-14 sm:h-14 shrink-0 rounded-full bg-white/15 flex items-center justify-center">
+          <img src={team.logo} alt={team.name} className="w-8 h-8 sm:w-11 sm:h-11 drop-shadow-lg" />
+        </div>
         <div>
           <h1
             className="text-lg sm:text-2xl font-serif font-bold leading-tight"

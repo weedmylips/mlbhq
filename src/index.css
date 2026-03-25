@@ -6,33 +6,23 @@
   --team-primary: #003087;
   --team-accent: #c8a951;
   --team-text: #fff;
-  --team-primary-rgb: 0, 48, 135;
-  --team-accent-rgb: 200, 169, 81;
-
-  /* Derived — auto-update when base vars change */
-  --team-card-bg: color-mix(in srgb, var(--team-primary) 4%, #0c0c18);
-  --team-card-border: color-mix(in srgb, var(--team-primary) 12%, #1e1e2e);
-  --team-surface-hover: color-mix(in srgb, var(--team-primary) 8%, transparent);
-  --team-divider: color-mix(in srgb, var(--team-accent) 15%, #1e1e2e);
-  --team-section-header: color-mix(in srgb, var(--team-accent) 40%, #c9d1d9);
-  --team-muted-text: color-mix(in srgb, var(--team-primary) 25%, #b0b8c4);
-  --team-page-bg: color-mix(in srgb, var(--team-primary) 3%, #0a0a0f);
+  --team-highlight: #c8a951;
 }
 
 body {
-  background: var(--team-page-bg);
+  background: #0a0a0f;
   color: #e2e8f0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 * {
-  transition: border-color 0.4s ease, background-color 0.4s ease, color 0.3s ease, box-shadow 0.4s ease;
+  transition: border-color 0.4s ease, background-color 0.4s ease;
 }
 
 .card {
-  background: var(--team-card-bg);
-  border: 1px solid var(--team-card-border);
-  border-top: 2px solid var(--team-accent);
+  background: rgba(12, 12, 24, 0.9);
+  border: 1px solid #1e1e2e;
+  border-top: 2px solid var(--team-highlight);
   border-radius: 0.5rem;
   padding: 1rem;
 }
@@ -81,18 +71,6 @@ body {
 
 .team-glow {
   box-shadow: 0 0 12px var(--team-primary), 0 0 4px var(--team-primary);
-}
-
-.team-section-header {
-  color: var(--team-section-header);
-}
-
-.team-divider {
-  border-color: var(--team-divider);
-}
-
-.team-hover:hover {
-  background: var(--team-surface-hover);
 }
 
 .scrollbar-none {

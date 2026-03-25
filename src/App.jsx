@@ -46,8 +46,8 @@ export default function App() {
               onClick={() => setActiveTab(id)}
               className={`flex items-center gap-1.5 px-3 sm:px-4 py-3 text-xs sm:text-sm font-medium transition-colors relative shrink-0 ${
                 activeTab === id
-                  ? 'text-[var(--team-accent)]'
-                  : 'text-gray-500 hover:text-[var(--team-muted-text)]'
+                  ? 'text-white'
+                  : 'text-gray-500 hover:text-gray-300'
               }`}
             >
               <Icon size={15} />
@@ -55,7 +55,7 @@ export default function App() {
               {activeTab === id && (
                 <span
                   className="absolute bottom-0 left-0 right-0 h-0.5"
-                  style={{ background: 'var(--team-accent)' }}
+                  style={{ background: 'var(--team-highlight)' }}
                 />
               )}
             </button>

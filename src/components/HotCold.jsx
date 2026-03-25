@@ -20,7 +20,7 @@ function Section({ title, batters, pitchers, hot }) {
 
   return (
     <div>
-      <div className="text-[10px] text-[var(--team-muted-text)] uppercase tracking-wider mb-1.5">{title}</div>
+      <div className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">{title}</div>
       {hasBatters && (
         <div className="mb-2">
           <div className="text-[9px] text-gray-600 uppercase tracking-wider mb-1">Batting</div>
@@ -58,7 +58,7 @@ export default function HotCold() {
 
   return (
     <div className="card">
-      <h3 className="text-sm font-bold team-section-header uppercase tracking-wider mb-3">
+      <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
         Hot &amp; Cold · Last 7 Days
       </h3>
       {isEmpty ? (

@@ -22,7 +22,7 @@ export default function Milestones() {
   return (
     <div className="card">
       <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-        <Trophy size={14} className="text-[var(--team-accent)]" />
+        <Trophy size={14} className="text-[var(--team-highlight)]" />
         Milestones
       </h3>
       {milestones.length === 0 ? (
@@ -46,7 +46,7 @@ export default function Milestones() {
                     className="h-2 rounded-full transition-all duration-500"
                     style={{
                       width: `${pct}%`,
-                      background: `linear-gradient(90deg, var(--team-primary), var(--team-accent))`,
+                      background: `linear-gradient(90deg, var(--team-primary), var(--team-highlight))`,
                     }}
                   />
                 </div>
