@@ -5,6 +5,7 @@
     { "source": "/api/matchup", "destination": "/api/extra?route=matchup" },
     { "source": "/api/leaders", "destination": "/api/extra?route=leaders" },
     { "source": "/api/highlights", "destination": "/api/extra?route=highlights" },
+    { "source": "/api/scoreboard", "destination": "/api/extra?route=scoreboard" },
     { "source": "/api/:path*", "destination": "/api/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
