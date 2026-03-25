@@ -40,7 +40,7 @@ function TeamPage() {
   const navigate = useNavigate();
   const { team, setSelectedTeamId } = useTeam();
 
-  // Sync URL team with context
+  // Sync URL team → context (only when URL changes, e.g. direct navigation or link)
   useEffect(() => {
     if (teamAbbr) {
       const urlTeam = getTeamByAbbr(teamAbbr);
@@ -48,7 +48,7 @@ function TeamPage() {
         setSelectedTeamId(urlTeam.id);
       }
     }
-  }, [teamAbbr, team.id, setSelectedTeamId]);
+  }, [teamAbbr]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const activeTab = tab || 'overview';
   const validTab = tabs.find((t) => t.id === activeTab) ? activeTab : 'overview';
@@ -59,13 +59,6 @@ function TeamPage() {
   const setActiveTab = (tabId) => {
     navigate(`/${team.abbr}/${tabId}`);
   };
-
-  // If URL team doesn't match context (e.g. team selected via TeamSelector), redirect
-  useEffect(() => {
-    if (teamAbbr && team.abbr.toLowerCase() !== teamAbbr.toLowerCase()) {
-      navigate(`/${team.abbr}/${validTab}`, { replace: true });
-    }
-  }, [team.abbr, teamAbbr, validTab, navigate]);
 
   return (
     <div className={`min-h-screen bg-surface ${isYankees ? 'pinstripe-bg' : ''}`}>
