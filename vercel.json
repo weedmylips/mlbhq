@@ -1,5 +1,10 @@
 {
   "rewrites": [
+    { "source": "/api/player", "destination": "/api/extra?route=player" },
+    { "source": "/api/transactions", "destination": "/api/extra?route=transactions" },
+    { "source": "/api/matchup", "destination": "/api/extra?route=matchup" },
+    { "source": "/api/leaders", "destination": "/api/extra?route=leaders" },
+    { "source": "/api/highlights", "destination": "/api/extra?route=highlights" },
     { "source": "/api/:path*", "destination": "/api/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
