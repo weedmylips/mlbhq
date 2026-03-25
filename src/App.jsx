@@ -21,6 +21,7 @@ import Scoreboard from './components/Scoreboard';
 import AdvancedStats from './components/AdvancedStats';
 import PitchingRotation from './components/PitchingRotation';
 import RecordBreakdown from './components/RecordBreakdown';
+import BullpenHealth from './components/BullpenHealth';
 import PlayerComparison from './components/PlayerComparison';
 import PlayerSearch from './components/PlayerSearch';
 import { LayoutDashboard, Users, CalendarDays, BarChart3, Trophy, Tv2, FlaskConical } from 'lucide-react';
@@ -177,8 +178,9 @@ function OverviewTab({ gamesData, gamesLoading }) {
         <NextGame game={nextGame} />
       )}
 
-      {/* Pitching Rotation */}
+      {/* Pitching Rotation + Bullpen */}
       <PitchingRotation />
+      <BullpenHealth />
 
       {/* Row 2 */}
       <RecentGames games={recentGames} />

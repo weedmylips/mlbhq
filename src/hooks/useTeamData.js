@@ -163,6 +163,16 @@ export function useBvp(batterId, pitcherId) {
   });
 }
 
+export function useBullpen(teamId) {
+  return useQuery({
+    queryKey: ['bullpen', teamId],
+    queryFn: () => fetchApi(`/api/bullpen?teamId=${teamId}`),
+    refetchInterval: 900000,
+    staleTime: 300000,
+    enabled: !!teamId,
+  });
+}
+
 export function useScoreboard(date) {
   return useQuery({
     queryKey: ['scoreboard', date],
