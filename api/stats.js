@@ -32,14 +32,15 @@ export default async function handler(req, res) {
     const teamId = req.query.teamId || 147;
     const leagueId = req.query.leagueId || 103;
     const cacheKey = `stats-${teamId}-${leagueId}`;
+    const season = new Date().getFullYear();
     const result = await getOrFetch(cacheKey, async () => {
       const [hittingResp, pitchingResp, allHittingResp, allPitchingResp, playerHittingResp, playerPitchingResp] = await Promise.all([
-        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=2025`),
-        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=2025`),
-        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=2025&leagueIds=${leagueId}&sportId=1`),
-        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=2025&leagueIds=${leagueId}&sportId=1`),
-        fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=2025&teamId=${teamId}&playerPool=All&sportId=1`),
-        fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=2025&teamId=${teamId}&playerPool=All&sportId=1`),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${season}`),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=${season}`),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=${season}&leagueIds=${leagueId}&sportId=1`),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=${season}&leagueIds=${leagueId}&sportId=1`),
+        fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=${season}&teamId=${teamId}&playerPool=All&sportId=1`),
+        fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=${season}&teamId=${teamId}&playerPool=All&sportId=1`),
       ]);
 
       const [hittingData, pitchingData, allHittingData, allPitchingData, playerHittingData, playerPitchingData] = await Promise.all([

@@ -21,7 +21,7 @@ function TeamRow({ t, isSelected }) {
             <img src={teamData.logo} alt={teamData.abbr} className="w-5 h-5" />
           )}
           <span className={isSelected ? 'font-bold' : ''}>
-            {teamData ? teamData.name.slice(teamData.city.length).trim() : t.teamName}
+            {teamData ? teamData.shortName : t.teamName}
           </span>
         </div>
       </td>
@@ -160,7 +160,7 @@ function WildCardTable({ leagueId, data, selectedTeam }) {
                     )}
                     <span className={isSelected ? 'font-bold' : ''}>
                       {teamData
-                        ? teamData.name.slice(teamData.city.length).trim()
+                        ? teamData.shortName
                         : t.teamName}
                     </span>
                     <span className="text-[10px] text-gray-500 ml-1">
@@ -250,7 +250,7 @@ function WildCardTable({ leagueId, data, selectedTeam }) {
                       }`}
                     >
                       {teamData
-                        ? teamData.name.slice(teamData.city.length).trim()
+                        ? teamData.shortName
                         : t.teamName}
                     </span>
                     <span className="text-[10px] text-gray-500 ml-1">

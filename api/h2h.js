@@ -9,7 +9,8 @@ export default async function handler(req, res) {
 
     const cacheKey = `h2h-${teamId}-${opponentId}`;
     const result = await getOrFetch(cacheKey, async () => {
-      const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=${teamId}&opponentId=${opponentId}&season=2025&gameType=R`;
+      const season = new Date().getFullYear();
+      const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=${teamId}&opponentId=${opponentId}&season=${season}&gameType=R`;
       const resp = await fetch(url);
       const data = await resp.json();
 

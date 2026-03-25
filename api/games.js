@@ -17,7 +17,8 @@ export default async function handler(req, res) {
       const end = new Date(today);
       end.setDate(end.getDate() + 14);
 
-      const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=${teamId}&season=2025&startDate=${formatDate(start)}&endDate=${formatDate(end)}&hydrate=linescore,decisions,probablePitcher`;
+      const season = new Date().getFullYear();
+      const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=${teamId}&season=${season}&startDate=${formatDate(start)}&endDate=${formatDate(end)}&hydrate=linescore,decisions,probablePitcher`;
       const resp = await fetch(url);
       const data = await resp.json();
 

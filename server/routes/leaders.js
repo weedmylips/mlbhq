@@ -32,7 +32,8 @@ router.get('/leaders', async (req, res) => {
 
     const cacheKey = `leaders-${teamId}`;
     const leaders = await getOrFetch(cacheKey, async () => {
-      const url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${CATEGORIES.join(',')}&season=2025&limit=5`;
+      const season = new Date().getFullYear();
+      const url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${CATEGORIES.join(',')}&season=${season}&limit=5`;
       const resp = await fetch(url);
       const data = await resp.json();
 

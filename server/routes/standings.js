@@ -35,7 +35,8 @@ router.get('/standings', async (req, res) => {
     const type = req.query.type === 'wildCard' ? 'wildCard' : 'regularSeason';
     const cacheKey = `standings-${leagueId}-${type}`;
     const divisions = await getOrFetch(cacheKey, async () => {
-      const url = `https://statsapi.mlb.com/api/v1/standings?leagueId=${leagueId}&season=2025&standingsTypes=${type}&hydrate=team(division)`;
+      const season = new Date().getFullYear();
+      const url = `https://statsapi.mlb.com/api/v1/standings?leagueId=${leagueId}&season=${season}&standingsTypes=${type}&hydrate=team(division)`;
       const resp = await fetch(url);
       const data = await resp.json();
       const isWC = type === 'wildCard';
