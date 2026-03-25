@@ -3,6 +3,7 @@ import { useGames } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 import { getTeamById } from '../data/teams';
 import GameSummaryPanel from './GameSummaryPanel';
+import GamePreviewPanel from './GamePreviewPanel';
 
 function ScheduleGameRow({ game, teamId }) {
   const [expanded, setExpanded] = useState(false);
@@ -13,6 +14,7 @@ function ScheduleGameRow({ game, teamId }) {
   const gameDate = new Date(game.gameDate);
   const isFinal = game.status?.abstractGameState === 'Final';
   const isLive = game.status?.abstractGameState === 'Live';
+  const isUpcoming = !isFinal && !isLive;
   const teamScore = isHome ? game.teams?.home?.score : game.teams?.away?.score;
   const oppScore = isHome ? game.teams?.away?.score : game.teams?.home?.score;
   const won = isFinal && teamScore > oppScore;
@@ -63,12 +65,9 @@ function ScheduleGameRow({ game, teamId }) {
               hour: 'numeric',
               minute: '2-digit',
             })}
-            {probPitcher?.fullName && (
-              <span className="text-gray-600 ml-1">({probPitcher.fullName})</span>
-            )}
           </span>
         ) : null}
-        {isFinal && (
+        {(isFinal || isUpcoming) && (
           <svg
             className={`w-3 h-3 text-gray-500 transition-transform shrink-0 ${expanded ? 'rotate-180' : ''}`}
             fill="none"
@@ -83,7 +82,7 @@ function ScheduleGameRow({ game, teamId }) {
     </div>
   );
 
-  if (!isFinal) {
+  if (isLive) {
     return (
       <div className="py-2 px-3 rounded text-sm bg-white/[0.02]">
         {rowContent}
@@ -102,7 +101,11 @@ function ScheduleGameRow({ game, teamId }) {
       </button>
       {expanded && (
         <div className="px-3 pb-3">
-          <GameSummaryPanel gamePk={game.gamePk} />
+          {isFinal ? (
+            <GameSummaryPanel gamePk={game.gamePk} />
+          ) : (
+            <GamePreviewPanel game={game} teamId={teamId} />
+          )}
         </div>
       )}
     </div>
