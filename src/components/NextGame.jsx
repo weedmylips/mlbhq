@@ -3,6 +3,7 @@ import { useTeam } from '../context/TeamContext';
 import { useH2H } from '../hooks/useTeamData';
 import { Calendar } from 'lucide-react';
 import MatchupPreview from './MatchupPreview';
+import LineupCard from './LineupCard';
 
 export default function NextGame({ game }) {
   const { team } = useTeam();
@@ -106,6 +107,8 @@ export default function NextGame({ game }) {
           pitcher2Id={oppProbPitcher?.id}
         />
       )}
+
+      {game.gamePk && <LineupCard gamePk={game.gamePk} />}
     </div>
   );
 }

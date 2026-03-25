@@ -1,4 +1,7 @@
+import { useState } from 'react';
 import { usePlayerDetail } from '../hooks/useTeamData';
+import PlayerGameLog from './PlayerGameLog';
+import PlayerSplits from './PlayerSplits';
 
 function StatRow({ label, season, career }) {
   return (
@@ -71,8 +74,15 @@ function PitchingStats({ season, career }) {
   );
 }
 
+const TABS = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'gamelog', label: 'Game Log' },
+  { id: 'splits', label: 'Splits' },
+];
+
 export default function PlayerDetailCard({ playerId }) {
   const { data: player, isLoading } = usePlayerDetail(playerId);
+  const [activeTab, setActiveTab] = useState('overview');
 
   if (isLoading) {
     return (
@@ -83,6 +93,8 @@ export default function PlayerDetailCard({ playerId }) {
   }
 
   if (!player) return null;
+
+  const isPitcher = player.positionCode === '1' || player.position === 'P';
 
   const headshotUrl = `https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/${player.id}/headshot/67/current`;
 
@@ -97,57 +109,65 @@ export default function PlayerDetailCard({ playerId }) {
 
   return (
     <div className="bg-white/[0.03] border-t border-border px-4 py-4">
-      <div className="flex flex-col sm:flex-row gap-4">
-        {/* Bio Section */}
-        <div className="flex gap-3 sm:w-48 shrink-0">
-          <img
-            src={headshotUrl}
-            alt={player.fullName}
-            className="w-16 h-16 rounded-lg bg-white/5 object-cover"
-          />
-          <div className="min-w-0">
-            <h3 className="text-sm font-bold truncate">{player.fullName}</h3>
-            <p className="text-xs text-gray-400">
-              #{player.number} {player.position}
-            </p>
-            <div className="mt-1 space-y-0.5 text-[11px] text-gray-500">
-              <p>
-                {player.batSide && `B: ${player.batSide}`}
-                {player.batSide && player.pitchHand && ' / '}
-                {player.pitchHand && `T: ${player.pitchHand}`}
-              </p>
-              {player.age && (
-                <p>Age {player.age}</p>
-              )}
-              {player.height && (
-                <p>
-                  {player.height}, {player.weight} lbs
-                </p>
-              )}
-              {player.debutDate && (
-                <p>Debut: {formatDate(player.debutDate)}</p>
-              )}
-              {player.birthCity && (
-                <p>
-                  {player.birthCity}, {player.birthCountry}
-                </p>
-              )}
-            </div>
+      {/* Bio header - always visible */}
+      <div className="flex gap-3 mb-3">
+        <img
+          src={headshotUrl}
+          alt={player.fullName}
+          className="w-16 h-16 rounded-lg bg-white/5 object-cover shrink-0"
+        />
+        <div className="min-w-0">
+          <h3 className="text-sm font-bold truncate">{player.fullName}</h3>
+          <p className="text-xs text-gray-400">
+            #{player.number} {player.position}
+          </p>
+          <div className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-[11px] text-gray-500">
+            {player.batSide && <span>B: {player.batSide}</span>}
+            {player.pitchHand && <span>T: {player.pitchHand}</span>}
+            {player.age && <span>Age {player.age}</span>}
+            {player.height && <span>{player.height}, {player.weight} lbs</span>}
+            {player.debutDate && <span>Debut: {formatDate(player.debutDate)}</span>}
+            {player.birthCity && <span>{player.birthCity}, {player.birthCountry}</span>}
           </div>
         </div>
-
-        {/* Stats Section */}
-        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4 min-w-0">
-          <HittingStats
-            season={player.seasonHitting}
-            career={player.careerHitting}
-          />
-          <PitchingStats
-            season={player.seasonPitching}
-            career={player.careerPitching}
-          />
-        </div>
       </div>
+
+      {/* Tab navigation */}
+      <div className="flex gap-0.5 border-b border-border mb-3">
+        {TABS.map(({ id, label }) => (
+          <button
+            key={id}
+            onClick={() => setActiveTab(id)}
+            className={`px-3 py-1.5 text-[11px] font-medium transition-colors relative ${
+              activeTab === id ? 'text-white' : 'text-gray-500 hover:text-gray-300'
+            }`}
+          >
+            {label}
+            {activeTab === id && (
+              <span
+                className="absolute bottom-0 left-0 right-0 h-0.5"
+                style={{ background: 'var(--team-highlight)' }}
+              />
+            )}
+          </button>
+        ))}
+      </div>
+
+      {/* Tab content */}
+      {activeTab === 'overview' && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <HittingStats season={player.seasonHitting} career={player.careerHitting} />
+          <PitchingStats season={player.seasonPitching} career={player.careerPitching} />
+        </div>
+      )}
+
+      {activeTab === 'gamelog' && (
+        <PlayerGameLog gameLog={player.gameLog} isPitcher={isPitcher} />
+      )}
+
+      {activeTab === 'splits' && (
+        <PlayerSplits splits={player.splits} isPitcher={isPitcher} />
+      )}
     </div>
   );
 }

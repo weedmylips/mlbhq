@@ -13,7 +13,7 @@ async function handlePlayer(req, res) {
 
   const cacheKey = `player-${playerId}`;
   const player = await playerCache.getOrFetch(cacheKey, async () => {
-    const url = `https://statsapi.mlb.com/api/v1/people/${playerId}?hydrate=stats(group=[hitting,pitching],type=[season,career]),currentTeam`;
+    const url = `https://statsapi.mlb.com/api/v1/people/${playerId}?hydrate=stats(group=[hitting,pitching],type=[season,career,gameLog,leftAndRight,homeAndAway,byMonth]),currentTeam`;
     const resp = await fetch(url);
     const data = await resp.json();
     const person = data.people?.[0];
@@ -27,6 +27,36 @@ async function handlePlayer(req, res) {
       return entry?.splits?.[0]?.stat || null;
     };
 
+    const findAllSplits = (group, type) => {
+      const entry = stats.find(
+        (s) => s.group?.displayName === group && s.type?.displayName === type
+      );
+      return entry?.splits || [];
+    };
+
+    const hittingGroup = person.primaryPosition?.code === '1' ? 'pitching' : 'hitting';
+    const gameLogSplits = findAllSplits(hittingGroup, 'gameLog');
+    const gameLog = gameLogSplits.slice(-15).reverse().map((g) => ({
+      date: g.date,
+      opponent: g.opponent?.abbreviation || g.opponent?.name,
+      isHome: g.isHome,
+      stat: g.stat,
+    }));
+
+    const platoonSplits = findAllSplits(hittingGroup, 'leftAndRight');
+    const vsLeft = platoonSplits.find((s) => s.split?.code === 'vl')?.stat || null;
+    const vsRight = platoonSplits.find((s) => s.split?.code === 'vr')?.stat || null;
+
+    const haSplits = findAllSplits(hittingGroup, 'homeAndAway');
+    const homeStat = haSplits.find((s) => s.split?.code === 'h')?.stat || null;
+    const awayStat = haSplits.find((s) => s.split?.code === 'a')?.stat || null;
+
+    const monthSplits = findAllSplits(hittingGroup, 'byMonth');
+    const byMonth = monthSplits.map((s) => ({
+      month: s.split?.description || '',
+      stat: s.stat,
+    }));
+
     return {
       id: person.id,
       fullName: person.fullName,
@@ -39,6 +69,7 @@ async function handlePlayer(req, res) {
       height: person.height,
       weight: person.weight,
       position: person.primaryPosition?.abbreviation,
+      positionCode: person.primaryPosition?.code,
       batSide: person.batSide?.code,
       pitchHand: person.pitchHand?.code,
       number: person.primaryNumber,
@@ -49,6 +80,14 @@ async function handlePlayer(req, res) {
       careerHitting: findStats('hitting', 'career'),
       seasonPitching: findStats('pitching', 'season'),
       careerPitching: findStats('pitching', 'career'),
+      gameLog,
+      splits: {
+        vsLeft,
+        vsRight,
+        home: homeStat,
+        away: awayStat,
+        byMonth,
+      },
     };
   }, 1800);
 

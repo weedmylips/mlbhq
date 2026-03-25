@@ -64,6 +64,24 @@ router.get('/live', async (req, res) => {
 
       const linescore = data.liveData?.linescore || {};
       const plays = data.liveData?.plays || {};
+      const boxscore = data.liveData?.boxscore || {};
+
+      // Extract batting order for lineup card
+      function getLineup(side) {
+        const team = boxscore.teams?.[side] || {};
+        const battingOrder = team.battingOrder || [];
+        const players = team.players || {};
+        return battingOrder.map((id, idx) => {
+          const p = players[`ID${id}`];
+          return {
+            id,
+            order: idx + 1,
+            name: p?.person?.fullName || '',
+            position: p?.position?.abbreviation || '',
+            batting: p?.stats?.batting || null,
+          };
+        });
+      }
 
       return {
         gameData: data.gameData || {},
@@ -94,6 +112,10 @@ router.get('/live', async (req, res) => {
         currentPitcher: linescore.defense?.pitcher || null,
         lastPlay: plays.currentPlay?.result?.description || '',
         probablePitchers: data.gameData?.probablePitchers || {},
+        lineups: {
+          away: getLineup('away'),
+          home: getLineup('home'),
+        },
         currentAtBat: (plays.currentPlay?.playEvents || [])
           .filter((e) => e.isPitch)
           .map((e) => ({

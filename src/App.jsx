@@ -18,6 +18,7 @@ import TeamLeaders from './components/TeamLeaders';
 import Scoreboard from './components/Scoreboard';
 import PitchingRotation from './components/PitchingRotation';
 import RecordBreakdown from './components/RecordBreakdown';
+import PlayerComparison from './components/PlayerComparison';
 import { LayoutDashboard, Users, CalendarDays, BarChart3, Trophy, Tv2 } from 'lucide-react';
 
 const tabs = [
@@ -72,7 +73,12 @@ export default function App() {
         {activeTab === 'overview' && (
           <OverviewTab gamesData={gamesData} gamesLoading={gamesLoading} />
         )}
-        {activeTab === 'roster' && <RosterTable />}
+        {activeTab === 'roster' && (
+          <div className="space-y-4">
+            <PlayerComparison />
+            <RosterTable />
+          </div>
+        )}
         {activeTab === 'schedule' && <Schedule />}
         {activeTab === 'standings' && <Standings />}
         {activeTab === 'leaders' && <TeamLeaders />}
