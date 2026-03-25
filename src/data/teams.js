@@ -48,6 +48,8 @@ export const divisionOrder = [
 ];
 
 export const getTeamById = (id) => teams.find((t) => t.id === id);
+export const getTeamByAbbr = (abbr) => teams.find((t) => t.abbr.toLowerCase() === abbr?.toLowerCase());
+export default teams;
 
 export const getTeamsByDivision = () => {
   const grouped = {};
@@ -56,5 +58,3 @@ export const getTeamsByDivision = () => {
   }
   return grouped;
 };
-
-export default teams;

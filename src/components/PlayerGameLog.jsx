@@ -1,11 +1,24 @@
+import Sparkline from './Sparkline';
+
 export default function PlayerGameLog({ gameLog, isPitcher }) {
   if (!gameLog?.length) {
     return <p className="text-gray-500 text-xs py-2">No game log available</p>;
   }
 
+  // Compute trend data for sparkline (reverse so oldest first)
+  const trendData = [...gameLog].reverse().map((g) =>
+    isPitcher
+      ? parseFloat(g.stat?.era) || 0
+      : parseFloat(g.stat?.avg) || 0
+  );
+
   if (isPitcher) {
     return (
       <div className="overflow-x-auto">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="text-[10px] text-gray-500">ERA Trend</span>
+          <Sparkline data={trendData} color="auto" width={80} height={20} showDots />
+        </div>
         <table className="w-full text-xs">
           <thead>
             <tr className="text-gray-500 text-[10px] border-b border-border">
@@ -44,6 +57,10 @@ export default function PlayerGameLog({ gameLog, isPitcher }) {
 
   return (
     <div className="overflow-x-auto">
+      <div className="flex items-center gap-2 mb-2">
+        <span className="text-[10px] text-gray-500">AVG Trend</span>
+        <Sparkline data={trendData} color="auto" width={80} height={20} showDots />
+      </div>
       <table className="w-full text-xs">
         <thead>
           <tr className="text-gray-500 text-[10px] border-b border-border">

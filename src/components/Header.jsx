@@ -1,5 +1,6 @@
 import { useTeam } from '../context/TeamContext';
 import { useGames } from '../hooks/useTeamData';
+import PlayerSearch from './PlayerSearch';
 
 export default function Header() {
   const { team } = useTeam();
@@ -42,6 +43,7 @@ export default function Header() {
           </div>
         </div>
       </div>
+      <PlayerSearch />
     </div>
   );
 }

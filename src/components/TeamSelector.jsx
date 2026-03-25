@@ -1,8 +1,11 @@
+import { useNavigate, useParams } from 'react-router-dom';
 import { useTeam } from '../context/TeamContext';
 import { getTeamsByDivision, divisionOrder } from '../data/teams';
 
 export default function TeamSelector() {
   const { selectedTeamId, setSelectedTeamId } = useTeam();
+  const navigate = useNavigate();
+  const { tab } = useParams();
   const grouped = getTeamsByDivision();
 
   return (
@@ -26,7 +29,7 @@ export default function TeamSelector() {
             {grouped[div].map((t) => (
               <button
                 key={t.id}
-                onClick={() => setSelectedTeamId(t.id)}
+                onClick={() => { setSelectedTeamId(t.id); navigate(`/${t.abbr}/${tab || 'overview'}`); }}
                 title={t.name}
                 className={`flex flex-col items-center p-1 rounded-lg transition-all duration-300 hover:bg-white/5 shrink-0 ${
                   selectedTeamId === t.id ? 'team-glow ring-2 ring-[var(--team-primary)] bg-white/10' : ''
