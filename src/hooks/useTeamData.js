@@ -136,3 +136,11 @@ export function useHotCold(teamId) {
   });
 }
 
+export function useScoreboard(date) {
+  return useQuery({
+    queryKey: ['scoreboard', date],
+    queryFn: () => fetchApi(`/api/scoreboard${date ? `?date=${date}` : ''}`),
+    refetchInterval: 30000,
+  });
+}
+

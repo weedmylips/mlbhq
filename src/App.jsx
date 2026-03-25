@@ -15,7 +15,10 @@ import NewsFeed from './components/NewsFeed';
 import HotCold from './components/HotCold';
 import TransactionsFeed from './components/TransactionsFeed';
 import TeamLeaders from './components/TeamLeaders';
-import { LayoutDashboard, Users, CalendarDays, BarChart3, Trophy } from 'lucide-react';
+import Scoreboard from './components/Scoreboard';
+import PitchingRotation from './components/PitchingRotation';
+import RecordBreakdown from './components/RecordBreakdown';
+import { LayoutDashboard, Users, CalendarDays, BarChart3, Trophy, Tv2 } from 'lucide-react';
 
 const tabs = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
@@ -23,6 +26,7 @@ const tabs = [
   { id: 'schedule', label: 'Schedule', icon: CalendarDays },
   { id: 'standings', label: 'Standings', icon: BarChart3 },
   { id: 'leaders', label: 'Leaders', icon: Trophy },
+  { id: 'scores', label: 'Scores', icon: Tv2 },
 ];
 
 export default function App() {
@@ -72,6 +76,7 @@ export default function App() {
         {activeTab === 'schedule' && <Schedule />}
         {activeTab === 'standings' && <Standings />}
         {activeTab === 'leaders' && <TeamLeaders />}
+        {activeTab === 'scores' && <Scoreboard />}
       </div>
 
       {/* Footer disclaimer */}
@@ -111,12 +116,16 @@ function OverviewTab({ gamesData, gamesLoading }) {
         <NextGame game={nextGame} />
       )}
 
+      {/* Pitching Rotation */}
+      <PitchingRotation />
+
       {/* Row 2 */}
       <RecentGames games={recentGames} />
       <HotCold />
 
       {/* Row 3 */}
       <TeamStats />
+      <RecordBreakdown />
       <InjuryReport />
 
       {/* Row 4 */}

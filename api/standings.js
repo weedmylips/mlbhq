@@ -18,6 +18,22 @@ function mapTeamRecord(tr, isWildCard) {
     runsAllowed: tr.runsAllowed,
     runDiff: tr.runDifferential,
   };
+  const splits = tr.records?.splitRecords;
+  if (splits) {
+    const getRecord = (type) => {
+      const s = splits.find((r) => r.type === type);
+      return s ? `${s.wins}-${s.losses}` : null;
+    };
+    base.splits = {
+      home: getRecord('home'),
+      away: getRecord('away'),
+      oneRun: getRecord('oneRun'),
+      extraInnings: getRecord('extraInning'),
+      interLeague: getRecord('interLeague'),
+      day: getRecord('day'),
+      night: getRecord('night'),
+    };
+  }
   if (isWildCard) {
     base.wcRank = tr.wildCardRank ? parseInt(tr.wildCardRank, 10) : null;
     base.wcGb = tr.wildCardGamesBack ?? '-';

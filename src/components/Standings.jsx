@@ -2,11 +2,19 @@ import { useState } from 'react';
 import { useStandings } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 import { getTeamById } from '../data/teams';
+import { expectedWins, magicNumber } from '../utils/statsCalculations';
 
 const LEAGUE_NAMES = { 103: 'American League', 104: 'National League' };
 
-function TeamRow({ t, isSelected }) {
+function TeamRow({ t, isSelected, divisionLeaderLosses }) {
   const teamData = getTeamById(t.teamId);
+  const gp = (t.wins || 0) + (t.losses || 0);
+  const expW = gp > 0 ? expectedWins(t.runsScored, t.runsAllowed, gp) : null;
+  const luck = expW !== null ? t.wins - expW : null;
+  const magic = divisionLeaderLosses !== undefined
+    ? magicNumber(t.wins, t.wins, divisionLeaderLosses)
+    : null;
+
   return (
     <tr
       className={`border-b border-white/5 ${
@@ -57,11 +65,25 @@ function TeamRow({ t, isSelected }) {
           {t.runDiff}
         </span>
       </td>
+      <td className="text-right px-2 font-mono text-gray-400">
+        {expW !== null ? `${expW}-${gp - expW}` : '-'}
+      </td>
+      <td className="text-right px-2 font-mono">
+        {luck !== null ? (
+          <span className={luck > 0 ? 'text-green-400' : luck < 0 ? 'text-red-400' : 'text-gray-400'}>
+            {luck > 0 ? '+' : ''}{luck}
+          </span>
+        ) : '-'}
+      </td>
     </tr>
   );
 }
 
 function DivisionTable({ division, selectedTeam }) {
+  // Find division leader's losses for magic number calculation
+  const leader = division.teams[0];
+  const leaderLosses = leader?.losses ?? 0;
+
   return (
     <div className="card overflow-x-auto">
       <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
@@ -80,6 +102,8 @@ function DivisionTable({ division, selectedTeam }) {
             <th className="text-right px-2 font-mono">STRK</th>
             <th className="text-right px-2 font-mono">L10</th>
             <th className="text-right px-2 font-mono">DIFF</th>
+            <th className="text-right px-2 font-mono" title="Pythagorean Expected Record">xW-L</th>
+            <th className="text-right px-2 font-mono" title="Wins above expected (luck)">Luck</th>
           </tr>
         </thead>
         <tbody>
@@ -88,6 +112,7 @@ function DivisionTable({ division, selectedTeam }) {
               key={t.teamId}
               t={t}
               isSelected={t.teamId === selectedTeam.id}
+              divisionLeaderLosses={leaderLosses}
             />
           ))}
         </tbody>
@@ -125,13 +150,15 @@ function WildCardTable({ leagueId, data, selectedTeam }) {
             <th className="text-right px-2 font-mono">STRK</th>
             <th className="text-right px-2 font-mono">L10</th>
             <th className="text-right px-2 font-mono">DIFF</th>
+            <th className="text-right px-2 font-mono" title="Pythagorean Expected Record">xW-L</th>
+            <th className="text-right px-2 font-mono" title="Wins above expected (luck)">Luck</th>
           </tr>
         </thead>
         <tbody>
           {/* Division Leaders Section */}
           <tr>
             <td
-              colSpan={8}
+              colSpan={10}
               className="pt-2 pb-1 text-[10px] font-bold text-gray-500 uppercase tracking-widest"
             >
               Division Leaders
@@ -200,6 +227,25 @@ function WildCardTable({ leagueId, data, selectedTeam }) {
                     {t.runDiff}
                   </span>
                 </td>
+                {(() => {
+                  const gp = (t.wins || 0) + (t.losses || 0);
+                  const expW = gp > 0 ? expectedWins(t.runsScored, t.runsAllowed, gp) : null;
+                  const luck = expW !== null ? t.wins - expW : null;
+                  return (
+                    <>
+                      <td className="text-right px-2 font-mono text-gray-400">
+                        {expW !== null ? `${expW}-${gp - expW}` : '-'}
+                      </td>
+                      <td className="text-right px-2 font-mono">
+                        {luck !== null ? (
+                          <span className={luck > 0 ? 'text-green-400' : luck < 0 ? 'text-red-400' : 'text-gray-400'}>
+                            {luck > 0 ? '+' : ''}{luck}
+                          </span>
+                        ) : '-'}
+                      </td>
+                    </>
+                  );
+                })()}
               </tr>
             );
           })}
@@ -207,7 +253,7 @@ function WildCardTable({ leagueId, data, selectedTeam }) {
           {/* Wild Card Section */}
           <tr>
             <td
-              colSpan={8}
+              colSpan={10}
               className="pt-4 pb-1 text-[10px] font-bold text-gray-500 uppercase tracking-widest"
             >
               Wild Card
@@ -318,6 +364,29 @@ function WildCardTable({ leagueId, data, selectedTeam }) {
                     {t.runDiff}
                   </span>
                 </td>
+                {(() => {
+                  const gp = (t.wins || 0) + (t.losses || 0);
+                  const expW = gp > 0 ? expectedWins(t.runsScored, t.runsAllowed, gp) : null;
+                  const luck = expW !== null ? t.wins - expW : null;
+                  return (
+                    <>
+                      <td className={`text-right px-2 font-mono ${isBelowCutoff ? 'text-gray-600' : 'text-gray-400'}`}>
+                        {expW !== null ? `${expW}-${gp - expW}` : '-'}
+                      </td>
+                      <td className="text-right px-2 font-mono">
+                        {luck !== null ? (
+                          <span className={
+                            isBelowCutoff
+                              ? 'text-gray-600'
+                              : luck > 0 ? 'text-green-400' : luck < 0 ? 'text-red-400' : 'text-gray-400'
+                          }>
+                            {luck > 0 ? '+' : ''}{luck}
+                          </span>
+                        ) : '-'}
+                      </td>
+                    </>
+                  );
+                })()}
               </tr>
             );
           })}
