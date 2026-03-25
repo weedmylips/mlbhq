@@ -37,7 +37,7 @@ function ScheduleGameRow({ game, teamId }) {
         {oppTeam && (
           <img src={oppTeam.logo} alt={oppTeam.abbr} className="w-5 h-5 shrink-0" />
         )}
-        <span className="truncate">{oppTeam?.name || oppData?.team?.name}</span>
+        <span className="truncate">{oppTeam?.shortName || oppData?.team?.teamName || oppData?.team?.name}</span>
       </div>
       <div className="flex items-center gap-2 shrink-0 ml-2">
         {isLive && (
