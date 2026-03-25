@@ -41,13 +41,48 @@ export default function RecordBreakdown() {
 
   if (!teamRecord?.splits) return null;
 
-  const { splits } = teamRecord;
+  const { splits, streak, lastTen } = teamRecord;
+
+  const streakIsWin = streak && streak.startsWith('W');
+  const streakIsLoss = streak && streak.startsWith('L');
 
   return (
     <div className="card">
       <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
         Record Breakdown
       </h3>
+
+      {/* Streak + L10 highlight row */}
+      {(streak || lastTen) && (
+        <div className="flex gap-1.5 mb-2">
+          {streak && streak !== '-' && (
+            <div className="flex-1 flex items-center justify-between py-1.5 px-2 rounded bg-white/5">
+              <span className="text-xs text-gray-400">Streak</span>
+              <span className={`font-mono text-sm font-bold ${
+                streakIsWin ? 'text-green-400' : streakIsLoss ? 'text-red-400' : 'text-gray-300'
+              }`}>
+                {streak}
+              </span>
+            </div>
+          )}
+          {lastTen && lastTen !== '-' && (() => {
+            const [w, l] = lastTen.split('-').map(Number);
+            const isWinning = w > l;
+            const isLosing = w < l;
+            return (
+              <div className="flex-1 flex items-center justify-between py-1.5 px-2 rounded bg-white/5">
+                <span className="text-xs text-gray-400">L10</span>
+                <span className={`font-mono text-sm font-bold ${
+                  isWinning ? 'text-green-400' : isLosing ? 'text-red-400' : 'text-gray-300'
+                }`}>
+                  {lastTen}
+                </span>
+              </div>
+            );
+          })()}
+        </div>
+      )}
+
       <div className="grid grid-cols-2 gap-1.5">
         <RecordRow label="Home" record={splits.home} />
         <RecordRow label="Away" record={splits.away} />

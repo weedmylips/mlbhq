@@ -87,9 +87,7 @@ export default function BullpenHealth() {
           </h3>
           <InfoTip />
         </div>
-        {data?.window && (
-          <span className="text-[10px] text-gray-600 font-mono">{data.window}</span>
-        )}
+        <span className="text-[10px] text-gray-600 font-mono">Last 4 days</span>
       </div>
       <div className="space-y-1 max-h-[280px] overflow-y-auto scrollbar-none">
         {relievers.map((r) => (

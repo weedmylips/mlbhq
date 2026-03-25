@@ -67,14 +67,14 @@ export default function RecentGames({ games = [] }) {
   const last5 = games.slice(0, 5);
 
   return (
-    <div className="card md:col-span-2">
+    <div className="card">
       <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
         Recent Games
       </h3>
       {last5.length === 0 ? (
         <p className="text-gray-500 text-center py-4">No recent games</p>
       ) : (
-        <div className="space-y-2">
+        <div className="space-y-2 max-h-[280px] overflow-y-auto scrollbar-none">
           {last5.map((game) => (
             <GameRow key={game.gamePk} game={game} teamId={team.id} />
           ))}
