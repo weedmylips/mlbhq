@@ -32,16 +32,28 @@ export default async function handler(req, res) {
     const teamId = req.query.teamId || 147;
     const leagueId = req.query.leagueId || 103;
     const cacheKey = `stats-${teamId}-${leagueId}`;
-    const season = new Date().getFullYear();
     const result = await getOrFetch(cacheKey, async () => {
-      const [hittingResp, pitchingResp, allHittingResp, allPitchingResp, playerHittingResp, playerPitchingResp] = await Promise.all([
-        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${season}`),
-        fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=${season}`),
-        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=${season}&leagueIds=${leagueId}&sportId=1`),
-        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=${season}&leagueIds=${leagueId}&sportId=1`),
-        fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=${season}&teamId=${teamId}&playerPool=All&sportId=1`),
-        fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=${season}&teamId=${teamId}&playerPool=All&sportId=1`),
-      ]);
+      let season = new Date().getFullYear();
+
+      async function fetchStats(s) {
+        return Promise.all([
+          fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${s}`),
+          fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=${s}`),
+          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=${s}&leagueIds=${leagueId}&sportId=1`),
+          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=${s}&leagueIds=${leagueId}&sportId=1`),
+          fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`),
+          fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`),
+        ]);
+      }
+
+      let [hittingResp, pitchingResp, allHittingResp, allPitchingResp, playerHittingResp, playerPitchingResp] = await fetchStats(season);
+
+      // Check if current season has data; if not, fall back to previous season
+      const testData = await hittingResp.clone().json();
+      if (!testData.stats?.length) {
+        season = season - 1;
+        [hittingResp, pitchingResp, allHittingResp, allPitchingResp, playerHittingResp, playerPitchingResp] = await fetchStats(season);
+      }
 
       const [hittingData, pitchingData, allHittingData, allPitchingData, playerHittingData, playerPitchingData] = await Promise.all([
         hittingResp.json(),

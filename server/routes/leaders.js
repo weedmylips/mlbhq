@@ -33,9 +33,15 @@ router.get('/leaders', async (req, res) => {
     const cacheKey = `leaders-${teamId}`;
     const leaders = await getOrFetch(cacheKey, async () => {
       const season = new Date().getFullYear();
-      const url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${CATEGORIES.join(',')}&season=${season}&limit=5`;
-      const resp = await fetch(url);
-      const data = await resp.json();
+      let url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${CATEGORIES.join(',')}&season=${season}&limit=5`;
+      let resp = await fetch(url);
+      let data = await resp.json();
+
+      if (!data.teamLeaders?.length) {
+        url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${CATEGORIES.join(',')}&season=${season - 1}&limit=5`;
+        resp = await fetch(url);
+        data = await resp.json();
+      }
 
       const seen = new Set();
       return (data.teamLeaders || [])
