@@ -47,14 +47,16 @@ async function fetchBullpenData(teamId) {
   const schedData = await schedResp.json();
   const allGames = (schedData.dates || []).flatMap((d) => d.games || []);
 
+  const yesterday = new Date(today);
+  yesterday.setDate(yesterday.getDate() - 1);
   const fourDaysAgo = new Date(today);
   fourDaysAgo.setDate(fourDaysAgo.getDate() - 4);
   const recentGames = allGames.filter(
-    (g) => g.status?.abstractGameState === 'Final' && new Date(g.gameDate) >= fourDaysAgo
+    (g) => g.status?.abstractGameState === 'Final' && new Date(g.gameDate) >= fourDaysAgo && new Date(g.gameDate) <= yesterday
   );
 
   if (recentGames.length === 0) {
-    return { relievers: [], window: `${formatDate(fourDaysAgo)} – ${formatDate(today)}` };
+    return { relievers: [], window: `${formatDate(fourDaysAgo)} – ${formatDate(yesterday)}` };
   }
 
   const boxscorePromises = recentGames.map((g) =>
@@ -63,11 +65,23 @@ async function fetchBullpenData(teamId) {
   const seasonStatsPromise = fetch(
     `https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=${season}&teamId=${teamId}&playerPool=All&sportId=1`
   ).then((r) => r.json());
+  const rosterPromise = fetch(
+    `https://statsapi.mlb.com/api/v1/teams/${teamId}/roster/active?hydrate=person`
+  ).then((r) => r.json());
 
-  const [seasonStatsData, ...boxscores] = await Promise.all([
+  const [seasonStatsData, rosterData, ...boxscores] = await Promise.all([
     seasonStatsPromise,
+    rosterPromise,
     ...boxscorePromises,
   ]);
+
+  // Build pitchHand lookup from roster
+  const handMap = {};
+  for (const p of rosterData.roster || []) {
+    if (p.person?.id) {
+      handMap[p.person.id] = p.person.pitchHand?.code || '?';
+    }
+  }
 
   const seasonMap = {};
   for (const split of seasonStatsData.stats?.[0]?.splits || []) {
@@ -106,7 +120,7 @@ async function fetchBullpenData(teamId) {
         relieverApps[pid] = {
           id: pid,
           name: abbrevName(p.person?.fullName),
-          pitchHand: p.person?.pitchHand?.code || '?',
+          pitchHand: handMap[pid] || '?',
           appearances: [],
         };
       }
@@ -160,7 +174,7 @@ async function fetchBullpenData(teamId) {
 
     relievers.push({
       name: abbrevName(split.player?.fullName),
-      pitchHand: split.player?.pitchHand?.code || '?',
+      pitchHand: handMap[pid] || '?',
       appearances: 0,
       ip: '0.0',
       pitches: 0,
@@ -174,7 +188,7 @@ async function fetchBullpenData(teamId) {
 
   return {
     relievers,
-    window: `${formatDate(fourDaysAgo)} – ${formatDate(today)}`,
+    window: `${formatDate(fourDaysAgo)} – ${formatDate(yesterday)}`,
   };
 }
 
