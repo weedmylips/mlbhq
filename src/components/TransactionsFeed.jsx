@@ -25,7 +25,7 @@ export default function TransactionsFeed() {
 
   if (isLoading) {
     return (
-      <div className="card md:col-span-3">
+      <div className="card">
         <div className="skeleton h-40 w-full" />
       </div>
     );
@@ -33,7 +33,7 @@ export default function TransactionsFeed() {
 
   if (!transactions?.length) {
     return (
-      <div className="card md:col-span-3">
+      <div className="card">
         <div className="flex items-center gap-2 mb-3">
           <ArrowRightLeft size={14} className="text-gray-400" />
           <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">
@@ -48,7 +48,7 @@ export default function TransactionsFeed() {
   }
 
   return (
-    <div className="card md:col-span-3">
+    <div className="card">
       <div className="flex items-center gap-2 mb-3">
         <ArrowRightLeft size={14} className="text-gray-400" />
         <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">

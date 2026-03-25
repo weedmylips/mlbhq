@@ -52,7 +52,7 @@ export default function PitchingRotation() {
 
   if (isLoading) {
     return (
-      <div className="card md:col-span-3">
+      <div className="card">
         <div className="skeleton h-32 w-full" />
       </div>
     );
@@ -78,11 +78,11 @@ export default function PitchingRotation() {
   if (rotation.length === 0) return null;
 
   return (
-    <div className="card md:col-span-3">
+    <div className="card">
       <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
         Upcoming Starters
       </h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2">
+      <div className="space-y-1.5">
         {rotation.map((game) => (
           <StarterRow key={game.gamePk} game={game} teamId={team.id} />
         ))}

@@ -110,7 +110,7 @@ function TeamPage() {
       </div>
 
       {/* Footer disclaimer */}
-      <footer className="border-t border-border mt-8 py-6 px-4 text-center hidden sm:block">
+      <footer className="border-t border-border mt-8 py-6 px-4 text-center mb-16 sm:mb-0">
         <p className="text-[11px] text-gray-600 leading-relaxed max-w-2xl mx-auto">
           This is an independent fan site and is not affiliated with, endorsed by, or in any way connected to
           Major League Baseball (MLB), its teams, or MLB Advanced Media. All team names, logos, and related
