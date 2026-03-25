@@ -14,8 +14,8 @@
   --team-card-border: color-mix(in srgb, var(--team-primary) 12%, #1e1e2e);
   --team-surface-hover: color-mix(in srgb, var(--team-primary) 8%, transparent);
   --team-divider: color-mix(in srgb, var(--team-accent) 15%, #1e1e2e);
-  --team-section-header: color-mix(in srgb, var(--team-accent) 60%, #9ca3af);
-  --team-muted-text: color-mix(in srgb, var(--team-primary) 25%, #9ca3af);
+  --team-section-header: color-mix(in srgb, var(--team-accent) 40%, #c9d1d9);
+  --team-muted-text: color-mix(in srgb, var(--team-primary) 25%, #b0b8c4);
   --team-page-bg: color-mix(in srgb, var(--team-primary) 3%, #0a0a0f);
 }
 
