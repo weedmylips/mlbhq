@@ -1,6 +1,6 @@
 import { useTeamLeaders } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
-import { Trophy } from 'lucide-react';
+import { Swords, Flame } from 'lucide-react';
 
 const HITTING_CATS = new Set(['battingAverage', 'homeRuns', 'runsBattedIn', 'stolenBases']);
 
@@ -8,40 +8,54 @@ function LeaderCategory({ category }) {
   if (!category.leaders?.length) return null;
 
   const topValue = parseFloat(category.leaders[0]?.value) || 0;
-  const isDecimal = category.category === 'battingAverage' || category.category === 'earnedRunAverage';
+  const invertedBar = category.category === 'earnedRunAverage';
 
   return (
-    <div>
-      <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">
+    <div className="bg-white/[0.02] rounded-lg p-3">
+      <h4 className="text-[11px] font-bold text-[var(--team-accent)] uppercase tracking-wider mb-2">
         {category.label}
       </h4>
-      <div className="space-y-1">
+      <div className="space-y-1.5">
         {category.leaders.map((leader, i) => {
           const val = parseFloat(leader.value) || 0;
           const barWidth = topValue > 0 ? Math.max((val / topValue) * 100, 8) : 0;
-          // For ERA, invert the bar (lower is better)
-          const invertedBar = category.category === 'earnedRunAverage';
           const effectiveWidth = invertedBar
             ? Math.max(100 - (val / (topValue * 2)) * 100, 8)
             : barWidth;
 
           return (
             <div key={leader.playerId || i} className="flex items-center gap-2">
-              <span className="text-[10px] text-gray-600 w-3 text-right shrink-0">
+              <span
+                className={`text-[10px] w-3 text-right shrink-0 font-mono ${
+                  i === 0 ? 'text-[var(--team-accent)]' : 'text-gray-600'
+                }`}
+              >
                 {leader.rank}
               </span>
               <div className="flex-1 min-w-0">
                 <div className="flex items-baseline justify-between gap-1 mb-0.5">
-                  <span className="text-[11px] text-gray-300 truncate">
-                    {leader.name?.split(' ').pop()}
+                  <span
+                    className={`text-[11px] truncate ${
+                      i === 0 ? 'text-gray-200 font-medium' : 'text-gray-400'
+                    }`}
+                  >
+                    {leader.name}
                   </span>
-                  <span className="text-[11px] font-mono text-gray-400 shrink-0">
-                    {isDecimal ? leader.value : leader.value}
+                  <span
+                    className={`text-[11px] font-mono shrink-0 ${
+                      i === 0 ? 'text-gray-200' : 'text-gray-500'
+                    }`}
+                  >
+                    {leader.value}
                   </span>
                 </div>
                 <div className="h-1 bg-white/5 rounded-full overflow-hidden">
                   <div
-                    className="h-full rounded-full bg-[var(--team-accent)]/60"
+                    className={`h-full rounded-full ${
+                      i === 0
+                        ? 'bg-[var(--team-accent)]'
+                        : 'bg-[var(--team-accent)]/40'
+                    }`}
                     style={{ width: `${effectiveWidth}%` }}
                   />
                 </div>
@@ -50,6 +64,18 @@ function LeaderCategory({ category }) {
           );
         })}
       </div>
+    </div>
+  );
+}
+
+function SectionHeader({ icon: Icon, label }) {
+  return (
+    <div className="flex items-center gap-2 mb-3">
+      <Icon size={14} className="text-[var(--team-accent)]" />
+      <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">
+        {label}
+      </h3>
+      <div className="flex-1 h-px bg-white/5" />
     </div>
   );
 }
@@ -72,23 +98,25 @@ export default function TeamLeaders() {
   const pitching = categories.filter((c) => !HITTING_CATS.has(c.category));
 
   return (
-    <div className="card md:col-span-3">
-      <div className="flex items-center gap-2 mb-4">
-        <Trophy size={14} className="text-gray-400" />
-        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">
-          Team Leaders
-        </h3>
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        {hitting.map((cat) => (
-          <LeaderCategory key={cat.category} category={cat} />
-        ))}
-      </div>
+    <div className="space-y-6">
+      {hitting.length > 0 && (
+        <div className="card">
+          <SectionHeader icon={Swords} label="Batting Leaders" />
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {hitting.map((cat) => (
+              <LeaderCategory key={cat.category} category={cat} />
+            ))}
+          </div>
+        </div>
+      )}
       {pitching.length > 0 && (
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4 pt-4 border-t border-white/5">
-          {pitching.map((cat) => (
-            <LeaderCategory key={cat.category} category={cat} />
-          ))}
+        <div className="card">
+          <SectionHeader icon={Flame} label="Pitching Leaders" />
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {pitching.map((cat) => (
+              <LeaderCategory key={cat.category} category={cat} />
+            ))}
+          </div>
         </div>
       )}
     </div>
