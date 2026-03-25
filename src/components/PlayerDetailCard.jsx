@@ -84,7 +84,7 @@ export default function PlayerDetailCard({ playerId }) {
 
   if (!player) return null;
 
-  const headshotUrl = `https://img.mlb.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/${player.id}/headshot/67/current`;
+  const headshotUrl = `https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/${player.id}/headshot/67/current`;
 
   const formatDate = (dateStr) => {
     if (!dateStr) return null;

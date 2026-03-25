@@ -10,7 +10,7 @@ function PitcherColumn({ pitcher, align }) {
   }
 
   const s = pitcher.season;
-  const headshotUrl = `https://img.mlb.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/${pitcher.id}/headshot/67/current`;
+  const headshotUrl = `https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/${pitcher.id}/headshot/67/current`;
 
   return (
     <div className={`flex-1 ${align === 'right' ? 'text-right' : ''}`}>

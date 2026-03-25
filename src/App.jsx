@@ -15,13 +15,14 @@ import NewsFeed from './components/NewsFeed';
 import HotCold from './components/HotCold';
 import TransactionsFeed from './components/TransactionsFeed';
 import TeamLeaders from './components/TeamLeaders';
-import { LayoutDashboard, Users, CalendarDays, BarChart3 } from 'lucide-react';
+import { LayoutDashboard, Users, CalendarDays, BarChart3, Trophy } from 'lucide-react';
 
 const tabs = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
   { id: 'roster', label: 'Roster', icon: Users },
   { id: 'schedule', label: 'Schedule', icon: CalendarDays },
   { id: 'standings', label: 'Standings', icon: BarChart3 },
+  { id: 'leaders', label: 'Leaders', icon: Trophy },
 ];
 
 export default function App() {
@@ -70,6 +71,7 @@ export default function App() {
         {activeTab === 'roster' && <RosterTable />}
         {activeTab === 'schedule' && <Schedule />}
         {activeTab === 'standings' && <Standings />}
+        {activeTab === 'leaders' && <TeamLeaders />}
       </div>
     </div>
   );
@@ -107,9 +109,6 @@ function OverviewTab({ gamesData, gamesLoading }) {
       {/* Row 3 */}
       <TeamStats />
       <InjuryReport />
-
-      {/* Row 3.5 */}
-      <TeamLeaders />
 
       {/* Row 4 */}
       <TransactionsFeed />
