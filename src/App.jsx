@@ -13,6 +13,8 @@ import Standings from './components/Standings';
 import RosterTable from './components/RosterTable';
 import NewsFeed from './components/NewsFeed';
 import HotCold from './components/HotCold';
+import TransactionsFeed from './components/TransactionsFeed';
+import TeamLeaders from './components/TeamLeaders';
 import { LayoutDashboard, Users, CalendarDays, BarChart3 } from 'lucide-react';
 
 const tabs = [
@@ -106,7 +108,13 @@ function OverviewTab({ gamesData, gamesLoading }) {
       <TeamStats />
       <InjuryReport />
 
+      {/* Row 3.5 */}
+      <TeamLeaders />
+
       {/* Row 4 */}
+      <TransactionsFeed />
+
+      {/* Row 5 */}
       <NewsFeed />
     </div>
   );

@@ -42,10 +42,10 @@ export function useTeamStats(teamId, leagueId) {
   });
 }
 
-export function useStandings(leagueId) {
+export function useStandings(leagueId, type = 'regularSeason') {
   return useQuery({
-    queryKey: ['standings', leagueId],
-    queryFn: () => fetchApi(`/api/standings?leagueId=${leagueId}`),
+    queryKey: ['standings', leagueId, type],
+    queryFn: () => fetchApi(`/api/standings?leagueId=${leagueId}&type=${type}`),
     refetchInterval: 300000,
     enabled: !!leagueId,
   });
@@ -75,6 +75,54 @@ export function useH2H(teamId, opponentId) {
     queryKey: ['h2h', teamId, opponentId],
     queryFn: () => fetchApi(`/api/h2h?teamId=${teamId}&opponentId=${opponentId}`),
     enabled: !!teamId && !!opponentId,
+    staleTime: 300000,
+  });
+}
+
+export function useHighlights(gamePk) {
+  return useQuery({
+    queryKey: ['highlights', gamePk],
+    queryFn: () => fetchApi(`/api/highlights?gamePk=${gamePk}`),
+    enabled: !!gamePk,
+    staleTime: 600000,
+  });
+}
+
+export function useTeamLeaders(teamId) {
+  return useQuery({
+    queryKey: ['leaders', teamId],
+    queryFn: () => fetchApi(`/api/leaders?teamId=${teamId}`),
+    refetchInterval: 300000,
+    enabled: !!teamId,
+  });
+}
+
+export function useMatchup(pitcher1Id, pitcher2Id) {
+  return useQuery({
+    queryKey: ['matchup', pitcher1Id, pitcher2Id],
+    queryFn: () =>
+      fetchApi(
+        `/api/matchup?pitcher1=${pitcher1Id || ''}&pitcher2=${pitcher2Id || ''}`
+      ),
+    enabled: !!(pitcher1Id || pitcher2Id),
+    staleTime: 600000,
+  });
+}
+
+export function useTransactions(teamId) {
+  return useQuery({
+    queryKey: ['transactions', teamId],
+    queryFn: () => fetchApi(`/api/transactions?teamId=${teamId}`),
+    refetchInterval: 900000,
+    enabled: !!teamId,
+  });
+}
+
+export function usePlayerDetail(playerId) {
+  return useQuery({
+    queryKey: ['player', playerId],
+    queryFn: () => fetchApi(`/api/player?playerId=${playerId}`),
+    enabled: !!playerId,
     staleTime: 300000,
   });
 }

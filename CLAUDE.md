@@ -29,23 +29,65 @@ No test suite exists in this project.
 | File | Role |
 |------|------|
 | `index.js` | Express app, mounts all routers |
-| `cache.js` | Shared NodeCache instance (default 60s TTL) |
+| `cache.js` | Shared NodeCache instance (default 60s TTL) with `getOrFetch()` helper and pending request deduplication |
 | `injuryScraper.js` | Puppeteer scraper — loads `mlb.com/news/{slug}-injuries-and-roster-moves`, parses "LATEST INJURIES" section |
 | `teamSlugs.js` | Maps `teamId → newsSlug` for the scraper |
+| `routes/games.js` | 7 days prior + 14 days future schedule; returns `{live, next, recent, allGames}`; dynamic TTL |
 | `routes/roster.js` | Fetches active roster from MLB API, merges with `injuries.json` and scraper data |
+| `routes/standings.js` | League standings by division |
+| `routes/stats.js` | Team & league-wide stats with rankings; returns hitting/pitching stats, ranks, top batters/pitchers |
+| `routes/news.js` | Team news from MLB CMS; top 8 articles |
+| `routes/h2h.js` | Head-to-head record between two teams (`teamId` + `opponentId` params) |
+| `routes/hotcold.js` | Hot/cold players over last 7 days; top 3 batters + 2 pitchers each way |
+| `routes/boxscore.js` | Detailed boxscore by `gamePk` with inning-by-inning, pitcher/hitter stats |
+| `routes/live.js` | Dedicated live game details endpoint |
+
+### Vercel serverless (`api/`)
+
+Mirrors `server/routes/` for production. Uses a different cache pattern than the dev server:
+
+| File | Role |
+|------|------|
+| `_cache.js` | Cache factory `createCache(stdTTL, checkperiod)` — each serverless function gets its own instance (can't share process state) |
+| `games.js`, `roster.js`, `standings.js`, `stats.js`, `news.js`, `h2h.js`, `hotcold.js`, `boxscore.js`, `live.js` | Mirror their `server/routes/` counterparts |
 
 ### Frontend (`src/`)
 
 | File | Role |
 |------|------|
+| `main.jsx` | React entry point; sets up React Query client (staleTime: 30s, retry: 2, no focus refetch) |
+| `App.jsx` | Main layout coordinator |
 | `context/TeamContext.jsx` | Global team selection, CSS var injection, localStorage persistence |
 | `hooks/useTeamData.js` | All React Query hooks: `useGames`, `useLiveGame`, `useRoster`, `useTeamStats`, `useStandings`, `useNews`, `useWeather` |
 | `data/teams.js` | Static data for all 30 teams: colors, stadium coords, division, logo URL |
 | `data/injuries.json` | Updated by GitHub Actions cron every 6h via `scripts/scrapeInjuries.js` |
+| `utils/rosterMerge.js` | `mergeRosterData()` — merges MLB API roster with scraped injury data |
+
+#### Components (`src/components/`)
+
+| Component | Role |
+|-----------|------|
+| `Header.jsx` | Top navigation bar with team selection |
+| `TeamSelector.jsx` | Team selection dropdown |
+| `TeamStats.jsx` | Offensive/pitching stats with league rankings |
+| `RosterTable.jsx` | Active roster with injury badges and expected return dates |
+| `InjuryReport.jsx` | Dedicated injury report view |
+| `Schedule.jsx` | Full team schedule |
+| `NextGame.jsx` | Upcoming game details (time, opponent, probable pitchers) |
+| `LiveGame.jsx` | Real-time live game with inning-by-inning, runner positions, count |
+| `GameSummaryPanel.jsx` | Completed game boxscore summary |
+| `RecentGames.jsx` | Last N completed games |
+| `PitchingTable.jsx` | Pitcher stats table |
+| `Standings.jsx` | Divisional/league standings |
+| `NewsFeed.jsx` | Recent team news articles |
+| `HotCold.jsx` | Hot/cold player performers |
+| `Milestones.jsx` | Player milestones |
+| `TeamUpdates.jsx` | General team updates widget |
 
 ### Injury data pipeline
 
 - **Build-time data**: `src/data/injuries.json` is committed to the repo and refreshed by GitHub Actions (`.github/workflows/scrape-injuries.yml`) every 6 hours
+- **Script**: `scripts/scrapeInjuries.js` orchestrates scraping all 30 teams and writes the JSON
 - **Merging**: both `server/routes/roster.js` and `api/roster.js` call `mergeRosterData()` from `src/utils/rosterMerge.js`
 
 #### Merge priority in `rosterMerge.js`
@@ -66,11 +108,14 @@ No test suite exists in this project.
 |------|-----|
 | Live game | 15s |
 | Games/schedule | 60s (live), 300s (no game) |
-| Roster, stats, standings | 300s |
-| News | 900s |
+| Roster | 300s (server) / 600s (api) |
+| Stats, standings | 900s |
+| News | 1800s |
+| Boxscore, H2H | 3600s |
 | Hot/Cold players | 7200s |
 
 ### Deployment
 
 - `vercel.json` rewrites: `/api/*` passes through to serverless functions in `api/`, everything else → `index.html`
 - The `api/` directory mirrors `server/routes/` for Vercel serverless — both must stay in sync
+- `api/_cache.js` uses a factory pattern (vs shared singleton in `server/cache.js`) because Vercel serverless functions cannot share process-level state

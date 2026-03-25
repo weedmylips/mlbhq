@@ -1,4 +1,5 @@
 import { useBoxScore } from '../hooks/useTeamData';
+import Highlights from './Highlights';
 
 const DECISION_COLORS = { W: 'text-green-400', L: 'text-red-400', SV: 'text-blue-400' };
 
@@ -172,6 +173,7 @@ export default function GameSummaryPanel({ gamePk }) {
         <TeamStatsColumn side="home" pitchers={pitchers} topHitters={topHitters} />
       </div>
 
+      <Highlights gamePk={gamePk} />
     </div>
   );
 }

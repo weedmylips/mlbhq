@@ -93,6 +93,29 @@ router.get('/live', async (req, res) => {
         currentPitcher: linescore.defense?.pitcher || null,
         lastPlay: plays.currentPlay?.result?.description || '',
         probablePitchers: data.gameData?.probablePitchers || {},
+        currentAtBat: (plays.currentPlay?.playEvents || [])
+          .filter((e) => e.isPitch)
+          .map((e) => ({
+            pitchNumber: e.pitchNumber,
+            type: e.details?.type?.description || e.details?.description || '',
+            speed: e.pitchData?.startSpeed ?? null,
+            result: e.details?.description || '',
+            call: e.details?.call?.description || '',
+            isStrike: e.details?.isStrike ?? false,
+            isBall: e.details?.isBall ?? false,
+            isInPlay: e.details?.isInPlay ?? false,
+          })),
+        recentPlays: (plays.allPlays || [])
+          .slice(-6, -1)
+          .reverse()
+          .map((p) => ({
+            description: p.result?.description || '',
+            event: p.result?.event || '',
+            isOut: p.result?.isOut ?? false,
+            rbi: p.result?.rbi ?? 0,
+            awayScore: p.result?.awayScore ?? 0,
+            homeScore: p.result?.homeScore ?? 0,
+          })),
       };
     }, 15);
     res.json(result);

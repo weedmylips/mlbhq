@@ -2,6 +2,7 @@ import { getTeamById } from '../data/teams';
 import { useTeam } from '../context/TeamContext';
 import { useH2H } from '../hooks/useTeamData';
 import { Calendar } from 'lucide-react';
+import MatchupPreview from './MatchupPreview';
 
 export default function NextGame({ game }) {
   const { team } = useTeam();
@@ -97,6 +98,13 @@ export default function NextGame({ game }) {
         <div className="mt-3 pt-2 border-t border-white/5 text-center text-xs text-gray-500">
           First meeting this season
         </div>
+      )}
+
+      {(probPitcher?.id || oppProbPitcher?.id) && (
+        <MatchupPreview
+          pitcher1Id={probPitcher?.id}
+          pitcher2Id={oppProbPitcher?.id}
+        />
       )}
     </div>
   );

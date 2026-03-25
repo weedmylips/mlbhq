@@ -1,9 +1,34 @@
+import { useState } from 'react';
 import { useRoster } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
+import PlayerDetailCard from './PlayerDetailCard';
+
+function ExpandableRow({ player, children, isExpanded, onToggle }) {
+  return (
+    <>
+      <tr
+        className={`border-b border-white/5 cursor-pointer transition-colors ${
+          isExpanded ? 'bg-white/[0.06]' : 'hover:bg-white/5'
+        }`}
+        onClick={onToggle}
+      >
+        {children}
+      </tr>
+      {isExpanded && (
+        <tr>
+          <td colSpan={99}>
+            <PlayerDetailCard playerId={player.id} />
+          </td>
+        </tr>
+      )}
+    </>
+  );
+}
 
 export default function RosterTable() {
   const { team } = useTeam();
   const { data, isLoading } = useRoster(team.id);
+  const [expandedId, setExpandedId] = useState(null);
 
   if (isLoading) {
     return (
@@ -15,6 +40,10 @@ export default function RosterTable() {
 
   const batters = data?.batters || [];
   const pitchers = data?.pitchers || [];
+
+  const toggleExpanded = (id) => {
+    setExpandedId((prev) => (prev === id ? null : id));
+  };
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -39,10 +68,28 @@ export default function RosterTable() {
           </thead>
           <tbody>
             {batters.map((p) => (
-              <tr key={p.id} className="border-b border-white/5 hover:bg-white/5">
+              <ExpandableRow
+                key={p.id}
+                player={p}
+                isExpanded={expandedId === p.id}
+                onToggle={() => toggleExpanded(p.id)}
+              >
                 <td className="py-1.5 pr-2 whitespace-nowrap">
-                  <span className="text-gray-400 text-xs mr-1">#{p.number}</span>
-                  {p.name}
+                  <div className="flex items-center gap-1">
+                    <svg
+                      className={`w-3 h-3 text-gray-500 transition-transform shrink-0 ${
+                        expandedId === p.id ? 'rotate-90' : ''
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span className="text-gray-400 text-xs mr-1">#{p.number}</span>
+                    {p.name}
+                  </div>
                 </td>
                 <td className="text-center text-xs text-gray-400">{p.position}</td>
                 <td className="text-right font-mono text-xs">{p.hitting?.avg || '-'}</td>
@@ -52,7 +99,7 @@ export default function RosterTable() {
                 <td className="text-right font-mono text-xs">{p.hitting?.homeRuns || '-'}</td>
                 <td className="text-right font-mono text-xs">{p.hitting?.rbi || '-'}</td>
                 <td className="text-right font-mono text-xs">{p.hitting?.stolenBases || '-'}</td>
-              </tr>
+              </ExpandableRow>
             ))}
           </tbody>
         </table>
@@ -82,10 +129,28 @@ export default function RosterTable() {
           </thead>
           <tbody>
             {pitchers.map((p) => (
-              <tr key={p.id} className="border-b border-white/5 hover:bg-white/5">
+              <ExpandableRow
+                key={p.id}
+                player={p}
+                isExpanded={expandedId === p.id}
+                onToggle={() => toggleExpanded(p.id)}
+              >
                 <td className="py-1.5 pr-2 whitespace-nowrap">
-                  <span className="text-gray-400 text-xs mr-1">#{p.number}</span>
-                  {p.name}
+                  <div className="flex items-center gap-1">
+                    <svg
+                      className={`w-3 h-3 text-gray-500 transition-transform shrink-0 ${
+                        expandedId === p.id ? 'rotate-90' : ''
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span className="text-gray-400 text-xs mr-1">#{p.number}</span>
+                    {p.name}
+                  </div>
                 </td>
                 <td className="text-center text-xs text-gray-400">{p.position}</td>
                 <td className="text-right font-mono text-xs">{p.pitching?.era || '-'}</td>
@@ -95,7 +160,7 @@ export default function RosterTable() {
                 <td className="text-right font-mono text-xs">{p.pitching?.saves || '-'}</td>
                 <td className="text-right font-mono text-xs">{p.pitching?.strikeOuts || '-'}</td>
                 <td className="text-right font-mono text-xs">{p.pitching?.inningsPitched || '-'}</td>
-              </tr>
+              </ExpandableRow>
             ))}
           </tbody>
           </table>

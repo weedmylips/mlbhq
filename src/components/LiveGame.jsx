@@ -1,5 +1,6 @@
 import { useLiveGame } from '../hooks/useTeamData';
 import { getTeamById } from '../data/teams';
+import PitchLog from './PitchLog';
 
 function BaseRunners({ runners }) {
   const baseStyle = (active) =>
@@ -187,6 +188,8 @@ export default function LiveGame({ gamePk }) {
           {data.lastPlay}
         </p>
       )}
+
+      <PitchLog currentAtBat={data.currentAtBat} recentPlays={data.recentPlays} />
     </div>
   );
 }

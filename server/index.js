@@ -8,6 +8,11 @@ import statsRouter from './routes/stats.js';
 import newsRouter from './routes/news.js';
 import h2hRouter from './routes/h2h.js';
 import hotcoldRouter from './routes/hotcold.js';
+import playerRouter from './routes/player.js';
+import transactionsRouter from './routes/transactions.js';
+import matchupRouter from './routes/matchup.js';
+import leadersRouter from './routes/leaders.js';
+import highlightsRouter from './routes/highlights.js';
 
 dotenv.config();
 
@@ -24,6 +29,11 @@ app.use('/api', statsRouter);
 app.use('/api', newsRouter);
 app.use('/api', h2hRouter);
 app.use('/api', hotcoldRouter);
+app.use('/api', playerRouter);
+app.use('/api', transactionsRouter);
+app.use('/api', matchupRouter);
+app.use('/api', leadersRouter);
+app.use('/api', highlightsRouter);
 
 app.listen(PORT, () => {
   console.log(`MLB Dashboard API running on port ${PORT}`);
