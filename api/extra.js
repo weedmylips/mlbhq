@@ -382,6 +382,40 @@ async function handleScoreboard(req, res) {
   res.json(result);
 }
 
+// --- Batter vs Pitcher ---
+const bvpCache = createCache(3600, 120);
+
+async function handleBvp(req, res) {
+  const { batterId, pitcherId } = req.query;
+  if (!batterId || !pitcherId) {
+    return res.status(400).json({ error: 'batterId and pitcherId required' });
+  }
+
+  const cacheKey = `bvp-${batterId}-${pitcherId}`;
+  const result = await bvpCache.getOrFetch(cacheKey, async () => {
+    const url = `https://statsapi.mlb.com/api/v1/people/${batterId}/stats?stats=vsPlayer&opposingPlayerId=${pitcherId}&group=hitting`;
+    const resp = await fetch(url);
+    const data = await resp.json();
+
+    const splits = data.stats?.[0]?.splits || [];
+    const career = splits[0]?.stat || null;
+
+    if (!career) return { atBats: 0 };
+
+    return {
+      atBats: career.atBats ?? 0,
+      hits: career.hits ?? 0,
+      avg: career.avg ?? '-',
+      hr: career.homeRuns ?? 0,
+      rbi: career.rbi ?? 0,
+      bb: career.baseOnBalls ?? 0,
+      k: career.strikeOuts ?? 0,
+    };
+  }, 3600);
+
+  res.json(result);
+}
+
 // --- Router ---
 const handlers = {
   player: handlePlayer,
@@ -390,6 +424,7 @@ const handlers = {
   leaders: handleLeaders,
   highlights: handleHighlights,
   scoreboard: handleScoreboard,
+  bvp: handleBvp,
 };
 
 export default async function handler(req, res) {

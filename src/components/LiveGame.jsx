@@ -1,6 +1,10 @@
 import { useLiveGame } from '../hooks/useTeamData';
 import { getTeamById } from '../data/teams';
 import PitchLog from './PitchLog';
+import WinProbability from './WinProbability';
+import PitchZone from './PitchZone';
+import BatterVsPitcher from './BatterVsPitcher';
+import PitcherEfficiency from './PitcherEfficiency';
 
 function BaseRunners({ runners }) {
   const baseStyle = (active) =>
@@ -190,6 +194,24 @@ export default function LiveGame({ gamePk }) {
       )}
 
       <PitchLog currentAtBat={data.currentAtBat} recentPlays={data.recentPlays} />
+
+      <WinProbability data={data} />
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
+        <PitchZone pitches={data.currentAtBat} />
+        <div>
+          <PitcherEfficiency
+            pitchCount={data.pitchCount}
+            pitcherName={data.currentPitcher?.fullName?.split(' ').at(-1)}
+          />
+          <BatterVsPitcher
+            batterId={data.currentBatter?.id}
+            pitcherId={data.currentPitcher?.id}
+            batterName={data.currentBatter?.fullName?.split(' ').at(-1)}
+            pitcherName={data.currentPitcher?.fullName?.split(' ').at(-1)}
+          />
+        </div>
+      </div>
     </div>
   );
 }

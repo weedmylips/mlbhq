@@ -136,6 +136,15 @@ export function useHotCold(teamId) {
   });
 }
 
+export function useBvp(batterId, pitcherId) {
+  return useQuery({
+    queryKey: ['bvp', batterId, pitcherId],
+    queryFn: () => fetchApi(`/api/bvp?batterId=${batterId}&pitcherId=${pitcherId}`),
+    enabled: !!batterId && !!pitcherId,
+    staleTime: 600000,
+  });
+}
+
 export function useScoreboard(date) {
   return useQuery({
     queryKey: ['scoreboard', date],

@@ -116,6 +116,19 @@ router.get('/live', async (req, res) => {
           away: getLineup('away'),
           home: getLineup('home'),
         },
+        pitchCount: (() => {
+          const currentPitcherId = linescore.defense?.pitcher?.id;
+          if (!currentPitcherId) return null;
+          const side = data.inningHalf === 'Top' ? 'home' : 'away';
+          const p = boxscore.teams?.[side]?.players?.[`ID${currentPitcherId}`];
+          const ps = p?.stats?.pitching || {};
+          return {
+            pitches: ps.pitchesThrown ?? null,
+            strikes: ps.strikes ?? null,
+            balls: (ps.pitchesThrown ?? 0) - (ps.strikes ?? 0),
+            ip: ps.inningsPitched ?? null,
+          };
+        })(),
         currentAtBat: (plays.currentPlay?.playEvents || [])
           .filter((e) => e.isPitch)
           .map((e) => ({
@@ -127,6 +140,9 @@ router.get('/live', async (req, res) => {
             isStrike: e.details?.isStrike ?? false,
             isBall: e.details?.isBall ?? false,
             isInPlay: e.details?.isInPlay ?? false,
+            pX: e.pitchData?.coordinates?.pX ?? null,
+            pZ: e.pitchData?.coordinates?.pZ ?? null,
+            zone: e.pitchData?.zone ?? null,
           })),
         recentPlays: (plays.allPlays || [])
           .slice(-6, -1)
