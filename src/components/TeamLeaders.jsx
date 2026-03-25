@@ -2,13 +2,10 @@ import { useTeamLeaders } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 import { Swords, Flame } from 'lucide-react';
 
-const HITTING_CATS = new Set(['battingAverage', 'homeRuns', 'runsBattedIn', 'stolenBases']);
+const HITTING_CATS = new Set(['battingAverage', 'homeRuns', 'runsBattedIn', 'stolenBases', 'strikeouts']);
 
 function LeaderCategory({ category }) {
   if (!category.leaders?.length) return null;
-
-  const topValue = parseFloat(category.leaders[0]?.value) || 0;
-  const invertedBar = category.category === 'earnedRunAverage';
 
   return (
     <div className="bg-white/[0.02] rounded-lg p-3">
@@ -16,14 +13,7 @@ function LeaderCategory({ category }) {
         {category.label}
       </h4>
       <div className="space-y-1.5">
-        {category.leaders.map((leader, i) => {
-          const val = parseFloat(leader.value) || 0;
-          const barWidth = topValue > 0 ? Math.max((val / topValue) * 100, 8) : 0;
-          const effectiveWidth = invertedBar
-            ? Math.max(100 - (val / (topValue * 2)) * 100, 8)
-            : barWidth;
-
-          return (
+        {category.leaders.map((leader, i) => (
             <div key={leader.playerId || i} className="flex items-center gap-2">
               <span
                 className={`text-[10px] w-3 text-right shrink-0 font-mono ${
@@ -33,7 +23,7 @@ function LeaderCategory({ category }) {
                 {leader.rank}
               </span>
               <div className="flex-1 min-w-0">
-                <div className="flex items-baseline justify-between gap-1 mb-0.5">
+                <div className="flex items-baseline justify-between gap-1">
                   <span
                     className={`text-[11px] truncate ${
                       i === 0 ? 'text-gray-200 font-medium' : 'text-gray-400'
@@ -49,20 +39,9 @@ function LeaderCategory({ category }) {
                     {leader.value}
                   </span>
                 </div>
-                <div className="h-1 bg-white/5 rounded-full overflow-hidden">
-                  <div
-                    className={`h-full rounded-full ${
-                      i === 0
-                        ? 'bg-[var(--team-accent)]'
-                        : 'bg-[var(--team-accent)]/40'
-                    }`}
-                    style={{ width: `${effectiveWidth}%` }}
-                  />
-                </div>
               </div>
             </div>
-          );
-        })}
+        ))}
       </div>
     </div>
   );

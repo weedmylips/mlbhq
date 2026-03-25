@@ -73,6 +73,15 @@ export default function App() {
         {activeTab === 'standings' && <Standings />}
         {activeTab === 'leaders' && <TeamLeaders />}
       </div>
+
+      {/* Footer disclaimer */}
+      <footer className="border-t border-border mt-8 py-6 px-4 text-center">
+        <p className="text-[11px] text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          This is an independent fan site and is not affiliated with, endorsed by, or in any way connected to
+          Major League Baseball (MLB), its teams, or MLB Advanced Media. All team names, logos, and related
+          marks are trademarks of their respective owners. Data provided by the MLB Stats API.
+        </p>
+      </footer>
     </div>
   );
 }

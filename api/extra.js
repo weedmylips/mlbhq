@@ -183,10 +183,11 @@ const CATEGORIES = [
   'homeRuns',
   'runsBattedIn',
   'stolenBases',
+  'strikeouts',
   'earnedRunAverage',
   'wins',
   'saves',
-  'strikeouts',
+  'strikeoutsPer9Inn',
 ];
 
 const CATEGORY_LABELS = {
@@ -194,10 +195,11 @@ const CATEGORY_LABELS = {
   homeRuns: 'HR',
   runsBattedIn: 'RBI',
   stolenBases: 'SB',
+  strikeouts: 'K',
   earnedRunAverage: 'ERA',
   wins: 'W',
   saves: 'SV',
-  strikeouts: 'K',
+  strikeoutsPer9Inn: 'K/9',
 };
 
 async function handleLeaders(req, res) {
