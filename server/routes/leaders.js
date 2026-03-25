@@ -36,16 +36,23 @@ router.get('/leaders', async (req, res) => {
       const resp = await fetch(url);
       const data = await resp.json();
 
-      return (data.teamLeaders || []).map((cat) => ({
-        category: cat.leaderCategory,
-        label: CATEGORY_LABELS[cat.leaderCategory] || cat.leaderCategory,
-        leaders: (cat.leaders || []).map((l) => ({
-          rank: l.rank,
-          name: l.person?.fullName,
-          playerId: l.person?.id,
-          value: l.value,
-        })),
-      }));
+      const seen = new Set();
+      return (data.teamLeaders || [])
+        .filter((cat) => {
+          if (seen.has(cat.leaderCategory)) return false;
+          seen.add(cat.leaderCategory);
+          return true;
+        })
+        .map((cat) => ({
+          category: cat.leaderCategory,
+          label: CATEGORY_LABELS[cat.leaderCategory] || cat.leaderCategory,
+          leaders: (cat.leaders || []).map((l) => ({
+            rank: l.rank,
+            name: l.person?.fullName,
+            playerId: l.person?.id,
+            value: l.value,
+          })),
+        }));
     }, 3600);
 
     res.json(leaders);
