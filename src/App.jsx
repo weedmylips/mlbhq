@@ -111,7 +111,7 @@ function TeamPage() {
       </div>
 
       {/* Footer disclaimer */}
-      <footer className="border-t border-border mt-8 py-6 px-4 text-center mb-16 sm:mb-0">
+      <footer className="border-t border-border mt-8 py-6 px-4 text-center sm:mb-0">
         <p className="text-[11px] text-gray-600 leading-relaxed max-w-2xl mx-auto">
           This is an independent fan site and is not affiliated with, endorsed by, or in any way connected to
           Major League Baseball (MLB), its teams, or MLB Advanced Media. All team names, logos, and related
@@ -120,7 +120,7 @@ function TeamPage() {
       </footer>
 
       {/* Mobile bottom tab bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-surface/95 backdrop-blur-sm border-t border-border sm:hidden z-50">
+      <div className="fixed bottom-0 left-0 right-0 bg-surface backdrop-blur-sm border-t border-border sm:hidden z-50">
         <div className="flex justify-around py-1">
           {tabs.map(({ id, label, icon: Icon }) => (
             <button

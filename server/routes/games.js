@@ -28,7 +28,8 @@ router.get('/games', async (req, res) => {
       const live = allGames.find(
         (g) =>
           g.status?.abstractGameState === 'Live' ||
-          g.status?.detailedState === 'In Progress'
+          g.status?.detailedState === 'In Progress' ||
+          (g.status?.detailedState || '').includes('Delayed')
       ) || null;
 
       const now = new Date();

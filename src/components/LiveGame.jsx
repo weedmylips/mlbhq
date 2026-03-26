@@ -129,6 +129,8 @@ export default function LiveGame({ gamePk }) {
 
   const awayTeam = getTeamById(data.away?.team?.id);
   const homeTeam = getTeamById(data.home?.team?.id);
+  const detailedState = data.gameData?.status?.detailedState || '';
+  const isDelayed = detailedState.includes('Delayed');
   const inningHalf = data.inningHalf === 'Top' ? '\u25B2' : '\u25BC';
 
   // Top = away batting, home pitching; Bottom = home batting, away pitching
@@ -153,10 +155,16 @@ export default function LiveGame({ gamePk }) {
         <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">
           Live Game
         </h3>
-        <span className="flex items-center gap-1 bg-red-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">
-          <span className="w-2 h-2 bg-white rounded-full live-dot" />
-          {inningHalf} {data.inning}
-        </span>
+        {isDelayed ? (
+          <span className="flex items-center gap-1 bg-yellow-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">
+            Delayed
+          </span>
+        ) : (
+          <span className="flex items-center gap-1 bg-red-600 text-white text-xs px-2 py-0.5 rounded-full font-bold">
+            <span className="w-2 h-2 bg-white rounded-full live-dot" />
+            {inningHalf} {data.inning}
+          </span>
+        )}
       </div>
 
       <div className="flex items-center justify-between">
