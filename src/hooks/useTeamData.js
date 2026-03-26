@@ -92,8 +92,18 @@ export function useTeamLeaders(teamId) {
   return useQuery({
     queryKey: ['leaders', teamId],
     queryFn: () => fetchApi(`/api/leaders?teamId=${teamId}`),
-    refetchInterval: 900000,
+    refetchInterval: 3600000,
+    staleTime: 1800000,
     enabled: !!teamId,
+  });
+}
+
+export function useLeagueLeaders() {
+  return useQuery({
+    queryKey: ['league-leaders'],
+    queryFn: () => fetchApi('/api/league-leaders'),
+    refetchInterval: 3600000,
+    staleTime: 1800000,
   });
 }
 

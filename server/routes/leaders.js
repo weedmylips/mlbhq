@@ -3,29 +3,56 @@ import { getOrFetch } from '../cache.js';
 
 const router = Router();
 
-const CATEGORIES = [
-  'battingAverage',
-  'homeRuns',
-  'runsBattedIn',
-  'stolenBases',
-  'strikeouts',
-  'earnedRunAverage',
-  'wins',
-  'saves',
-  'strikeoutsPer9Inn',
+const TRADITIONAL_HITTING = [
+  { key: 'battingAverage', label: 'AVG' },
+  { key: 'homeRuns', label: 'HR' },
+  { key: 'runsBattedIn', label: 'RBI' },
+  { key: 'stolenBases', label: 'SB' },
+  { key: 'onBasePercentage', label: 'OBP' },
 ];
 
-const CATEGORY_LABELS = {
-  battingAverage: 'AVG',
-  homeRuns: 'HR',
-  runsBattedIn: 'RBI',
-  stolenBases: 'SB',
-  strikeouts: 'K',
-  earnedRunAverage: 'ERA',
-  wins: 'W',
-  saves: 'SV',
-  strikeoutsPer9Inn: 'K/9',
-};
+const ADVANCED_HITTING = [
+  { key: 'onBasePlusSlugging', label: 'OPS' },
+  { key: 'sluggingPercentage', label: 'SLG' },
+  { key: 'isolatedPower', label: 'ISO' },
+  { key: 'strikeoutRate', label: 'K%' },
+  { key: 'walksPerPlateAppearance', label: 'BB%' },
+];
+
+const TRADITIONAL_PITCHING = [
+  { key: 'earnedRunAverage', label: 'ERA' },
+  { key: 'wins', label: 'W' },
+  { key: 'saves', label: 'SV' },
+  { key: 'strikeoutsPer9Inn', label: 'K/9' },
+];
+
+const ADVANCED_PITCHING = [
+  { key: 'walksAndHitsPerInningPitched', label: 'WHIP' },
+  { key: 'strikeoutWalkRatio', label: 'K/BB' },
+  { key: 'groundOutsToAirouts', label: 'GO/AO' },
+];
+
+const ALL_CATS = [
+  ...TRADITIONAL_HITTING,
+  ...ADVANCED_HITTING,
+  ...TRADITIONAL_PITCHING,
+  ...ADVANCED_PITCHING,
+];
+
+const LABEL_MAP = Object.fromEntries(ALL_CATS.map((c) => [c.key, c.label]));
+
+const TRAD_HITTING_SET = new Set(TRADITIONAL_HITTING.map((c) => c.key));
+const ADV_HITTING_SET = new Set(ADVANCED_HITTING.map((c) => c.key));
+const TRAD_PITCHING_SET = new Set(TRADITIONAL_PITCHING.map((c) => c.key));
+const ADV_PITCHING_SET = new Set(ADVANCED_PITCHING.map((c) => c.key));
+
+function classifyCategory(key) {
+  if (TRAD_HITTING_SET.has(key)) return { group: 'hitting', type: 'traditional' };
+  if (ADV_HITTING_SET.has(key)) return { group: 'hitting', type: 'advanced' };
+  if (TRAD_PITCHING_SET.has(key)) return { group: 'pitching', type: 'traditional' };
+  if (ADV_PITCHING_SET.has(key)) return { group: 'pitching', type: 'advanced' };
+  return { group: 'hitting', type: 'traditional' };
+}
 
 router.get('/leaders', async (req, res) => {
   try {
@@ -35,12 +62,13 @@ router.get('/leaders', async (req, res) => {
     const cacheKey = `leaders-${teamId}`;
     const leaders = await getOrFetch(cacheKey, async () => {
       const season = new Date().getFullYear();
-      let url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${CATEGORIES.join(',')}&season=${season}&limit=5`;
+      const cats = ALL_CATS.map((c) => c.key).join(',');
+      let url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season}&limit=5`;
       let resp = await fetch(url);
       let data = await resp.json();
 
       if (!data.teamLeaders?.length) {
-        url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${CATEGORIES.join(',')}&season=${season - 1}&limit=5`;
+        url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season - 1}&limit=5`;
         resp = await fetch(url);
         data = await resp.json();
       }
@@ -50,24 +78,78 @@ router.get('/leaders', async (req, res) => {
         .filter((cat) => {
           if (seen.has(cat.leaderCategory)) return false;
           seen.add(cat.leaderCategory);
-          return true;
+          return LABEL_MAP[cat.leaderCategory] !== undefined;
         })
-        .map((cat) => ({
-          category: cat.leaderCategory,
-          label: CATEGORY_LABELS[cat.leaderCategory] || cat.leaderCategory,
-          leaders: (cat.leaders || []).map((l) => ({
-            rank: l.rank,
-            name: l.person?.fullName,
-            playerId: l.person?.id,
-            value: l.value,
-          })),
-        }));
+        .map((cat) => {
+          const { group, type } = classifyCategory(cat.leaderCategory);
+          return {
+            category: cat.leaderCategory,
+            label: LABEL_MAP[cat.leaderCategory],
+            group,
+            type,
+            leaders: (cat.leaders || []).map((l) => ({
+              rank: l.rank,
+              name: l.person?.fullName,
+              playerId: l.person?.id,
+              value: l.value,
+            })),
+          };
+        });
     }, 3600);
 
     res.json(leaders);
   } catch (err) {
     console.error('Leaders error:', err.message);
     res.status(500).json({ error: 'Failed to fetch leaders' });
+  }
+});
+
+router.get('/league-leaders', async (req, res) => {
+  try {
+    const cacheKey = 'league-leaders';
+    const leaders = await getOrFetch(cacheKey, async () => {
+      const season = new Date().getFullYear();
+      const cats = ALL_CATS.map((c) => c.key).join(',');
+      let url = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${cats}&season=${season}&sportId=1&limit=5&hydrate=person(team)`;
+      let resp = await fetch(url);
+      let data = await resp.json();
+
+      if (!data.leagueLeaders?.length) {
+        url = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${cats}&season=${season - 1}&sportId=1&limit=5&hydrate=person(team)`;
+        resp = await fetch(url);
+        data = await resp.json();
+      }
+
+      const seen = new Set();
+      return (data.leagueLeaders || [])
+        .filter((cat) => {
+          if (seen.has(cat.leaderCategory)) return false;
+          seen.add(cat.leaderCategory);
+          return LABEL_MAP[cat.leaderCategory] !== undefined;
+        })
+        .map((cat) => {
+          const { group, type } = classifyCategory(cat.leaderCategory);
+          return {
+            category: cat.leaderCategory,
+            label: LABEL_MAP[cat.leaderCategory],
+            group,
+            type,
+            leaders: (cat.leaders || []).map((l) => ({
+              rank: l.rank,
+              name: l.person?.fullName,
+              playerId: l.person?.id,
+              team: l.team?.name || l.person?.team?.name || '',
+              teamAbbr: l.team?.abbreviation || '',
+              value: l.value,
+            })),
+          };
+        });
+    }, 3600);
+
+    res.json(leaders);
+  } catch (err) {
+    console.error('League leaders error:', err.message);
+    res.status(500).json({ error: 'Failed to fetch league leaders' });
   }
 });
 

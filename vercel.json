@@ -4,6 +4,7 @@
     { "source": "/api/transactions", "destination": "/api/extra?route=transactions" },
     { "source": "/api/matchup", "destination": "/api/extra?route=matchup" },
     { "source": "/api/leaders", "destination": "/api/extra?route=leaders" },
+    { "source": "/api/league-leaders", "destination": "/api/extra?route=league-leaders" },
     { "source": "/api/highlights", "destination": "/api/extra?route=highlights" },
     { "source": "/api/scoreboard", "destination": "/api/extra?route=scoreboard" },
     { "source": "/api/bvp", "destination": "/api/extra?route=bvp" },
