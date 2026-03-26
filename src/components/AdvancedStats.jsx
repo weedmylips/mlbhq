@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useAnalytics, useSituational } from '../hooks/useTeamData';
+import { useAnalytics, useSituational, useHasLiveGame } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 import SituationalStats from './SituationalStats';
 
@@ -82,8 +82,9 @@ const PITCHER_COLS = [
 
 export default function AdvancedStats() {
   const { team } = useTeam();
-  const { data, isLoading } = useAnalytics(team.id);
-  const { data: sitData, isLoading: sitLoading } = useSituational(team.id);
+  const hasLiveGame = useHasLiveGame(team.id);
+  const { data, isLoading } = useAnalytics(team.id, hasLiveGame);
+  const { data: sitData, isLoading: sitLoading } = useSituational(team.id, hasLiveGame);
   const [view, setView] = useState('hitting');
 
   if (isLoading) {

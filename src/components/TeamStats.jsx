@@ -1,4 +1,4 @@
-import { useTeamStats } from '../hooks/useTeamData';
+import { useTeamStats, useHasLiveGame } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 
 function StatBox({ label, value, rank, leagueAbbr }) {
@@ -27,7 +27,8 @@ function PlayerRow({ name, stats }) {
 export default function TeamStats() {
   const { team } = useTeam();
   const leagueId = team.league === 'AL' ? 103 : 104;
-  const { data, isLoading } = useTeamStats(team.id, leagueId);
+  const hasLiveGame = useHasLiveGame(team.id);
+  const { data, isLoading } = useTeamStats(team.id, leagueId, hasLiveGame);
 
   if (isLoading) {
     return (

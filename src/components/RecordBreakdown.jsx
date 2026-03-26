@@ -1,4 +1,4 @@
-import { useStandings } from '../hooks/useTeamData';
+import { useStandings, useHasLiveGame } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 
 function RecordRow({ label, record }) {
@@ -39,7 +39,8 @@ function StreakRow({ label, value }) {
 export default function RecordBreakdown() {
   const { team } = useTeam();
   const leagueId = team.league === 'AL' ? 103 : 104;
-  const { data, isLoading } = useStandings(leagueId);
+  const hasLiveGame = useHasLiveGame(team.id);
+  const { data, isLoading } = useStandings(leagueId, 'regularSeason', hasLiveGame);
 
   if (isLoading) {
     return (

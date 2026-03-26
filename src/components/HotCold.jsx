@@ -1,5 +1,5 @@
 import { useTeam } from '../context/TeamContext';
-import { useHotCold } from '../hooks/useTeamData';
+import { useHotCold, useHasLiveGame } from '../hooks/useTeamData';
 
 function PlayerRow({ name, stats, hot }) {
   return (
@@ -57,7 +57,8 @@ function InfoTip() {
 
 export default function HotCold() {
   const { team } = useTeam();
-  const { data, isLoading } = useHotCold(team.id);
+  const hasLiveGame = useHasLiveGame(team.id);
+  const { data, isLoading } = useHotCold(team.id, hasLiveGame);
 
   if (isLoading) {
     return (

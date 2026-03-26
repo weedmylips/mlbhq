@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Routes, Route, useParams, useNavigate, Navigate } from 'react-router-dom';
 import { useTeam } from './context/TeamContext';
-import { useGames } from './hooks/useTeamData';
+import { useGames, useGameEndRefresh } from './hooks/useTeamData';
 import { getTeamByAbbr } from './data/teams';
 import TeamSelector from './components/TeamSelector';
 import Header from './components/Header';
@@ -55,6 +55,8 @@ function TeamPage() {
   const validTab = tabs.find((t) => t.id === activeTab) ? activeTab : 'overview';
 
   const { data: gamesData, isLoading: gamesLoading } = useGames(team.id);
+  const hasLiveGame = !!gamesData?.live;
+  useGameEndRefresh(hasLiveGame);
   const isYankees = team.id === 147;
 
   const setActiveTab = (tabId) => {

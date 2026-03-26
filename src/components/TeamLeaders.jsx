@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useTeamLeaders, useLeagueLeaders } from '../hooks/useTeamData';
+import { useTeamLeaders, useLeagueLeaders, useHasLiveGame } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 import { Swords, Flame } from 'lucide-react';
 
@@ -219,8 +219,9 @@ function LeadersGrid({ categories, hittingView, setHittingView, pitchingView, se
 
 export default function TeamLeaders() {
   const { team } = useTeam();
-  const { data: teamCategories, isLoading: teamLoading } = useTeamLeaders(team.id);
-  const { data: leagueCategories, isLoading: leagueLoading } = useLeagueLeaders();
+  const hasLiveGame = useHasLiveGame(team.id);
+  const { data: teamCategories, isLoading: teamLoading } = useTeamLeaders(team.id, hasLiveGame);
+  const { data: leagueCategories, isLoading: leagueLoading } = useLeagueLeaders(hasLiveGame);
   const [scope, setScope] = useState('team');
   const [hittingView, setHittingView] = useState('traditional');
   const [pitchingView, setPitchingView] = useState('traditional');

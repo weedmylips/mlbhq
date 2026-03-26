@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useStandings } from '../hooks/useTeamData';
+import { useStandings, useHasLiveGame } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 import { getTeamById } from '../data/teams';
 import { expectedWins, magicNumber } from '../utils/statsCalculations';
@@ -424,8 +424,9 @@ export default function Standings() {
   const secondaryLeagueId = team.league === 'AL' ? 104 : 103;
 
   const standingsType = viewType === 'wildCard' ? 'wildCard' : 'regularSeason';
-  const { data: primaryData, isLoading: primaryLoading } = useStandings(primaryLeagueId, standingsType);
-  const { data: secondaryData, isLoading: secondaryLoading } = useStandings(secondaryLeagueId, standingsType);
+  const hasLiveGame = useHasLiveGame(team.id);
+  const { data: primaryData, isLoading: primaryLoading } = useStandings(primaryLeagueId, standingsType, hasLiveGame);
+  const { data: secondaryData, isLoading: secondaryLoading } = useStandings(secondaryLeagueId, standingsType, hasLiveGame);
 
   if (primaryLoading || secondaryLoading) {
     return (

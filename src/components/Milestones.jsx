@@ -1,10 +1,11 @@
 import { useTeam } from '../context/TeamContext';
-import { useTeamStats } from '../hooks/useTeamData';
+import { useTeamStats, useHasLiveGame } from '../hooks/useTeamData';
 import { Trophy } from 'lucide-react';
 
 export default function Milestones() {
   const { team } = useTeam();
-  const { data } = useTeamStats(team.id);
+  const hasLiveGame = useHasLiveGame(team.id);
+  const { data } = useTeamStats(team.id, undefined, hasLiveGame);
 
   const milestones = [];
   if (data) {

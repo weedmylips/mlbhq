@@ -1,9 +1,10 @@
-import { useHotCold } from '../hooks/useTeamData';
+import { useHotCold, useHasLiveGame } from '../hooks/useTeamData';
 import { getTeamById } from '../data/teams';
 import MatchupPreview from './MatchupPreview';
 
 function WatchList({ teamId }) {
-  const { data, isLoading } = useHotCold(teamId);
+  const hasLiveGame = useHasLiveGame(teamId);
+  const { data, isLoading } = useHotCold(teamId, hasLiveGame);
   const team = getTeamById(teamId);
 
   if (isLoading) return <div className="skeleton h-16 w-full rounded" />;
