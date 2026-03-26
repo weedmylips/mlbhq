@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { useLiveGame } from '../hooks/useTeamData';
 import { getTeamById } from '../data/teams';
 import PitchLog from './PitchLog';
@@ -116,6 +118,50 @@ function PlayerBadge({ player, label }) {
   );
 }
 
+function ScoringPlays({ plays }) {
+  const [expanded, setExpanded] = useState(false);
+  if (!plays?.length) return null;
+
+  return (
+    <div className="mt-3 border-t border-border pt-2">
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition-colors w-full"
+      >
+        <ChevronDown
+          size={14}
+          className={`transition-transform ${expanded ? 'rotate-180' : ''}`}
+        />
+        <span className="font-medium uppercase tracking-wider text-[10px]">
+          Scoring Plays
+        </span>
+        <span className="text-[10px] text-gray-600 ml-1">
+          {plays.length} run{plays.length !== 1 ? 's' : ''}
+        </span>
+      </button>
+
+      {expanded && (
+        <div className="mt-2 space-y-1 max-h-[250px] overflow-y-auto scrollbar-none">
+          {plays.map((play, i) => (
+            <div key={i} className="flex items-start gap-2 py-1.5 px-2 rounded bg-white/[0.03]">
+              <span className="text-[10px] font-mono text-gray-500 shrink-0 w-6 text-right">
+                {play.halfInning === 'top' ? '\u25B2' : '\u25BC'}{play.inning}
+              </span>
+              <span className="text-[10px] font-medium px-1.5 py-0.5 rounded border shrink-0 bg-green-500/15 text-green-400 border-green-500/20">
+                {play.event}
+              </span>
+              <p className="text-[11px] text-gray-400 leading-relaxed flex-1 min-w-0">{play.description}</p>
+              <span className="text-[11px] font-mono font-bold text-gray-300 shrink-0">
+                {play.awayScore}-{play.homeScore}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function LiveGame({ gamePk }) {
   const { data, isLoading } = useLiveGame(gamePk);
 
@@ -224,31 +270,6 @@ export default function LiveGame({ gamePk }) {
         </p>
       )}
 
-      {/* Scoring Plays */}
-      {data.scoringPlays?.length > 0 && (
-        <div className="mt-3 pt-3 border-t border-white/5">
-          <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-2">
-            Scoring Plays
-          </h4>
-          <div className="space-y-1 max-h-[200px] overflow-y-auto scrollbar-none">
-            {data.scoringPlays.map((play, i) => (
-              <div key={i} className="flex items-start gap-2 py-1.5 px-2 rounded bg-white/[0.03]">
-                <span className="text-[10px] font-mono text-gray-500 shrink-0 w-6 text-right">
-                  {play.halfInning === 'top' ? '\u25B2' : '\u25BC'}{play.inning}
-                </span>
-                <span className="text-[10px] font-medium px-1.5 py-0.5 rounded border shrink-0 bg-green-500/15 text-green-400 border-green-500/20">
-                  {play.event}
-                </span>
-                <p className="text-[11px] text-gray-400 leading-relaxed flex-1 min-w-0">{play.description}</p>
-                <span className="text-[11px] font-mono font-bold text-gray-300 shrink-0">
-                  {play.awayScore}-{play.homeScore}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
         <PitchZone pitches={data.currentAtBat} />
         <div>
@@ -266,6 +287,8 @@ export default function LiveGame({ gamePk }) {
       </div>
 
       <PitchLog currentAtBat={data.currentAtBat} recentPlays={data.recentPlays} />
+
+      <ScoringPlays plays={data.scoringPlays} />
     </div>
   );
 }
