@@ -1,5 +1,5 @@
 import { useTeam } from '../context/TeamContext';
-import { useBullpen, useHasLiveGame } from '../hooks/useTeamData';
+import { useBullpen } from '../hooks/useTeamData';
 
 function InfoTip() {
   return (
@@ -65,8 +65,7 @@ function RelieverRow({ reliever }) {
 
 export default function BullpenHealth() {
   const { team } = useTeam();
-  const hasLiveGame = useHasLiveGame(team.id);
-  const { data, isLoading } = useBullpen(team.id, hasLiveGame);
+  const { data, isLoading } = useBullpen(team.id);
 
   if (isLoading) {
     return (

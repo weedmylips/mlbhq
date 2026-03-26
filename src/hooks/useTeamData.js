@@ -170,12 +170,12 @@ export function useSituational(teamId, hasLiveGame) {
   });
 }
 
-export function useBullpen(teamId, hasLiveGame) {
+export function useBullpen(teamId) {
   return useQuery({
     queryKey: ['bullpen', teamId],
     queryFn: () => fetchApi(`/api/bullpen?teamId=${teamId}`),
-    refetchInterval: hasLiveGame ? 1800000 : false,
-    staleTime: 900000,
+    refetchInterval: false,
+    staleTime: 3600000,
     enabled: !!teamId,
   });
 }
