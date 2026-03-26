@@ -39,3 +39,27 @@ export default function BatterVsPitcher({ batterId, pitcherId, batterName, pitch
     </div>
   );
 }
+
+export function BvpInline({ batterId, pitcherId, perspective = 'batter' }) {
+  const { data, isLoading } = useBvp(batterId, pitcherId);
+
+  if (isLoading || !data || data.atBats === 0) return null;
+
+  if (perspective === 'pitcher') {
+    return (
+      <div className="text-[10px] text-gray-500 font-mono mt-0.5">
+        vs: {data.avg} <span className="text-gray-600">({data.hits}-{data.atBats})</span>
+        {data.hr > 0 && <>, {data.hr} HR</>}
+        {data.bb > 0 && <>, {data.bb} BB</>}
+      </div>
+    );
+  }
+
+  return (
+    <div className="text-[10px] text-gray-500 font-mono mt-0.5">
+      vs: {data.avg} <span className="text-gray-600">({data.hits}-{data.atBats})</span>
+      {data.hr > 0 && <>, {data.hr} HR</>}
+      {data.k > 0 && <>, {data.k} K</>}
+    </div>
+  );
+}

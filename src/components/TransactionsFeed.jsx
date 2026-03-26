@@ -31,7 +31,9 @@ export default function TransactionsFeed() {
     );
   }
 
-  if (!transactions?.length) {
+  const sorted = (transactions || []).slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+
+  if (!sorted.length) {
     return (
       <div className="card">
         <div className="flex items-center gap-2 mb-3">
@@ -57,7 +59,7 @@ export default function TransactionsFeed() {
         <span className="text-[10px] text-gray-600 ml-auto">Last 30 days</span>
       </div>
       <div className="space-y-2 max-h-80 overflow-y-auto pr-1">
-        {transactions.map((t) => {
+        {sorted.map((t) => {
           const style = TYPE_STYLES[t.type] || TYPE_STYLES.other;
           return (
             <div

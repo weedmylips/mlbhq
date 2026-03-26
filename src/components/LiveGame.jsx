@@ -3,7 +3,7 @@ import { getTeamById } from '../data/teams';
 import PitchLog from './PitchLog';
 import WinProbability from './WinProbability';
 import PitchZone from './PitchZone';
-import BatterVsPitcher from './BatterVsPitcher';
+import BatterVsPitcher, { BvpInline } from './BatterVsPitcher';
 import PitcherEfficiency from './PitcherEfficiency';
 
 function BaseRunners({ runners }) {
@@ -96,6 +96,26 @@ function LineScore({ innings, away, home, awayTeam, homeTeam }) {
   );
 }
 
+function playerHeadshot(playerId) {
+  if (!playerId) return null;
+  return `https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/${playerId}/headshot/67/current`;
+}
+
+function PlayerBadge({ player, label }) {
+  if (!player?.id) return null;
+  const name = player.fullName?.split(' ').at(-1) ?? '';
+  return (
+    <div className="flex items-center gap-1.5 mt-1">
+      <img
+        src={playerHeadshot(player.id)}
+        alt={name}
+        className="w-6 h-6 rounded-full object-cover bg-gray-700"
+      />
+      <span className="text-xs text-gray-400">{label}: {name}</span>
+    </div>
+  );
+}
+
 export default function LiveGame({ gamePk }) {
   const { data, isLoading } = useLiveGame(gamePk);
 
@@ -113,9 +133,13 @@ export default function LiveGame({ gamePk }) {
 
   // Top = away batting, home pitching; Bottom = home batting, away pitching
   const isTopHalf = data.inningHalf === 'Top';
-  const batterName = data.currentBatter?.fullName?.split(' ').at(-1) ?? null;
-  const pitcherName = data.currentPitcher?.fullName?.split(' ').at(-1) ?? null;
+  const batter = data.currentBatter;
+  const pitcher = data.currentPitcher;
+  const batterName = batter?.fullName?.split(' ').at(-1) ?? null;
+  const pitcherName = pitcher?.fullName?.split(' ').at(-1) ?? null;
 
+  const awayPlayer = isTopHalf ? batter : pitcher;
+  const homePlayer = isTopHalf ? pitcher : batter;
   const awaySubtext = isTopHalf
     ? (batterName ? `AB: ${batterName}` : 'Batting')
     : (pitcherName ? `P: ${pitcherName}` : 'Pitching');
@@ -145,7 +169,8 @@ export default function LiveGame({ gamePk }) {
             <div className="font-bold text-lg">
               {data.away?.team?.teamName || 'Away'}
             </div>
-            <div className="text-xs text-gray-400">{awaySubtext}</div>
+            <PlayerBadge player={awayPlayer} label={isTopHalf ? 'AB' : 'P'} />
+            {batter?.id && pitcher?.id && <BvpInline batterId={batter.id} pitcherId={pitcher.id} perspective={isTopHalf ? 'batter' : 'pitcher'} />}
           </div>
         </div>
 
@@ -162,7 +187,8 @@ export default function LiveGame({ gamePk }) {
             <div className="font-bold text-lg">
               {data.home?.team?.teamName || 'Home'}
             </div>
-            <div className="text-xs text-gray-400">{homeSubtext}</div>
+            <PlayerBadge player={homePlayer} label={isTopHalf ? 'P' : 'AB'} />
+            {batter?.id && pitcher?.id && <BvpInline batterId={batter.id} pitcherId={pitcher.id} perspective={isTopHalf ? 'pitcher' : 'batter'} />}
           </div>
           {homeTeam && (
             <img src={homeTeam.logo} alt={homeTeam.abbr} className="w-12 h-12" />
@@ -202,12 +228,6 @@ export default function LiveGame({ gamePk }) {
         <div>
           <PitcherEfficiency
             pitchCount={data.pitchCount}
-            pitcherName={data.currentPitcher?.fullName?.split(' ').at(-1)}
-          />
-          <BatterVsPitcher
-            batterId={data.currentBatter?.id}
-            pitcherId={data.currentPitcher?.id}
-            batterName={data.currentBatter?.fullName?.split(' ').at(-1)}
             pitcherName={data.currentPitcher?.fullName?.split(' ').at(-1)}
           />
         </div>

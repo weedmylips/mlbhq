@@ -141,6 +141,7 @@ async function handleTransactions(req, res) {
           ? { id: t.person.id, name: t.person.fullName }
           : null,
       }))
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
       .slice(0, 30);
   }, 1800);
 
