@@ -36,7 +36,7 @@ router.get('/highlights', async (req, res) => {
           };
         })
         .filter((h) => h.videoUrl || h.thumbnail);
-    }, 3600);
+    }, 60);
 
     res.json(highlights);
   } catch (err) {

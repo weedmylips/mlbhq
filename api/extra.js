@@ -4,7 +4,7 @@ const playerCache = createCache(1800, 120);
 const transactionsCache = createCache(1800, 120);
 const matchupCache = createCache(3600, 60);
 const leadersCache = createCache(3600, 60);
-const highlightsCache = createCache(3600, 60);
+const highlightsCache = createCache(60, 30);
 
 // --- Player ---
 async function handlePlayer(req, res) {

@@ -7,6 +7,7 @@ import PitchLog from './PitchLog';
 import PitchZone from './PitchZone';
 import BatterVsPitcher, { BvpInline } from './BatterVsPitcher';
 import PitcherEfficiency from './PitcherEfficiency';
+import Highlights from './Highlights';
 
 function BaseRunners({ runners }) {
   const baseStyle = (active) =>
@@ -289,6 +290,8 @@ export default function LiveGame({ gamePk }) {
       <PitchLog currentAtBat={data.currentAtBat} recentPlays={data.recentPlays} />
 
       <ScoringPlays plays={data.scoringPlays} />
+
+      <Highlights gamePk={gamePk} live />
     </div>
   );
 }

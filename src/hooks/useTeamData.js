@@ -200,12 +200,13 @@ export function useH2H(teamId, opponentId) {
   });
 }
 
-export function useHighlights(gamePk) {
+export function useHighlights(gamePk, live) {
   return useQuery({
     queryKey: ['highlights', gamePk],
     queryFn: () => fetchApi(`/api/highlights?gamePk=${gamePk}`),
     enabled: !!gamePk,
-    staleTime: 1800000,
+    staleTime: live ? 60000 : 3600000,
+    refetchInterval: live ? 60000 : false,
   });
 }
 
