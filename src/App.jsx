@@ -62,7 +62,8 @@ function TeamPage() {
   };
 
   return (
-    <div className={`min-h-screen bg-surface ${isYankees ? 'pinstripe-bg' : ''}`}>
+    <>
+    <div className={`min-h-screen bg-surface overflow-x-hidden ${isYankees ? 'pinstripe-bg' : ''}`}>
       <TeamSelector />
       <Header />
 
@@ -119,24 +120,26 @@ function TeamPage() {
         </p>
       </footer>
 
-      {/* Mobile bottom tab bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-surface backdrop-blur-sm border-t border-border sm:hidden z-50">
-        <div className="flex justify-around py-1">
-          {tabs.map(({ id, label, icon: Icon }) => (
-            <button
-              key={id}
-              onClick={() => setActiveTab(id)}
-              className={`flex flex-col items-center gap-0.5 py-1.5 px-1 min-w-0 ${
-                validTab === id ? 'text-[var(--team-highlight)]' : 'text-gray-500'
-              }`}
-            >
-              <Icon size={18} />
-              <span className="text-[9px] font-medium truncate">{label}</span>
-            </button>
-          ))}
-        </div>
+    </div>
+
+    {/* Mobile bottom tab bar — outside main div to avoid transform/filter ancestors breaking fixed */}
+    <div className="fixed bottom-0 left-0 right-0 bg-[#0a0a0f] border-t border-border sm:hidden z-50" style={{ transform: 'none' }}>
+      <div className="flex justify-around py-1">
+        {tabs.map(({ id, label, icon: Icon }) => (
+          <button
+            key={id}
+            onClick={() => setActiveTab(id)}
+            className={`flex flex-col items-center gap-0.5 py-1.5 px-1 min-w-0 ${
+              validTab === id ? 'text-[var(--team-highlight)]' : 'text-gray-500'
+            }`}
+          >
+            <Icon size={18} />
+            <span className="text-[9px] font-medium truncate">{label}</span>
+          </button>
+        ))}
       </div>
     </div>
+    </>
   );
 }
 
