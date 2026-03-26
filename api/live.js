@@ -135,6 +135,17 @@ export default async function handler(req, res) {
             awayScore: p.result?.awayScore ?? 0,
             homeScore: p.result?.homeScore ?? 0,
           })),
+        scoringPlays: (plays.allPlays || [])
+          .filter((p) => p.about?.isScoringPlay)
+          .map((p) => ({
+            inning: p.about?.inning,
+            halfInning: p.about?.halfInning,
+            event: p.result?.event || '',
+            description: p.result?.description || '',
+            rbi: p.result?.rbi ?? 0,
+            awayScore: p.result?.awayScore ?? 0,
+            homeScore: p.result?.homeScore ?? 0,
+          })),
       };
     }, 15);
     res.json(result);
