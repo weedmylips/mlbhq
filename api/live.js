@@ -60,6 +60,8 @@ export default async function handler(req, res) {
         innings: linescore.innings || [],
         currentBatter: linescore.offense?.batter || null,
         currentPitcher: linescore.defense?.pitcher || null,
+        battingTeamId: linescore.offense?.team?.id || null,
+        fieldingTeamId: linescore.defense?.team?.id || null,
         lastPlay: plays.currentPlay?.result?.description || '',
         probablePitchers: data.gameData?.probablePitchers || {},
         lineups: {

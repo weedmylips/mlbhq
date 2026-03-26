@@ -1,7 +1,7 @@
 import { useLiveGame } from '../hooks/useTeamData';
 import { getTeamById } from '../data/teams';
 import PitchLog from './PitchLog';
-import WinProbability from './WinProbability';
+
 import PitchZone from './PitchZone';
 import BatterVsPitcher, { BvpInline } from './BatterVsPitcher';
 import PitcherEfficiency from './PitcherEfficiency';
@@ -133,21 +133,18 @@ export default function LiveGame({ gamePk }) {
   const isDelayed = detailedState.includes('Delayed');
   const inningHalf = data.inningHalf === 'Top' ? '\u25B2' : '\u25BC';
 
-  // Top = away batting, home pitching; Bottom = home batting, away pitching
-  const isTopHalf = data.inningHalf === 'Top';
   const batter = data.currentBatter;
   const pitcher = data.currentPitcher;
-  const batterName = batter?.fullName?.split(' ').at(-1) ?? null;
-  const pitcherName = pitcher?.fullName?.split(' ').at(-1) ?? null;
+  const awayId = data.away?.team?.id;
 
-  const awayPlayer = isTopHalf ? batter : pitcher;
-  const homePlayer = isTopHalf ? pitcher : batter;
-  const awaySubtext = isTopHalf
-    ? (batterName ? `AB: ${batterName}` : 'Batting')
-    : (pitcherName ? `P: ${pitcherName}` : 'Pitching');
-  const homeSubtext = isTopHalf
-    ? (pitcherName ? `P: ${pitcherName}` : 'Pitching')
-    : (batterName ? `AB: ${batterName}` : 'Batting');
+  // Use explicit team IDs from offense/defense to assign players to correct side
+  const awayIsBatting = data.battingTeamId === awayId;
+  const awayPlayer = awayIsBatting ? batter : pitcher;
+  const homePlayer = awayIsBatting ? pitcher : batter;
+  const awayLabel = awayIsBatting ? 'AB' : 'P';
+  const homeLabel = awayIsBatting ? 'P' : 'AB';
+  const awayPerspective = awayIsBatting ? 'batter' : 'pitcher';
+  const homePerspective = awayIsBatting ? 'pitcher' : 'batter';
 
   return (
     <div className="card md:col-span-2">
@@ -177,8 +174,8 @@ export default function LiveGame({ gamePk }) {
             <div className="font-bold text-sm sm:text-lg">
               {data.away?.team?.teamName || 'Away'}
             </div>
-            <PlayerBadge player={awayPlayer} label={isTopHalf ? 'AB' : 'P'} />
-            {batter?.id && pitcher?.id && <BvpInline batterId={batter.id} pitcherId={pitcher.id} perspective={isTopHalf ? 'batter' : 'pitcher'} />}
+            <PlayerBadge player={awayPlayer} label={awayLabel} />
+            {batter?.id && pitcher?.id && <BvpInline batterId={batter.id} pitcherId={pitcher.id} perspective={awayPerspective} />}
           </div>
         </div>
 
@@ -198,8 +195,8 @@ export default function LiveGame({ gamePk }) {
             <div className="font-bold text-sm sm:text-lg">
               {data.home?.team?.teamName || 'Home'}
             </div>
-            <PlayerBadge player={homePlayer} label={isTopHalf ? 'P' : 'AB'} />
-            {batter?.id && pitcher?.id && <BvpInline batterId={batter.id} pitcherId={pitcher.id} perspective={isTopHalf ? 'pitcher' : 'batter'} />}
+            <PlayerBadge player={homePlayer} label={homeLabel} />
+            {batter?.id && pitcher?.id && <BvpInline batterId={batter.id} pitcherId={pitcher.id} perspective={homePerspective} />}
           </div>
         </div>
       </div>
@@ -244,8 +241,6 @@ export default function LiveGame({ gamePk }) {
       </div>
 
       <PitchLog currentAtBat={data.currentAtBat} recentPlays={data.recentPlays} />
-
-      <WinProbability data={data} />
     </div>
   );
 }
