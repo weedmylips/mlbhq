@@ -69,10 +69,38 @@ export default async function handler(req, res) {
         pitchCount: (() => {
           const currentPitcherId = linescore.defense?.pitcher?.id;
           if (!currentPitcherId) return null;
-          const side = data.inningHalf === 'Top' ? 'home' : 'away';
+          const side = linescore.inningHalf === 'Top' ? 'home' : 'away';
           const p = boxscore.teams?.[side]?.players?.[`ID${currentPitcherId}`];
           const ps = p?.stats?.pitching || {};
           return {
+            pitches: ps.pitchesThrown ?? null,
+            strikes: ps.strikes ?? null,
+            balls: (ps.pitchesThrown ?? 0) - (ps.strikes ?? 0),
+            ip: ps.inningsPitched ?? null,
+          };
+        })(),
+        awayPitchCount: (() => {
+          const pitcherIds = boxscore.teams?.away?.pitchers || [];
+          const currentId = pitcherIds[pitcherIds.length - 1];
+          if (!currentId) return null;
+          const p = boxscore.teams?.away?.players?.[`ID${currentId}`];
+          const ps = p?.stats?.pitching || {};
+          return {
+            name: p?.person?.fullName?.split(' ').at(-1) || 'Pitcher',
+            pitches: ps.pitchesThrown ?? null,
+            strikes: ps.strikes ?? null,
+            balls: (ps.pitchesThrown ?? 0) - (ps.strikes ?? 0),
+            ip: ps.inningsPitched ?? null,
+          };
+        })(),
+        homePitchCount: (() => {
+          const pitcherIds = boxscore.teams?.home?.pitchers || [];
+          const currentId = pitcherIds[pitcherIds.length - 1];
+          if (!currentId) return null;
+          const p = boxscore.teams?.home?.players?.[`ID${currentId}`];
+          const ps = p?.stats?.pitching || {};
+          return {
+            name: p?.person?.fullName?.split(' ').at(-1) || 'Pitcher',
             pitches: ps.pitchesThrown ?? null,
             strikes: ps.strikes ?? null,
             balls: (ps.pitchesThrown ?? 0) - (ps.strikes ?? 0),

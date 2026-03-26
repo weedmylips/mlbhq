@@ -1,4 +1,4 @@
-export default function PitcherEfficiency({ pitchCount, pitcherName }) {
+export default function PitcherEfficiency({ pitchCount, pitcherName, teamAbbr }) {
   if (!pitchCount || pitchCount.pitches == null) return null;
 
   const { pitches, strikes, ip } = pitchCount;
@@ -9,7 +9,7 @@ export default function PitcherEfficiency({ pitchCount, pitcherName }) {
   return (
     <div className="mt-3 pt-3 border-t border-white/5">
       <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1.5">
-        {pitcherName || 'Pitcher'} — Pitch Count
+        {teamAbbr ? `${teamAbbr} — ` : ''}{pitcherName || 'Pitcher'} — Pitch Count
       </h4>
       <div className="flex gap-4 text-xs">
         <div>

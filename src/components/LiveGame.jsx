@@ -231,8 +231,14 @@ export default function LiveGame({ gamePk }) {
         <PitchZone pitches={data.currentAtBat} />
         <div>
           <PitcherEfficiency
-            pitchCount={data.pitchCount}
-            pitcherName={data.currentPitcher?.fullName?.split(' ').at(-1)}
+            pitchCount={data.awayPitchCount}
+            pitcherName={data.awayPitchCount?.name || 'Pitcher'}
+            teamAbbr={awayTeam?.abbr}
+          />
+          <PitcherEfficiency
+            pitchCount={data.homePitchCount}
+            pitcherName={data.homePitchCount?.name || 'Pitcher'}
+            teamAbbr={homeTeam?.abbr}
           />
         </div>
       </div>
