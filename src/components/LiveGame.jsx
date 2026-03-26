@@ -167,14 +167,14 @@ export default function LiveGame({ gamePk }) {
         )}
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-start justify-between">
         {/* Away */}
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col items-center text-center w-24 sm:w-auto sm:flex-row sm:items-center sm:gap-3 sm:text-left">
           {awayTeam && (
-            <img src={awayTeam.logo} alt={awayTeam.abbr} className="w-12 h-12" />
+            <img src={awayTeam.logo} alt={awayTeam.abbr} className="w-10 h-10 sm:w-12 sm:h-12" />
           )}
           <div>
-            <div className="font-bold text-lg">
+            <div className="font-bold text-sm sm:text-lg">
               {data.away?.team?.teamName || 'Away'}
             </div>
             <PlayerBadge player={awayPlayer} label={isTopHalf ? 'AB' : 'P'} />
@@ -183,24 +183,24 @@ export default function LiveGame({ gamePk }) {
         </div>
 
         {/* Score */}
-        <div className="flex items-center gap-4">
-          <span className="stat-number text-3xl">{data.away?.runs}</span>
-          <span className="text-gray-600 text-xl">-</span>
-          <span className="stat-number text-3xl">{data.home?.runs}</span>
+        <div className="flex items-center gap-3 sm:gap-4 pt-2">
+          <span className="stat-number text-2xl sm:text-3xl">{data.away?.runs}</span>
+          <span className="text-gray-600 text-lg sm:text-xl">-</span>
+          <span className="stat-number text-2xl sm:text-3xl">{data.home?.runs}</span>
         </div>
 
         {/* Home */}
-        <div className="flex items-center gap-3">
-          <div className="text-right">
-            <div className="font-bold text-lg">
+        <div className="flex flex-col items-center text-center w-24 sm:w-auto sm:flex-row-reverse sm:items-center sm:gap-3 sm:text-right">
+          {homeTeam && (
+            <img src={homeTeam.logo} alt={homeTeam.abbr} className="w-10 h-10 sm:w-12 sm:h-12" />
+          )}
+          <div>
+            <div className="font-bold text-sm sm:text-lg">
               {data.home?.team?.teamName || 'Home'}
             </div>
             <PlayerBadge player={homePlayer} label={isTopHalf ? 'P' : 'AB'} />
             {batter?.id && pitcher?.id && <BvpInline batterId={batter.id} pitcherId={pitcher.id} perspective={isTopHalf ? 'pitcher' : 'batter'} />}
           </div>
-          {homeTeam && (
-            <img src={homeTeam.logo} alt={homeTeam.abbr} className="w-12 h-12" />
-          )}
         </div>
       </div>
 
@@ -227,10 +227,6 @@ export default function LiveGame({ gamePk }) {
         </p>
       )}
 
-      <PitchLog currentAtBat={data.currentAtBat} recentPlays={data.recentPlays} />
-
-      <WinProbability data={data} />
-
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
         <PitchZone pitches={data.currentAtBat} />
         <div>
@@ -240,6 +236,10 @@ export default function LiveGame({ gamePk }) {
           />
         </div>
       </div>
+
+      <PitchLog currentAtBat={data.currentAtBat} recentPlays={data.recentPlays} />
+
+      <WinProbability data={data} />
     </div>
   );
 }

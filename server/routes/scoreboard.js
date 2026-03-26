@@ -6,7 +6,7 @@ const router = Router();
 router.get('/scoreboard', async (req, res) => {
   try {
     const dateParam = req.query.date;
-    const today = dateParam || new Date().toISOString().split('T')[0];
+    const today = dateParam || new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
     const cacheKey = `scoreboard-${today}`;
     const result = await getOrFetch(cacheKey, async () => {
       const url = `https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${today}&hydrate=linescore,decisions,probablePitcher,team`;
