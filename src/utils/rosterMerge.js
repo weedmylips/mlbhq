@@ -114,10 +114,24 @@ export function mergeRosterData(activeData, fullData, scraped) {
     }
   }
 
-  const batters = roster.filter(
-    (p) => p.positionType !== 'Pitcher' || (p.hitting && !p.pitching)
-  );
-  const pitchers = roster.filter((p) => p.positionType === 'Pitcher');
+  const batters = roster
+    .filter((p) => p.positionType !== 'Pitcher' || (p.hitting && !p.pitching))
+    .sort((a, b) => {
+      const opsA = parseFloat(a.hitting?.ops) || 0;
+      const opsB = parseFloat(b.hitting?.ops) || 0;
+      return opsB - opsA;
+    });
+
+  const pitchers = roster
+    .filter((p) => p.positionType === 'Pitcher')
+    .sort((a, b) => {
+      const whipA = parseFloat(a.pitching?.whip);
+      const whipB = parseFloat(b.pitching?.whip);
+      if (isNaN(whipA) && isNaN(whipB)) return 0;
+      if (isNaN(whipA)) return 1;
+      if (isNaN(whipB)) return -1;
+      return whipA - whipB;
+    });
 
   return { batters, pitchers, full: roster, injured };
 }

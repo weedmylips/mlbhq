@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useScoreboard } from '../hooks/useTeamData';
+import { useScoreboard, useHighlights } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 import { getTeamById } from '../data/teams';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -42,6 +42,45 @@ function InningLine({ innings, away, home }) {
           </tr>
         </tbody>
       </table>
+    </div>
+  );
+}
+
+function GameHighlights({ gamePk }) {
+  const { data: highlights, isLoading } = useHighlights(gamePk, false);
+
+  if (isLoading) return <div className="skeleton h-12 w-full mt-2 rounded" />;
+  if (!highlights?.length) return null;
+
+  return (
+    <div className="mt-2 pt-2 border-t border-white/5">
+      <div className="text-[10px] text-gray-500 uppercase font-bold mb-1.5">Highlights</div>
+      <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1 scrollbar-hide">
+        {highlights.slice(0, 8).map((h) => (
+          <a
+            key={h.id}
+            href={h.videoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="shrink-0 w-32 group"
+          >
+            <div className="relative">
+              {h.thumbnail ? (
+                <img src={h.thumbnail} alt="" className="w-32 h-18 rounded object-cover bg-gray-800" />
+              ) : (
+                <div className="w-32 h-18 rounded bg-gray-800" />
+              )}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+              </div>
+            </div>
+            <p className="text-[10px] text-gray-400 group-hover:text-white mt-1 line-clamp-2 leading-tight">
+              {h.title}
+            </p>
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
@@ -147,6 +186,7 @@ function GameCard({ game, isMyTeam }) {
               {game.decisions.save && <span>SV: {game.decisions.save.name}</span>}
             </div>
           )}
+          <GameHighlights gamePk={game.gamePk} />
         </div>
       )}
     </div>
