@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-27T05:52:19.736Z",
+  "lastUpdated": "2026-03-27T08:09:35.875Z",
   "teams": {
     "108": [
       {
@@ -181,6 +181,12 @@
       }
     ],
     "114": [
+      {
+        "playerName": "Tanner Bibee",
+        "injury": "Right shoulder inflammation",
+        "expectedReturn": "TBD",
+        "status": "Exited his Opening Day start on March 26 after warming up ahead of the bottom of the 6th inning. Was feeling better postgame and did well on strength tests. Team will see how he feels in coming days."
+      },
       {
         "playerName": "Hunter Gaddis",
         "injury": "Right forearm strain",
