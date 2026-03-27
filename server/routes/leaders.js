@@ -65,14 +65,27 @@ router.get('/leaders', async (req, res) => {
     const leaders = await getOrFetch(cacheKey, async () => {
       const season = new Date().getFullYear();
       const cats = ALL_CATS.map((c) => c.key).join(',');
-      let url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season}&limit=5`;
-      let resp = await fetch(url);
-      let data = await resp.json();
+      let teamUrl = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season}&limit=5`;
+      const leagueUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${cats}&season=${season}&sportId=1&limit=50`;
+
+      let [teamResp, leagueResp] = await Promise.all([fetch(teamUrl), fetch(leagueUrl)]);
+      let [data, leagueData] = await Promise.all([teamResp.json(), leagueResp.json()]);
 
       if (!data.teamLeaders?.length) {
-        url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season - 1}&limit=5`;
-        resp = await fetch(url);
-        data = await resp.json();
+        const prevTeamUrl = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season - 1}&limit=5`;
+        const prevLeagueUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${cats}&season=${season - 1}&sportId=1&limit=50`;
+        [teamResp, leagueResp] = await Promise.all([fetch(prevTeamUrl), fetch(prevLeagueUrl)]);
+        [data, leagueData] = await Promise.all([teamResp.json(), leagueResp.json()]);
+      }
+
+      // Build lookup: category -> playerId -> league rank
+      const leagueRankMap = {};
+      for (const cat of leagueData.leagueLeaders || []) {
+        const map = {};
+        for (const l of cat.leaders || []) {
+          if (l.person?.id) map[l.person.id] = l.rank;
+        }
+        leagueRankMap[cat.leaderCategory] = map;
       }
 
       const seen = new Set();
@@ -84,6 +97,7 @@ router.get('/leaders', async (req, res) => {
         })
         .map((cat) => {
           const { group, type } = classifyCategory(cat.leaderCategory);
+          const catRanks = leagueRankMap[cat.leaderCategory] || {};
           return {
             category: cat.leaderCategory,
             label: LABEL_MAP[cat.leaderCategory],
@@ -94,6 +108,7 @@ router.get('/leaders', async (req, res) => {
               name: l.person?.fullName,
               playerId: l.person?.id,
               value: l.value,
+              leagueRank: catRanks[l.person?.id] || null,
             })),
           };
         });

@@ -159,7 +159,8 @@ export default function Scoreboard() {
 
   const targetDate = new Date();
   targetDate.setDate(targetDate.getDate() + dateOffset);
-  const dateStr = targetDate.toISOString().split('T')[0];
+  // MLB uses Eastern Time for game dates — use locale date string to avoid UTC offset issues
+  const dateStr = targetDate.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
 
   const { data: games, isLoading } = useScoreboard(dateStr);
 

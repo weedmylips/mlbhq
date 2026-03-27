@@ -39,6 +39,13 @@ function RankBadge({ rank }) {
   );
 }
 
+function abbrevName(name) {
+  if (!name) return '';
+  const parts = name.split(' ');
+  if (parts.length < 2) return name;
+  return `${parts[0][0]}. ${parts.slice(1).join(' ')}`;
+}
+
 function LeaderCategory({ category, showTeam }) {
   if (!category.leaders?.length) return null;
 
@@ -89,9 +96,14 @@ function LeaderCategory({ category, showTeam }) {
                     i === 0 ? 'text-gray-200 font-medium' : 'text-gray-400'
                   }`}
                 >
-                  {leader.name}
+                  {abbrevName(leader.name)}
                   {showTeam && leader.teamAbbr && (
                     <span className="text-[9px] text-gray-600 ml-1">{leader.teamAbbr}</span>
+                  )}
+                  {!showTeam && i < 3 && leader.leagueRank && (
+                    <span className="text-[8px] text-gray-500 bg-white/[0.06] border border-white/[0.08] rounded-full px-1.5 py-px ml-1 font-mono">
+                      #{leader.leagueRank}
+                    </span>
                   )}
                 </span>
                 <span

@@ -249,14 +249,26 @@ async function handleLeaders(req, res) {
   const leaders = await leadersCache.getOrFetch(cacheKey, async () => {
     const season = new Date().getFullYear();
     const cats = LEADER_CATS.map((c) => c.key).join(',');
-    let url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season}&limit=5`;
-    let resp = await fetch(url);
-    let data = await resp.json();
+    let teamUrl = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season}&limit=5`;
+    const leagueUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${cats}&season=${season}&sportId=1&limit=50`;
+
+    let [teamResp, leagueResp] = await Promise.all([fetch(teamUrl), fetch(leagueUrl)]);
+    let [data, leagueData] = await Promise.all([teamResp.json(), leagueResp.json()]);
 
     if (!data.teamLeaders?.length) {
-      url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season - 1}&limit=5`;
-      resp = await fetch(url);
-      data = await resp.json();
+      const prevTeamUrl = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season - 1}&limit=5`;
+      const prevLeagueUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${cats}&season=${season - 1}&sportId=1&limit=50`;
+      [teamResp, leagueResp] = await Promise.all([fetch(prevTeamUrl), fetch(prevLeagueUrl)]);
+      [data, leagueData] = await Promise.all([teamResp.json(), leagueResp.json()]);
+    }
+
+    const leagueRankMap = {};
+    for (const cat of leagueData.leagueLeaders || []) {
+      const map = {};
+      for (const l of cat.leaders || []) {
+        if (l.person?.id) map[l.person.id] = l.rank;
+      }
+      leagueRankMap[cat.leaderCategory] = map;
     }
 
     const seen = new Set();
@@ -268,6 +280,7 @@ async function handleLeaders(req, res) {
       })
       .map((cat) => {
         const meta = LEADER_LABEL_MAP[cat.leaderCategory];
+        const catRanks = leagueRankMap[cat.leaderCategory] || {};
         return {
           category: cat.leaderCategory,
           label: meta.label,
@@ -278,6 +291,7 @@ async function handleLeaders(req, res) {
             name: l.person?.fullName,
             playerId: l.person?.id,
             value: l.value,
+            leagueRank: catRanks[l.person?.id] || null,
           })),
         };
       });
