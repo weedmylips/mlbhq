@@ -17,7 +17,7 @@ export default function Highlights({ gamePk, live }) {
         </span>
       </div>
 
-      <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
+      <div className="flex gap-2 overflow-x-auto pb-2">
         {highlights.map((h) => (
           <a
             key={h.id}

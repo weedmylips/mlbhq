@@ -73,8 +73,8 @@ function HittingTable({ hitterData }) {
                 </span>
               </td>
               <td className={TD}>{h.ab}</td>
-              <td className={`${TD} ${h.h >= 2 ? 'text-white font-medium' : ''}`}>{h.h}</td>
-              <td className={`${TD} ${h.rbi >= 3 ? 'text-white font-medium' : ''}`}>{h.rbi}</td>
+              <td className={`${TD} ${h.h >= 2 ? 'text-cyan-400 font-medium' : ''}`}>{h.h}</td>
+              <td className={`${TD} ${h.rbi >= 3 ? 'text-cyan-400 font-medium' : ''}`}>{h.rbi}</td>
               <td className={`${TD} ${h.hr > 0 ? 'text-yellow-400 font-bold' : ''}`}>{h.hr}</td>
               <td className={TD}>{h.bb}</td>
             </tr>
@@ -119,7 +119,7 @@ function TeamStatsColumn({ side, pitchers, topHitters }) {
   );
 }
 
-export default function GameSummaryPanel({ gamePk }) {
+export default function GameSummaryPanel({ gamePk, className }) {
   const { data, isLoading, isError } = useBoxScore(gamePk);
 
   if (isLoading) {
@@ -143,7 +143,7 @@ export default function GameSummaryPanel({ gamePk }) {
   const home = teams?.home;
 
   return (
-    <div className="mt-2 pt-2 border-t border-white/10 text-xs space-y-3">
+    <div className={className || "mt-2 pt-2 border-t border-white/10 text-xs space-y-3"}>
 
       {/* Line score — centered */}
       <div className="flex justify-center overflow-x-auto">
@@ -187,6 +187,13 @@ export default function GameSummaryPanel({ gamePk }) {
       <div className="bg-white/[0.02] rounded-lg p-3 grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
         <TeamStatsColumn side="away" pitchers={pitchers} topHitters={topHitters} />
         <TeamStatsColumn side="home" pitchers={pitchers} topHitters={topHitters} />
+      </div>
+
+      {/* Legend */}
+      <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-[10px] text-gray-600 pt-1 border-t border-white/5">
+        <span><span className="text-green-300">Green</span> = Quality Start (6+ IP, ≤3 ER)</span>
+        <span><span className="text-yellow-400 font-bold">Yellow</span> = Home Run</span>
+        <span><span className="text-cyan-400 font-bold">Cyan</span> = 2+ H or 3+ RBI</span>
       </div>
 
       <Highlights gamePk={gamePk} />

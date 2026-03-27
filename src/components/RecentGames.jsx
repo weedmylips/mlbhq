@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useTeam } from '../context/TeamContext';
 import { getTeamById } from '../data/teams';
-import GameSummaryPanel from './GameSummaryPanel';
+import GameDetailModal from './GameDetailModal';
 
 function GameRow({ game, teamId }) {
-  const [expanded, setExpanded] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const isHome = game.teams?.home?.team?.id === teamId;
   const teamScore = isHome ? game.teams?.home?.score : game.teams?.away?.score;
@@ -15,11 +15,10 @@ function GameRow({ game, teamId }) {
   const gameDate = new Date(game.gameDate);
 
   return (
-    <div className="rounded bg-white/5">
+    <>
       <button
-        className="w-full flex items-center justify-between py-1.5 px-2 text-left"
-        onClick={() => setExpanded((v) => !v)}
-        aria-expanded={expanded}
+        className="w-full flex items-center justify-between py-1.5 px-2 text-left rounded bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"
+        onClick={() => setModalOpen(true)}
       >
         <div className="flex items-center gap-2">
           <span
@@ -42,23 +41,15 @@ function GameRow({ game, teamId }) {
           <span className="text-xs text-gray-500">
             {gameDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
           </span>
-          <svg
-            className={`w-3 h-3 text-gray-500 transition-transform ${expanded ? 'rotate-180' : ''}`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2.5}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
         </div>
       </button>
-      {expanded && (
-        <div className="px-2 pb-2">
-          <GameSummaryPanel gamePk={game.gamePk} />
-        </div>
-      )}
-    </div>
+      <GameDetailModal
+        game={game}
+        teamId={teamId}
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
+    </>
   );
 }
 
@@ -74,7 +65,7 @@ export default function RecentGames({ games = [] }) {
       {last5.length === 0 ? (
         <p className="text-gray-500 text-center py-4">No recent games</p>
       ) : (
-        <div className="space-y-2 max-h-[280px] overflow-y-auto scrollbar-none">
+        <div className="space-y-2">
           {last5.map((game) => (
             <GameRow key={game.gamePk} game={game} teamId={team.id} />
           ))}
