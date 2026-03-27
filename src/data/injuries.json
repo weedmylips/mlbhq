@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-26T20:00:31.807Z",
+  "lastUpdated": "2026-03-27T05:52:19.736Z",
   "teams": {
     "108": [
       {
@@ -27,6 +27,12 @@
         "status": "Nail on his right middle finger bothered him in his March 17 start and hasn't improved much. Working through mechanical issues at the club's Spring Training complex in Arizona."
       },
       {
+        "playerName": "Ben Joyce",
+        "injury": "Right shoulder surgery",
+        "expectedReturn": "Early 2026 season",
+        "status": "Progressing well in his throwing program. Angels manager Kurt Suzuki said he looks really good and wouldn't be surprised if he comes back sooner than expected."
+      },
+      {
         "playerName": "Robert Stephenson",
         "injury": "Right elbow inflammation",
         "expectedReturn": "TBD",
@@ -37,12 +43,6 @@
         "injury": "Left hip surgery",
         "expectedReturn": "Expected retirement",
         "status": "Not going to play in 2026 and had the last year of his contract deferred over several years. Was placed on 60-day IL on March 24."
-      },
-      {
-        "playerName": "Ben Joyce",
-        "injury": "Right shoulder surgery",
-        "expectedReturn": "Early 2026 season",
-        "status": "Progressing well in his throwing program. Angels manager Kurt Suzuki said he looks really good and wouldn't be surprised if he comes back sooner than expected."
       }
     ],
     "109": [],
@@ -378,6 +378,24 @@
     ],
     "119": [
       {
+        "playerName": "Brock Stewart",
+        "injury": "Recovery from right shoulder surgery",
+        "expectedReturn": "Late April or early May",
+        "status": "Underwent shoulder debridement procedure in September 2025. He's set to begin facing live hitters on March 27 and could start an extended rehab assignment not long after."
+      },
+      {
+        "playerName": "Landon Knack",
+        "injury": "Side tightness",
+        "expectedReturn": "TBD",
+        "status": "In a \"holding pattern,\" per general manager Brandon Gomes, as the team waits for his side tightness to subside before he can resume a throwing program."
+      },
+      {
+        "playerName": "Bobby Miller",
+        "injury": "Right shoulder soreness",
+        "expectedReturn": "Late May at earliest",
+        "status": "Dealt with shoulder soreness during Spring Training. He progressed to throwing off the mound by the time the Dodgers broke camp, but the team is building him up slowly."
+      },
+      {
         "playerName": "Blake Snell",
         "injury": "Left shoulder fatigue",
         "expectedReturn": "Late May",
@@ -396,24 +414,6 @@
         "status": "Velocity is down from where it is expected to be, so the Dodgers are slow-playing him. He is ramping up to greater distances in his catch play."
       },
       {
-        "playerName": "Brock Stewart",
-        "injury": "Recovery from right shoulder surgery",
-        "expectedReturn": "Possibly late April",
-        "status": "Underwent shoulder debridement procedure in September 2025. He has progressed to throwing full bullpen sessions."
-      },
-      {
-        "playerName": "Bobby Miller",
-        "injury": "Right shoulder soreness",
-        "expectedReturn": "Late May at earliest",
-        "status": "Dealt with shoulder soreness during Spring Training. He progressed to throwing off the mound by the time the Dodgers broke camp."
-      },
-      {
-        "playerName": "Landon Knack",
-        "injury": "Undisclosed",
-        "expectedReturn": "TBD",
-        "status": "Last pitched in a spring game on March 13."
-      },
-      {
         "playerName": "Jake Cousins",
         "injury": "Recovery from Tommy John surgery",
         "expectedReturn": "Second half of 2026",
@@ -423,7 +423,7 @@
         "playerName": "Evan Phillips",
         "injury": "Recovery from Tommy John surgery",
         "expectedReturn": "Second half of 2026",
-        "status": "Underwent Tommy John surgery in June 2025. He threw his first full bullpen session to a squatting catcher on March 17."
+        "status": "Underwent Tommy John surgery in June 2025. He started throwing full bullpen sessions in mid-March."
       }
     ],
     "120": [
@@ -513,6 +513,12 @@
     ],
     "135": [
       {
+        "playerName": "Jason Adam",
+        "injury": "Left quadriceps tendon rupture",
+        "expectedReturn": "Early April",
+        "status": "Underwent quad surgery in September. Returned in the Cactus League, making two scoreless appearances, but wasn't built up enough for Opening Day. Scheduled to begin a rehab stint in late March."
+      },
+      {
         "playerName": "Joe Musgrove",
         "injury": "Tommy John surgery",
         "expectedReturn": "Mid-to-late April",
@@ -523,12 +529,6 @@
         "injury": "Right oblique tightness",
         "expectedReturn": "Mid-April",
         "status": "Sustained an oblique injury during the offseason, then aggravated it during a game on March 5. Returned on March 22 in a Triple-A game but will open the season on the IL and is expected to need a rehab assignment."
-      },
-      {
-        "playerName": "Jason Adam",
-        "injury": "Left quadriceps tendon rupture",
-        "expectedReturn": "Early April",
-        "status": "Underwent quad surgery in September. Returned in the Cactus League, making two scoreless appearances, but wasn't built up enough for Opening Day."
       },
       {
         "playerName": "Griffin Canning",
@@ -934,7 +934,7 @@
         "playerName": "Kyle Stowers",
         "injury": "Grade 1 right hamstring strain",
         "expectedReturn": "Late April",
-        "status": "Placed on 10-day injured list on March 25 (retroactive to March 22). Will be reassessed in 3-4 weeks from March 22. Felt tightness on March 20 rounding third base. Missed 1-2 weeks with a strain of the same hamstring earlier this spring."
+        "status": "Performing baseball activities. Placed on 10-day injured list on March 25 (retroactive to March 22). Will be reassessed in 3-4 weeks from March 22. Felt tightness on March 20 rounding third base. Missed 1-2 weeks with a strain of the same hamstring earlier this spring."
       },
       {
         "playerName": "Esteury Ruiz",
