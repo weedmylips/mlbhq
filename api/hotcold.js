@@ -63,14 +63,19 @@ export default async function handler(req, res) {
       const formatBatter = ({ name, avg, hr, rbi, ops }) => ({ name, avg, hr, rbi, ops: ops.toFixed(3).replace(/^0/, '') });
       const formatPitcher = ({ name, era, wins, losses, k, ip }) => ({ name, era, wins, losses, k, ip });
 
+      const hotBatCount = Math.min(3, Math.floor(batters.length / 2));
+      const coldBatCount = Math.min(3, batters.length - hotBatCount);
+      const hotPitchCount = Math.min(2, Math.floor(pitchers.length / 2));
+      const coldPitchCount = Math.min(2, pitchers.length - hotPitchCount);
+
       return {
         hot: {
-          batters: batters.slice(0, 3).map(formatBatter),
-          pitchers: pitchers.slice(0, 2).map(formatPitcher),
+          batters: batters.slice(0, hotBatCount).map(formatBatter),
+          pitchers: pitchers.slice(0, hotPitchCount).map(formatPitcher),
         },
         cold: {
-          batters: batters.slice(-3).reverse().map(formatBatter),
-          pitchers: pitchers.slice(-2).reverse().map(formatPitcher),
+          batters: batters.slice(-coldBatCount).reverse().map(formatBatter),
+          pitchers: pitchers.slice(-coldPitchCount).reverse().map(formatPitcher),
         },
         period: `${startDate} – ${endDate}`,
       };

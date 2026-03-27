@@ -46,6 +46,8 @@ const ADV_HITTING_SET = new Set(ADVANCED_HITTING.map((c) => c.key));
 const TRAD_PITCHING_SET = new Set(TRADITIONAL_PITCHING.map((c) => c.key));
 const ADV_PITCHING_SET = new Set(ADVANCED_PITCHING.map((c) => c.key));
 
+const TEAM_ABBR = {108:'LAA',109:'ARI',110:'BAL',111:'BOS',112:'CHC',113:'CIN',114:'CLE',115:'COL',116:'DET',117:'HOU',118:'KC',119:'LAD',120:'WSH',121:'NYM',133:'OAK',134:'PIT',135:'SD',136:'SEA',137:'SF',138:'STL',139:'TB',140:'TEX',141:'TOR',142:'MIN',143:'PHI',144:'ATL',145:'CWS',146:'MIA',147:'NYY',158:'MIL'};
+
 function classifyCategory(key) {
   if (TRAD_HITTING_SET.has(key)) return { group: 'hitting', type: 'traditional' };
   if (ADV_HITTING_SET.has(key)) return { group: 'hitting', type: 'advanced' };
@@ -138,8 +140,8 @@ router.get('/league-leaders', async (req, res) => {
               rank: l.rank,
               name: l.person?.fullName,
               playerId: l.person?.id,
-              team: l.team?.name || l.person?.team?.name || '',
-              teamAbbr: l.team?.abbreviation || '',
+              team: l.team?.name || l.person?.currentTeam?.name || l.person?.team?.name || '',
+              teamAbbr: TEAM_ABBR[l.team?.id] || l.team?.abbreviation || l.person?.currentTeam?.abbreviation || '',
               value: l.value,
             })),
           };

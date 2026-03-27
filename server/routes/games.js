@@ -44,7 +44,7 @@ router.get('/games', async (req, res) => {
         .slice(0, 10);
 
       return { live, next, recent, allGames };
-    }, (result) => result.live ? 60 : 300);
+    }, 1800);
     res.json(result);
   } catch (err) {
     console.error('Games error:', err.message);

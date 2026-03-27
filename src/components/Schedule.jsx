@@ -60,11 +60,20 @@ function ScheduleGameRow({ game, teamId }) {
             </span>
           </span>
         ) : !isLive ? (
-          <span className="text-xs text-gray-400">
-            {gameDate.toLocaleTimeString('en-US', {
-              hour: 'numeric',
-              minute: '2-digit',
-            })}
+          <span className="flex items-center gap-2 text-xs text-gray-400">
+            {probPitcher?.fullName && (
+              <span className="text-gray-500 truncate max-w-[7rem]" title={probPitcher.fullName}>
+                {probPitcher.fullName.split(' ').length >= 2
+                  ? `${probPitcher.fullName.split(' ')[0][0]}. ${probPitcher.fullName.split(' ').slice(1).join(' ')}`
+                  : probPitcher.fullName}
+              </span>
+            )}
+            <span>
+              {gameDate.toLocaleTimeString('en-US', {
+                hour: 'numeric',
+                minute: '2-digit',
+              })}
+            </span>
           </span>
         ) : null}
         {(isFinal || isUpcoming) && (
@@ -143,7 +152,7 @@ export default function Schedule() {
       </h3>
       {Object.entries(grouped).map(([month, monthGames]) => (
         <div key={month} className="mb-4">
-          <h4 className="text-xs font-bold text-[var(--team-highlight)] uppercase mb-2">
+          <h4 className="text-xs font-bold text-gray-400 uppercase mb-2">
             {month}
           </h4>
           <div className="space-y-1">

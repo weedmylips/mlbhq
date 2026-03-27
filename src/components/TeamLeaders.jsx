@@ -59,7 +59,7 @@ function LeaderCategory({ category, showTeam }) {
 
   return (
     <div className="bg-white/[0.02] rounded-lg p-3">
-      <h4 className="text-[11px] font-bold text-[var(--team-highlight)] uppercase tracking-wider mb-2">
+      <h4 className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">
         {category.label}
       </h4>
       <div className="space-y-1">
@@ -70,7 +70,7 @@ function LeaderCategory({ category, showTeam }) {
               className="absolute inset-0 rounded opacity-[0.07]"
               style={{
                 width: `${barWidth(leader.value)}%`,
-                background: 'var(--team-highlight)',
+                background: '#9ca3af',
               }}
             />
 
@@ -113,7 +113,7 @@ function LeaderCategory({ category, showTeam }) {
 function SectionHeader({ icon: Icon, label }) {
   return (
     <div className="flex items-center gap-2 mb-3">
-      <Icon size={14} className="text-[var(--team-highlight)]" />
+      <Icon size={14} className="text-gray-400" />
       <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">
         {label}
       </h3>
@@ -131,7 +131,7 @@ function ViewToggle({ active, onChange }) {
           onClick={() => onChange(view)}
           className={`text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded transition-colors ${
             active === view
-              ? 'bg-[var(--team-highlight)]/15 text-[var(--team-highlight)] border border-[var(--team-highlight)]/30'
+              ? 'bg-gray-400/15 text-gray-300 border border-gray-400/30'
               : 'text-gray-500 hover:text-gray-300 border border-transparent'
           }`}
         >
@@ -152,7 +152,7 @@ function ScopeToggle({ active, onChange }) {
             onClick={() => onChange(key)}
             className={`px-4 py-1.5 text-sm font-medium rounded-md transition-all ${
               active === key
-                ? 'bg-[var(--team-primary)]/20 text-[var(--team-highlight)] border border-[var(--team-primary)]/30'
+                ? 'bg-gray-400/20 text-gray-300 border border-gray-400/30'
                 : 'text-gray-400 hover:text-gray-300'
             }`}
           >
