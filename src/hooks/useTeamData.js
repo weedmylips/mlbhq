@@ -150,10 +150,10 @@ export function useHotCold(teamId, hasLiveGame) {
   });
 }
 
-export function useAnalytics(teamId, hasLiveGame) {
+export function useAnalytics(teamId, leagueId, hasLiveGame) {
   return useQuery({
-    queryKey: ['analytics', teamId],
-    queryFn: () => fetchApi(`/api/analytics?teamId=${teamId}`),
+    queryKey: ['analytics', teamId, leagueId],
+    queryFn: () => fetchApi(`/api/analytics?teamId=${teamId}&leagueId=${leagueId || 103}`),
     refetchInterval: hasLiveGame ? 900000 : false,
     staleTime: 900000,
     enabled: !!teamId,

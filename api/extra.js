@@ -226,18 +226,20 @@ const LEADER_CATS = [
   { key: 'runsBattedIn', label: 'RBI', group: 'hitting', type: 'traditional' },
   { key: 'stolenBases', label: 'SB', group: 'hitting', type: 'traditional' },
   { key: 'onBasePercentage', label: 'OBP', group: 'hitting', type: 'traditional' },
-  { key: 'onBasePlusSlugging', label: 'OPS', group: 'hitting', type: 'advanced' },
-  { key: 'sluggingPercentage', label: 'SLG', group: 'hitting', type: 'advanced' },
+  { key: 'sluggingPercentage', label: 'SLG', group: 'hitting', type: 'traditional' },
+  { key: 'onBasePlusSlugging', label: 'OPS', group: 'hitting', type: 'traditional' },
   { key: 'isolatedPower', label: 'ISO', group: 'hitting', type: 'advanced' },
-  { key: 'strikeoutRate', label: 'K%', group: 'hitting', type: 'advanced' },
   { key: 'walksPerPlateAppearance', label: 'BB%', group: 'hitting', type: 'advanced' },
+  { key: 'strikeoutRate', label: 'K%', group: 'hitting', type: 'advanced' },
   { key: 'earnedRunAverage', label: 'ERA', group: 'pitching', type: 'traditional' },
+  { key: 'walksAndHitsPerInningPitched', label: 'WHIP', group: 'pitching', type: 'traditional' },
   { key: 'wins', label: 'W', group: 'pitching', type: 'traditional' },
   { key: 'saves', label: 'SV', group: 'pitching', type: 'traditional' },
   { key: 'strikeoutsPer9Inn', label: 'K/9', group: 'pitching', type: 'traditional' },
-  { key: 'walksAndHitsPerInningPitched', label: 'WHIP', group: 'pitching', type: 'advanced' },
+  { key: 'walksPer9Inn', label: 'BB/9', group: 'pitching', type: 'traditional' },
+  { key: 'inningsPitched', label: 'IP', group: 'pitching', type: 'traditional' },
   { key: 'strikeoutWalkRatio', label: 'K/BB', group: 'pitching', type: 'advanced' },
-  { key: 'groundOutsToAirouts', label: 'GO/AO', group: 'pitching', type: 'advanced' },
+  { key: 'homeRunsPer9', label: 'HR/9', group: 'pitching', type: 'advanced' },
 ];
 const LEADER_LABEL_MAP = Object.fromEntries(LEADER_CATS.map((c) => [c.key, c]));
 
@@ -502,7 +504,7 @@ function computeAdvanced(stat, isPitching) {
     const denom = bf - k - hr + sf;
     result.babip = denom > 0 ? ((h - hr) / denom).toFixed(3) : null;
     result.hr9 = ip > 0 ? ((hr * 9) / ip).toFixed(2) : null;
-    result.goAo = stat.groundOutsToAirouts ?? null;
+    result.kBBPct = bf > 0 ? (((k - bb) / bf) * 100).toFixed(1) : null;
     result.era = stat.era ?? null;
     result.whip = stat.whip ?? null;
     result.k = k; result.bb = bb; result.ip = stat.inningsPitched;
@@ -542,9 +544,28 @@ function abbrevNameAnalytics(fullName) {
   return parts.length < 2 ? fullName : `${parts[0][0]}. ${parts.slice(1).join(' ')}`;
 }
 
+function ordinalRankAnalytics(n) {
+  if (!n) return null;
+  const s = ['th', 'st', 'nd', 'rd'];
+  const v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+
+function advRankAnalytics(allAdv, teamId, field, lowerIsBetter) {
+  const valid = allAdv.filter((t) => t[field] != null);
+  const sorted = [...valid].sort((a, b) => {
+    const va = parseFloat(a[field]) || 0;
+    const vb = parseFloat(b[field]) || 0;
+    return lowerIsBetter ? va - vb : vb - va;
+  });
+  const idx = sorted.findIndex((t) => String(t.teamId) === String(teamId));
+  return idx >= 0 ? ordinalRankAnalytics(idx + 1) : null;
+}
+
 async function handleAnalytics(req, res) {
   const teamId = req.query.teamId || 147;
-  const cacheKey = `analytics-${teamId}`;
+  const leagueId = req.query.leagueId || 103;
+  const cacheKey = `analytics-${teamId}-${leagueId}`;
   const result = await analyticsCache.getOrFetch(cacheKey, async () => {
     let season = new Date().getFullYear();
     async function fetchData(s) {
@@ -553,12 +574,36 @@ async function handleAnalytics(req, res) {
         fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=${s}`).then(r=>r.json()),
         fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`).then(r=>r.json()),
         fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`).then(r=>r.json()),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=${s}&leagueIds=${leagueId}&sportId=1`).then(r=>r.json()),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=${s}&leagueIds=${leagueId}&sportId=1`).then(r=>r.json()),
       ]);
     }
-    let [hD, pD, phD, ppD] = await fetchData(season);
-    if (!hD.stats?.length) { season--; [hD, pD, phD, ppD] = await fetchData(season); }
+    let [hD, pD, phD, ppD, ahD, apD] = await fetchData(season);
+    if (!hD.stats?.length) { season--; [hD, pD, phD, ppD, ahD, apD] = await fetchData(season); }
     const teamHitting = hD.stats?.[0]?.splits?.[0]?.stat || {};
     const teamPitching = pD.stats?.[0]?.splits?.[0]?.stat || {};
+
+    const allHitAdv = (ahD.stats?.[0]?.splits || []).map(s => ({ teamId: s.team?.id, ...computeAdvanced(s.stat || {}, false) }));
+    const allPitAdv = (apD.stats?.[0]?.splits || []).map(s => ({ teamId: s.team?.id, ...computeAdvanced(s.stat || {}, true) }));
+
+    const hittingRanks = allHitAdv.length > 0 ? {
+      woba: advRankAnalytics(allHitAdv, teamId, 'woba', false),
+      iso: advRankAnalytics(allHitAdv, teamId, 'iso', false),
+      babip: advRankAnalytics(allHitAdv, teamId, 'babip', false),
+      kPct: advRankAnalytics(allHitAdv, teamId, 'kPct', true),
+      bbPct: advRankAnalytics(allHitAdv, teamId, 'bbPct', false),
+      sb: advRankAnalytics(allHitAdv, teamId, 'sb', false),
+    } : null;
+
+    const pitchingRanks = allPitAdv.length > 0 ? {
+      fip: advRankAnalytics(allPitAdv, teamId, 'fip', true),
+      babip: advRankAnalytics(allPitAdv, teamId, 'babip', true),
+      kPct: advRankAnalytics(allPitAdv, teamId, 'kPct', false),
+      bbPct: advRankAnalytics(allPitAdv, teamId, 'bbPct', true),
+      kBBPct: advRankAnalytics(allPitAdv, teamId, 'kBBPct', false),
+      hr9: advRankAnalytics(allPitAdv, teamId, 'hr9', true),
+    } : null;
+
     const batters = (phD.stats?.[0]?.splits || [])
       .filter(s => (s.stat?.plateAppearances || s.stat?.atBats || 0) >= 20)
       .map(s => ({ name: abbrevNameAnalytics(s.player?.fullName), playerId: s.player?.id, ...computeAdvanced(s.stat, false) }))
@@ -567,7 +612,7 @@ async function handleAnalytics(req, res) {
       .filter(s => parseFloat(s.stat?.inningsPitched || 0) >= 10)
       .map(s => ({ name: abbrevNameAnalytics(s.player?.fullName), playerId: s.player?.id, ...computeAdvanced(s.stat, true) }))
       .sort((a, b) => parseFloat(a.fip || 99) - parseFloat(b.fip || 99));
-    return { teamHitting: computeAdvanced(teamHitting, false), teamPitching: computeAdvanced(teamPitching, true), batters, pitchers };
+    return { teamHitting: computeAdvanced(teamHitting, false), teamPitching: computeAdvanced(teamPitching, true), hittingRanks, pitchingRanks, batters, pitchers };
   }, 900);
   res.json(result);
 }
@@ -576,9 +621,11 @@ async function handleAnalytics(req, res) {
 const situationalCache = createCache(1800, 120);
 const SIT_CODES = [
   { code: 'risp', label: 'RISP' },
-  { code: 'bases_loaded', label: 'Bases Loaded' },
-  { code: 'men_on', label: 'Men On' },
-  { code: 'bases_empty', label: 'Bases Empty' },
+  { code: 'bload', label: 'Bases Loaded' },
+  { code: 'mon', label: 'Men On' },
+  { code: 'bemp', label: 'Bases Empty' },
+  { code: 'vl', label: 'vs LHP' },
+  { code: 'vr', label: 'vs RHP' },
 ];
 
 async function handleSituational(req, res) {
@@ -587,7 +634,7 @@ async function handleSituational(req, res) {
   const result = await situationalCache.getOrFetch(cacheKey, async () => {
     const season = new Date().getFullYear();
     const fetches = SIT_CODES.map(async (sit) => {
-      const url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${season}&situationCodes=${sit.code}`;
+      const url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${season}&sitCodes=${sit.code}`;
       const resp = await fetch(url);
       const data = await resp.json();
       const stat = data.stats?.[0]?.splits?.[0]?.stat || null;

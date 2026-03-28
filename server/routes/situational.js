@@ -5,10 +5,29 @@ const router = Router();
 
 const SITUATIONS = [
   { code: 'risp', label: 'RISP' },
-  { code: 'bases_loaded', label: 'Bases Loaded' },
-  { code: 'men_on', label: 'Men On' },
-  { code: 'bases_empty', label: 'Bases Empty' },
+  { code: 'bload', label: 'Bases Loaded' },
+  { code: 'mon', label: 'Men On' },
+  { code: 'bemp', label: 'Bases Empty' },
+  { code: 'vl', label: 'vs LHP' },
+  { code: 'vr', label: 'vs RHP' },
 ];
+
+function extractStat(data) {
+  const stat = data.stats?.[0]?.splits?.[0]?.stat || null;
+  if (!stat) return null;
+  return {
+    avg: stat.avg ?? '-',
+    obp: stat.obp ?? '-',
+    slg: stat.slg ?? '-',
+    ops: stat.ops ?? '-',
+    hr: stat.homeRuns ?? 0,
+    rbi: stat.rbi ?? 0,
+    hits: stat.hits ?? 0,
+    ab: stat.atBats ?? 0,
+    bb: stat.baseOnBalls ?? 0,
+    k: stat.strikeOuts ?? 0,
+  };
+}
 
 router.get('/situational', async (req, res) => {
   try {
@@ -16,48 +35,16 @@ router.get('/situational', async (req, res) => {
     const cacheKey = `situational-${teamId}`;
     const result = await getOrFetch(cacheKey, async () => {
       const season = new Date().getFullYear();
-      const codes = SITUATIONS.map((s) => s.code).join(',');
-      const url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${season}&situationCodes=${codes}`;
-      const resp = await fetch(url);
-      const data = await resp.json();
 
-      const statEntries = data.stats || [];
-
-      // The API returns one stats entry per situation code
-      // Each entry has splits[0].stat with the situational stats
-      const situations = SITUATIONS.map((sit) => {
-        // Find the matching stat entry
-        const entry = statEntries.find((e) =>
-          e.type?.displayName === 'statSplits' || true
-        );
-        // Actually, MLB API returns all situations in one stats entry's splits
-        // Let's handle both cases
-        return null;
-      });
-
-      // Alternative approach: fetch each situation individually
+      // Fetch each situation individually with the correct MLB API sitCodes
       const fetches = SITUATIONS.map(async (sit) => {
-        const sitUrl = `https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${season}&situationCodes=${sit.code}`;
+        const sitUrl = `https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${season}&sitCodes=${sit.code}`;
         const sitResp = await fetch(sitUrl);
         const sitData = await sitResp.json();
-        const stat = sitData.stats?.[0]?.splits?.[0]?.stat || null;
         return {
           code: sit.code,
           label: sit.label,
-          stat: stat
-            ? {
-                avg: stat.avg ?? '-',
-                obp: stat.obp ?? '-',
-                slg: stat.slg ?? '-',
-                ops: stat.ops ?? '-',
-                hr: stat.homeRuns ?? 0,
-                rbi: stat.rbi ?? 0,
-                hits: stat.hits ?? 0,
-                ab: stat.atBats ?? 0,
-                bb: stat.baseOnBalls ?? 0,
-                k: stat.strikeOuts ?? 0,
-              }
-            : null,
+          stat: extractStat(sitData),
         };
       });
 

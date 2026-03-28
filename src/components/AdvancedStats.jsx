@@ -65,7 +65,7 @@ const BATTER_COLS = [
   { key: 'kPct', label: 'K%', tooltip: 'Strikeout Rate' },
   { key: 'bbPct', label: 'BB%', tooltip: 'Walk Rate' },
   { key: 'avg', label: 'AVG' },
-  { key: 'ops', label: 'OPS' },
+  { key: 'sb', label: 'SB' },
   { key: 'hr', label: 'HR' },
 ];
 
@@ -74,8 +74,8 @@ const PITCHER_COLS = [
   { key: 'babip', label: 'BABIP', tooltip: 'Batting Average on Balls in Play' },
   { key: 'kPct', label: 'K%', tooltip: 'Strikeout Rate' },
   { key: 'bbPct', label: 'BB%', tooltip: 'Walk Rate' },
+  { key: 'kBBPct', label: 'K-BB%', tooltip: 'Strikeout minus Walk Rate' },
   { key: 'hr9', label: 'HR/9', tooltip: 'Home Runs per 9 Innings' },
-  { key: 'era', label: 'ERA' },
   { key: 'whip', label: 'WHIP' },
   { key: 'ip', label: 'IP' },
 ];
@@ -141,7 +141,7 @@ export default function AdvancedStats() {
               <StatCard label="BABIP" value={th.babip} description="Balls in Play" />
               <StatCard label="K%" value={th.kPct ? `${th.kPct}%` : '-'} />
               <StatCard label="BB%" value={th.bbPct ? `${th.bbPct}%` : '-'} />
-              <StatCard label="OPS" value={th.ops} />
+              <StatCard label="SB" value={th.sb} description="Stolen Bases" />
             </div>
           </div>
 
@@ -160,13 +160,14 @@ export default function AdvancedStats() {
             <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
               Team Pitching — Advanced
             </h3>
-            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+            <div className="grid grid-cols-3 sm:grid-cols-7 gap-2">
               <StatCard label="FIP" value={tp.fip} description="Field Indep. Pitching" />
               <StatCard label="BABIP" value={tp.babip} description="Balls in Play" />
               <StatCard label="K%" value={tp.kPct ? `${tp.kPct}%` : '-'} />
               <StatCard label="BB%" value={tp.bbPct ? `${tp.bbPct}%` : '-'} />
+              <StatCard label="K-BB%" value={tp.kBBPct ? `${tp.kBBPct}%` : '-'} description="K% minus BB%" />
               <StatCard label="HR/9" value={tp.hr9} />
-              <StatCard label="ERA" value={tp.era} />
+              <StatCard label="WHIP" value={tp.whip} />
             </div>
           </div>
 

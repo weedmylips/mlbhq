@@ -9,27 +9,31 @@ const TRADITIONAL_HITTING = [
   { key: 'runsBattedIn', label: 'RBI' },
   { key: 'stolenBases', label: 'SB' },
   { key: 'onBasePercentage', label: 'OBP' },
+  { key: 'sluggingPercentage', label: 'SLG' },
+  { key: 'onBasePlusSlugging', label: 'OPS' },
 ];
 
+// Note: wOBA, BABIP, wRC+ are not available as MLB Stats API leaderCategories
 const ADVANCED_HITTING = [
-  { key: 'onBasePlusSlugging', label: 'OPS' },
-  { key: 'sluggingPercentage', label: 'SLG' },
   { key: 'isolatedPower', label: 'ISO' },
-  { key: 'strikeoutRate', label: 'K%' },
   { key: 'walksPerPlateAppearance', label: 'BB%' },
+  { key: 'strikeoutRate', label: 'K%' },
 ];
 
 const TRADITIONAL_PITCHING = [
   { key: 'earnedRunAverage', label: 'ERA' },
+  { key: 'walksAndHitsPerInningPitched', label: 'WHIP' },
   { key: 'wins', label: 'W' },
   { key: 'saves', label: 'SV' },
   { key: 'strikeoutsPer9Inn', label: 'K/9' },
+  { key: 'walksPer9Inn', label: 'BB/9' },
+  { key: 'inningsPitched', label: 'IP' },
 ];
 
+// Note: FIP, K%, BB%, K-BB% are not available as MLB Stats API leaderCategories
 const ADVANCED_PITCHING = [
-  { key: 'walksAndHitsPerInningPitched', label: 'WHIP' },
   { key: 'strikeoutWalkRatio', label: 'K/BB' },
-  { key: 'groundOutsToAirouts', label: 'GO/AO' },
+  { key: 'homeRunsPer9', label: 'HR/9' },
 ];
 
 const ALL_CATS = [

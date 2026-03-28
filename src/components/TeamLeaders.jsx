@@ -1,10 +1,19 @@
 import { useState } from 'react';
-import { useTeamLeaders, useLeagueLeaders, useHasLiveGame } from '../hooks/useTeamData';
+import { useTeamLeaders, useLeagueLeaders, useSituational, useHasLiveGame } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 import { Swords, Flame } from 'lucide-react';
+import SituationalStats from './SituationalStats';
 
 // Stats where lower is better
 const INVERSE_STATS = new Set(['earnedRunAverage', 'walksAndHitsPerInningPitched', 'strikeoutRate']);
+
+// Guard against null/undefined/NaN display values (e.g. K/BB with zero walks)
+function sanitizeValue(value) {
+  if (value == null) return '—';
+  const s = String(value);
+  if (s === '-.--' || s === '-.-' || s === 'NaN' || s === 'Infinity' || s.includes('∞')) return '—';
+  return s;
+}
 
 function playerHeadshot(playerId) {
   return `https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/${playerId}/headshot/67/current`;
@@ -50,7 +59,10 @@ function LeaderCategory({ category, showTeam }) {
   if (!category.leaders?.length) return null;
 
   const isInverse = INVERSE_STATS.has(category.category);
-  const values = category.leaders.map((l) => parseFloat(l.value) || 0);
+  const values = category.leaders.map((l) => {
+    const v = parseFloat(l.value);
+    return isFinite(v) ? v : 0;
+  });
   const maxVal = Math.max(...values);
   const minVal = Math.min(...values.filter((v) => v > 0));
 
@@ -111,7 +123,7 @@ function LeaderCategory({ category, showTeam }) {
                     i === 0 ? 'text-green-400' : 'text-gray-500'
                   }`}
                 >
-                  {leader.value}
+                  {sanitizeValue(leader.value)}
                 </span>
               </div>
             </div>
@@ -177,10 +189,11 @@ function ScopeToggle({ active, onChange }) {
 }
 
 function classifyCategories(categories) {
-  const HITTING_KEYS = new Set(['battingAverage', 'homeRuns', 'runsBattedIn', 'stolenBases', 'onBasePercentage', 'strikeouts',
-    'onBasePlusSlugging', 'sluggingPercentage', 'isolatedPower', 'strikeoutRate', 'walksPerPlateAppearance']);
-  const ADV_HITTING_KEYS = new Set(['onBasePlusSlugging', 'sluggingPercentage', 'isolatedPower', 'strikeoutRate', 'walksPerPlateAppearance']);
-  const ADV_PITCHING_KEYS = new Set(['walksAndHitsPerInningPitched', 'strikeoutWalkRatio', 'groundOutsToAirouts']);
+  // Server already provides group/type — use as-is if present, otherwise classify
+  const HITTING_KEYS = new Set(['battingAverage', 'homeRuns', 'runsBattedIn', 'stolenBases', 'onBasePercentage',
+    'sluggingPercentage', 'onBasePlusSlugging', 'isolatedPower', 'strikeoutRate', 'walksPerPlateAppearance']);
+  const ADV_HITTING_KEYS = new Set(['isolatedPower', 'strikeoutRate', 'walksPerPlateAppearance']);
+  const ADV_PITCHING_KEYS = new Set(['strikeoutWalkRatio', 'homeRunsPer9']);
 
   const hasGroupField = categories.some((c) => c.group);
   return categories.map((c) => {
@@ -207,7 +220,7 @@ function LeadersGrid({ categories, hittingView, setHittingView, pitchingView, se
         <div className="card">
           <SectionHeader icon={Swords} label="Batting Leaders" />
           {hasAdvHitting && <ViewToggle active={hittingView} onChange={setHittingView} />}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {hittingDisplay.map((cat) => (
               <LeaderCategory key={cat.category} category={cat} showTeam={showTeam} />
             ))}
@@ -234,6 +247,7 @@ export default function TeamLeaders() {
   const hasLiveGame = useHasLiveGame(team.id);
   const { data: teamCategories, isLoading: teamLoading } = useTeamLeaders(team.id, hasLiveGame);
   const { data: leagueCategories, isLoading: leagueLoading } = useLeagueLeaders(hasLiveGame);
+  const { data: sitData, isLoading: sitLoading } = useSituational(team.id, hasLiveGame);
   const [scope, setScope] = useState('team');
   const [hittingView, setHittingView] = useState('traditional');
   const [pitchingView, setPitchingView] = useState('traditional');
@@ -253,22 +267,27 @@ export default function TeamLeaders() {
   }
 
   return (
-    <div>
-      <ScopeToggle active={scope} onChange={setScope} />
-      {categories?.length > 0 ? (
-        <LeadersGrid
-          categories={categories}
-          hittingView={hittingView}
-          setHittingView={setHittingView}
-          pitchingView={pitchingView}
-          setPitchingView={setPitchingView}
-          showTeam={scope === 'league'}
-        />
-      ) : (
-        <div className="card">
-          <p className="text-gray-500 text-center py-8">No leader data available</p>
-        </div>
-      )}
+    <div className="space-y-6">
+      <div>
+        <ScopeToggle active={scope} onChange={setScope} />
+        {categories?.length > 0 ? (
+          <LeadersGrid
+            categories={categories}
+            hittingView={hittingView}
+            setHittingView={setHittingView}
+            pitchingView={pitchingView}
+            setPitchingView={setPitchingView}
+            showTeam={scope === 'league'}
+          />
+        ) : (
+          <div className="card">
+            <p className="text-gray-500 text-center py-8">No leader data available</p>
+          </div>
+        )}
+      </div>
+
+      {/* Situational Splits */}
+      <SituationalStats data={sitData} isLoading={sitLoading} />
     </div>
   );
 }

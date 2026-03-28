@@ -35,8 +35,8 @@ function computeAdvanced(stat, isPitching) {
     // HR/9
     result.hr9 = ip > 0 ? ((hr * 9) / ip).toFixed(2) : null;
 
-    // Groundout/Airout ratio
-    result.goAo = stat.groundOutsToAirouts ?? null;
+    // K-BB%
+    result.kBBPct = bf > 0 ? (((k - bb) / bf) * 100).toFixed(1) : null;
 
     // Pass through standard
     result.era = stat.era ?? null;
@@ -103,10 +103,29 @@ function abbrevName(fullName) {
   return `${parts[0][0]}. ${parts.slice(1).join(' ')}`;
 }
 
+function ordinalRank(n) {
+  if (!n) return null;
+  const s = ['th', 'st', 'nd', 'rd'];
+  const v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+
+function advRank(allAdvanced, teamId, field, lowerIsBetter) {
+  const valid = allAdvanced.filter((t) => t[field] != null);
+  const sorted = [...valid].sort((a, b) => {
+    const va = parseFloat(a[field]) || 0;
+    const vb = parseFloat(b[field]) || 0;
+    return lowerIsBetter ? va - vb : vb - va;
+  });
+  const idx = sorted.findIndex((t) => String(t.teamId) === String(teamId));
+  return idx >= 0 ? ordinalRank(idx + 1) : null;
+}
+
 router.get('/analytics', async (req, res) => {
   try {
     const teamId = req.query.teamId || 147;
-    const cacheKey = `analytics-${teamId}`;
+    const leagueId = req.query.leagueId || 103;
+    const cacheKey = `analytics-${teamId}-${leagueId}`;
     const result = await getOrFetch(cacheKey, async () => {
       let season = new Date().getFullYear();
 
@@ -116,18 +135,51 @@ router.get('/analytics', async (req, res) => {
           fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=${s}`).then((r) => r.json()),
           fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`).then((r) => r.json()),
           fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`).then((r) => r.json()),
+          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=${s}&leagueIds=${leagueId}&sportId=1`).then((r) => r.json()),
+          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=${s}&leagueIds=${leagueId}&sportId=1`).then((r) => r.json()),
         ]);
       }
 
-      let [hittingData, pitchingData, playerHitting, playerPitching] = await fetchData(season);
+      let [hittingData, pitchingData, playerHitting, playerPitching, allHittingData, allPitchingData] = await fetchData(season);
 
       if (!hittingData.stats?.length) {
         season = season - 1;
-        [hittingData, pitchingData, playerHitting, playerPitching] = await fetchData(season);
+        [hittingData, pitchingData, playerHitting, playerPitching, allHittingData, allPitchingData] = await fetchData(season);
       }
 
       const teamHitting = hittingData.stats?.[0]?.splits?.[0]?.stat || {};
       const teamPitching = pitchingData.stats?.[0]?.splits?.[0]?.stat || {};
+
+      // Compute advanced stats for all league teams to derive rankings
+      const allHittingSplits = allHittingData.stats?.[0]?.splits || [];
+      const allHittingAdv = allHittingSplits.map((s) => ({
+        teamId: s.team?.id,
+        ...computeAdvanced(s.stat || {}, false),
+      }));
+
+      const allPitchingSplits = allPitchingData.stats?.[0]?.splits || [];
+      const allPitchingAdv = allPitchingSplits.map((s) => ({
+        teamId: s.team?.id,
+        ...computeAdvanced(s.stat || {}, true),
+      }));
+
+      const hittingRanks = allHittingAdv.length > 0 ? {
+        woba: advRank(allHittingAdv, teamId, 'woba', false),
+        iso: advRank(allHittingAdv, teamId, 'iso', false),
+        babip: advRank(allHittingAdv, teamId, 'babip', false),
+        kPct: advRank(allHittingAdv, teamId, 'kPct', true),
+        bbPct: advRank(allHittingAdv, teamId, 'bbPct', false),
+        sb: advRank(allHittingAdv, teamId, 'sb', false),
+      } : null;
+
+      const pitchingRanks = allPitchingAdv.length > 0 ? {
+        fip: advRank(allPitchingAdv, teamId, 'fip', true),
+        babip: advRank(allPitchingAdv, teamId, 'babip', true),
+        kPct: advRank(allPitchingAdv, teamId, 'kPct', false),
+        bbPct: advRank(allPitchingAdv, teamId, 'bbPct', true),
+        kBBPct: advRank(allPitchingAdv, teamId, 'kBBPct', false),
+        hr9: advRank(allPitchingAdv, teamId, 'hr9', true),
+      } : null;
 
       // Player-level advanced stats
       const playerHittingSplits = playerHitting.stats?.[0]?.splits || [];
@@ -153,6 +205,8 @@ router.get('/analytics', async (req, res) => {
       return {
         teamHitting: computeAdvanced(teamHitting, false),
         teamPitching: computeAdvanced(teamPitching, true),
+        hittingRanks,
+        pitchingRanks,
         batters: advancedBatters,
         pitchers: advancedPitchers,
       };
