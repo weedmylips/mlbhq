@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-28T14:02:19.568Z",
+  "lastUpdated": "2026-03-28T19:44:34.464Z",
   "teams": {
     "108": [
       {
@@ -162,16 +162,16 @@
     ],
     "113": [
       {
+        "playerName": "Nick Lodolo",
+        "injury": "Blister on left index finger",
+        "expectedReturn": "April 5",
+        "status": "Scheduled to throw in a side bullpen session on March 29. If all goes well, he could make a rehab start on April 1 at a location TBD."
+      },
+      {
         "playerName": "Caleb Ferguson",
         "injury": "Mild right oblique strain",
         "expectedReturn": "April",
         "status": "Ferguson's second MRI in Cincinnati on March 25 went well and confirmed he's healing well. Cleared to begin a throwing program. Will travel with the club on the road."
-      },
-      {
-        "playerName": "Nick Lodolo",
-        "injury": "Blister on left index finger",
-        "expectedReturn": "April 5",
-        "status": "Lodolo took part in a light throwing session on March 24. He exited his final Cactus League start on March 22 after 10 pitches due to a blister."
       },
       {
         "playerName": "Hunter Greene",
@@ -677,6 +677,12 @@
     ],
     "139": [
       {
+        "playerName": "Edwin Uceta",
+        "injury": "Right shoulder soreness",
+        "expectedReturn": "Early April",
+        "status": "“Didn’t feel great” when playing catch Feb. 19. Received a cortisone injection on Feb. 20. Pitched in live BP on March 27, with another scheduled for March 31. Rehab assignment should begin soon after."
+      },
+      {
         "playerName": "Gavin Lux",
         "injury": "Right shoulder impingement",
         "expectedReturn": "Possibly mid-April",
@@ -687,12 +693,6 @@
         "injury": "Right hip inflammation",
         "expectedReturn": "Early April",
         "status": "Threw a bullpen on March 23 and received an injection on March 25. Will be shut down for only two days before resuming throwing. \"Expected to be a short absence,\" per baseball operations president Erik Neander."
-      },
-      {
-        "playerName": "Edwin Uceta",
-        "injury": "Right shoulder soreness",
-        "expectedReturn": "Early April",
-        "status": "“Didn’t feel great” when playing catch Feb. 19. Received a cortisone injection on Feb. 20. After bullpens, scheduled for live BPs on March 27 and 31. Triple-A rehab assignment should begin soon after."
       },
       {
         "playerName": "Taylor Walls",
@@ -943,12 +943,6 @@
     ],
     "146": [
       {
-        "playerName": "Christopher Morel",
-        "injury": "Left oblique strain",
-        "expectedReturn": "TBD",
-        "status": "Will be further evaluated after being scratched from March 27 lineup."
-      },
-      {
         "playerName": "Thomas White (MLB No. 17 overall prospect)",
         "injury": "Grade 1 right oblique strain",
         "expectedReturn": "Late March/early April",
@@ -961,10 +955,16 @@
         "status": "Underwent core muscle surgery on Feb. 27. Sustained left groin injury during offseason workouts. Rested before arriving in Jupiter, where it flared up again."
       },
       {
+        "playerName": "Christopher Morel",
+        "injury": "Left oblique strain",
+        "expectedReturn": "Late April/early May",
+        "status": "Timeline of 4-6 weeks after being placed on IL on March 28 (retroactive to March 25). Scratched from March 27 lineup."
+      },
+      {
         "playerName": "Kyle Stowers",
         "injury": "Grade 1 right hamstring strain",
         "expectedReturn": "Late April",
-        "status": "Performing baseball activities. Placed on 10-day injured list on March 25 (retroactive to March 22). Will be reassessed in 3-4 weeks from March 22. Felt tightness on March 20 rounding third base. Missed 1-2 weeks with a strain of the same hamstring earlier this spring."
+        "status": "Performing baseball activities. Placed on IL on March 25 (retroactive to March 22). Will be reassessed in 3-4 weeks from March 22. Felt tightness on March 20 rounding third base. Missed 1-2 weeks with a strain of the same hamstring earlier this spring."
       },
       {
         "playerName": "Esteury Ruiz",
