@@ -220,28 +220,49 @@ async function handleMatchup(req, res) {
 // --- Leaders ---
 const TEAM_ABBR = {108:'LAA',109:'ARI',110:'BAL',111:'BOS',112:'CHC',113:'CIN',114:'CLE',115:'COL',116:'DET',117:'HOU',118:'KC',119:'LAD',120:'WSH',121:'NYM',133:'OAK',134:'PIT',135:'SD',136:'SEA',137:'SF',138:'STL',139:'TB',140:'TEX',141:'TOR',142:'MIN',143:'PHI',144:'ATL',145:'CWS',146:'MIA',147:'NYY',158:'MIL'};
 
+const REVERSE_SORT_CATS = new Set(['sluggingPercentage']);
+const COUNTING_STATS = new Set(['homeRuns', 'runsBattedIn', 'stolenBases', 'hits', 'runs', 'walks', 'strikeouts', 'wins', 'losses', 'saves', 'blownSaves', 'holds', 'inningsPitched']);
+const MIN_PA = 3;
+const MIN_IP = 1.0;
+function meetsMinimum(leader, isPitching) {
+  const stats = leader.person?.stats?.[0]?.splits?.[0]?.stat;
+  if (!stats) return true;
+  if (isPitching) return parseFloat(stats.inningsPitched || 0) >= MIN_IP;
+  return (stats.plateAppearances || stats.atBats || 0) >= MIN_PA;
+}
+function fixLeaderOrder(category, leaders) {
+  if (!REVERSE_SORT_CATS.has(category)) return leaders;
+  const sorted = [...leaders].sort((a, b) => parseFloat(b.value) - parseFloat(a.value));
+  return sorted.map((l, i) => ({ ...l, rank: i + 1 }));
+}
+
 const LEADER_CATS = [
   { key: 'battingAverage', label: 'AVG', group: 'hitting', type: 'traditional' },
   { key: 'homeRuns', label: 'HR', group: 'hitting', type: 'traditional' },
   { key: 'runsBattedIn', label: 'RBI', group: 'hitting', type: 'traditional' },
+  { key: 'hits', label: 'H', group: 'hitting', type: 'traditional' },
+  { key: 'runs', label: 'R', group: 'hitting', type: 'traditional' },
   { key: 'stolenBases', label: 'SB', group: 'hitting', type: 'traditional' },
+  { key: 'walks', label: 'BB', group: 'hitting', type: 'traditional' },
+  { key: 'strikeouts', label: 'SO', group: 'hitting', type: 'traditional' },
   { key: 'onBasePercentage', label: 'OBP', group: 'hitting', type: 'traditional' },
   { key: 'sluggingPercentage', label: 'SLG', group: 'hitting', type: 'traditional' },
   { key: 'onBasePlusSlugging', label: 'OPS', group: 'hitting', type: 'traditional' },
-  { key: 'isolatedPower', label: 'ISO', group: 'hitting', type: 'advanced' },
-  { key: 'walksPerPlateAppearance', label: 'BB%', group: 'hitting', type: 'advanced' },
-  { key: 'strikeoutRate', label: 'K%', group: 'hitting', type: 'advanced' },
   { key: 'earnedRunAverage', label: 'ERA', group: 'pitching', type: 'traditional' },
   { key: 'walksAndHitsPerInningPitched', label: 'WHIP', group: 'pitching', type: 'traditional' },
   { key: 'wins', label: 'W', group: 'pitching', type: 'traditional' },
+  { key: 'losses', label: 'L', group: 'pitching', type: 'traditional' },
   { key: 'saves', label: 'SV', group: 'pitching', type: 'traditional' },
+  { key: 'blownSaves', label: 'BS', group: 'pitching', type: 'traditional' },
+  { key: 'holds', label: 'HLD', group: 'pitching', type: 'traditional' },
   { key: 'strikeoutsPer9Inn', label: 'K/9', group: 'pitching', type: 'traditional' },
   { key: 'walksPer9Inn', label: 'BB/9', group: 'pitching', type: 'traditional' },
   { key: 'inningsPitched', label: 'IP', group: 'pitching', type: 'traditional' },
-  { key: 'strikeoutWalkRatio', label: 'K/BB', group: 'pitching', type: 'advanced' },
-  { key: 'homeRunsPer9', label: 'HR/9', group: 'pitching', type: 'advanced' },
+  { key: 'strikeoutWalkRatio', label: 'K/BB', group: 'pitching', type: 'traditional' },
+  { key: 'homeRunsPer9', label: 'HR/9', group: 'pitching', type: 'traditional' },
 ];
 const LEADER_LABEL_MAP = Object.fromEntries(LEADER_CATS.map((c) => [c.key, c]));
+const LEADER_SORT_ORDER = Object.fromEntries(LEADER_CATS.map((c, i) => [c.key, i]));
 
 async function handleLeaders(req, res) {
   const { teamId } = req.query;
@@ -251,21 +272,26 @@ async function handleLeaders(req, res) {
   const leaders = await leadersCache.getOrFetch(cacheKey, async () => {
     const season = new Date().getFullYear();
     const cats = LEADER_CATS.map((c) => c.key).join(',');
+    const hittingCats = LEADER_CATS.filter(c => c.group === 'hitting').map(c => c.key).join(',');
+    const pitchingCats = LEADER_CATS.filter(c => c.group === 'pitching').map(c => c.key).join(',');
     let teamUrl = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season}&limit=5`;
-    const leagueUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${cats}&season=${season}&sportId=1&limit=50`;
+    let lhUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${hittingCats}&season=${season}&sportId=1&limit=50&statGroup=hitting`;
+    let lpUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${pitchingCats}&season=${season}&sportId=1&limit=50&statGroup=pitching`;
 
-    let [teamResp, leagueResp] = await Promise.all([fetch(teamUrl), fetch(leagueUrl)]);
-    let [data, leagueData] = await Promise.all([teamResp.json(), leagueResp.json()]);
+    let [teamResp, lhResp, lpResp] = await Promise.all([fetch(teamUrl), fetch(lhUrl), fetch(lpUrl)]);
+    let [data, lhData, lpData] = await Promise.all([teamResp.json(), lhResp.json(), lpResp.json()]);
 
     if (!data.teamLeaders?.length) {
       const prevTeamUrl = `https://statsapi.mlb.com/api/v1/teams/${teamId}/leaders?leaderCategories=${cats}&season=${season - 1}&limit=5`;
-      const prevLeagueUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${cats}&season=${season - 1}&sportId=1&limit=50`;
-      [teamResp, leagueResp] = await Promise.all([fetch(prevTeamUrl), fetch(prevLeagueUrl)]);
-      [data, leagueData] = await Promise.all([teamResp.json(), leagueResp.json()]);
+      lhUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${hittingCats}&season=${season - 1}&sportId=1&limit=50&statGroup=hitting`;
+      lpUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${pitchingCats}&season=${season - 1}&sportId=1&limit=50&statGroup=pitching`;
+      [teamResp, lhResp, lpResp] = await Promise.all([fetch(prevTeamUrl), fetch(lhUrl), fetch(lpUrl)]);
+      [data, lhData, lpData] = await Promise.all([teamResp.json(), lhResp.json(), lpResp.json()]);
     }
 
+    const allLeagueLeaders = [...(lhData.leagueLeaders || []), ...(lpData.leagueLeaders || [])];
     const leagueRankMap = {};
-    for (const cat of leagueData.leagueLeaders || []) {
+    for (const cat of allLeagueLeaders) {
       const map = {};
       for (const l of cat.leaders || []) {
         if (l.person?.id) map[l.person.id] = l.rank;
@@ -288,15 +314,16 @@ async function handleLeaders(req, res) {
           label: meta.label,
           group: meta.group,
           type: meta.type,
-          leaders: (cat.leaders || []).map((l) => ({
+          leaders: fixLeaderOrder(cat.leaderCategory, (cat.leaders || []).map((l) => ({
             rank: l.rank,
             name: l.person?.fullName,
             playerId: l.person?.id,
             value: l.value,
             leagueRank: catRanks[l.person?.id] || null,
-          })),
+          }))),
         };
-      });
+      })
+      .sort((a, b) => (LEADER_SORT_ORDER[a.category] ?? 99) - (LEADER_SORT_ORDER[b.category] ?? 99));
   }, 3600);
 
   res.json(leaders);
@@ -307,19 +334,26 @@ async function handleLeagueLeaders(req, res) {
   const cacheKey = 'league-leaders';
   const leaders = await leadersCache.getOrFetch(cacheKey, async () => {
     const season = new Date().getFullYear();
-    const cats = LEADER_CATS.map((c) => c.key).join(',');
-    let url = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${cats}&season=${season}&sportId=1&limit=5&hydrate=person(team)`;
-    let resp = await fetch(url);
-    let data = await resp.json();
+    const hittingCats = LEADER_CATS.filter(c => c.group === 'hitting').map(c => c.key).join(',');
+    const pitchingCats = LEADER_CATS.filter(c => c.group === 'pitching').map(c => c.key).join(',');
 
-    if (!data.leagueLeaders?.length) {
-      url = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${cats}&season=${season - 1}&sportId=1&limit=5&hydrate=person(team)`;
-      resp = await fetch(url);
-      data = await resp.json();
+    let hUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${hittingCats}&season=${season}&sportId=1&limit=50&statGroup=hitting&hydrate=person(team,stats(group=hitting,type=season))`;
+    let pUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${pitchingCats}&season=${season}&sportId=1&limit=50&statGroup=pitching&hydrate=person(team,stats(group=pitching,type=season))`;
+
+    let [hResp, pResp] = await Promise.all([fetch(hUrl), fetch(pUrl)]);
+    let [hData, pData] = await Promise.all([hResp.json(), pResp.json()]);
+
+    if (!hData.leagueLeaders?.length && !pData.leagueLeaders?.length) {
+      hUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${hittingCats}&season=${season - 1}&sportId=1&limit=50&statGroup=hitting&hydrate=person(team,stats(group=hitting,type=season))`;
+      pUrl = `https://statsapi.mlb.com/api/v1/stats/leaders?leaderCategories=${pitchingCats}&season=${season - 1}&sportId=1&limit=50&statGroup=pitching&hydrate=person(team,stats(group=pitching,type=season))`;
+      [hResp, pResp] = await Promise.all([fetch(hUrl), fetch(pUrl)]);
+      [hData, pData] = await Promise.all([hResp.json(), pResp.json()]);
     }
 
+    const allLeaders = [...(hData.leagueLeaders || []), ...(pData.leagueLeaders || [])];
+
     const seen = new Set();
-    return (data.leagueLeaders || [])
+    return allLeaders
       .filter((cat) => {
         if (seen.has(cat.leaderCategory)) return false;
         seen.add(cat.leaderCategory);
@@ -327,21 +361,27 @@ async function handleLeagueLeaders(req, res) {
       })
       .map((cat) => {
         const meta = LEADER_LABEL_MAP[cat.leaderCategory];
+        const isPitching = meta.group === 'pitching';
+        const isCounting = COUNTING_STATS.has(cat.leaderCategory);
+        const filtered = isCounting
+          ? (cat.leaders || [])
+          : (cat.leaders || []).filter((l) => meetsMinimum(l, isPitching));
         return {
           category: cat.leaderCategory,
           label: meta.label,
           group: meta.group,
           type: meta.type,
-          leaders: (cat.leaders || []).map((l) => ({
-            rank: l.rank,
+          leaders: fixLeaderOrder(cat.leaderCategory, filtered.slice(0, 10).map((l, i) => ({
+            rank: i + 1,
             name: l.person?.fullName,
             playerId: l.person?.id,
             team: l.team?.name || l.person?.currentTeam?.name || l.person?.team?.name || '',
             teamAbbr: TEAM_ABBR[l.team?.id] || l.team?.abbreviation || l.person?.currentTeam?.abbreviation || '',
             value: l.value,
-          })),
+          }))),
         };
-      });
+      })
+      .sort((a, b) => (LEADER_SORT_ORDER[a.category] ?? 99) - (LEADER_SORT_ORDER[b.category] ?? 99));
   }, 3600);
 
   res.json(leaders);
@@ -621,9 +661,9 @@ async function handleAnalytics(req, res) {
 const situationalCache = createCache(1800, 120);
 const SIT_CODES = [
   { code: 'risp', label: 'RISP' },
-  { code: 'bload', label: 'Bases Loaded' },
-  { code: 'mon', label: 'Men On' },
-  { code: 'bemp', label: 'Bases Empty' },
+  { code: 'r123', label: 'Bases Loaded' },
+  { code: 'ron', label: 'Men On' },
+  { code: 'r0', label: 'Bases Empty' },
   { code: 'vl', label: 'vs LHP' },
   { code: 'vr', label: 'vs RHP' },
 ];
@@ -634,7 +674,7 @@ async function handleSituational(req, res) {
   const result = await situationalCache.getOrFetch(cacheKey, async () => {
     const season = new Date().getFullYear();
     const fetches = SIT_CODES.map(async (sit) => {
-      const url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${season}&sitCodes=${sit.code}`;
+      const url = `https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=statSplits&group=hitting&season=${season}&sitCodes=${sit.code}`;
       const resp = await fetch(url);
       const data = await resp.json();
       const stat = data.stats?.[0]?.splits?.[0]?.stat || null;

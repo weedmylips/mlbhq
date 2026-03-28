@@ -5,9 +5,9 @@ const router = Router();
 
 const SITUATIONS = [
   { code: 'risp', label: 'RISP' },
-  { code: 'bload', label: 'Bases Loaded' },
-  { code: 'mon', label: 'Men On' },
-  { code: 'bemp', label: 'Bases Empty' },
+  { code: 'r123', label: 'Bases Loaded' },
+  { code: 'ron', label: 'Men On' },
+  { code: 'r0', label: 'Bases Empty' },
   { code: 'vl', label: 'vs LHP' },
   { code: 'vr', label: 'vs RHP' },
 ];
@@ -38,7 +38,7 @@ router.get('/situational', async (req, res) => {
 
       // Fetch each situation individually with the correct MLB API sitCodes
       const fetches = SITUATIONS.map(async (sit) => {
-        const sitUrl = `https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${season}&sitCodes=${sit.code}`;
+        const sitUrl = `https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=statSplits&group=hitting&season=${season}&sitCodes=${sit.code}`;
         const sitResp = await fetch(sitUrl);
         const sitData = await sitResp.json();
         return {

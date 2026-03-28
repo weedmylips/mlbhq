@@ -146,25 +146,6 @@ function SectionHeader({ icon: Icon, label }) {
   );
 }
 
-function ViewToggle({ active, onChange }) {
-  return (
-    <div className="flex gap-1 mb-3">
-      {['traditional', 'advanced'].map((view) => (
-        <button
-          key={view}
-          onClick={() => onChange(view)}
-          className={`text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded transition-colors ${
-            active === view
-              ? 'bg-gray-400/15 text-gray-300 border border-gray-400/30'
-              : 'text-gray-500 hover:text-gray-300 border border-transparent'
-          }`}
-        >
-          {view}
-        </button>
-      ))}
-    </div>
-  );
-}
 
 function ScopeToggle({ active, onChange }) {
   return (
@@ -190,49 +171,39 @@ function ScopeToggle({ active, onChange }) {
 
 function classifyCategories(categories) {
   // Server already provides group/type — use as-is if present, otherwise classify
-  const HITTING_KEYS = new Set(['battingAverage', 'homeRuns', 'runsBattedIn', 'stolenBases', 'onBasePercentage',
-    'sluggingPercentage', 'onBasePlusSlugging', 'isolatedPower', 'strikeoutRate', 'walksPerPlateAppearance']);
-  const ADV_HITTING_KEYS = new Set(['isolatedPower', 'strikeoutRate', 'walksPerPlateAppearance']);
-  const ADV_PITCHING_KEYS = new Set(['strikeoutWalkRatio', 'homeRunsPer9']);
+  const HITTING_KEYS = new Set(['battingAverage', 'homeRuns', 'runsBattedIn', 'hits', 'runs', 'stolenBases',
+    'walks', 'strikeouts', 'onBasePercentage', 'sluggingPercentage', 'onBasePlusSlugging']);
 
   const hasGroupField = categories.some((c) => c.group);
   return categories.map((c) => {
     if (hasGroupField && c.group) return c;
     const isHitting = HITTING_KEYS.has(c.category);
-    const isAdvanced = isHitting ? ADV_HITTING_KEYS.has(c.category) : ADV_PITCHING_KEYS.has(c.category);
-    return { ...c, group: isHitting ? 'hitting' : 'pitching', type: isAdvanced ? 'advanced' : 'traditional' };
+    return { ...c, group: isHitting ? 'hitting' : 'pitching', type: 'traditional' };
   });
 }
 
-function LeadersGrid({ categories, hittingView, setHittingView, pitchingView, setPitchingView, showTeam }) {
+function LeadersGrid({ categories, showTeam }) {
   const classified = classifyCategories(categories);
-
-  const hittingDisplay = classified.filter((c) => c.group === 'hitting' && c.type === hittingView);
-  const pitchingDisplay = classified.filter((c) => c.group === 'pitching' && c.type === pitchingView);
-  const hasAdvHitting = classified.some((c) => c.group === 'hitting' && c.type === 'advanced');
-  const hasAdvPitching = classified.some((c) => c.group === 'pitching' && c.type === 'advanced');
-  const allHitting = classified.filter((c) => c.group === 'hitting');
-  const allPitching = classified.filter((c) => c.group === 'pitching');
+  const hitting = classified.filter((c) => c.group === 'hitting');
+  const pitching = classified.filter((c) => c.group === 'pitching');
 
   return (
     <div className="space-y-6">
-      {allHitting.length > 0 && (
+      {hitting.length > 0 && (
         <div className="card">
           <SectionHeader icon={Swords} label="Batting Leaders" />
-          {hasAdvHitting && <ViewToggle active={hittingView} onChange={setHittingView} />}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {hittingDisplay.map((cat) => (
+            {hitting.map((cat) => (
               <LeaderCategory key={cat.category} category={cat} showTeam={showTeam} />
             ))}
           </div>
         </div>
       )}
-      {allPitching.length > 0 && (
+      {pitching.length > 0 && (
         <div className="card">
           <SectionHeader icon={Flame} label="Pitching Leaders" />
-          {hasAdvPitching && <ViewToggle active={pitchingView} onChange={setPitchingView} />}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {pitchingDisplay.map((cat) => (
+            {pitching.map((cat) => (
               <LeaderCategory key={cat.category} category={cat} showTeam={showTeam} />
             ))}
           </div>
@@ -249,8 +220,6 @@ export default function TeamLeaders() {
   const { data: leagueCategories, isLoading: leagueLoading } = useLeagueLeaders(hasLiveGame);
   const { data: sitData, isLoading: sitLoading } = useSituational(team.id, hasLiveGame);
   const [scope, setScope] = useState('team');
-  const [hittingView, setHittingView] = useState('traditional');
-  const [pitchingView, setPitchingView] = useState('traditional');
 
   const isLoading = scope === 'team' ? teamLoading : leagueLoading;
   const categories = scope === 'team' ? teamCategories : leagueCategories;
@@ -273,10 +242,6 @@ export default function TeamLeaders() {
         {categories?.length > 0 ? (
           <LeadersGrid
             categories={categories}
-            hittingView={hittingView}
-            setHittingView={setHittingView}
-            pitchingView={pitchingView}
-            setPitchingView={setPitchingView}
             showTeam={scope === 'league'}
           />
         ) : (
@@ -286,8 +251,8 @@ export default function TeamLeaders() {
         )}
       </div>
 
-      {/* Situational Splits */}
-      <SituationalStats data={sitData} isLoading={sitLoading} />
+      {/* Situational Splits — team scope only */}
+      {scope === 'team' && <SituationalStats data={sitData} isLoading={sitLoading} />}
     </div>
   );
 }

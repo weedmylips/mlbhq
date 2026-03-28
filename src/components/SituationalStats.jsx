@@ -50,6 +50,31 @@ export default function SituationalStats({ data, isLoading }) {
       <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
         Situational Hitting
       </h3>
+
+      {/* Visual comparison cards */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 mb-4">
+        {withData.map((sit) => {
+          if (!sit.stat) return null;
+          const ops = parseFloat(sit.stat.ops) || 0;
+          return (
+            <div key={sit.code} className="bg-white/5 rounded-lg p-2.5 text-center">
+              <div className="text-[10px] text-gray-500 uppercase">{sit.label}</div>
+              <div
+                className={`text-lg font-mono font-bold mt-0.5 ${
+                  ops >= 0.8 ? 'text-green-400' : ops >= 0.7 ? 'text-gray-200' : 'text-red-400'
+                }`}
+              >
+                {sit.stat.ops}
+              </div>
+              <div className="text-[10px] text-gray-500">OPS</div>
+              <div className="text-xs font-mono text-gray-400 mt-1">
+                {sit.stat.avg} AVG &middot; {sit.stat.hr} HR
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
       <div className="overflow-x-auto">
         <table className="w-full text-xs">
           <thead>
@@ -75,29 +100,6 @@ export default function SituationalStats({ data, isLoading }) {
         </table>
       </div>
 
-      {/* Visual comparison cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-4">
-        {withData.map((sit) => {
-          if (!sit.stat) return null;
-          const ops = parseFloat(sit.stat.ops) || 0;
-          return (
-            <div key={sit.code} className="bg-white/5 rounded-lg p-2.5 text-center">
-              <div className="text-[10px] text-gray-500 uppercase">{sit.label}</div>
-              <div
-                className={`text-lg font-mono font-bold mt-0.5 ${
-                  ops >= 0.8 ? 'text-green-400' : ops >= 0.7 ? 'text-gray-200' : 'text-red-400'
-                }`}
-              >
-                {sit.stat.ops}
-              </div>
-              <div className="text-[10px] text-gray-500">OPS</div>
-              <div className="text-xs font-mono text-gray-400 mt-1">
-                {sit.stat.avg} AVG &middot; {sit.stat.hr} HR
-              </div>
-            </div>
-          );
-        })}
-      </div>
     </div>
   );
 }
