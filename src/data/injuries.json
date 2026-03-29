@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-03-29T12:55:11.397Z",
+  "lastUpdated": "2026-03-29T18:41:51.607Z",
   "teams": {
     "108": [
       {
         "playerName": "Kirby Yates",
         "injury": "Left knee inflammation",
         "expectedReturn": "April",
-        "status": "Knee started bothering him after March 15 outing. Angels will be cautious. Played catch March 26 and 27. Knee is improving. Throwing a bullpen being his next step."
+        "status": "Knee started bothering him after March 15 outing. Angels will be cautious. Played catch March 26 and 27. Knee is improving. Throwing a bullpen is his next step."
       },
       {
         "playerName": "Vaughn Grissom",
@@ -51,13 +51,13 @@
         "playerName": "Jackson Holliday",
         "injury": "Right hamate surgery",
         "expectedReturn": "Mid-April",
-        "status": "Underwent procedure to remove bone from right hand on Feb. 12. Took live batting practice March 19 and 20. Began rehab assignment in Triple-A Norfolk's opener on March 27."
+        "status": "Underwent procedure to remove bone from right hand on Feb. 12. Began rehab assignment in Triple-A Norfolk's opener on March 27. Played again March 29."
       },
       {
         "playerName": "Keegan Akin",
         "injury": "Left groin strain",
         "expectedReturn": "TBD",
-        "status": "Felt discomfort while warming up in bullpen on March 21. Underwent imaging in Baltimore on March 23. Placed on IL to begin season."
+        "status": "Felt discomfort while warming up in bullpen on March 21. Underwent imaging in Baltimore on March 23. Playing catch and running as of March 29."
       },
       {
         "playerName": "Heston Kjerstad",
@@ -92,28 +92,22 @@
     ],
     "111": [
       {
-        "playerName": "Triston Casas",
-        "injury": "Ruptured left patellar tendon",
-        "expectedReturn": "May at earliest",
-        "status": "Recently cleared a key hurdle when he was given clearance to run the bases and slide. Will stay at extended spring training until ready to go on Minors rehab assignment."
-      },
-      {
         "playerName": "Kutter Crawford",
         "injury": "Right wrist subsheath tear",
-        "expectedReturn": "April or early May",
-        "status": "Should soon be ready for Minors rehab assignment."
+        "expectedReturn": "Late April or early May",
+        "status": "Will throw four innings in extended spring training on March 30. Close to Minors rehab assignment."
       },
       {
         "playerName": "Patrick Sandoval",
         "injury": "Left UCL repair",
         "expectedReturn": "Mid-April to early May",
-        "status": "Close to Minors rehab assignment."
+        "status": "Will throw four innings in extended spring training on March 30. Close to Minors rehab assignment."
       },
       {
-        "playerName": "Romy Gonzalez",
-        "injury": "Left shoulder",
-        "expectedReturn": "Will miss significant time at start of season",
-        "status": "Underwent left shoulder arthroscopic debridement surgery on March 12 and was placed on 60-day injured list. Had a PRP injection in early February, and has not participated in any baseball activity."
+        "playerName": "Triston Casas",
+        "injury": "Ruptured left patellar tendon",
+        "expectedReturn": "May at earliest",
+        "status": "Recently cleared a key hurdle when he was given clearance to run the bases and slide. Will stay at extended spring training until ready to go on Minors rehab assignment."
       },
       {
         "playerName": "Tanner Houck",
@@ -127,7 +121,7 @@
         "playerName": "Seiya Suzuki",
         "injury": "Right knee",
         "expectedReturn": "April",
-        "status": "Injured March 14 during Classic. Has resumed hitting, throwing and light running (with modified knee brace). Will continue rehab in Chicago during first homestand."
+        "status": "Injured March 14 during Classic. Has continued to up intensity in baseball activities in recent days. Ran the bases on March 29 and could be ready for a Minor League rehab assignment at some point during the Cubs' first road trip."
       },
       {
         "playerName": "Jordan Wicks",
@@ -165,13 +159,13 @@
         "playerName": "Nick Lodolo",
         "injury": "Blister on left index finger",
         "expectedReturn": "April 5",
-        "status": "Scheduled to throw in a side bullpen session on March 29. If all goes well, he could make a rehab start on April 1 at a location TBD."
+        "status": "Scheduled to throw in a side bullpen session on March 29. A potential April 1 rehab assignment start at Triple-A Louisville might have to be pushed back because of a bad weather forecast, not health reasons."
       },
       {
         "playerName": "Caleb Ferguson",
         "injury": "Mild right oblique strain",
         "expectedReturn": "April",
-        "status": "Ferguson's second MRI in Cincinnati on March 25 went well and confirmed he's healing well. Cleared to begin a throwing program. Will travel with the club on the road."
+        "status": "Threw on flat ground from 60 feet on March 29 and is scheduled to long toss at 75 feet on March 30. Ferguson will travel with the club on its first road trip."
       },
       {
         "playerName": "Hunter Greene",
@@ -665,6 +659,12 @@
     ],
     "139": [
       {
+        "playerName": "Jake Fraley",
+        "injury": "Right shoulder soreness",
+        "expectedReturn": "Day to day",
+        "status": "Scratched from lineup on March 29 after banging up his shoulder while trying to make a play in right field on March 28. Manager Kevin Cash said Rays \"think he's going to be OK,\" but more sore than expected."
+      },
+      {
         "playerName": "Edwin Uceta",
         "injury": "Right shoulder soreness",
         "expectedReturn": "Early April",
@@ -702,6 +702,12 @@
       }
     ],
     "140": [
+      {
+        "playerName": "Jacob deGrom",
+        "injury": "Stiff neck",
+        "expectedReturn": "This week in Baltimore",
+        "status": "Scratched from season debut March 28 in Philadelphia after waking up with a stiff neck. Felt “much better” the following day and played catch from 120 feet, which he couldn’t do before. He’s optimistic about being able to start this week vs. the O's. More >"
+      },
       {
         "playerName": "Cody Bradford",
         "injury": "Left UCL surgery",
@@ -843,6 +849,12 @@
     ],
     "144": [
       {
+        "playerName": "Spencer Strider",
+        "injury": "Left oblique strain",
+        "expectedReturn": "April 6",
+        "status": "Early reports regarding Strider's progress have been encouraging. President of baseball operations Alex Anthopoulos told MLB Network Radio he expected Strider back \"sooner rather than later.\""
+      },
+      {
         "playerName": "Sean Murphy",
         "injury": "Right hip labral tear",
         "expectedReturn": "May",
@@ -853,12 +865,6 @@
         "injury": "Torn tendon in right middle finger",
         "expectedReturn": "First half of May",
         "status": "Still hasn't faced live pitching, but the Braves are hoping he could begin a rehab assignment within the next couple weeks."
-      },
-      {
-        "playerName": "Spencer Strider",
-        "injury": "Left oblique strain",
-        "expectedReturn": "April",
-        "status": "Felt some discomfort after his March 17 start in a Minor League game. Early reports regarding his progress have been encouraging. He may end up missing just a start or two. He’ll be eligible for activation on April 6."
       },
       {
         "playerName": "Danny Young",
@@ -937,7 +943,7 @@
       {
         "playerName": "Brooks Baldwin",
         "injury": "Right elbow soreness",
-        "expectedReturn": "Day to day",
+        "expectedReturn": "April",
         "status": "Hasn't played in a game since March 6 during a Cactus League contest. General manager Chris Getz said they will find out something soon in regard to Baldwin’s next move."
       }
     ],
@@ -1028,7 +1034,7 @@
         "playerName": "Andrew Vaughn",
         "injury": "Fractured left hamate",
         "expectedReturn": "4-6 weeks",
-        "status": "Vaughn was injured swinging the bat on Opening Day, though he took three more at-bats and didn't realize it until he woke up in the middle of the night in pain. (last updated: March 28)"
+        "status": "Vaughn was injured swinging the bat on Opening Day, though he took three more at-bats and didn't realize it until he woke up in the middle of the night in pain."
       },
       {
         "playerName": "Quinn Priester",
