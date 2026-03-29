@@ -28,7 +28,10 @@ function TeamRow({ t, isSelected, divisionLeaderLosses }) {
           {teamData && (
             <img src={teamData.logo} alt={teamData.abbr} className="w-5 h-5" />
           )}
-          <span className={isSelected ? 'font-bold' : ''}>
+          <span className={`${isSelected ? 'font-bold' : ''} sm:hidden`}>
+            {teamData ? teamData.abbr : t.teamName}
+          </span>
+          <span className={`${isSelected ? 'font-bold' : ''} hidden sm:inline`}>
             {teamData ? teamData.shortName : t.teamName}
           </span>
         </div>
@@ -185,12 +188,13 @@ function WildCardTable({ leagueId, data, selectedTeam }) {
                         className="w-5 h-5"
                       />
                     )}
-                    <span className={isSelected ? 'font-bold' : ''}>
-                      {teamData
-                        ? teamData.shortName
-                        : t.teamName}
+                    <span className={`${isSelected ? 'font-bold' : ''} sm:hidden`}>
+                      {teamData ? teamData.abbr : t.teamName}
                     </span>
-                    <span className="text-[10px] text-gray-500 ml-1">
+                    <span className={`${isSelected ? 'font-bold' : ''} hidden sm:inline`}>
+                      {teamData ? teamData.shortName : t.teamName}
+                    </span>
+                    <span className="text-[10px] text-gray-500 ml-1 hidden sm:inline">
                       {t.divisionName?.split(' ').pop() || ''}
                     </span>
                   </div>
@@ -293,13 +297,18 @@ function WildCardTable({ leagueId, data, selectedTeam }) {
                     <span
                       className={`${isSelected ? 'font-bold' : ''} ${
                         isBelowCutoff ? 'text-gray-500' : ''
-                      }`}
+                      } sm:hidden`}
                     >
-                      {teamData
-                        ? teamData.shortName
-                        : t.teamName}
+                      {teamData ? teamData.abbr : t.teamName}
                     </span>
-                    <span className="text-[10px] text-gray-500 ml-1">
+                    <span
+                      className={`${isSelected ? 'font-bold' : ''} ${
+                        isBelowCutoff ? 'text-gray-500' : ''
+                      } hidden sm:inline`}
+                    >
+                      {teamData ? teamData.shortName : t.teamName}
+                    </span>
+                    <span className="text-[10px] text-gray-500 ml-1 hidden sm:inline">
                       {t.divisionName?.split(' ').pop() || ''}
                     </span>
                   </div>
