@@ -41,6 +41,9 @@ function GameRow({ game, teamId }) {
           <span className="text-xs text-gray-500">
             {gameDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
           </span>
+          <svg className="w-3.5 h-3.5 text-gray-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
         </div>
       </button>
       <GameDetailModal
