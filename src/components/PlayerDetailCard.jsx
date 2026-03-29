@@ -156,8 +156,14 @@ export default function PlayerDetailCard({ playerId }) {
       {/* Tab content */}
       {activeTab === 'overview' && (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <HittingStats season={player.seasonHitting} career={player.careerHitting} />
-          <PitchingStats season={player.seasonPitching} career={player.careerPitching} />
+          {/* Position players: always show hitting, only show pitching if they pitched this season */}
+          {/* Pitchers: always show pitching, only show hitting if they hit this season */}
+          {(!isPitcher || player.seasonHitting) && (
+            <HittingStats season={player.seasonHitting} career={!isPitcher ? player.careerHitting : null} />
+          )}
+          {(isPitcher || player.seasonPitching) && (
+            <PitchingStats season={player.seasonPitching} career={isPitcher ? player.careerPitching : null} />
+          )}
         </div>
       )}
 

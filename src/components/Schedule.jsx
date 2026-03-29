@@ -3,10 +3,9 @@ import { useGames } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 import { getTeamById } from '../data/teams';
 import GameDetailModal from './GameDetailModal';
-import GamePreviewPanel from './GamePreviewPanel';
+import GamePreviewModal from './GamePreviewModal';
 
 function ScheduleGameRow({ game, teamId }) {
-  const [expanded, setExpanded] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   const isHome = game.teams?.home?.team?.id === teamId;
@@ -25,11 +24,7 @@ function ScheduleGameRow({ game, teamId }) {
     : game.teams?.away?.probablePitcher;
 
   const handleClick = () => {
-    if (isFinal) {
-      setModalOpen(true);
-    } else {
-      setExpanded((v) => !v);
-    }
+    if (!isLive) setModalOpen(true);
   };
 
   const rowContent = (
@@ -46,7 +41,8 @@ function ScheduleGameRow({ game, teamId }) {
         {oppTeam && (
           <img src={oppTeam.logo} alt={oppTeam.abbr} className="w-5 h-5 shrink-0" />
         )}
-        <span className="truncate">{oppTeam?.shortName || oppData?.team?.teamName || oppData?.team?.name}</span>
+        <span className="truncate sm:hidden">{oppTeam?.abbr || oppData?.team?.teamName || oppData?.team?.name}</span>
+        <span className="truncate hidden sm:inline">{oppTeam?.shortName || oppData?.team?.teamName || oppData?.team?.name}</span>
       </div>
       <div className="flex items-center gap-2 shrink-0 ml-2">
         {isLive && (
@@ -85,17 +81,6 @@ function ScheduleGameRow({ game, teamId }) {
             </span>
           </span>
         ) : null}
-        {isUpcoming && (
-          <svg
-            className={`w-3 h-3 text-gray-500 transition-transform shrink-0 ${expanded ? 'rotate-180' : ''}`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2.5}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        )}
       </div>
     </div>
   );
@@ -110,22 +95,24 @@ function ScheduleGameRow({ game, teamId }) {
 
   return (
     <>
-      <div className={`rounded text-sm ${isFinal ? 'bg-white/5 hover:bg-white/10 transition-colors' : 'bg-white/5'}`}>
+      <div className="rounded text-sm bg-white/5 hover:bg-white/10 transition-colors">
         <button
           className="w-full py-2 px-3 text-left"
           onClick={handleClick}
-          aria-expanded={isUpcoming ? expanded : undefined}
         >
           {rowContent}
         </button>
-        {expanded && isUpcoming && (
-          <div className="px-3 pb-3">
-            <GamePreviewPanel game={game} teamId={teamId} />
-          </div>
-        )}
       </div>
       {isFinal && (
         <GameDetailModal
+          game={game}
+          teamId={teamId}
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+        />
+      )}
+      {isUpcoming && (
+        <GamePreviewModal
           game={game}
           teamId={teamId}
           open={modalOpen}

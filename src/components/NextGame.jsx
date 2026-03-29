@@ -20,6 +20,7 @@ export default function NextGame({ game }) {
   }
 
   const isHome = game.teams?.home?.team?.id === team.id;
+  const myData = isHome ? game.teams?.home : game.teams?.away;
   const opponentData = isHome ? game.teams?.away : game.teams?.home;
   const opponentTeam = getTeamById(opponentData?.team?.id);
   const gameDate = new Date(game.gameDate);
@@ -53,6 +54,9 @@ export default function NextGame({ game }) {
           <img src={team.logo} alt={team.abbr} className="w-10 h-10 sm:w-12 sm:h-12 shrink-0" />
           <div className="min-w-0">
             <div className="font-bold text-sm sm:text-base truncate">{team.abbr}</div>
+            {myData?.leagueRecord && (
+              <div className="text-[10px] text-gray-500 font-mono">{myData.leagueRecord.wins}-{myData.leagueRecord.losses}</div>
+            )}
             <div className="text-xs text-gray-400 truncate">
               {probPitcher?.fullName ? probPitcher.fullName.split(' ').pop() : ''}
             </div>
@@ -75,6 +79,9 @@ export default function NextGame({ game }) {
         <div className="flex items-center gap-2 min-w-0 justify-end">
           <div className="text-right min-w-0">
             <div className="font-bold text-sm sm:text-base truncate">{opponentTeam?.abbr || opponentData?.team?.abbreviation}</div>
+            {opponentData?.leagueRecord && (
+              <div className="text-[10px] text-gray-500 font-mono">{opponentData.leagueRecord.wins}-{opponentData.leagueRecord.losses}</div>
+            )}
             <div className="text-xs text-gray-400 truncate">
               {oppProbPitcher?.fullName ? oppProbPitcher.fullName.split(' ').pop() : ''}
             </div>
