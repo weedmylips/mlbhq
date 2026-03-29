@@ -182,17 +182,47 @@ function classifyCategories(categories) {
   });
 }
 
+function StatPicker({ categories, activeIndex, onChange }) {
+  return (
+    <div className="flex gap-1.5 overflow-x-auto scrollbar-none pb-2 mb-2 sm:hidden">
+      {categories.map((cat, i) => (
+        <button
+          key={cat.category}
+          onClick={() => onChange(i)}
+          className={`shrink-0 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full transition-colors ${
+            i === activeIndex
+              ? 'bg-[var(--team-primary)]/25 text-[var(--team-highlight)] border border-[var(--team-primary)]/40'
+              : 'text-gray-500 hover:text-gray-300 bg-white/5 border border-transparent'
+          }`}
+        >
+          {cat.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 function LeadersGrid({ categories, showTeam }) {
   const classified = classifyCategories(categories);
   const hitting = classified.filter((c) => c.group === 'hitting');
   const pitching = classified.filter((c) => c.group === 'pitching');
+  const [activeHit, setActiveHit] = useState(0);
+  const [activePit, setActivePit] = useState(0);
 
   return (
     <div className="space-y-6">
       {hitting.length > 0 && (
         <div className="card">
           <SectionHeader icon={Swords} label="Batting Leaders" />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          <StatPicker categories={hitting} activeIndex={activeHit} onChange={setActiveHit} />
+          {/* Mobile: single stat */}
+          <div className="sm:hidden">
+            {hitting[activeHit] && (
+              <LeaderCategory category={hitting[activeHit]} showTeam={showTeam} />
+            )}
+          </div>
+          {/* Desktop: full grid */}
+          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {hitting.map((cat) => (
               <LeaderCategory key={cat.category} category={cat} showTeam={showTeam} />
             ))}
@@ -202,7 +232,15 @@ function LeadersGrid({ categories, showTeam }) {
       {pitching.length > 0 && (
         <div className="card">
           <SectionHeader icon={Flame} label="Pitching Leaders" />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          <StatPicker categories={pitching} activeIndex={activePit} onChange={setActivePit} />
+          {/* Mobile: single stat */}
+          <div className="sm:hidden">
+            {pitching[activePit] && (
+              <LeaderCategory category={pitching[activePit]} showTeam={showTeam} />
+            )}
+          </div>
+          {/* Desktop: full grid */}
+          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {pitching.map((cat) => (
               <LeaderCategory key={cat.category} category={cat} showTeam={showTeam} />
             ))}
