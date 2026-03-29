@@ -124,10 +124,12 @@ function advRank(allAdvanced, teamId, field, lowerIsBetter) {
 router.get('/analytics', async (req, res) => {
   try {
     const teamId = req.query.teamId || 147;
-    const leagueId = req.query.leagueId || 103;
-    const cacheKey = `analytics-${teamId}-${leagueId}`;
+    const leagueId = req.query.leagueId;
+    const cacheKey = leagueId ? `analytics-${teamId}-${leagueId}` : `analytics-${teamId}-mlb`;
     const result = await getOrFetch(cacheKey, async () => {
       let season = new Date().getFullYear();
+
+      const leagueFilter = leagueId ? `&leagueIds=${leagueId}` : '';
 
       async function fetchData(s) {
         return Promise.all([
@@ -135,8 +137,8 @@ router.get('/analytics', async (req, res) => {
           fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=${s}`).then((r) => r.json()),
           fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`).then((r) => r.json()),
           fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`).then((r) => r.json()),
-          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=${s}&leagueIds=${leagueId}&sportId=1`).then((r) => r.json()),
-          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=${s}&leagueIds=${leagueId}&sportId=1`).then((r) => r.json()),
+          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=${s}${leagueFilter}&sportId=1`).then((r) => r.json()),
+          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=${s}${leagueFilter}&sportId=1`).then((r) => r.json()),
         ]);
       }
 
@@ -181,6 +183,32 @@ router.get('/analytics', async (req, res) => {
         hr9: advRank(allPitchingAdv, teamId, 'hr9', true),
       } : null;
 
+      // Compute league averages from all-teams advanced stats
+      function advAvg(arr, field) {
+        const vals = arr.map(t => parseFloat(t[field]) || 0).filter(v => v > 0);
+        if (vals.length === 0) return null;
+        return vals.reduce((a, b) => a + b, 0) / vals.length;
+      }
+
+      const leagueAvgHitting = allHittingAdv.length > 0 ? {
+        woba: advAvg(allHittingAdv, 'woba')?.toFixed(3) || null,
+        iso: advAvg(allHittingAdv, 'iso')?.toFixed(3) || null,
+        babip: advAvg(allHittingAdv, 'babip')?.toFixed(3) || null,
+        kPct: advAvg(allHittingAdv, 'kPct')?.toFixed(1) || null,
+        bbPct: advAvg(allHittingAdv, 'bbPct')?.toFixed(1) || null,
+        sb: Math.round(advAvg(allHittingAdv, 'sb') || 0),
+      } : null;
+
+      const leagueAvgPitching = allPitchingAdv.length > 0 ? {
+        fip: advAvg(allPitchingAdv, 'fip')?.toFixed(2) || null,
+        babip: advAvg(allPitchingAdv, 'babip')?.toFixed(3) || null,
+        kPct: advAvg(allPitchingAdv, 'kPct')?.toFixed(1) || null,
+        bbPct: advAvg(allPitchingAdv, 'bbPct')?.toFixed(1) || null,
+        kBBPct: advAvg(allPitchingAdv, 'kBBPct')?.toFixed(1) || null,
+        hr9: advAvg(allPitchingAdv, 'hr9')?.toFixed(2) || null,
+        whip: advAvg(allPitchingAdv, 'whip')?.toFixed(2) || null,
+      } : null;
+
       // Player-level advanced stats
       const playerHittingSplits = playerHitting.stats?.[0]?.splits || [];
       const advancedBatters = playerHittingSplits
@@ -207,6 +235,8 @@ router.get('/analytics', async (req, res) => {
         teamPitching: computeAdvanced(teamPitching, true),
         hittingRanks,
         pitchingRanks,
+        leagueAvgHitting,
+        leagueAvgPitching,
         batters: advancedBatters,
         pitchers: advancedPitchers,
       };

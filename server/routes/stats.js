@@ -31,17 +31,18 @@ function abbrevName(fullName) {
 router.get('/stats', async (req, res) => {
   try {
     const teamId = req.query.teamId || 147;
-    const leagueId = req.query.leagueId || 103;
-    const cacheKey = `stats-${teamId}-${leagueId}`;
+    const leagueId = req.query.leagueId;
+    const cacheKey = leagueId ? `stats-${teamId}-${leagueId}` : `stats-${teamId}-mlb`;
     const result = await getOrFetch(cacheKey, async () => {
       let season = new Date().getFullYear();
+      const leagueFilter = leagueId ? `&leagueIds=${leagueId}` : '';
 
       async function fetchStats(s) {
         return Promise.all([
           fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${s}`),
           fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=${s}`),
-          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=${s}&leagueIds=${leagueId}&sportId=1`),
-          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=${s}&leagueIds=${leagueId}&sportId=1`),
+          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=${s}${leagueFilter}&sportId=1`),
+          fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=${s}${leagueFilter}&sportId=1`),
           fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`),
           fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`),
         ]);
@@ -87,6 +88,31 @@ router.get('/stats', async (req, res) => {
         saves: getRank(allPitchingSplits, teamId, 'saves', false),
         wins: getRank(allPitchingSplits, teamId, 'wins', false),
         losses: getRank(allPitchingSplits, teamId, 'losses', true),
+      } : null;
+
+      // Compute league averages from all-teams data
+      function leagueAvg(splits, field) {
+        const vals = splits.map(s => parseFloat(s.stat?.[field]) || 0).filter(v => v > 0);
+        if (vals.length === 0) return null;
+        return vals.reduce((a, b) => a + b, 0) / vals.length;
+      }
+
+      const leagueAvgHitting = allHittingSplits.length > 0 ? {
+        avg: leagueAvg(allHittingSplits, 'avg')?.toFixed(3) || null,
+        ops: leagueAvg(allHittingSplits, 'ops')?.toFixed(3) || null,
+        hr: Math.round(leagueAvg(allHittingSplits, 'homeRuns') || 0),
+        runs: Math.round(leagueAvg(allHittingSplits, 'runs') || 0),
+        sb: Math.round(leagueAvg(allHittingSplits, 'stolenBases') || 0),
+        rbi: Math.round(leagueAvg(allHittingSplits, 'rbi') || 0),
+      } : null;
+
+      const leagueAvgPitching = allPitchingSplits.length > 0 ? {
+        era: leagueAvg(allPitchingSplits, 'era')?.toFixed(2) || null,
+        whip: leagueAvg(allPitchingSplits, 'whip')?.toFixed(2) || null,
+        k: Math.round(leagueAvg(allPitchingSplits, 'strikeOuts') || 0),
+        saves: Math.round(leagueAvg(allPitchingSplits, 'saves') || 0),
+        wins: Math.round(leagueAvg(allPitchingSplits, 'wins') || 0),
+        losses: Math.round(leagueAvg(allPitchingSplits, 'losses') || 0),
       } : null;
 
       const playerHittingSplits = playerHittingData.stats?.[0]?.splits || [];
@@ -143,6 +169,8 @@ router.get('/stats', async (req, res) => {
         },
         hittingRanks,
         pitchingRanks,
+        leagueAvgHitting,
+        leagueAvgPitching,
         topBatters,
         topPitchers,
       };

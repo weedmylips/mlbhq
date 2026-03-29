@@ -604,18 +604,19 @@ function advRankAnalytics(allAdv, teamId, field, lowerIsBetter) {
 
 async function handleAnalytics(req, res) {
   const teamId = req.query.teamId || 147;
-  const leagueId = req.query.leagueId || 103;
-  const cacheKey = `analytics-${teamId}-${leagueId}`;
+  const leagueId = req.query.leagueId;
+  const cacheKey = leagueId ? `analytics-${teamId}-${leagueId}` : `analytics-${teamId}-mlb`;
   const result = await analyticsCache.getOrFetch(cacheKey, async () => {
     let season = new Date().getFullYear();
+    const leagueFilter = leagueId ? `&leagueIds=${leagueId}` : '';
     async function fetchData(s) {
       return Promise.all([
         fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=hitting&season=${s}`).then(r=>r.json()),
         fetch(`https://statsapi.mlb.com/api/v1/teams/${teamId}/stats?stats=season&group=pitching&season=${s}`).then(r=>r.json()),
         fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=hitting&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`).then(r=>r.json()),
         fetch(`https://statsapi.mlb.com/api/v1/stats?stats=season&group=pitching&season=${s}&teamId=${teamId}&playerPool=All&sportId=1`).then(r=>r.json()),
-        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=${s}&leagueIds=${leagueId}&sportId=1`).then(r=>r.json()),
-        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=${s}&leagueIds=${leagueId}&sportId=1`).then(r=>r.json()),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=${s}${leagueFilter}&sportId=1`).then(r=>r.json()),
+        fetch(`https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=pitching&season=${s}${leagueFilter}&sportId=1`).then(r=>r.json()),
       ]);
     }
     let [hD, pD, phD, ppD, ahD, apD] = await fetchData(season);
@@ -644,6 +645,31 @@ async function handleAnalytics(req, res) {
       hr9: advRankAnalytics(allPitAdv, teamId, 'hr9', true),
     } : null;
 
+    function advAvgA(arr, field) {
+      const vals = arr.map(t => parseFloat(t[field]) || 0).filter(v => v > 0);
+      if (vals.length === 0) return null;
+      return vals.reduce((a, b) => a + b, 0) / vals.length;
+    }
+
+    const leagueAvgHitting = allHitAdv.length > 0 ? {
+      woba: advAvgA(allHitAdv, 'woba')?.toFixed(3) || null,
+      iso: advAvgA(allHitAdv, 'iso')?.toFixed(3) || null,
+      babip: advAvgA(allHitAdv, 'babip')?.toFixed(3) || null,
+      kPct: advAvgA(allHitAdv, 'kPct')?.toFixed(1) || null,
+      bbPct: advAvgA(allHitAdv, 'bbPct')?.toFixed(1) || null,
+      sb: Math.round(advAvgA(allHitAdv, 'sb') || 0),
+    } : null;
+
+    const leagueAvgPitching = allPitAdv.length > 0 ? {
+      fip: advAvgA(allPitAdv, 'fip')?.toFixed(2) || null,
+      babip: advAvgA(allPitAdv, 'babip')?.toFixed(3) || null,
+      kPct: advAvgA(allPitAdv, 'kPct')?.toFixed(1) || null,
+      bbPct: advAvgA(allPitAdv, 'bbPct')?.toFixed(1) || null,
+      kBBPct: advAvgA(allPitAdv, 'kBBPct')?.toFixed(1) || null,
+      hr9: advAvgA(allPitAdv, 'hr9')?.toFixed(2) || null,
+      whip: advAvgA(allPitAdv, 'whip')?.toFixed(2) || null,
+    } : null;
+
     const batters = (phD.stats?.[0]?.splits || [])
       .filter(s => (s.stat?.plateAppearances || s.stat?.atBats || 0) >= 20)
       .map(s => ({ name: abbrevNameAnalytics(s.player?.fullName), playerId: s.player?.id, ...computeAdvanced(s.stat, false) }))
@@ -652,7 +678,7 @@ async function handleAnalytics(req, res) {
       .filter(s => parseFloat(s.stat?.inningsPitched || 0) >= 10)
       .map(s => ({ name: abbrevNameAnalytics(s.player?.fullName), playerId: s.player?.id, ...computeAdvanced(s.stat, true) }))
       .sort((a, b) => parseFloat(a.fip || 99) - parseFloat(b.fip || 99));
-    return { teamHitting: computeAdvanced(teamHitting, false), teamPitching: computeAdvanced(teamPitching, true), hittingRanks, pitchingRanks, batters, pitchers };
+    return { teamHitting: computeAdvanced(teamHitting, false), teamPitching: computeAdvanced(teamPitching, true), hittingRanks, pitchingRanks, leagueAvgHitting, leagueAvgPitching, batters, pitchers };
   }, 900);
   res.json(result);
 }

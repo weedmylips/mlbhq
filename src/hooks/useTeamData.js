@@ -102,12 +102,13 @@ export function useTransactions(teamId) {
 // --- Game-dependent (poll during live, stop when no game) ---
 
 export function useTeamStats(teamId, leagueId, hasLiveGame) {
+  const leagueParam = leagueId ? `&leagueId=${leagueId}` : '';
   return useQuery({
-    queryKey: ['stats', teamId, leagueId],
-    queryFn: () => fetchApi(`/api/stats?teamId=${teamId}&leagueId=${leagueId}`),
+    queryKey: ['stats', teamId, leagueId || 'mlb'],
+    queryFn: () => fetchApi(`/api/stats?teamId=${teamId}${leagueParam}`),
     refetchInterval: hasLiveGame ? 900000 : false,
     staleTime: 900000,
-    enabled: !!teamId && !!leagueId,
+    enabled: !!teamId,
   });
 }
 
@@ -151,9 +152,10 @@ export function useHotCold(teamId, hasLiveGame) {
 }
 
 export function useAnalytics(teamId, leagueId, hasLiveGame) {
+  const leagueParam = leagueId ? `&leagueId=${leagueId}` : '';
   return useQuery({
-    queryKey: ['analytics', teamId, leagueId],
-    queryFn: () => fetchApi(`/api/analytics?teamId=${teamId}&leagueId=${leagueId || 103}`),
+    queryKey: ['analytics', teamId, leagueId || 'mlb'],
+    queryFn: () => fetchApi(`/api/analytics?teamId=${teamId}${leagueParam}`),
     refetchInterval: hasLiveGame ? 900000 : false,
     staleTime: 900000,
     enabled: !!teamId,
