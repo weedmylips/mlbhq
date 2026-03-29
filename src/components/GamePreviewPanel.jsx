@@ -23,18 +23,11 @@ function WatchList({ teamId }) {
           <div key={i} className="flex items-center justify-between gap-2">
             <span className="text-[11px] text-gray-300 truncate">{b.name}</span>
             <span className="text-[11px] font-mono text-gray-500 shrink-0">
-              {b.avg} · {b.hr}HR · {b.rbi}RBI
+              <span className="sm:hidden">{b.avg}</span>
+              <span className="hidden sm:inline">{b.avg} · {b.hr}HR · {b.rbi}RBI</span>
             </span>
           </div>
         ))}
-        {data.hot.pitchers?.[0] && (
-          <div className="flex items-center justify-between gap-2 mt-1 pt-1 border-t border-white/5">
-            <span className="text-[11px] text-gray-300 truncate">{data.hot.pitchers[0].name}</span>
-            <span className="text-[11px] font-mono text-gray-500 shrink-0">
-              {data.hot.pitchers[0].era} ERA · {data.hot.pitchers[0].k}K
-            </span>
-          </div>
-        )}
       </div>
     </div>
   );

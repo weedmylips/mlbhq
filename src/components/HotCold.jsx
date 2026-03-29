@@ -45,7 +45,7 @@ function InfoTip() {
   return (
     <div className="relative group">
       <span className="text-gray-600 hover:text-gray-400 cursor-help text-xs leading-none">&#9432;</span>
-      <div className="absolute left-0 top-full mt-1 w-56 p-2.5 rounded bg-gray-900 border border-white/10 text-[11px] text-gray-300 leading-relaxed shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity z-20">
+      <div className="absolute left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 top-full mt-1 w-56 p-2.5 rounded bg-gray-900 border border-white/10 text-[11px] text-gray-300 leading-relaxed shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity z-20">
         <p className="font-semibold text-gray-200 mb-1">Methodology</p>
         <p className="mb-1.5">Rolling 7-day window from the MLB Stats API.</p>
         <p className="mb-1"><span className="text-gray-200">Batters:</span> Min 10 AB, ranked by OPS. Top 3 = hot, bottom 3 = cold.</p>
