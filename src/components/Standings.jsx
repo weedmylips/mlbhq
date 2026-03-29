@@ -53,7 +53,7 @@ function TeamRow({ t, isSelected, divisionLeaderLosses }) {
           {t.streak}
         </span>
       </td>
-      <td className="text-right px-2 font-mono">{t.lastTen}</td>
+      <td className="text-right px-2 font-mono whitespace-nowrap">{t.lastTen}</td>
       <td className="text-right px-2 font-mono">
         <span
           className={
@@ -216,7 +216,7 @@ function WildCardTable({ leagueId, data, selectedTeam }) {
                     {t.streak}
                   </span>
                 </td>
-                <td className="text-right px-2 font-mono">{t.lastTen}</td>
+                <td className="text-right px-2 font-mono whitespace-nowrap">{t.lastTen}</td>
                 <td className="text-right px-2 font-mono">
                   <span
                     className={
