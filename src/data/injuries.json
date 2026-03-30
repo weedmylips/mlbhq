@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-30T13:19:00.300Z",
+  "lastUpdated": "2026-03-30T18:59:54.967Z",
   "teams": {
     "108": [
       {
@@ -345,6 +345,12 @@
       }
     ],
     "118": [
+      {
+        "playerName": "Carlos Estévez",
+        "injury": "Left foot contusion",
+        "expectedReturn": "Day to day",
+        "status": "Hit by a comebacker in ninth inning March 28 and has been in a walking boot for two days. Played catch March 30 but isn't likely to be available out of the 'pen."
+      },
       {
         "playerName": "Stephen Kolek",
         "injury": "Left oblique strain",
