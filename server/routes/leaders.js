@@ -193,6 +193,7 @@ router.get('/league-leaders', async (req, res) => {
               rank: i + 1,
               name: l.person?.fullName,
               playerId: l.person?.id,
+              teamId: l.team?.id || l.person?.currentTeam?.id || null,
               team: l.team?.name || l.person?.currentTeam?.name || l.person?.team?.name || '',
               teamAbbr: TEAM_ABBR[l.team?.id] || l.team?.abbreviation || l.person?.currentTeam?.abbreviation || '',
               value: l.value,

@@ -55,7 +55,7 @@ function abbrevName(name) {
   return `${parts[0][0]}. ${parts.slice(1).join(' ')}`;
 }
 
-function LeaderCategory({ category, showTeam }) {
+function LeaderCategory({ category, showTeam, selectedTeamId }) {
   if (!category.leaders?.length) return null;
 
   const isInverse = INVERSE_STATS.has(category.category);
@@ -82,14 +82,17 @@ function LeaderCategory({ category, showTeam }) {
         {category.label}
       </h4>
       <div className="space-y-1">
-        {category.leaders.map((leader, i) => (
-          <div key={leader.playerId || i} className="relative flex items-center gap-1.5 py-1 px-1 rounded overflow-hidden">
+        {category.leaders.map((leader, i) => {
+          const isMyTeam = showTeam && selectedTeamId && leader.teamId === selectedTeamId;
+          return (
+          <div key={leader.playerId || i} className={`relative flex items-center gap-1.5 py-1 px-1 rounded overflow-hidden ${isMyTeam ? 'ring-1 ring-[var(--team-primary)]/40' : ''}`}>
             {/* Bar chart background */}
             <div
-              className="absolute inset-0 rounded opacity-[0.07]"
+              className="absolute inset-0 rounded"
               style={{
                 width: `${barWidth(leader.value)}%`,
-                background: '#9ca3af',
+                background: isMyTeam ? 'var(--team-primary)' : '#9ca3af',
+                opacity: isMyTeam ? 0.15 : 0.07,
               }}
             />
 
@@ -98,19 +101,19 @@ function LeaderCategory({ category, showTeam }) {
             <img
               src={playerHeadshot(leader.playerId)}
               alt=""
-              className="w-6 h-6 rounded-full object-cover bg-gray-800 shrink-0"
+              className={`w-6 h-6 rounded-full object-cover bg-gray-800 shrink-0 ${isMyTeam ? 'ring-1 ring-[var(--team-primary)]/60' : ''}`}
             />
 
             <div className="flex-1 min-w-0 relative">
               <div className="flex items-baseline justify-between gap-1">
                 <span
                   className={`text-[11px] truncate ${
-                    i === 0 ? 'text-gray-200 font-medium' : 'text-gray-400'
+                    isMyTeam ? 'text-[var(--team-highlight,var(--team-primary))] font-medium' : i === 0 ? 'text-gray-200 font-medium' : 'text-gray-400'
                   }`}
                 >
                   {abbrevName(leader.name)}
                   {showTeam && leader.teamAbbr && (
-                    <span className="text-[9px] text-gray-600 ml-1">{leader.teamAbbr}</span>
+                    <span className={`text-[9px] ml-1 ${isMyTeam ? 'text-[var(--team-primary)]/70 font-semibold' : 'text-gray-600'}`}>{leader.teamAbbr}</span>
                   )}
                   {!showTeam && i < 3 && leader.leagueRank && (
                     <span className="text-[8px] text-gray-500 bg-white/[0.06] border border-white/[0.08] rounded-full px-1.5 py-px ml-1 font-mono">
@@ -120,7 +123,7 @@ function LeaderCategory({ category, showTeam }) {
                 </span>
                 <span
                   className={`text-[11px] font-mono shrink-0 font-medium ${
-                    i === 0 ? 'text-green-400' : 'text-gray-500'
+                    isMyTeam ? 'text-[var(--team-highlight,var(--team-primary))]' : i === 0 ? 'text-green-400' : 'text-gray-500'
                   }`}
                 >
                   {sanitizeValue(leader.value)}
@@ -128,7 +131,8 @@ function LeaderCategory({ category, showTeam }) {
               </div>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
@@ -202,7 +206,7 @@ function StatPicker({ categories, activeIndex, onChange }) {
   );
 }
 
-function LeadersGrid({ categories, showTeam }) {
+function LeadersGrid({ categories, showTeam, selectedTeamId }) {
   const classified = classifyCategories(categories);
   const hitting = classified.filter((c) => c.group === 'hitting');
   const pitching = classified.filter((c) => c.group === 'pitching');
@@ -218,13 +222,13 @@ function LeadersGrid({ categories, showTeam }) {
           {/* Mobile: single stat */}
           <div className="sm:hidden">
             {hitting[activeHit] && (
-              <LeaderCategory category={hitting[activeHit]} showTeam={showTeam} />
+              <LeaderCategory category={hitting[activeHit]} showTeam={showTeam} selectedTeamId={selectedTeamId} />
             )}
           </div>
           {/* Desktop: full grid */}
           <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {hitting.map((cat) => (
-              <LeaderCategory key={cat.category} category={cat} showTeam={showTeam} />
+              <LeaderCategory key={cat.category} category={cat} showTeam={showTeam} selectedTeamId={selectedTeamId} />
             ))}
           </div>
         </div>
@@ -236,13 +240,13 @@ function LeadersGrid({ categories, showTeam }) {
           {/* Mobile: single stat */}
           <div className="sm:hidden">
             {pitching[activePit] && (
-              <LeaderCategory category={pitching[activePit]} showTeam={showTeam} />
+              <LeaderCategory category={pitching[activePit]} showTeam={showTeam} selectedTeamId={selectedTeamId} />
             )}
           </div>
           {/* Desktop: full grid */}
           <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {pitching.map((cat) => (
-              <LeaderCategory key={cat.category} category={cat} showTeam={showTeam} />
+              <LeaderCategory key={cat.category} category={cat} showTeam={showTeam} selectedTeamId={selectedTeamId} />
             ))}
           </div>
         </div>
@@ -281,6 +285,7 @@ export default function TeamLeaders() {
           <LeadersGrid
             categories={categories}
             showTeam={scope === 'league'}
+            selectedTeamId={team.id}
           />
         ) : (
           <div className="card">
