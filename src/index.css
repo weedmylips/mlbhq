@@ -20,8 +20,8 @@ body {
 }
 
 .card {
-  background: rgba(12, 12, 24, 0.9);
-  border: 1px solid #1e1e2e;
+  background: rgba(18, 18, 34, 0.9);
+  border: 1px solid #252538;
   border-top: 2px solid var(--team-highlight);
   border-radius: 0.5rem;
   padding: 1rem;

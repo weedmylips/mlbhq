@@ -57,7 +57,7 @@ export default function SituationalStats({ data, isLoading }) {
           if (!sit.stat) return null;
           const ops = parseFloat(sit.stat.ops) || 0;
           return (
-            <div key={sit.code} className="bg-white/5 rounded-lg p-2.5 text-center">
+            <div key={sit.code} className="bg-white/[0.02] rounded-lg p-2.5 text-center">
               <div className="text-[10px] text-gray-500 uppercase">{sit.label}</div>
               <div
                 className={`text-lg font-mono font-bold mt-0.5 ${

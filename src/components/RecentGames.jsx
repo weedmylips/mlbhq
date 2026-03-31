@@ -17,7 +17,7 @@ function GameRow({ game, teamId }) {
   return (
     <>
       <button
-        className="w-full flex items-center justify-between py-1.5 px-2 text-left rounded bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"
+        className="w-full flex items-center justify-between py-1.5 px-2 text-left rounded bg-white/[0.02] hover:bg-white/10 transition-colors cursor-pointer"
         onClick={() => setModalOpen(true)}
       >
         <div className="flex items-center gap-2">

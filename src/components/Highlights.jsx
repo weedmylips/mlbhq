@@ -26,7 +26,7 @@ export default function Highlights({ gamePk, live }) {
             rel="noopener noreferrer"
             className="shrink-0 group w-36 block"
           >
-            <div className="relative rounded overflow-hidden bg-white/5 aspect-video">
+            <div className="relative rounded overflow-hidden bg-white/[0.02] aspect-video">
               {h.thumbnail ? (
                 <img
                   src={h.thumbnail}

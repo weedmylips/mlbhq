@@ -10,19 +10,19 @@ export default function TeamSelector() {
 
   return (
     <div className="sticky top-0 z-50 bg-surface border-b border-border py-2 px-4">
-      <div className="flex items-center justify-center gap-1 overflow-x-auto pb-1">
+      <div className="flex items-center lg:justify-center gap-1 overflow-x-auto pb-1">
         {divisionOrder.map((div, di) => (
           <div key={div} className="flex items-center gap-1 shrink-0">
             {di > 0 && (
               <div className="flex flex-col items-center mx-1">
-                <div className="w-px h-8 bg-gray-700" />
-                <span className="text-[9px] text-gray-600 whitespace-nowrap mt-0.5">
+                <div className="w-px h-8 bg-gray-600" />
+                <span className="text-[9px] text-gray-400 whitespace-nowrap mt-0.5">
                   {div}
                 </span>
               </div>
             )}
             {di === 0 && (
-              <span className="text-[9px] text-gray-600 whitespace-nowrap mr-1">
+              <span className="text-[9px] text-gray-400 whitespace-nowrap mr-1">
                 {div}
               </span>
             )}
@@ -43,7 +43,7 @@ export default function TeamSelector() {
                     loading="lazy"
                   />
                 </div>
-                <span className="text-[10px] text-gray-400 mt-0.5">{t.abbr}</span>
+                <span className="text-[10px] text-gray-300 mt-0.5">{t.abbr}</span>
               </button>
             ))}
           </div>

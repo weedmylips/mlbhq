@@ -18,7 +18,7 @@ function PitcherColumn({ pitcher, align }) {
         <img
           src={headshotUrl}
           alt={pitcher.name}
-          className="w-8 h-8 rounded-full bg-white/5 object-cover shrink-0"
+          className="w-8 h-8 rounded-full bg-white/[0.02] object-cover shrink-0"
         />
         <div>
           <p className="text-xs font-bold">{pitcher.name}</p>

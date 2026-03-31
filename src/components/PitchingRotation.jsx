@@ -39,7 +39,7 @@ function StarterRow({ game, teamId, isExpanded, onToggle }) {
   const hasDetails = hasPitcher && (stats || lastStart);
 
   return (
-    <div className="rounded bg-white/5 overflow-hidden">
+    <div className="rounded bg-white/[0.02] overflow-hidden">
       <button
         type="button"
         onClick={hasDetails ? onToggle : undefined}

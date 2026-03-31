@@ -14,7 +14,7 @@ function LineupList({ lineup, teamAbbr, label }) {
         {lineup.map((p) => (
           <div
             key={p.id}
-            className="flex items-center gap-2 py-0.5 px-1.5 rounded bg-white/5 text-xs"
+            className="flex items-center gap-2 py-0.5 px-1.5 rounded bg-white/[0.02] text-xs"
           >
             <span className="text-gray-500 font-mono w-3 text-right shrink-0">
               {p.order}

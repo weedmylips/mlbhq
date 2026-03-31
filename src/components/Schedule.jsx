@@ -100,7 +100,7 @@ function ScheduleGameRow({ game, teamId }) {
 
   return (
     <>
-      <div className="rounded text-sm bg-white/5 hover:bg-white/10 transition-colors">
+      <div className="rounded text-sm bg-white/[0.02] hover:bg-white/10 transition-colors">
         <button
           className="w-full py-2 px-3 text-left"
           onClick={handleClick}

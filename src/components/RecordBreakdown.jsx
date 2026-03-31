@@ -8,7 +8,7 @@ function RecordRow({ label, record }) {
   const isLosing = w < l;
 
   return (
-    <div className="flex items-center justify-between py-1.5 px-2 rounded bg-white/5">
+    <div className="flex items-center justify-between py-1.5 px-2 rounded bg-white/[0.02]">
       <span className="text-xs text-gray-400">{label}</span>
       <span className={`font-mono text-sm font-medium ${
         isWinning ? 'text-green-400' : isLosing ? 'text-red-400' : 'text-gray-300'
@@ -25,7 +25,7 @@ function StreakRow({ label, value }) {
   const isLoss = display.startsWith('L');
 
   return (
-    <div className="flex items-center justify-between py-1.5 px-2 rounded bg-white/5">
+    <div className="flex items-center justify-between py-1.5 px-2 rounded bg-white/[0.02]">
       <span className="text-xs text-gray-400">{label}</span>
       <span className={`font-mono text-sm font-medium ${
         isWin ? 'text-green-400' : isLoss ? 'text-red-400' : 'text-gray-300'

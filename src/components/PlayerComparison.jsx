@@ -11,7 +11,7 @@ function PlayerSelect({ players, selectedId, onChange, label }) {
       <select
         value={selectedId || ''}
         onChange={(e) => onChange(e.target.value || null)}
-        className="mt-1 w-full bg-white/5 border border-border rounded-lg px-3 py-2 text-sm text-gray-200 focus:outline-none focus:border-[var(--team-highlight)]"
+        className="mt-1 w-full bg-white/[0.02] border border-border rounded-lg px-3 py-2 text-sm text-gray-200 focus:outline-none focus:border-[var(--team-highlight)]"
       >
         <option value="">Select player...</option>
         {players.map((p) => (
@@ -56,7 +56,7 @@ function PlayerHeader({ player }) {
       <img
         src={headshotUrl}
         alt={player.fullName}
-        className="w-14 h-14 rounded-lg bg-white/5 object-cover"
+        className="w-14 h-14 rounded-lg bg-white/[0.02] object-cover"
       />
       <div className="text-center">
         <div className="text-sm font-bold">{player.fullName}</div>

@@ -5,7 +5,7 @@ import SituationalStats from './SituationalStats';
 
 function StatCard({ label, value, description }) {
   return (
-    <div className="bg-white/5 rounded-lg p-3 text-center">
+    <div className="bg-white/[0.02] rounded-lg p-3 text-center">
       <div className="text-[10px] text-gray-500 uppercase tracking-wider">{label}</div>
       <div className="text-xl font-mono font-bold mt-1" style={{ color: 'var(--team-highlight)' }}>
         {value ?? '-'}

@@ -29,7 +29,7 @@ function RelieverRow({ reliever }) {
   const cfg = STATUS_CONFIG[reliever.status] || STATUS_CONFIG.available;
 
   return (
-    <div className="flex items-start gap-2 py-1.5 px-2 rounded bg-white/5">
+    <div className="flex items-start gap-2 py-1.5 px-2 rounded bg-white/[0.02]">
       <div className="flex items-center gap-1.5 shrink-0 w-[72px] pt-0.5">
         <span className={`w-2 h-2 rounded-full shrink-0 ${cfg.dot}`} />
         <span className={`text-[10px] font-bold uppercase ${cfg.textColor}`}>{cfg.label}</span>

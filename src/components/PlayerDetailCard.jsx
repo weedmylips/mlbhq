@@ -114,7 +114,7 @@ export default function PlayerDetailCard({ playerId }) {
         <img
           src={headshotUrl}
           alt={player.fullName}
-          className="w-16 h-16 rounded-lg bg-white/5 object-cover shrink-0"
+          className="w-16 h-16 rounded-lg bg-white/[0.02] object-cover shrink-0"
         />
         <div className="min-w-0">
           <h3 className="text-sm font-bold truncate">{player.fullName}</h3>

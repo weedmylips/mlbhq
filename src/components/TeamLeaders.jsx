@@ -145,7 +145,7 @@ function SectionHeader({ icon: Icon, label }) {
       <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">
         {label}
       </h3>
-      <div className="flex-1 h-px bg-white/5" />
+      <div className="flex-1 h-px bg-white/[0.02]" />
     </div>
   );
 }
@@ -196,7 +196,7 @@ function StatPicker({ categories, activeIndex, onChange }) {
           className={`shrink-0 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full transition-colors ${
             i === activeIndex
               ? 'bg-[var(--team-primary)]/25 text-[var(--team-highlight)] border border-[var(--team-primary)]/40'
-              : 'text-gray-500 hover:text-gray-300 bg-white/5 border border-transparent'
+              : 'text-gray-500 hover:text-gray-300 bg-white/[0.02] border border-transparent'
           }`}
         >
           {cat.label}

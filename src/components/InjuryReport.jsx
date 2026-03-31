@@ -65,7 +65,7 @@ export default function InjuryReport() {
                   </div>
                 </button>
                 {isOpen && (
-                  <div className="bg-white/5 rounded-b px-3 pb-2 pt-1 text-xs text-gray-400 space-y-1">
+                  <div className="bg-white/[0.02] rounded-b px-3 pb-2 pt-1 text-xs text-gray-400 space-y-1">
                     <div>
                       <span className="text-gray-500">Injury: </span>
                       {p.injury || '—'}

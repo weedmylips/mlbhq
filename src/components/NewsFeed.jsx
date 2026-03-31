@@ -18,7 +18,7 @@ function ArticleCard({ article, team }) {
       href={article.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-colors p-3"
+      className="flex flex-col bg-white/[0.02] rounded-lg overflow-hidden hover:bg-white/10 transition-colors p-3"
     >
       <div className="flex items-center gap-2 mb-2">
         <img src={team.logo} alt="" className="w-4 h-4" />
@@ -39,7 +39,7 @@ function ArticleCard({ article, team }) {
 
 function SkeletonCard() {
   return (
-    <div className="flex flex-col bg-white/5 rounded-lg p-3 space-y-2">
+    <div className="flex flex-col bg-white/[0.02] rounded-lg p-3 space-y-2">
       <div className="skeleton h-3 w-24 rounded" />
       <div className="skeleton h-4 w-full rounded" />
       <div className="skeleton h-4 w-3/4 rounded" />
@@ -66,7 +66,7 @@ export default function NewsFeed() {
             href={`https://www.mlb.com/${team.abbr.toLowerCase()}/news`}
             target="_blank"
             rel="noopener noreferrer"
-            className="col-span-4 flex items-center gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+            className="col-span-4 flex items-center gap-3 p-4 bg-white/[0.02] rounded-lg hover:bg-white/10 transition-colors"
           >
             <img src={team.logo} alt="" className="w-8 h-8" />
             <div>
