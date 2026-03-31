@@ -1,10 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route, useParams, useNavigate, Navigate } from 'react-router-dom';
 import { useTeam } from './context/TeamContext';
+import { getFavoriteTeam, setFavoriteTeam } from './context/TeamContext';
 import { useGames, useGameEndRefresh } from './hooks/useTeamData';
-import { getTeamByAbbr } from './data/teams';
+import { getTeamByAbbr, getTeamById } from './data/teams';
+import { ArrowLeftRight } from 'lucide-react';
 import TeamSelector from './components/TeamSelector';
 import Header from './components/Header';
+import TeamPicker from './components/TeamPicker';
 import LiveGame from './components/LiveGame';
 import NextGame from './components/NextGame';
 import RecentGames from './components/RecentGames';
@@ -37,7 +40,8 @@ const tabs = [
 function TeamPage() {
   const { teamAbbr, tab } = useParams();
   const navigate = useNavigate();
-  const { team, setSelectedTeamId } = useTeam();
+  const { team, setSelectedTeamId, hasFavorite, setHasFavorite, pickerOpen, setPickerOpen } = useTeam();
+  const [isFirstVisit, setIsFirstVisit] = useState(() => !getFavoriteTeam());
 
   // Sync URL team → context (only when URL changes, e.g. direct navigation or link)
   useEffect(() => {
@@ -65,11 +69,22 @@ function TeamPage() {
     <>
     <div className={`min-h-screen bg-surface overflow-x-hidden ${isYankees ? 'pinstripe-bg' : ''}`}>
       <TeamSelector />
-      <Header />
+      <div className="max-w-[1400px] mx-auto px-3 sm:px-6">
+        <div className="flex items-center justify-start py-1.5">
+          <button
+            onClick={() => setPickerOpen(true)}
+            className="flex items-center gap-1.5 text-[11px] text-gray-500 hover:text-gray-300 transition-colors"
+          >
+            <ArrowLeftRight size={12} />
+            Change Team
+          </button>
+        </div>
+        <div className="rounded-lg overflow-hidden">
+          <Header />
+        </div>
 
-      {/* Nav tabs — desktop top bar */}
-      <div className="border-b border-border px-2 sm:px-6 hidden sm:block">
-        <div className="flex gap-0.5 overflow-x-auto scrollbar-none">
+        {/* Nav tabs — desktop top bar */}
+        <div className="hidden sm:flex gap-0.5 overflow-x-auto scrollbar-none border-b border-border">
           {tabs.map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -138,6 +153,26 @@ function TeamPage() {
         ))}
       </div>
     </div>
+
+    {/* Team picker modal — auto-show on first visit, or opened from header */}
+    {(isFirstVisit || pickerOpen) && (
+      <TeamPicker
+        isFirstVisit={isFirstVisit && !pickerOpen}
+        onSelect={(teamId) => {
+          setFavoriteTeam(teamId);
+          setSelectedTeamId(teamId);
+          setHasFavorite(true);
+          setIsFirstVisit(false);
+          setPickerOpen(false);
+          const picked = getTeamById(teamId);
+          if (picked) navigate(`/${picked.abbr}/${tab || 'overview'}`);
+        }}
+        onClose={() => {
+          setIsFirstVisit(false);
+          setPickerOpen(false);
+        }}
+      />
+    )}
     </>
   );
 }

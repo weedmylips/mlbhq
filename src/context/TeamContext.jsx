@@ -4,6 +4,17 @@ import { getTeamById } from '../data/teams';
 const TeamContext = createContext(null);
 
 const DEFAULT_TEAM_ID = 147; // NYY
+const FAVORITE_KEY = 'mlb-favorite-team';
+const SELECTED_KEY = 'mlb-selected-team';
+
+export function getFavoriteTeam() {
+  const val = localStorage.getItem(FAVORITE_KEY);
+  return val ? Number(val) : null;
+}
+
+export function setFavoriteTeam(teamId) {
+  localStorage.setItem(FAVORITE_KEY, String(teamId));
+}
 
 function luminance(hex) {
   const r = parseInt(hex.slice(1, 3), 16) / 255;
@@ -14,14 +25,17 @@ function luminance(hex) {
 
 export function TeamProvider({ children }) {
   const [selectedTeamId, setSelectedTeamId] = useState(() => {
-    const saved = localStorage.getItem('mlb-selected-team');
-    return saved ? Number(saved) : DEFAULT_TEAM_ID;
+    const saved = localStorage.getItem(SELECTED_KEY);
+    return saved ? Number(saved) : (getFavoriteTeam() || DEFAULT_TEAM_ID);
   });
+
+  const [hasFavorite, setHasFavorite] = useState(() => getFavoriteTeam() !== null);
+  const [pickerOpen, setPickerOpen] = useState(false);
 
   const team = getTeamById(selectedTeamId) || getTeamById(DEFAULT_TEAM_ID);
 
   useEffect(() => {
-    localStorage.setItem('mlb-selected-team', String(selectedTeamId));
+    localStorage.setItem(SELECTED_KEY, String(selectedTeamId));
   }, [selectedTeamId]);
 
   useEffect(() => {
@@ -35,7 +49,7 @@ export function TeamProvider({ children }) {
   }, [team]);
 
   return (
-    <TeamContext.Provider value={{ team, selectedTeamId, setSelectedTeamId }}>
+    <TeamContext.Provider value={{ team, selectedTeamId, setSelectedTeamId, hasFavorite, setHasFavorite, pickerOpen, setPickerOpen }}>
       {children}
     </TeamContext.Provider>
   );

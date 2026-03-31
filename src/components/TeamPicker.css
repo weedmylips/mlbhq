@@ -1,0 +1,148 @@
+.team-picker-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.team-picker-modal {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  margin: 0 16px;
+  overflow-y: auto;
+  background: #0c0c18;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.team-picker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.team-picker-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.team-picker-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #6b7280;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.team-picker-close:hover {
+  color: #d1d5db;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.team-picker-division {
+  margin-bottom: 16px;
+}
+
+.team-picker-division-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.team-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.team-picker-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 4px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.team-picker-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.team-picker-btn img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.team-picker-btn span {
+  font-size: 11px;
+  color: #9ca3af;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.team-picker-skip {
+  display: block;
+  margin: 20px auto 0;
+  padding: 8px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: transparent;
+  color: #6b7280;
+  font-size: 13px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.team-picker-skip:hover {
+  color: #d1d5db;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 600px) {
+  .team-picker-modal {
+    padding: 16px;
+    margin: 0 12px;
+  }
+
+  .team-picker-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-picker-btn img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .team-picker-btn span {
+    font-size: 10px;
+  }
+}

@@ -10,7 +10,7 @@ export default function TeamSelector() {
 
   return (
     <div className="sticky top-0 z-50 bg-surface border-b border-border py-2 px-4">
-      <div className="flex items-center gap-1 overflow-x-auto pb-1">
+      <div className="flex items-center justify-center gap-1 overflow-x-auto pb-1">
         {divisionOrder.map((div, di) => (
           <div key={div} className="flex items-center gap-1 shrink-0">
             {di > 0 && (
