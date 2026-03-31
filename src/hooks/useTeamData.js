@@ -182,6 +182,15 @@ export function useBullpen(teamId) {
   });
 }
 
+export function useVsDivisions(teamId) {
+  return useQuery({
+    queryKey: ['vsdivisions', teamId],
+    queryFn: () => fetchApi(`/api/vsdivisions?teamId=${teamId}`),
+    staleTime: 3600000,
+    enabled: !!teamId,
+  });
+}
+
 // --- On-demand only (no auto-refetch) ---
 
 export function useBoxScore(gamePk) {

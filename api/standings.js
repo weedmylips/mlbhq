@@ -34,6 +34,13 @@ function mapTeamRecord(tr, isWildCard) {
       night: getRecord('night'),
     };
   }
+  const divRecords = tr.records?.divisionRecords;
+  if (divRecords) {
+    base.divisionRecords = divRecords.map((dr) => ({
+      division: dr.division?.name || '',
+      record: `${dr.wins}-${dr.losses}`,
+    }));
+  }
   if (isWildCard) {
     base.wcRank = tr.wildCardRank ? parseInt(tr.wildCardRank, 10) : null;
     base.wcGb = tr.wildCardGamesBack ?? '-';

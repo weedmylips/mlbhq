@@ -18,6 +18,7 @@ import bvpRouter from './routes/bvp.js';
 import analyticsRouter from './routes/analytics.js';
 import situationalRouter from './routes/situational.js';
 import bullpenRouter from './routes/bullpen.js';
+import vsdivisionsRouter from './routes/vsdivisions.js';
 
 dotenv.config();
 
@@ -44,6 +45,7 @@ app.use('/api', bvpRouter);
 app.use('/api', analyticsRouter);
 app.use('/api', situationalRouter);
 app.use('/api', bullpenRouter);
+app.use('/api', vsdivisionsRouter);
 
 app.listen(PORT, () => {
   console.log(`MLB Dashboard API running on port ${PORT}`);

@@ -1,4 +1,4 @@
-import { useStandings, useHasLiveGame } from '../hooks/useTeamData';
+import { useStandings, useHasLiveGame, useVsDivisions } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 
 function RecordRow({ label, record }) {
@@ -41,6 +41,7 @@ export default function RecordBreakdown() {
   const leagueId = team.league === 'AL' ? 103 : 104;
   const hasLiveGame = useHasLiveGame(team.id);
   const { data, isLoading } = useStandings(leagueId, 'regularSeason', hasLiveGame);
+  const { data: vsDivisions } = useVsDivisions(team.id);
 
   if (isLoading) {
     return (
@@ -75,7 +76,9 @@ export default function RecordBreakdown() {
         <RecordRow label="Extra Innings" record={splits.extraInnings} />
         <RecordRow label="Day Games" record={splits.day} />
         <RecordRow label="Night Games" record={splits.night} />
-        <RecordRow label="Interleague" record={splits.interLeague} />
+        {vsDivisions?.map((dr) => (
+          <RecordRow key={dr.division} label={`vs ${dr.division}`} record={dr.record} />
+        ))}
       </div>
     </div>
   );
