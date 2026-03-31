@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-31T02:22:49.349Z",
+  "lastUpdated": "2026-03-31T07:13:54.151Z",
   "teams": {
     "108": [
       {
@@ -651,16 +651,16 @@
     ],
     "138": [
       {
+        "playerName": "Hunter Dobbins",
+        "injury": "Torn right ACL",
+        "expectedReturn": "TBD",
+        "status": "Will begin a 30-day rehab assignment with Triple-A Memphis on March 31. Expected to start against Norfolk."
+      },
+      {
         "playerName": "Lars Nootbaar",
         "injury": "Surgery on both heels",
         "expectedReturn": "TBD",
         "status": "Underwent surgery last October to address Haglund’s deformities in both heels. Started his running progression on March 20, but no date has been set for a return to the lineup."
-      },
-      {
-        "playerName": "Hunter Dobbins",
-        "injury": "Torn right ACL",
-        "expectedReturn": "TBD",
-        "status": "Dobbins will start the season on the injured list. He is able to pitch but is being held out of agility drills. The team is still mapping out the next steps of Dobbins' rehab."
       }
     ],
     "139": [
@@ -746,6 +746,12 @@
       }
     ],
     "141": [
+      {
+        "playerName": "Cody Ponce",
+        "injury": "Right knee discomfort",
+        "expectedReturn": "TBD (tests pending)",
+        "status": "Ponce injured his knee fielding a ground ball March 30 and was removed from the game on a medical cart. He underwent an MRI after the game."
+      },
       {
         "playerName": "Trey Yesavage",
         "injury": "Right shoulder impingement",
