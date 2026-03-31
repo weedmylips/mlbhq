@@ -11,16 +11,16 @@ function statColor(value, leagueAvg, inverse) {
   return isBetter ? 'text-green-400' : 'text-red-400';
 }
 
-function StatBox({ label, value, rank, leagueAbbr, leagueAvg, inverse }) {
+function StatBox({ label, value, rank, leagueAvg, inverse }) {
   const color = statColor(value, leagueAvg, inverse);
 
   return (
     <div className="text-center">
       <div className={`stat-number text-xl ${color}`}>{value}</div>
       <div className="text-[10px] text-gray-500 uppercase tracking-wider">{label}</div>
-      {rank && leagueAbbr && (
+      {rank && (
         <div className="text-[9px] text-white font-semibold mt-0.5 leading-tight">
-          {rank} in {leagueAbbr}
+          {rank} in MLB
         </div>
       )}
     </div>
@@ -67,36 +67,11 @@ function PlayerRow({ name, stats }) {
   );
 }
 
-function LeagueToggle({ active, onChange, teamLeague }) {
-  const options = [
-    { key: null, label: 'MLB' },
-    { key: teamLeague === 'AL' ? 103 : 104, label: teamLeague },
-  ];
-  return (
-    <div className="flex gap-1 ml-2">
-      {options.map(({ key, label }) => (
-        <button
-          key={label}
-          onClick={() => onChange(key)}
-          className={`text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded transition-colors ${
-            active === key
-              ? 'bg-gray-400/15 text-gray-300 border border-gray-400/30'
-              : 'text-gray-500 hover:text-gray-300 border border-transparent'
-          }`}
-        >
-          {label}
-        </button>
-      ))}
-    </div>
-  );
-}
-
 export default function TeamStats() {
   const { team } = useTeam();
-  const [leagueScope, setLeagueScope] = useState(null); // null = MLB-wide
   const hasLiveGame = useHasLiveGame(team.id);
-  const { data, isLoading } = useTeamStats(team.id, leagueScope, hasLiveGame);
-  const { data: advData } = useAnalytics(team.id, leagueScope, hasLiveGame);
+  const { data, isLoading } = useTeamStats(team.id, null, hasLiveGame);
+  const { data: advData } = useAnalytics(team.id, null, hasLiveGame);
   const [battingView, setBattingView] = useState('standard');
   const [pitchingView, setPitchingView] = useState('standard');
 
@@ -111,7 +86,6 @@ export default function TeamStats() {
 
   if (!data) return null;
 
-  const leagueAbbr = leagueScope ? team.league : 'MLB';
   const th = advData?.teamHitting;
   const tp = advData?.teamPitching;
   const ahr = advData?.hittingRanks;
@@ -128,28 +102,27 @@ export default function TeamStats() {
           <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">
             Team Batting
           </h3>
-          <InfoTip text={<><p className="font-semibold text-gray-200 mb-1">Stat Colors</p><p><span className="text-green-400">Green</span> = above {leagueAbbr} average</p><p><span className="text-red-400">Red</span> = below {leagueAbbr} average</p><p className="text-gray-500 mt-1">Toggle MLB/{team.league} to change comparison scope.</p></>} />
-          <LeagueToggle active={leagueScope} onChange={setLeagueScope} teamLeague={team.league} />
+          <InfoTip text={<><p className="font-semibold text-gray-200 mb-1">Stat Colors</p><p><span className="text-green-400">Green</span> = above MLB average</p><p><span className="text-red-400">Red</span> = below MLB average</p></>} />
           <AdvToggle active={battingView} onChange={setBattingView} />
         </div>
 
         {battingView === 'standard' ? (
           <div className="grid grid-cols-3 gap-2 sm:gap-3">
-            <StatBox label="AVG" value={data.hitting.avg} rank={data.hittingRanks?.avg} leagueAbbr={leagueAbbr} leagueAvg={lah?.avg} />
-            <StatBox label="OPS" value={data.hitting.ops} rank={data.hittingRanks?.ops} leagueAbbr={leagueAbbr} leagueAvg={lah?.ops} />
-            <StatBox label="HR" value={data.hitting.hr} rank={data.hittingRanks?.hr} leagueAbbr={leagueAbbr} leagueAvg={lah?.hr} />
-            <StatBox label="Runs" value={data.hitting.runs} rank={data.hittingRanks?.runs} leagueAbbr={leagueAbbr} leagueAvg={lah?.runs} />
-            <StatBox label="SB" value={data.hitting.sb} rank={data.hittingRanks?.sb} leagueAbbr={leagueAbbr} leagueAvg={lah?.sb} />
-            <StatBox label="RBI" value={data.hitting.rbi} rank={data.hittingRanks?.rbi} leagueAbbr={leagueAbbr} leagueAvg={lah?.rbi} />
+            <StatBox label="AVG" value={data.hitting.avg} rank={data.hittingRanks?.avg} leagueAvg={lah?.avg} />
+            <StatBox label="OPS" value={data.hitting.ops} rank={data.hittingRanks?.ops} leagueAvg={lah?.ops} />
+            <StatBox label="HR" value={data.hitting.hr} rank={data.hittingRanks?.hr} leagueAvg={lah?.hr} />
+            <StatBox label="Runs" value={data.hitting.runs} rank={data.hittingRanks?.runs} leagueAvg={lah?.runs} />
+            <StatBox label="SB" value={data.hitting.sb} rank={data.hittingRanks?.sb} leagueAvg={lah?.sb} />
+            <StatBox label="RBI" value={data.hitting.rbi} rank={data.hittingRanks?.rbi} leagueAvg={lah?.rbi} />
           </div>
         ) : (
           <div className="grid grid-cols-3 gap-2 sm:gap-3">
-            <StatBox label="wOBA" value={th?.woba ?? '-'} rank={ahr?.woba} leagueAbbr={leagueAbbr} leagueAvg={alah?.woba} />
-            <StatBox label="ISO" value={th?.iso ?? '-'} rank={ahr?.iso} leagueAbbr={leagueAbbr} leagueAvg={alah?.iso} />
-            <StatBox label="BABIP" value={th?.babip ?? '-'} rank={ahr?.babip} leagueAbbr={leagueAbbr} leagueAvg={alah?.babip} />
-            <StatBox label="K%" value={th?.kPct ? `${th.kPct}%` : '-'} rank={ahr?.kPct} leagueAbbr={leagueAbbr} leagueAvg={alah?.kPct} inverse />
-            <StatBox label="BB%" value={th?.bbPct ? `${th.bbPct}%` : '-'} rank={ahr?.bbPct} leagueAbbr={leagueAbbr} leagueAvg={alah?.bbPct} />
-            <StatBox label="SB" value={th?.sb ?? '-'} rank={ahr?.sb} leagueAbbr={leagueAbbr} leagueAvg={alah?.sb} />
+            <StatBox label="wOBA" value={th?.woba ?? '-'} rank={ahr?.woba} leagueAvg={alah?.woba} />
+            <StatBox label="ISO" value={th?.iso ?? '-'} rank={ahr?.iso} leagueAvg={alah?.iso} />
+            <StatBox label="BABIP" value={th?.babip ?? '-'} rank={ahr?.babip} leagueAvg={alah?.babip} />
+            <StatBox label="K%" value={th?.kPct ? `${th.kPct}%` : '-'} rank={ahr?.kPct} leagueAvg={alah?.kPct} inverse />
+            <StatBox label="BB%" value={th?.bbPct ? `${th.bbPct}%` : '-'} rank={ahr?.bbPct} leagueAvg={alah?.bbPct} />
+            <StatBox label="SB" value={th?.sb ?? '-'} rank={ahr?.sb} leagueAvg={alah?.sb} />
           </div>
         )}
 
@@ -173,28 +146,27 @@ export default function TeamStats() {
           <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">
             Team Pitching
           </h3>
-          <InfoTip text={<><p className="font-semibold text-gray-200 mb-1">Stat Colors</p><p><span className="text-green-400">Green</span> = above {leagueAbbr} average</p><p><span className="text-red-400">Red</span> = below {leagueAbbr} average</p><p className="text-gray-500 mt-1">For pitching, lower ERA/WHIP/BB% = green. Higher K/Saves/Wins = green.</p></>} />
-          <LeagueToggle active={leagueScope} onChange={setLeagueScope} teamLeague={team.league} />
+          <InfoTip text={<><p className="font-semibold text-gray-200 mb-1">Stat Colors</p><p><span className="text-green-400">Green</span> = above MLB average</p><p><span className="text-red-400">Red</span> = below MLB average</p><p className="text-gray-500 mt-1">For pitching, lower ERA/WHIP/BB% = green. Higher K/Saves/Wins = green.</p></>} />
           <AdvToggle active={pitchingView} onChange={setPitchingView} />
         </div>
 
         {pitchingView === 'standard' ? (
           <div className="grid grid-cols-3 gap-2 sm:gap-3">
-            <StatBox label="ERA" value={data.pitching.era} rank={data.pitchingRanks?.era} leagueAbbr={leagueAbbr} leagueAvg={lap?.era} inverse />
-            <StatBox label="WHIP" value={data.pitching.whip} rank={data.pitchingRanks?.whip} leagueAbbr={leagueAbbr} leagueAvg={lap?.whip} inverse />
-            <StatBox label="K" value={data.pitching.k} rank={data.pitchingRanks?.k} leagueAbbr={leagueAbbr} leagueAvg={lap?.k} />
-            <StatBox label="Saves" value={data.pitching.saves} rank={data.pitchingRanks?.saves} leagueAbbr={leagueAbbr} leagueAvg={lap?.saves} />
-            <StatBox label="W" value={data.pitching.wins} rank={data.pitchingRanks?.wins} leagueAbbr={leagueAbbr} leagueAvg={lap?.wins} />
-            <StatBox label="L" value={data.pitching.losses} rank={data.pitchingRanks?.losses} leagueAbbr={leagueAbbr} leagueAvg={lap?.losses} inverse />
+            <StatBox label="ERA" value={data.pitching.era} rank={data.pitchingRanks?.era} leagueAvg={lap?.era} inverse />
+            <StatBox label="WHIP" value={data.pitching.whip} rank={data.pitchingRanks?.whip} leagueAvg={lap?.whip} inverse />
+            <StatBox label="K" value={data.pitching.k} rank={data.pitchingRanks?.k} leagueAvg={lap?.k} />
+            <StatBox label="Saves" value={data.pitching.saves} rank={data.pitchingRanks?.saves} leagueAvg={lap?.saves} />
+            <StatBox label="W" value={data.pitching.wins} rank={data.pitchingRanks?.wins} leagueAvg={lap?.wins} />
+            <StatBox label="L" value={data.pitching.losses} rank={data.pitchingRanks?.losses} leagueAvg={lap?.losses} inverse />
           </div>
         ) : (
           <div className="grid grid-cols-3 gap-2 sm:gap-3">
-            <StatBox label="FIP" value={tp?.fip ?? '-'} rank={apr?.fip} leagueAbbr={leagueAbbr} leagueAvg={alap?.fip} inverse />
-            <StatBox label="BABIP" value={tp?.babip ?? '-'} rank={apr?.babip} leagueAbbr={leagueAbbr} leagueAvg={alap?.babip} inverse />
-            <StatBox label="K%" value={tp?.kPct ? `${tp.kPct}%` : '-'} rank={apr?.kPct} leagueAbbr={leagueAbbr} leagueAvg={alap?.kPct} />
-            <StatBox label="BB%" value={tp?.bbPct ? `${tp.bbPct}%` : '-'} rank={apr?.bbPct} leagueAbbr={leagueAbbr} leagueAvg={alap?.bbPct} inverse />
-            <StatBox label="K-BB%" value={tp?.kBBPct ? `${tp.kBBPct}%` : '-'} rank={apr?.kBBPct} leagueAbbr={leagueAbbr} leagueAvg={alap?.kBBPct} />
-            <StatBox label="HR/9" value={tp?.hr9 ?? '-'} rank={apr?.hr9} leagueAbbr={leagueAbbr} leagueAvg={alap?.hr9} inverse />
+            <StatBox label="FIP" value={tp?.fip ?? '-'} rank={apr?.fip} leagueAvg={alap?.fip} inverse />
+            <StatBox label="BABIP" value={tp?.babip ?? '-'} rank={apr?.babip} leagueAvg={alap?.babip} inverse />
+            <StatBox label="K%" value={tp?.kPct ? `${tp.kPct}%` : '-'} rank={apr?.kPct} leagueAvg={alap?.kPct} />
+            <StatBox label="BB%" value={tp?.bbPct ? `${tp.bbPct}%` : '-'} rank={apr?.bbPct} leagueAvg={alap?.bbPct} inverse />
+            <StatBox label="K-BB%" value={tp?.kBBPct ? `${tp.kBBPct}%` : '-'} rank={apr?.kBBPct} leagueAvg={alap?.kBBPct} />
+            <StatBox label="HR/9" value={tp?.hr9 ?? '-'} rank={apr?.hr9} leagueAvg={alap?.hr9} inverse />
           </div>
         )}
 
