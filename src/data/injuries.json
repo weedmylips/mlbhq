@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-01T02:33:01.298Z",
+  "lastUpdated": "2026-04-01T07:19:55.935Z",
   "teams": {
     "108": [
       {
@@ -175,6 +175,12 @@
       }
     ],
     "114": [
+      {
+        "playerName": "Chase DeLauter",
+        "injury": "Left foot contusion",
+        "expectedReturn": "April 3",
+        "status": "Exited March 31 game in Los Angeles after fouling pitch off left foot in first inning. X-rays came back negative. Will take a planned off-day April 1 before team heads to Cleveland for home opener April 3."
+      },
       {
         "playerName": "Hunter Gaddis",
         "injury": "Right forearm strain",
