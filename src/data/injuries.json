@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-01T19:01:21.598Z",
+  "lastUpdated": "2026-04-02T02:11:27.349Z",
   "teams": {
     "108": [
       {
@@ -354,20 +354,20 @@
       {
         "playerName": "Carlos Estévez",
         "injury": "Left foot contusion",
-        "expectedReturn": "Day to day",
-        "status": "Hit by a comebacker in ninth inning March 28 and has been in a walking boot for two days. Played catch March 30 but isn't likely to be available out of the 'pen."
-      },
-      {
-        "playerName": "Stephen Kolek",
-        "injury": "Left oblique strain",
         "expectedReturn": "Late April",
-        "status": "Suffered Grade 1+ oblique strain on Feb. 25 and began throwing bullpen sessions in mid-March. Threw two innings (34 pitches) March 28 in extended Spring Training."
+        "status": "Hit by a comebacker in ninth inning March 28 and has been in a walking boot since. Will let foot heal before building back up in intensity and go on rehab assignment."
       },
       {
         "playerName": "Michael Massey",
         "injury": "Left calf strain",
         "expectedReturn": "Beginning of April",
-        "status": "Suffered calf strain on March 6 and left off Opening Day roster. Continuing to play extended spring camp games in Arizona and could go on rehab assignment early next week."
+        "status": "Suffered calf strain on March 6 and left off Opening Day roster. Began rehab assignment March 31 with Triple-A Omaha and will be evaluated for potential return by end of week."
+      },
+      {
+        "playerName": "Stephen Kolek",
+        "injury": "Left oblique strain",
+        "expectedReturn": "Late April/early May",
+        "status": "Suffered Grade 1+ oblique strain on Feb. 25 and began throwing bullpen sessions in mid-March. Threw two innings (34 pitches) March 28 in extended Spring Training."
       },
       {
         "playerName": "James McArthur",
@@ -584,7 +584,7 @@
         "playerName": "J.P. Crawford",
         "injury": "Right shoulder soreness",
         "expectedReturn": "Weekend of April 3-5",
-        "status": "Rejoined team in Seattle on March 28 and is expected to begin Minor League rehab assignment as early as March 31. Could return during upcoming road trip through Anaheim and Arlington from April 3-8.More »"
+        "status": "Began rehab assignment on March 31 at Triple-A Tacoma, where he was expected to remain for 2-3 games. Could return as soon as first road trip, beginning on April 3 in Anaheim.More »"
       },
       {
         "playerName": "Carlos Vargas",
@@ -612,6 +612,12 @@
       }
     ],
     "137": [
+      {
+        "playerName": "José Buttó",
+        "injury": "Right forearm/elbow tightness",
+        "expectedReturn": "TBD",
+        "status": "Departed the Giants' 7-1 loss to the Padres on April 1 after experiencing arm tightness in the bottom of the eighth inning. Will be further evaluated when the club returns to San Francisco."
+      },
       {
         "playerName": "Sam Hentges",
         "injury": "Left shoulder surgery/right knee surgery",
@@ -657,16 +663,16 @@
     ],
     "138": [
       {
+        "playerName": "Hunter Dobbins",
+        "injury": "Torn right ACL",
+        "expectedReturn": "TBD",
+        "status": "Began rehab assignment with Triple-A Memphis on March 31. Pitched five innings, allowing three runs on 70 pitches vs. Norfolk."
+      },
+      {
         "playerName": "Matt Pushard",
         "injury": "Right knee patellar tendonitis",
         "expectedReturn": "TBD",
         "status": "Pushard felt right knee soreness on March 30, per manager Oliver Marmol. After imaging, the team believed he would be unavailable for several days, triggering the move."
-      },
-      {
-        "playerName": "Hunter Dobbins",
-        "injury": "Torn right ACL",
-        "expectedReturn": "TBD",
-        "status": "Will begin a 30-day rehab assignment with Triple-A Memphis on March 31. Expected to start against Norfolk."
       },
       {
         "playerName": "Lars Nootbaar",
@@ -794,7 +800,7 @@
         "playerName": "Kendry Rojas (No. 10 prospect)",
         "injury": "Right hamstring strain",
         "expectedReturn": "early April",
-        "status": "Threw bullpen session March 27, will throw live batting practice March 31."
+        "status": "Threw bullpen session on March 27 and followed that up by pitching in a live batting practice session on March 31."
       },
       {
         "playerName": "Travis Adams",
@@ -1005,22 +1011,22 @@
     ],
     "147": [
       {
+        "playerName": "Anthony Volpe",
+        "injury": "Left shoulder surgery recovery",
+        "expectedReturn": "No earlier than May",
+        "status": "Began taking live batting practice April 1. Could begin a Minor League rehab assignment in mid-April."
+      },
+      {
         "playerName": "Carlos Rodón",
         "injury": "Left elbow surgery recovery",
         "expectedReturn": "April/May",
-        "status": "Threw approximately 50 pitches in live BP March 24, his fourth time facing live hitters since October surgery to remove loose bodies and shave a bone spur. Hamstring tightness March 31 could disrupt plans for a rehab assignment with Double-A Somerset."
+        "status": "Threw approximately 50 pitches in live BP on March 29, his fourth time facing hitters since October surgery to remove loose bodies and shave a bone spur. Hamstring tightness March 31 could disrupt plans for a rehab assignment with Double-A Somerset. Performed throwing April 1."
       },
       {
         "playerName": "Gerrit Cole",
         "injury": "Tommy John surgery recovery",
         "expectedReturn": "May/June",
         "status": "Made two Grapefruit League starts. Will throw in game situations (and in the Minors) over the next several weeks. Will throw one 'up' of live BP April 1. Underwent Tommy John surgery in March 2025."
-      },
-      {
-        "playerName": "Anthony Volpe",
-        "injury": "Left shoulder surgery recovery",
-        "expectedReturn": "No earlier than May",
-        "status": "Hitting off a Trajekt machine and could advance to live ABs in Tampa, Fla., on or around April 1. Participating in all defensive and baserunning drills and began diving on his left shoulder in early March."
       },
       {
         "playerName": "Clarke Schmidt",
