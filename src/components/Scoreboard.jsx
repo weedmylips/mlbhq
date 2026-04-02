@@ -213,7 +213,7 @@ export default function Scoreboard() {
   const liveCount = (games || []).filter((g) => g.state === 'Live').length;
 
   return (
-    <div className="space-y-4">
+    <div className="card space-y-4 p-4">
       {/* Date navigator */}
       <div className="flex items-center justify-center gap-4">
         <button
