@@ -20,13 +20,6 @@ function getRank(splits, teamId, statField, lowerIsBetter) {
   return idx >= 0 ? ordinalRank(idx + 1) : null;
 }
 
-function abbrevName(fullName) {
-  if (!fullName) return '';
-  const parts = fullName.split(' ');
-  if (parts.length < 2) return fullName;
-  return `${parts[0][0]}. ${parts.slice(1).join(' ')}`;
-}
-
 export default async function handler(req, res) {
   try {
     const teamId = req.query.teamId || 147;
@@ -120,7 +113,7 @@ export default async function handler(req, res) {
         .sort((a, b) => parseFloat(b.stat?.ops || 0) - parseFloat(a.stat?.ops || 0))
         .slice(0, 5)
         .map(s => ({
-          name: abbrevName(s.player?.fullName),
+          name: s.player?.fullName || '',
           avg: s.stat?.avg || '.000',
           hr: s.stat?.homeRuns || 0,
           rbi: s.stat?.rbi || 0,
@@ -136,7 +129,7 @@ export default async function handler(req, res) {
         .sort((a, b) => parseFloat(a.stat?.era || 99) - parseFloat(b.stat?.era || 99))
         .slice(0, 5)
         .map(s => ({
-          name: abbrevName(s.player?.fullName),
+          name: s.player?.fullName || '',
           era: s.stat?.era || '-.--',
           wins: s.stat?.wins || 0,
           losses: s.stat?.losses || 0,

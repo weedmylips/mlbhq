@@ -3,13 +3,6 @@ import { getOrFetch } from '../cache.js';
 
 const router = Router();
 
-function abbrevName(fullName) {
-  if (!fullName) return '';
-  const parts = fullName.split(' ');
-  if (parts.length < 2) return fullName;
-  return `${parts[0][0]}. ${parts.slice(1).join(' ')}`;
-}
-
 function dateStr(d) {
   return d.toISOString().slice(0, 10);
 }
@@ -35,7 +28,7 @@ router.get('/hotcold', async (req, res) => {
       const batters = (hitData.stats?.[0]?.splits || [])
         .filter(s => (s.stat?.atBats || 0) >= 10)
         .map(s => ({
-          name: abbrevName(s.player?.fullName),
+          name: s.player?.fullName || '',
           avg: s.stat?.avg || '.000',
           ops: parseFloat(s.stat?.ops || 0),
           hr: s.stat?.homeRuns || 0,
@@ -51,7 +44,7 @@ router.get('/hotcold', async (req, res) => {
           return gs >= 1 && gs / gp >= 0.4 && parseFloat(s.stat?.inningsPitched || 0) >= 1;
         })
         .map(s => ({
-          name: abbrevName(s.player?.fullName),
+          name: s.player?.fullName || '',
           era: s.stat?.era || '-.--',
           eraNum: parseFloat(s.stat?.era || 99),
           wins: s.stat?.wins || 0,
