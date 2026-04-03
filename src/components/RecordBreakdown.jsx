@@ -60,7 +60,8 @@ export default function RecordBreakdown() {
 
   if (!teamRecord?.splits) return null;
 
-  const { splits, streak, lastTen } = teamRecord;
+  const { splits, streak, lastTen, wins, losses } = teamRecord;
+  const overall = `${wins}-${losses}`;
 
   return (
     <div className="card">
@@ -68,6 +69,7 @@ export default function RecordBreakdown() {
         Record Breakdown
       </h3>
       <div className="grid grid-cols-2 gap-1.5">
+        <RecordRow label="Overall" record={overall} />
         <RecordRow label="Home" record={splits.home} />
         <RecordRow label="Away" record={splits.away} />
         <StreakRow label="Streak" value={streak} />
