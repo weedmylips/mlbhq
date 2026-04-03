@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-02T18:56:22.513Z",
+  "lastUpdated": "2026-04-03T02:13:13.100Z",
   "teams": {
     "108": [
       {
@@ -581,12 +581,6 @@
     ],
     "136": [
       {
-        "playerName": "J.P. Crawford",
-        "injury": "Right shoulder soreness",
-        "expectedReturn": "Weekend of April 3-5",
-        "status": "Began rehab assignment on March 31 at Triple-A Tacoma, where he was expected to remain for 2-3 games. Could return as soon as first road trip, beginning on April 3 in Anaheim.More »"
-      },
-      {
         "playerName": "Carlos Vargas",
         "injury": "Right lat strain",
         "expectedReturn": "2-3 weeks",
@@ -614,9 +608,9 @@
     "137": [
       {
         "playerName": "José Buttó",
-        "injury": "Right forearm/elbow tightness",
+        "injury": "Right arm fatigue",
         "expectedReturn": "TBD",
-        "status": "Departed the Giants' 7-1 loss to the Padres on April 1 after experiencing arm tightness in the bottom of the eighth inning. Will be further evaluated when the club returns to San Francisco."
+        "status": "Departed the Giants' 7-1 loss to the Padres on April 1 after experiencing arm tightness in the bottom of the eighth inning."
       },
       {
         "playerName": "Sam Hentges",
@@ -855,16 +849,16 @@
     ],
     "144": [
       {
+        "playerName": "Sean Murphy",
+        "injury": "Right hip labral tear",
+        "expectedReturn": "Second half of April",
+        "status": "Caught three innings in a sim game with High-A Rome on April 1. Team has not announced where and when he'll begin his rehab assignment. One of the last steps will be to catch nine innings on consecutive days."
+      },
+      {
         "playerName": "Spencer Strider",
         "injury": "Left oblique strain",
         "expectedReturn": "Mid-April",
         "status": "Strider will accompany the Braves on their road trip to throw bullpen sessions and possibly a live BP. The team hasn't decided whether he will need a rehab start before being activated."
-      },
-      {
-        "playerName": "Sean Murphy",
-        "injury": "Right hip labral tear",
-        "expectedReturn": "Second half of April",
-        "status": "Murphy will go to High-A Rome on April 1 to take live batting practice and possibly begin his rehab assignment. He will likely need a couple weeks to build his endurance. One of the last steps will be to catch nine innings on consecutive days."
       },
       {
         "playerName": "Ha-Seong Kim",
