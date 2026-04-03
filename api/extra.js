@@ -237,6 +237,7 @@ function fixLeaderOrder(category, leaders) {
 }
 
 const LEADER_CATS = [
+  { key: 'onBasePlusSlugging', label: 'OPS', group: 'hitting', type: 'traditional' },
   { key: 'battingAverage', label: 'AVG', group: 'hitting', type: 'traditional' },
   { key: 'homeRuns', label: 'HR', group: 'hitting', type: 'traditional' },
   { key: 'runsBattedIn', label: 'RBI', group: 'hitting', type: 'traditional' },
@@ -247,7 +248,6 @@ const LEADER_CATS = [
   { key: 'strikeouts', label: 'SO', group: 'hitting', type: 'traditional' },
   { key: 'onBasePercentage', label: 'OBP', group: 'hitting', type: 'traditional' },
   { key: 'sluggingPercentage', label: 'SLG', group: 'hitting', type: 'traditional' },
-  { key: 'onBasePlusSlugging', label: 'OPS', group: 'hitting', type: 'traditional' },
   { key: 'earnedRunAverage', label: 'ERA', group: 'pitching', type: 'traditional' },
   { key: 'walksAndHitsPerInningPitched', label: 'WHIP', group: 'pitching', type: 'traditional' },
   { key: 'wins', label: 'W', group: 'pitching', type: 'traditional' },

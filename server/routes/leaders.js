@@ -27,6 +27,7 @@ function fixLeaderOrder(category, leaders) {
 }
 
 const TRADITIONAL_HITTING = [
+  { key: 'onBasePlusSlugging', label: 'OPS' },
   { key: 'battingAverage', label: 'AVG' },
   { key: 'homeRuns', label: 'HR' },
   { key: 'runsBattedIn', label: 'RBI' },
@@ -37,7 +38,6 @@ const TRADITIONAL_HITTING = [
   { key: 'strikeouts', label: 'SO' },
   { key: 'onBasePercentage', label: 'OBP' },
   { key: 'sluggingPercentage', label: 'SLG' },
-  { key: 'onBasePlusSlugging', label: 'OPS' },
 ];
 
 const TRADITIONAL_PITCHING = [
