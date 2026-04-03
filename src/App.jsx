@@ -79,9 +79,7 @@ function TeamPage() {
             Change Team
           </button>
         </div>
-        <div className="rounded-lg overflow-hidden">
-          <Header />
-        </div>
+        <Header />
 
         {/* Nav tabs — desktop top bar */}
         <div className="hidden sm:flex gap-0.5 overflow-x-auto scrollbar-none border-b border-border">

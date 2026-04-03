@@ -21,7 +21,7 @@ function WatchList({ teamId }) {
       <div className="space-y-1">
         {data.hot.batters.map((b, i) => (
           <div key={i} className="flex items-center justify-between gap-2">
-            <span className="text-[11px] text-gray-300 truncate">{b.name}</span>
+            <span className="text-[11px] text-gray-300">{b.name}</span>
             <span className="text-[11px] font-mono text-gray-500 shrink-0">
               <span className="sm:hidden">{b.avg}</span>
               <span className="hidden sm:inline">{b.avg} · {b.hr}HR · {b.rbi}RBI</span>

@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <div
-      className="px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between"
+      className="px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between rounded-lg"
       style={{
         background: `linear-gradient(135deg, ${team.primary} 0%, ${team.primary}dd 50%, ${team.primary}99 100%)`,
         transition: 'background 0.4s ease',

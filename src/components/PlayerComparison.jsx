@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { Search, X } from 'lucide-react';
 import { useRoster, usePlayerDetail } from '../hooks/useTeamData';
 import { useTeam } from '../context/TeamContext';
 
@@ -13,13 +14,131 @@ function PlayerSelect({ players, selectedId, onChange, label }) {
         onChange={(e) => onChange(e.target.value || null)}
         className="mt-1 w-full bg-white/[0.02] border border-border rounded-lg px-3 py-2 text-sm text-gray-200 focus:outline-none focus:border-[var(--team-highlight)]"
       >
-        <option value="">Select player...</option>
+        <option value="" className="bg-[#1a1a2e] text-gray-200">Select player...</option>
         {players.map((p) => (
-          <option key={p.id} value={p.id}>
+          <option key={p.id} value={p.id} className="bg-[#1a1a2e] text-gray-200">
             {p.name} ({p.position})
           </option>
         ))}
       </select>
+    </div>
+  );
+}
+
+function PlayerSearchSelect({ selectedId, onChange, label }) {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedName, setSelectedName] = useState('');
+  const containerRef = useRef(null);
+  const debounceRef = useRef(null);
+
+  useEffect(() => {
+    function handleClick(e) {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  const search = async (q) => {
+    if (q.length < 2) { setResults([]); return; }
+    setIsLoading(true);
+    try {
+      const resp = await fetch(
+        `https://statsapi.mlb.com/api/v1/people/search?names=${encodeURIComponent(q)}&sportId=1&active=true&limit=8`
+      );
+      const data = await resp.json();
+      setResults((data.people || []).map((p) => ({
+        id: p.id,
+        name: p.fullName,
+        team: p.currentTeam?.abbreviation || '',
+        position: p.primaryPosition?.abbreviation || '',
+      })));
+    } catch {
+      setResults([]);
+    }
+    setIsLoading(false);
+  };
+
+  const handleInput = (val) => {
+    setQuery(val);
+    setSelectedName('');
+    onChange(null);
+    setIsOpen(true);
+    clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => search(val), 300);
+  };
+
+  const selectPlayer = (player) => {
+    onChange(String(player.id));
+    setSelectedName(player.name);
+    setQuery('');
+    setResults([]);
+    setIsOpen(false);
+  };
+
+  const clear = () => {
+    setQuery('');
+    setResults([]);
+    setSelectedName('');
+    onChange(null);
+    setIsOpen(false);
+  };
+
+  return (
+    <div ref={containerRef} className="relative">
+      <label className="text-[10px] text-gray-500 uppercase tracking-wider font-bold">
+        {label}
+      </label>
+      <div className="mt-1 flex items-center bg-white/[0.02] border border-border rounded-lg px-3 py-2 gap-1.5">
+        <Search size={14} className="text-gray-400 shrink-0" />
+        {selectedName ? (
+          <div className="flex items-center justify-between w-full">
+            <span className="text-sm text-gray-200">{selectedName}</span>
+            <button onClick={clear} className="text-gray-400 hover:text-white">
+              <X size={14} />
+            </button>
+          </div>
+        ) : (
+          <>
+            <input
+              type="text"
+              placeholder="Search any player..."
+              value={query}
+              onChange={(e) => handleInput(e.target.value)}
+              onFocus={() => query.length >= 2 && setIsOpen(true)}
+              className="bg-transparent text-sm text-gray-200 placeholder-gray-500 outline-none w-full"
+            />
+            {query && (
+              <button onClick={clear} className="text-gray-400 hover:text-white shrink-0">
+                <X size={14} />
+              </button>
+            )}
+          </>
+        )}
+      </div>
+      {isOpen && (results.length > 0 || isLoading) && (
+        <div className="absolute top-full mt-1 left-0 w-full bg-[#1a1a2e] border border-border rounded-lg shadow-xl z-50 overflow-hidden">
+          {isLoading ? (
+            <div className="p-3 text-xs text-gray-500">Searching...</div>
+          ) : (
+            results.map((p) => (
+              <button
+                key={p.id}
+                onClick={() => selectPlayer(p)}
+                className="w-full text-left px-3 py-2 hover:bg-white/5 transition-colors flex items-center justify-between"
+              >
+                <span className="text-sm">{p.name} <span className="text-gray-500">({p.position})</span></span>
+                <span className="text-xs text-gray-400">{p.team}</span>
+              </button>
+            ))
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -96,13 +215,12 @@ export default function PlayerComparison() {
           players={allPlayers}
           selectedId={player1Id}
           onChange={setPlayer1Id}
-          label="Player 1"
+          label="Player 1 (Team Roster)"
         />
-        <PlayerSelect
-          players={allPlayers}
+        <PlayerSearchSelect
           selectedId={player2Id}
           onChange={setPlayer2Id}
-          label="Player 2"
+          label="Player 2 (Any MLB Player)"
         />
       </div>
 
