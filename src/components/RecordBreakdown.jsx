@@ -68,8 +68,15 @@ export default function RecordBreakdown() {
       <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
         Record Breakdown
       </h3>
+      <div className="flex items-center justify-center gap-2 py-2.5 px-2 rounded bg-white/[0.02] mb-1.5">
+        <span className="text-sm text-gray-300">Overall</span>
+        <span className={`font-mono text-lg font-medium ${
+          wins > losses ? 'text-green-400' : wins < losses ? 'text-red-400' : 'text-gray-300'
+        }`}>
+          {overall}
+        </span>
+      </div>
       <div className="grid grid-cols-2 gap-1.5">
-        <RecordRow label="Overall" record={overall} />
         <RecordRow label="Home" record={splits.home} />
         <RecordRow label="Away" record={splits.away} />
         <StreakRow label="Streak" value={streak} />
