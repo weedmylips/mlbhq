@@ -85,9 +85,14 @@ export default function RecordBreakdown() {
         <RecordRow label="Extra Innings" record={splits.extraInnings} />
         <RecordRow label="Day Games" record={splits.day} />
         <RecordRow label="Night Games" record={splits.night} />
-        {vsDivisions?.map((dr) => (
-          <RecordRow key={dr.division} label={`vs ${dr.division}`} record={dr.record} />
-        ))}
+        {['East', 'Central', 'West'].flatMap((div) =>
+          ['AL', 'NL'].map((league) => {
+            const dr = vsDivisions?.find((d) => d.division === `${league} ${div}`);
+            return dr ? (
+              <RecordRow key={dr.division} label={`vs ${dr.division}`} record={dr.record} />
+            ) : null;
+          })
+        )}
       </div>
     </div>
   );
