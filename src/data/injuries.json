@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-04T12:54:40.566Z",
+  "lastUpdated": "2026-04-04T18:41:15.517Z",
   "teams": {
     "108": [
       {
@@ -269,6 +269,12 @@
       }
     ],
     "116": [
+      {
+        "playerName": "Justin Verlander",
+        "injury": "Left hip inflammation",
+        "expectedReturn": "mid-April",
+        "status": "Was scratched from his April 5 start -- what was to be his first start in a Tigers home uniform since Aug. 20, 2017 -- one day prior."
+      },
       {
         "playerName": "Bailey Horn",
         "injury": "Left elbow arthroscopy",
@@ -778,9 +784,9 @@
     "141": [
       {
         "playerName": "Alejandro Kirk",
-        "injury": "Left thumb injury",
-        "expectedReturn": "Awaiting results of X-rays",
-        "status": "Took a foul tip off his left thumb in Friday's loss to the White Sox. Kirk immediately left the game and underwent X-rays."
+        "injury": "Left thumb fracture",
+        "expectedReturn": "TBD",
+        "status": "Took a foul tip off his left thumb in Friday's loss to the White Sox. Kirk immediately left the game and underwent X-rays, which revealed the fracture."
       },
       {
         "playerName": "Trey Yesavage",
