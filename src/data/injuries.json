@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-04T07:00:50.062Z",
+  "lastUpdated": "2026-04-04T12:54:40.566Z",
   "teams": {
     "108": [
       {
@@ -598,6 +598,12 @@
       }
     ],
     "136": [
+      {
+        "playerName": "Brendan Donovan",
+        "injury": "Leg discomfort",
+        "expectedReturn": "Day to day",
+        "status": "Exited April 3 game after landing awkwardly on first base attempting to leg out an infield single. Will be re-evaluated throughout the weekend in Anaheim."
+      },
       {
         "playerName": "Carlos Vargas",
         "injury": "Right lat strain",
