@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-05T12:56:47.525Z",
+  "lastUpdated": "2026-04-05T18:43:03.643Z",
   "teams": {
     "108": [
       {
@@ -48,10 +48,16 @@
     "109": [],
     "110": [
       {
+        "playerName": "Yaramil Hiraldo",
+        "injury": "Right shoulder inflammation",
+        "expectedReturn": "TBD",
+        "status": "Felt soreness coming out of March 31 outing vs. Rangers. Went on IL five days later."
+      },
+      {
         "playerName": "Zach Eflin",
         "injury": "Right elbow discomfort",
         "expectedReturn": "TBD",
-        "status": "Exited 2026 debut on March 31 due to discomfort, then went on IL. Underwent imaging on April 1. Getting second opinion from Dr. Keith Meister."
+        "status": "Exited 2026 debut on March 31 due to discomfort, then went on IL. Underwent imaging on April 1. Getting second opinion from Dr. Keith Meister on April 7."
       },
       {
         "playerName": "Jackson Holliday",
@@ -98,16 +104,16 @@
     ],
     "111": [
       {
+        "playerName": "Patrick Sandoval",
+        "injury": "Left UCL repair",
+        "expectedReturn": "Mid-April to early May",
+        "status": "First rehab assignment with Double-A Portland on April 5 was postponed due to rain. Will now start for Triple-A Worcester on Wednesday."
+      },
+      {
         "playerName": "Johan Oviedo",
         "injury": "Right elbow strain",
         "expectedReturn": "Dependent on consultation with doctor",
         "status": "Will get second opinion with Dr. Keith Meister on April 7 after inconclusive MRI."
-      },
-      {
-        "playerName": "Patrick Sandoval",
-        "injury": "Left UCL repair",
-        "expectedReturn": "Mid-April to early May",
-        "status": "Expected to throw four innings in first rehab assignment with Double-A Portland on April 5."
       },
       {
         "playerName": "Kutter Crawford",
@@ -139,19 +145,19 @@
         "playerName": "Seiya Suzuki",
         "injury": "Right knee",
         "expectedReturn": "April",
-        "status": "Began Minor League rehab assignment with Double-A Knoxville on April 3 (five innings in right field). Scheduled to continue games with Knoxville on April 4-5."
+        "status": "Began rehab assignment with Double-A Knoxville on April 3 (five innings in right field). After playing April 4-5, will be reassessed to determine if he needs more at-bats or is ready for activation."
       },
       {
         "playerName": "Porter Hodge",
         "injury": "Right flexor strain",
-        "expectedReturn": "April",
-        "status": "Shut down from throwing on March 8. After a period of rest and rehab, has resumed playing catch as of April 4."
+        "expectedReturn": "April/May",
+        "status": "Shut down from throwing on March 8. After a period of rest and rehab, resumed playing catch on April 4. Still \"weeks\" away, per manager Craig Counsell."
       },
       {
         "playerName": "Jordan Wicks",
         "injury": "Left forearm (radial nerve irritation)",
-        "expectedReturn": "April",
-        "status": "Resumed playing catch on March 3 after 10-day shutdown. Moved back to mound March 16. Could return to games by mid-April."
+        "expectedReturn": "April/May",
+        "status": "Resumed playing catch on March 3 after 10-day shutdown. Moved back to mound March 16 and was facing hitters as of April 5. Still likely \"weeks\" away, per manager Craig Counsell."
       },
       {
         "playerName": "Justin Steele",
@@ -177,7 +183,7 @@
         "playerName": "Nick Lodolo",
         "injury": "Blister on left index finger",
         "expectedReturn": "TBD",
-        "status": "Lodolo's rehab assignment start at Single-A Daytona on April 2 was cut short at 40 pitches because the blister returned. He will rest for a couple of days and then resume playing catch."
+        "status": "Lodolo resumed playing catch April 5 but with a Plyo ball without seams so his finger can continue to heal. His rehab assignment start at Single-A Daytona on April 2 was cut short at 40 pitches because the blister returned."
       },
       {
         "playerName": "Caleb Ferguson",
@@ -194,16 +200,16 @@
     ],
     "114": [
       {
+        "playerName": "George Valera",
+        "injury": "Left calf strain",
+        "expectedReturn": "April",
+        "status": "Continuing rehab assignment with Triple-A Columbus. Building up to physically handle playing five to six days per week."
+      },
+      {
         "playerName": "Hunter Gaddis",
         "injury": "Right forearm strain",
         "expectedReturn": "April",
         "status": "Made third appearance in rehab assignment with Triple-A Columbus on April 3."
-      },
-      {
-        "playerName": "George Valera",
-        "injury": "Left calf strain",
-        "expectedReturn": "April",
-        "status": "Made second appearance on rehab assignment with Triple-A Columbus on April 3. Building up to physically handle playing five to six days per week."
       },
       {
         "playerName": "Andrew Walters",
@@ -352,6 +358,18 @@
     ],
     "118": [
       {
+        "playerName": "Stephen Kolek",
+        "injury": "Left oblique strain",
+        "expectedReturn": "Late April/early May",
+        "status": "Began throwing bullpen sessions in mid-March. Threw three innings (49 pitches) April 2 in extended spring camp."
+      },
+      {
+        "playerName": "James McArthur",
+        "injury": "Right elbow inflammation",
+        "expectedReturn": "TBD",
+        "status": "Suffered minor setback while in extended spring camp, but is scheduled to start throwing again April 6."
+      },
+      {
         "playerName": "Bailey Falter",
         "injury": "Left elbow inflammation",
         "expectedReturn": "Late April",
@@ -361,25 +379,13 @@
         "playerName": "Carlos Estévez",
         "injury": "Left foot contusion",
         "expectedReturn": "Late April",
-        "status": "Hit by a comebacker in ninth inning March 28 and has been in a walking boot since. Will let foot heal before building back up in intensity and go on rehab assignment."
+        "status": "Hit by a comebacker March 28 and has been in a walking boot since. Will let foot heal before building back up in intensity and go on rehab assignment."
       },
       {
         "playerName": "Michael Massey",
         "injury": "Left calf strain",
         "expectedReturn": "Beginning of April",
-        "status": "Suffered calf strain on March 6 and left off Opening Day roster. Began rehab assignment March 31 with Triple-A Omaha and will be evaluated for potential return by end of week."
-      },
-      {
-        "playerName": "Stephen Kolek",
-        "injury": "Left oblique strain",
-        "expectedReturn": "Late April/early May",
-        "status": "Suffered Grade 1+ oblique strain on Feb. 25 and began throwing bullpen sessions in mid-March. Threw two innings (34 pitches) March 28 in extended Spring Training."
-      },
-      {
-        "playerName": "James McArthur",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "TBD",
-        "status": "Missed all of 2025 after right elbow surgery, so took ramp-up this spring slow. Expected to continue it in Arizona before a rehab assignment."
+        "status": "Began rehab assignment March 31 with Triple-A Omaha and will be evaluated for potential return by end of week."
       },
       {
         "playerName": "Alec Marsh",
@@ -391,9 +397,9 @@
     "119": [
       {
         "playerName": "Mookie Betts",
-        "injury": "Right lower back pain",
-        "expectedReturn": "Day to day",
-        "status": "Scheduled to get an MRI after his back flared up while running the bases on April 4. Manager Dave Roberts is hopeful that the injury is \"more moderate than significant.\""
+        "injury": "Right oblique strain",
+        "expectedReturn": "May",
+        "status": "An MRI revealed a right oblique strain. Manager Dave Roberts is hopeful that Betts could return before the typical timeline of 4-6 weeks."
       },
       {
         "playerName": "Blake Snell",
@@ -529,6 +535,12 @@
     "133": [],
     "134": [
       {
+        "playerName": "Jared Triolo",
+        "injury": "Right knee patellar tendon",
+        "expectedReturn": "TBD",
+        "status": "Triolo was injured while running the bases on April 3."
+      },
+      {
         "playerName": "Jared Jones",
         "injury": "Right UCL sprain",
         "expectedReturn": "Late May/early June",
@@ -537,22 +549,28 @@
     ],
     "135": [
       {
-        "playerName": "Matt Waldron",
-        "injury": "Medical procedure",
-        "expectedReturn": "Mid-April",
-        "status": "Wasn't built up enough to make the Opening Day roster. Has made scoreless starts of three and four innings, respectively, with Triple-A El Paso while on a rehab assignment."
-      },
-      {
         "playerName": "Griffin Canning",
         "injury": "Left Achilles tear",
         "expectedReturn": "Late April or May",
-        "status": "Scheduled to make a rehab start with Double-A San Antonio on April 4, his first game action since his 2025 season ended in June because of the injury. Could need a lengthy buildup progression."
+        "status": "Pitched 2 1/3 innings for Triple-A El Paso on April 4, his first game action since his 2025 season ended in June. Expected to require a lengthy buildup, akin to a full Spring Training."
       },
       {
         "playerName": "Jason Adam",
         "injury": "Left quadriceps tendon rupture",
         "expectedReturn": "Early April",
-        "status": "Pitched 1 1/3 scoreless innings in a rehab outing with Triple-A El Paso on March 28. Eligible to return April 7; could return that day."
+        "status": "Wasn't built up enough to make the OD roster. Has made two scoreless appearances with Triple-A El Paso after two scoreless appearances in the Cactus League. Could return April 7 when eligible."
+      },
+      {
+        "playerName": "Yuki Matsui",
+        "injury": "Left groin strain",
+        "expectedReturn": "Mid-April",
+        "status": "Missed the World Baseball Classic due to the injury, then began the season on the IL. Began a rehab stint with Triple-A El Paso on April 4, pitching a scoreless inning."
+      },
+      {
+        "playerName": "Matt Waldron",
+        "injury": "Medical procedure",
+        "expectedReturn": "Mid-April",
+        "status": "Wasn't built up enough to make the Opening Day roster. Has made scoreless starts of three and four innings, respectively, with Triple-A El Paso while on a rehab assignment."
       },
       {
         "playerName": "Sung-Mun Song",
@@ -561,15 +579,9 @@
         "status": "Sustained the injury during the offseason, then aggravated it during a game on March 5. Began a rehab stint with Triple-A El Paso on March 27."
       },
       {
-        "playerName": "Yuki Matsui",
-        "injury": "Left groin strain",
-        "expectedReturn": "Mid-April",
-        "status": "Missed the World Baseball Classic due to the injury, then began the season on the IL. Facing hitters at extended spring training in Arizona, could begin a rehab stint soon."
-      },
-      {
         "playerName": "Joe Musgrove",
         "injury": "Tommy John surgery",
-        "expectedReturn": "Mid-to-late April",
+        "expectedReturn": "May",
         "status": "Missed the 2025 season but hoped to return early in '26. Made one spring start but experienced soreness afterward and was sidelined. Has resumed playing catch but has yet to throw off a mound."
       },
       {
@@ -707,16 +719,22 @@
     ],
     "139": [
       {
+        "playerName": "Gavin Lux",
+        "injury": "Right shoulder impingement",
+        "expectedReturn": "Early/mid-April",
+        "status": "Planned to DH on April 5 for Triple-A Durham, then will travel with the Bulls to Scranton/Wilkes-Barre, where he’s expected to play second base. “So far, everything’s gone well. The shoulder’s feeling good,” manager Kevin Cash said."
+      },
+      {
+        "playerName": "Taylor Walls",
+        "injury": "Rib tip syndrome, right oblique strain",
+        "expectedReturn": "Possibly late April",
+        "status": "Worked out at Tropicana Field on April 5. “He’s in a pretty good spot,” manager Kevin Cash said. “We’ll continue to take it day by day.”"
+      },
+      {
         "playerName": "Garrett Cleavinger",
         "injury": "Right calf tightness",
         "expectedReturn": "Mid to late April",
         "status": "Manager Kevin Cash said Cleavinger will get a couple of days off before resuming a throwing program. “I'd like to be optimistic right now that he'll be back shorter than later,” Cash added."
-      },
-      {
-        "playerName": "Gavin Lux",
-        "injury": "Right shoulder impingement",
-        "expectedReturn": "Early/mid-April",
-        "status": "Began a rehab assignment with Triple-A Durham on April 2, playing nine innings. He played a second straight game on April 3."
       },
       {
         "playerName": "Edwin Uceta",
@@ -729,12 +747,6 @@
         "injury": "Right hip inflammation",
         "expectedReturn": "Early April",
         "status": "Threw a bullpen on March 23 and received an injection on March 25. Will be shut down for only two days before resuming throwing. \"Expected to be a short absence,\" per baseball operations president Erik Neander."
-      },
-      {
-        "playerName": "Taylor Walls",
-        "injury": "Rib tip syndrome, right oblique strain",
-        "expectedReturn": "Possibly late April",
-        "status": "Felt something in his ribs/ab/oblique after hitting on March 17. Underwent imaging on March 18. Was told he'll miss a minimum of 3-4 weeks."
       },
       {
         "playerName": "Steven Wilson",
@@ -751,6 +763,12 @@
     ],
     "140": [
       {
+        "playerName": "Carter Baumler",
+        "injury": "Right intercostal strain",
+        "expectedReturn": "Late April",
+        "status": "Suffered an intercostal strain during a perfect inning of relief on April 4. His outing ended prematurely, as he should have gone another frame. Manager Skip Schumaker said he doesn’t expect the IL stint to last too long."
+      },
+      {
         "playerName": "Cody Bradford",
         "injury": "Left UCL surgery",
         "expectedReturn": "Mid-May",
@@ -759,8 +777,8 @@
       {
         "playerName": "Cody Freeman",
         "injury": "Lumbar stress reaction",
-        "expectedReturn": "April",
-        "status": "Down 4-6 weeks minimum before re-evaluation."
+        "expectedReturn": "Late April",
+        "status": "Down four to six weeks minimum before re-evaluation."
       },
       {
         "playerName": "Winston Santos (Rangers' No. 5 prospect)",
@@ -865,16 +883,16 @@
     ],
     "143": [
       {
+        "playerName": "Orion Kerkering",
+        "injury": "Strained right hamstring (Grade 1)",
+        "expectedReturn": "As early as April 7",
+        "status": "Pitched a scoreless one-hit, two-strikeout inning on April 4 with Triple-A Lehigh Valley. He will meet the team April 6 in San Francisco for evaluation."
+      },
+      {
         "playerName": "Zack Wheeler",
         "injury": "Right upper extremity blood clot",
         "expectedReturn": "April",
         "status": "Threw three innings in first rehab start with Triple-A Lehigh Valley on March 28. Threw three more in a second Triple-A outing on April 3, and will make another rehab start on April 8. On track for April return."
-      },
-      {
-        "playerName": "Orion Kerkering",
-        "injury": "Strained right hamstring (Grade 1)",
-        "expectedReturn": "As early as April 7",
-        "status": "Tossed one inning in a rehab appearance on March 31 with Triple-A Lehigh Valley. Made a back-to-back appearance on April 1 and will pitch again on April 4."
       },
       {
         "playerName": "Aidan Miller (Phillies' No. 1 prospect, No. 21 overall)",
@@ -953,9 +971,15 @@
     ],
     "145": [
       {
+        "playerName": "Everson Pereira",
+        "injury": "Left ankle sprain",
+        "expectedReturn": "Mid- to late April",
+        "status": "Sustained the injury on April 1 after going 4-for-16 with one home run to start the season."
+      },
+      {
         "playerName": "Kyle Teel",
         "injury": "Right hamstring strain",
-        "expectedReturn": "Mid to late April",
+        "expectedReturn": "Mid- to late April",
         "status": "Feeling much better and will begin hitting off a tee around April 7 or 8. A Minor League rehab assignment is in sight as he continues to progress."
       },
       {
@@ -963,12 +987,6 @@
         "injury": "Tommy John surgery",
         "expectedReturn": "12 to 18 months",
         "status": "Underwent season-ending Tommy John surgery with the procedure performed by Dr. Keith Meister, but he was with the team for the home opener."
-      },
-      {
-        "playerName": "Everson Pereira",
-        "injury": "Left ankle soreness",
-        "expectedReturn": "Day to day",
-        "status": "Was replaced in right field to start the bottom of the fifth after going 1-for-2 at the plate in April 1 game against Miami."
       },
       {
         "playerName": "Ky Bush",
@@ -1056,7 +1074,7 @@
         "playerName": "Carlos Rodón",
         "injury": "Left elbow surgery recovery",
         "expectedReturn": "April/May",
-        "status": "Experiencing right hamstring tightness but continuing to throw, though fielding/covering bases is affected. Tossed bullpen April 4 in New York."
+        "status": "Experiencing right hamstring tightness but continuing to throw, though fielding/covering bases is affected. Tossed bullpen and performed agility work April 4 in New York. Next step is another side session, then possibly a rehab start."
       },
       {
         "playerName": "Gerrit Cole",
