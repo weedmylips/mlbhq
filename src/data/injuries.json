@@ -1,7 +1,13 @@
 {
-  "lastUpdated": "2026-04-05T18:43:03.643Z",
+  "lastUpdated": "2026-04-06T02:28:22.313Z",
   "teams": {
     "108": [
+      {
+        "playerName": "Mike Trout",
+        "injury": "Left hand contusion",
+        "expectedReturn": "Day to day",
+        "status": "Hit on the left hand by a 94.2 mph fastball from Mariners reliever Casey Legumina and had to exit the game in the eighth inning on April 5. Postgame X-rays were negative."
+      },
       {
         "playerName": "Kirby Yates",
         "injury": "Left knee inflammation",
@@ -136,16 +142,16 @@
     ],
     "112": [
       {
+        "playerName": "Seiya Suzuki",
+        "injury": "Right knee",
+        "expectedReturn": "April 10 vs. PIT",
+        "status": "Played with Double-A Knoxville on April 3-5 and will do so again on April 7-8, per manager Craig Counsell. Barring anything unexpected, Suzuki will rejoin the Cubs for the April 10-12 home series vs. Pittsburgh."
+      },
+      {
         "playerName": "Cade Horton",
         "injury": "Right forearm discomfort",
         "expectedReturn": "TBD",
         "status": "Pulled from April 3 start after 17 pitches. Scheduled to fly to Chicago to be further evaluated, including getting imaging."
-      },
-      {
-        "playerName": "Seiya Suzuki",
-        "injury": "Right knee",
-        "expectedReturn": "April",
-        "status": "Began rehab assignment with Double-A Knoxville on April 3 (five innings in right field). After playing April 4-5, will be reassessed to determine if he needs more at-bats or is ready for activation."
       },
       {
         "playerName": "Porter Hodge",
@@ -220,22 +226,22 @@
     ],
     "115": [
       {
-        "playerName": "McCade Brown",
-        "injury": "Right shoulder inflammation (60-day IL)",
-        "expectedReturn": "To be determined after he is cleared for game action",
-        "status": "Had been facing hitters, but now has backed off to playing catch."
+        "playerName": "Ryan Feltner",
+        "injury": "Right glute contusion",
+        "expectedReturn": "April 5",
+        "status": "Hit by a comebacker on March 31, expects to make his next start on April 6 against the Astros at Coors Field."
       },
       {
         "playerName": "Jose Quintana",
         "injury": "Right hamstring strain",
         "expectedReturn": "April",
-        "status": "Quintana, who sustained the injury doing conditioning drills on the turf in Toronto, does not expect to need a rehab assignment before returning to the mound."
+        "status": "Said on April 5 that the injury was feeling better and he has been playing catch, but he is waiting to be cleared for more extensive activity."
       },
       {
-        "playerName": "Ryan Feltner",
-        "injury": "Right glute contusion",
-        "expectedReturn": "TBD",
-        "status": "Hit by a comebacker on March 31, his first big league outing since April of last year; his 2025 season was limited due to back and shoulder injuries."
+        "playerName": "McCade Brown",
+        "injury": "Right shoulder inflammation (60-day IL)",
+        "expectedReturn": "To be determined after he is cleared for game action",
+        "status": "Had been facing hitters, but now has backed off to playing catch."
       },
       {
         "playerName": "RJ Petit",
@@ -313,6 +319,12 @@
       }
     ],
     "117": [
+      {
+        "playerName": "Hunter Brown",
+        "injury": "Right shoulder strain",
+        "expectedReturn": "TBD",
+        "status": "Made his first two starts before feeling something in his shoulder while throwing April 3 and was sent to be seen by team doctors."
+      },
       {
         "playerName": "Enyel De Los Santos",
         "injury": "Right knee strain",
@@ -493,7 +505,13 @@
         "playerName": "Juan Soto",
         "injury": "Right calf strain",
         "expectedReturn": "Day to day",
-        "status": "Held out of lineup on April 4 after exiting in first inning of previous game, but reported already feeling better and would not rule out quick return."
+        "status": "Held out of lineup on April 4 and 5 after exiting in first inning of previous game, but reported already feeling better and would not rule out quick return. The Mets were not expected to provide further updates until the team returned to New York for a homestand beginning Tuesday."
+      },
+      {
+        "playerName": "Brett Baty",
+        "injury": "Jammed left thumb",
+        "expectedReturn": "Day to day",
+        "status": "Jammed his thumb on a headfirst slide on April 4. Was initially in the lineup and playing right field April 5, but was scratched pregame. Should be available to pinch-hit."
       },
       {
         "playerName": "A.J. Minter",
@@ -612,9 +630,9 @@
     "136": [
       {
         "playerName": "Brendan Donovan",
-        "injury": "Leg discomfort",
+        "injury": "Right groin discomfort",
         "expectedReturn": "Day to day",
-        "status": "Exited April 3 game after landing awkwardly on first base attempting to leg out an infield single. Will be re-evaluated throughout the weekend in Anaheim."
+        "status": "Took ground balls before series finale at Angel Stadium on April 5 but was out of lineup for second straight day. MRI came back clean. Could return as soon as April 6 at Texas, and IL stint is unlikely."
       },
       {
         "playerName": "Carlos Vargas",
