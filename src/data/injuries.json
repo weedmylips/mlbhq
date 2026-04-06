@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-06T13:09:21.908Z",
+  "lastUpdated": "2026-04-06T18:58:33.472Z",
   "teams": {
     "108": [
       {
@@ -504,8 +504,8 @@
       {
         "playerName": "Juan Soto",
         "injury": "Right calf strain",
-        "expectedReturn": "Day to day",
-        "status": "Held out of lineup on April 4 and 5 after exiting in first inning of previous game, but reported already feeling better and would not rule out quick return. The Mets were not expected to provide further updates until the team returned to New York for a homestand beginning Tuesday."
+        "expectedReturn": "Late April",
+        "status": "Strained his calf running first to third in an April 3 game in San Francisco. Is expected to miss 2-3 weeks."
       },
       {
         "playerName": "Brett Baty",
@@ -737,16 +737,16 @@
     ],
     "139": [
       {
+        "playerName": "Ryan Pepiot",
+        "injury": "Right hip inflammation",
+        "expectedReturn": "Early April",
+        "status": "Threw a bullpen on March 23 and received an injection on March 25. Has resumed throwing bullpens. \"Expected to be a short absence,\" per baseball operations president Erik Neander."
+      },
+      {
         "playerName": "Gavin Lux",
         "injury": "Right shoulder impingement",
         "expectedReturn": "Early/mid-April",
-        "status": "Planned to DH on April 5 for Triple-A Durham, then will travel with the Bulls to Scranton/Wilkes-Barre, where he’s expected to play second base. “So far, everything’s gone well. The shoulder’s feeling good,” manager Kevin Cash said."
-      },
-      {
-        "playerName": "Taylor Walls",
-        "injury": "Rib tip syndrome, right oblique strain",
-        "expectedReturn": "Possibly late April",
-        "status": "Worked out at Tropicana Field on April 5. “He’s in a pretty good spot,” manager Kevin Cash said. “We’ll continue to take it day by day.”"
+        "status": "Served as DH (0-for-3, walk) on April 5 for Triple-A Durham, then traveled with the Bulls to Scranton/Wilkes-Barre, where he’s expected to play second base. “So far, everything’s gone well,” manager Kevin Cash said."
       },
       {
         "playerName": "Garrett Cleavinger",
@@ -759,12 +759,6 @@
         "injury": "Right shoulder impingement",
         "expectedReturn": "Early April",
         "status": "“Didn’t feel great” when playing catch Feb. 19. Received a cortisone injection on Feb. 20. Pitched in live BP on March 27 and in a back-field game on March 31. Rehab assignment should begin soon."
-      },
-      {
-        "playerName": "Ryan Pepiot",
-        "injury": "Right hip inflammation",
-        "expectedReturn": "Early April",
-        "status": "Threw a bullpen on March 23 and received an injection on March 25. Will be shut down for only two days before resuming throwing. \"Expected to be a short absence,\" per baseball operations president Erik Neander."
       },
       {
         "playerName": "Steven Wilson",
