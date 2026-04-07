@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-07T13:18:35.833Z",
+  "lastUpdated": "2026-04-07T19:02:47.944Z",
   "teams": {
     "108": [
       {
@@ -60,6 +60,12 @@
     "109": [],
     "110": [
       {
+        "playerName": "Zach Eflin",
+        "injury": "Right elbow discomfort",
+        "expectedReturn": "TBD",
+        "status": "Exited 2026 debut on March 31 due to discomfort, then went on IL. Underwent imaging on April 1. Getting second opinion from Dr. Keith Meister on April 7."
+      },
+      {
         "playerName": "Jackson Holliday",
         "injury": "Right hamate surgery",
         "expectedReturn": "Mid-April",
@@ -88,12 +94,6 @@
         "injury": "Right shoulder inflammation",
         "expectedReturn": "TBD",
         "status": "Felt soreness coming out of March 31 outing vs. Rangers. Went on IL five days later."
-      },
-      {
-        "playerName": "Zach Eflin",
-        "injury": "Right elbow discomfort",
-        "expectedReturn": "TBD",
-        "status": "Exited 2026 debut on March 31 due to discomfort, then went on IL. Underwent imaging on April 1. Getting second opinion from Dr. Keith Meister on April 7."
       },
       {
         "playerName": "Keegan Akin",
@@ -225,9 +225,9 @@
     "114": [
       {
         "playerName": "Gabriel Arias",
-        "injury": "Left hamstring tightness",
+        "injury": "Left hamstring strain",
         "expectedReturn": "TBD",
-        "status": "Exited after hitting a double in fifth inning on April 6. Set to undergo imaging."
+        "status": "Suffered injury running to second base while hitting a double in fifth inning on April 6. Imaging revealed moderate strain. Next steps and return-to-play timeline to be determined."
       },
       {
         "playerName": "Hunter Gaddis",
@@ -895,12 +895,6 @@
     ],
     "143": [
       {
-        "playerName": "Orion Kerkering",
-        "injury": "Strained right hamstring (Grade 1)",
-        "expectedReturn": "April 7",
-        "status": "Phillies manager Rob Thomson said Kerkering will be activated before the April 7 game against the Giants. Pitched a scoreless one-hit, two-strikeout inning on April 4 with Triple-A Lehigh Valley."
-      },
-      {
         "playerName": "Zack Wheeler",
         "injury": "Right upper extremity blood clot",
         "expectedReturn": "April",
@@ -977,22 +971,34 @@
     ],
     "145": [
       {
+        "playerName": "Austin Hays",
+        "injury": "Right hamstring strain",
+        "expectedReturn": "Early to mid May",
+        "status": "Manager Will Venable listed the injury, suffered on April 6, as a Grade 1 strain when talking on April 7. Hays will be out of action for 2 to 4 weeks."
+      },
+      {
+        "playerName": "Brooks Baldwin",
+        "injury": "Right elbow soreness",
+        "expectedReturn": "April",
+        "status": "According to the White Sox, Baldwin elected to undergo a season-ending UCL internal brace procedure on April 1. He is expected to be ready by Spring Training."
+      },
+      {
+        "playerName": "Mike Vasil",
+        "injury": "Tommy John surgery",
+        "expectedReturn": "12 to 18 months",
+        "status": "Underwent season-ending Tommy John surgery with the procedure performed by Dr. Keith Meister, but he was with the team for the home opener. Transferred to the 60-day IL on April 7."
+      },
+      {
         "playerName": "Everson Pereira",
         "injury": "Left ankle sprain",
         "expectedReturn": "Mid- to late April",
-        "status": "Sustained the injury on April 1 after going 4-for-16 with one home run to start the season."
+        "status": "Sustained the injury on April 1 after going 4-for-16 with one home run to start the season. He spoke on April 7 of not being 100 percent but was getting close."
       },
       {
         "playerName": "Kyle Teel",
         "injury": "Right hamstring strain",
         "expectedReturn": "Mid- to late April",
         "status": "Feeling much better and will begin hitting off a tee around April 7 or 8. A Minor League rehab assignment is in sight as he continues to progress."
-      },
-      {
-        "playerName": "Mike Vasil",
-        "injury": "Tommy John surgery",
-        "expectedReturn": "12 to 18 months",
-        "status": "Underwent season-ending Tommy John surgery with the procedure performed by Dr. Keith Meister, but he was with the team for the home opener."
       },
       {
         "playerName": "Ky Bush",
@@ -1007,22 +1013,10 @@
         "status": "Underwent successful surgery to repair the torn ACL on Oct. 28. Estimated recovery time is eight months, per the team."
       },
       {
-        "playerName": "Prelander Berroa",
-        "injury": "Grade 1 right elbow strain",
-        "expectedReturn": "2026",
-        "status": "Has been off the mound a few times and is feeling good in his recovery from Tommy John surgery he underwent March 7, 2025."
-      },
-      {
         "playerName": "Drew Thorpe",
         "injury": "Tommy John surgery",
         "expectedReturn": "2026",
         "status": "Continues with the bullpen portion of his recovery ramp-up, having thrown seven. Has felt great as the rehab process moves forward."
-      },
-      {
-        "playerName": "Brooks Baldwin",
-        "injury": "Right elbow soreness",
-        "expectedReturn": "April",
-        "status": "Hasn't played in a game since March 6 during a Cactus League contest. General manager Chris Getz said they will find out something soon in regard to Baldwin’s next move."
       }
     ],
     "146": [
