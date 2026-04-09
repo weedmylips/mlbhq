@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route, useParams, useNavigate, Navigate } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { useTeam } from './context/TeamContext';
 import { getFavoriteTeam, setFavoriteTeam } from './context/TeamContext';
 import { useGames, useGameEndRefresh } from './hooks/useTeamData';
@@ -179,12 +180,15 @@ export default function App() {
   const { team } = useTeam();
 
   return (
-    <Routes>
-      <Route path="/:teamAbbr/:tab" element={<TeamPage />} />
-      <Route path="/:teamAbbr" element={<TeamPage />} />
-      <Route path="/" element={<Navigate to={`/${team.abbr}/overview`} replace />} />
-      <Route path="*" element={<Navigate to={`/${team.abbr}/overview`} replace />} />
-    </Routes>
+    <>
+      <Analytics />
+      <Routes>
+        <Route path="/:teamAbbr/:tab" element={<TeamPage />} />
+        <Route path="/:teamAbbr" element={<TeamPage />} />
+        <Route path="/" element={<Navigate to={`/${team.abbr}/overview`} replace />} />
+        <Route path="*" element={<Navigate to={`/${team.abbr}/overview`} replace />} />
+      </Routes>
+    </>
   );
 }
 
