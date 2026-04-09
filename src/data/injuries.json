@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-09T02:10:48.385Z",
+  "lastUpdated": "2026-04-09T07:21:53.999Z",
   "teams": {
     "108": [
       {
@@ -55,15 +55,21 @@
     "110": [
       {
         "playerName": "Zach Eflin",
-        "injury": "Right elbow discomfort",
-        "expectedReturn": "TBD",
-        "status": "Exited 2026 debut on March 31 due to discomfort, then went on IL. Underwent imaging on April 1. Getting second opinion from Dr. Keith Meister on April 7."
+        "injury": "Tommy John surgery",
+        "expectedReturn": "2027",
+        "status": "Exited 2026 debut on March 31 due to right elbow discomfort. After getting imaging and a second opinion, underwent Tommy John surgery on April 8."
       },
       {
         "playerName": "Jackson Holliday",
         "injury": "Right hamate surgery",
         "expectedReturn": "Mid-April",
-        "status": "Bone removed from right hand on Feb. 12. Played six rehab games for Triple-A Norfolk from March 27-April 5, going 5-for-23 (.217) with two doubles and three RBIs."
+        "status": "Bone removed from right hand on Feb. 12. Played eight rehab games for Triple-A Norfolk from March 27-April 8, going 6-for-30 (.200) with two doubles and three RBIs."
+      },
+      {
+        "playerName": "Andrew Kittredge",
+        "injury": "Right shoulder inflammation",
+        "expectedReturn": "Potentially mid-April",
+        "status": "Currently on rehab assignment with Triple-A Norfolk. Allowed one run in 2 2/3 innings with five strikeouts and one walk in three outings from April 1-8."
       },
       {
         "playerName": "Jordan Westburg",
@@ -72,16 +78,10 @@
         "status": "After testing, received platelet-rich plasma injection on Feb. 20. Swinging a bat as of April 1. Scheduled to begin throwing progression week of April 6."
       },
       {
-        "playerName": "Andrew Kittredge",
-        "injury": "Right shoulder inflammation",
-        "expectedReturn": "Potentially mid-April",
-        "status": "Began rehab assignment with Triple-A Norfolk on April 1, allowing one run in two-thirds of an inning. Pitched a scoreless inning with two strikeouts in second appearance on April 5."
-      },
-      {
         "playerName": "Dietrich Enns",
         "injury": "Left foot infection",
         "expectedReturn": "TBD",
-        "status": "Allowed one run in one inning at Pittsburgh on April 3, then did not pitch in final two games of series. Went on IL prior to April 6 game vs. White Sox in Chicago."
+        "status": "Hospitalized in Pittsburgh during April 3-5 series vs. the Pirates. Received IV antibiotics to help with swelling in left foot."
       },
       {
         "playerName": "Yaramil Hiraldo",
@@ -926,16 +926,16 @@
     ],
     "143": [
       {
+        "playerName": "Zack Wheeler",
+        "injury": "Right upper extremity blood clot",
+        "expectedReturn": "April",
+        "status": "Struck out six over 4 1/3 innings in a third rehab start on April 8, and is set to make at least one more."
+      },
+      {
         "playerName": "Aidan Miller (Phillies' No. 1 prospect, No. 21 overall)",
         "injury": "Sore lower back",
         "expectedReturn": "TBD",
         "status": "Miller has started to swing a bat, but there is no timetable for his return."
-      },
-      {
-        "playerName": "Zack Wheeler",
-        "injury": "Right upper extremity blood clot",
-        "expectedReturn": "April",
-        "status": "Threw three innings in first rehab start with Triple-A Lehigh Valley on March 28. Threw three more in a second Triple-A outing on April 3, and will make another rehab start on April 8. On track for April return."
       },
       {
         "playerName": "Max Lazar",
