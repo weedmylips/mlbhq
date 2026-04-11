@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-11T02:09:39.402Z",
+  "lastUpdated": "2026-04-11T07:00:47.558Z",
   "teams": {
     "108": [
       {
@@ -538,6 +538,12 @@
     ],
     "121": [
       {
+        "playerName": "Clay Holmes",
+        "injury": "Left hamstring tightness",
+        "expectedReturn": "Possibly April 15",
+        "status": "Exited an April 10 start against the A's due to hamstring tightness. Does not consider the issue serious and hopes to make his next start, tentatively scheduled for April 15 against the Dodgers."
+      },
+      {
         "playerName": "Jorge Polanco",
         "injury": "Left Achilles bursitis",
         "expectedReturn": "Day to day",
@@ -914,8 +920,14 @@
       {
         "playerName": "Royce Lewis",
         "injury": "Left knee soreness",
-        "expectedReturn": "Day to day",
-        "status": "Scratched April 10 against the Blue Jays and will be re-evaluated on April 11."
+        "expectedReturn": "TBD",
+        "status": "Scratched from the lineup on April 10 and underwent an MRI that revealed a left knee sprain."
+      },
+      {
+        "playerName": "Cody Laweryson",
+        "injury": "Right forearm strain",
+        "expectedReturn": "TBD",
+        "status": "Laweryson was unavailable April 10 versus the Blue Jays due to right forearm soreness and was placed on the IL."
       },
       {
         "playerName": "Kendry Rojas (No. 10 prospect)",
