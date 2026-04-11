@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-11T12:56:40.962Z",
+  "lastUpdated": "2026-04-11T18:43:20.086Z",
   "teams": {
     "108": [
       {
@@ -25,12 +25,6 @@
         "injury": "Viral infection",
         "expectedReturn": "Mid-April",
         "status": "Scratched from his start due to illness on April 5 and was placed on the IL on April 6. Expected to be ready to return once he's eligible on April 18."
-      },
-      {
-        "playerName": "Vaughn Grissom",
-        "injury": "Left wrist sprain",
-        "expectedReturn": "April",
-        "status": "Began a rehab assignment and played third base for Triple-A Salt Lake on March 31. Has hit .429 in six games in his rehab assignment with Triple-A Salt Lake and is getting closer to a return, manager Kurt Suzuki said April 6."
       },
       {
         "playerName": "Alek Manoah",
@@ -300,6 +294,12 @@
     ],
     "116": [
       {
+        "playerName": "Justin Verlander",
+        "injury": "Left hip inflammation",
+        "expectedReturn": "Late April",
+        "status": "Threw a higher-intensity bullpen session on April 11. Will likely throw a rehab start or simulated game before being reinstated. Will not be reinstated when eligible on April 16."
+      },
+      {
         "playerName": "Parker Meadows",
         "injury": "Concussion, fractured left radius bone in arm",
         "expectedReturn": "TBD",
@@ -322,12 +322,6 @@
         "injury": "Left elbow arthroscopy",
         "expectedReturn": "April",
         "status": "Tossed two-thirds of an inning with an unearned run on a hit along with a strikeout in a rehab appearance for Single-A Lakeland on April 7. Scheduled to make another appearance on April 11."
-      },
-      {
-        "playerName": "Justin Verlander",
-        "injury": "Left hip inflammation",
-        "expectedReturn": "mid-April",
-        "status": "Threw a bullpen session on April 6. Scheduled to throw another on April 11."
       },
       {
         "playerName": "Beau Brieske",
@@ -919,9 +913,9 @@
     "142": [
       {
         "playerName": "Royce Lewis",
-        "injury": "Left knee soreness",
-        "expectedReturn": "TBD",
-        "status": "Scratched from the lineup on April 10 and underwent an MRI that revealed a left knee sprain."
+        "injury": "Left knee sprain",
+        "expectedReturn": "April 20",
+        "status": "Twisted a cleat and needed attention from the trainer on April 9 but stayed in the game. Scratched from the lineup on April 10 and underwent an MRI that revealed the sprain."
       },
       {
         "playerName": "Cody Laweryson",
@@ -962,6 +956,12 @@
     ],
     "143": [
       {
+        "playerName": "Max Lazar",
+        "injury": "Left oblique strain",
+        "expectedReturn": "TBD",
+        "status": "He is throwing bullpen sessions in Clearwater, Fla. Left Team Israel in the World Baseball Classic after feeling something in his abdomen/oblique."
+      },
+      {
         "playerName": "Zack Wheeler",
         "injury": "Right upper extremity blood clot",
         "expectedReturn": "April 24-26 in Atlanta",
@@ -972,12 +972,6 @@
         "injury": "Sore lower back",
         "expectedReturn": "TBD",
         "status": "Miller has started to swing a bat, but there is no timetable for his return."
-      },
-      {
-        "playerName": "Max Lazar",
-        "injury": "Left oblique strain",
-        "expectedReturn": "TBD",
-        "status": "Left Team Israel in the World Baseball Classic after feeling something in his abdomen/oblique. Phillies manager Rob Thomson said it’s “very mild.”"
       }
     ],
     "144": [
@@ -1096,14 +1090,14 @@
       {
         "playerName": "Griffin Conine",
         "injury": "Left hamstring tear",
-        "expectedReturn": "Months",
-        "status": "Placed on IL on April 10 and deciding whether to undergo surgery after imaging revealed a tear. Felt discomfort after making diving attempt during Marlins' win over Reds on April 9."
+        "expectedReturn": "June",
+        "status": "Will undergo left hamstring tendon excision week of April 13. Placed on IL on April 10. Felt discomfort after making diving attempt during Marlins' win over Reds on April 9."
       },
       {
         "playerName": "Kyle Stowers",
         "injury": "Grade 1 right hamstring strain",
         "expectedReturn": "Mid April",
-        "status": "Beginning rehab assignment April 10 with Triple-A Jacksonville. Felt tightness on March 20 rounding third. Missed 1-2 weeks of spring with a strain of the same hamstring."
+        "status": "Began rehab assignment April 10 with Triple-A Jacksonville. Felt tightness on March 20 rounding third. Missed 1-2 weeks of spring with a strain of the same hamstring."
       },
       {
         "playerName": "Christopher Morel",
