@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-12T02:32:02.084Z",
+  "lastUpdated": "2026-04-12T07:13:30.549Z",
   "teams": {
     "108": [
       {
@@ -48,10 +48,16 @@
     "109": [],
     "110": [
       {
+        "playerName": "Ryan Mountcastle",
+        "injury": "Left foot soreness",
+        "expectedReturn": "TBD",
+        "status": "Exited April 11 game vs. Giants after stumbling between first and second and sliding awkwardly into the bag on a double. Scheduled to undergo MRI on April 12."
+      },
+      {
         "playerName": "Adley Rutschman",
         "injury": "Left ankle inflammation",
         "expectedReturn": "TBD",
-        "status": "Scratched from lineup prior to April 11 game vs. Giants, then went on IL prior to the start of the contest."
+        "status": "Scratched from lineup prior to April 11 game vs. Giants, then went on IL prior to the start of the contest. Scheduled to undergo MRI on April 12."
       },
       {
         "playerName": "Tyler O'Neill",
@@ -356,6 +362,12 @@
     ],
     "117": [
       {
+        "playerName": "Jeremy Pena",
+        "injury": "Posterior right knee tightness",
+        "expectedReturn": "TBD",
+        "status": "Was removed from the April 11 game against the Mariners for a pinch-runner after his knee tightened up running the bases."
+      },
+      {
         "playerName": "Tatsuya Imai",
         "injury": "Right arm fatigue",
         "expectedReturn": "TBD",
@@ -365,7 +377,7 @@
         "playerName": "Bennett Sousa",
         "injury": "Left oblique strain",
         "expectedReturn": "April",
-        "status": "Scheduled to make a rehab appearance April 11 at Triple-A Sugar Land.."
+        "status": "Threw 14 pitches in a scoreless inning in his first Minor League rehab outing at Triple-A Sugar Land on April 11, walking one and striking out two. He topped out at 94.9 mph and he generated two swings and misses on his slider.."
       },
       {
         "playerName": "Cristian Javier",
@@ -681,7 +693,7 @@
         "playerName": "Brendan Donovan",
         "injury": "Illness",
         "expectedReturn": "Day to day",
-        "status": "Held out of April 10 series-opener vs. Astros, but not expected to miss extended time."
+        "status": "Held out of April 10 and 11 starting lineups vs. Astros but pinch-hit and drew a walk in April 11's walk-off win. Not expected to miss extended time.More »"
       },
       {
         "playerName": "Victor Robles",
