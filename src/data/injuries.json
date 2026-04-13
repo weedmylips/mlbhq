@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-12T18:49:52.522Z",
+  "lastUpdated": "2026-04-13T02:36:58.425Z",
   "teams": {
     "108": [
       {
@@ -50,32 +50,32 @@
       {
         "playerName": "Tyler O'Neill",
         "injury": "Concussion",
-        "expectedReturn": "TBD",
-        "status": "Missed April 10 and 11 games vs. Giants due to being \"under the weather.\" Placed on IL prior to the series finale."
+        "expectedReturn": "Potentially mid-April",
+        "status": "Missed April 10 and 11 games vs. Giants after dealing with extreme dehydration, which caused him to faint on April 9 off-day."
       },
       {
         "playerName": "Ryan Mountcastle",
-        "injury": "Left foot soreness",
+        "injury": "Broken bone in left foot",
         "expectedReturn": "TBD",
-        "status": "Exited April 11 game vs. Giants after stumbling between first and second and sliding awkwardly into the bag on a double. Scheduled to undergo MRI on April 12."
+        "status": "Exited April 11 game vs. Giants after stumbling between first and second and sliding awkwardly into the bag on a double. Broke fourth metatarsal on left foot. Expected to miss substantial time."
       },
       {
         "playerName": "Adley Rutschman",
         "injury": "Left ankle inflammation",
-        "expectedReturn": "TBD",
-        "status": "Scratched from lineup prior to April 11 game vs. Giants, then went on IL prior to the start of the contest. Scheduled to undergo MRI on April 12."
+        "expectedReturn": "Potentially late April",
+        "status": "Scratched from lineup prior to April 11 game vs. Giants, then went on IL prior to the start of the contest. MRI showed encouraging results. Not expected to miss extended time."
+      },
+      {
+        "playerName": "Jackson Holliday",
+        "injury": "Right hamate surgery",
+        "expectedReturn": "Week of April 13",
+        "status": "Bone removed from right hand on Feb. 12. Played 11 rehab games for Triple-A Norfolk from March 27-April 12, going 7-for-42 (.167) with two doubles and three RBIs."
       },
       {
         "playerName": "Zach Eflin",
         "injury": "Tommy John surgery",
         "expectedReturn": "2027",
         "status": "Exited 2026 debut on March 31 due to right elbow discomfort. After getting imaging and a second opinion, underwent Tommy John surgery on April 8."
-      },
-      {
-        "playerName": "Jackson Holliday",
-        "injury": "Right hamate surgery",
-        "expectedReturn": "Mid-April",
-        "status": "Bone removed from right hand on Feb. 12. Played eight rehab games for Triple-A Norfolk from March 27-April 8, going 6-for-30 (.200) with two doubles and three RBIs."
       },
       {
         "playerName": "Andrew Kittredge",
@@ -276,8 +276,8 @@
       {
         "playerName": "Jose Quintana",
         "injury": "Right hamstring strain",
-        "expectedReturn": "April",
-        "status": "Threw a bullpen session April 9 and has another scheduled for April 12; he and manager Warren Schaeffer say a rehab assignment is not necessary."
+        "expectedReturn": "April 15",
+        "status": "After a 21-pitch bullpen session on April 12, Quintana declared himself ready to return to the rotation on April 15 at Houston."
       },
       {
         "playerName": "McCade Brown",
@@ -371,7 +371,7 @@
         "playerName": "Jeremy Pena",
         "injury": "Posterior right knee tightness",
         "expectedReturn": "TBD",
-        "status": "Was removed from the April 11 game against the Mariners for a pinch-runner after his knee tightened up running the bases."
+        "status": "Was removed from the April 11 game against the Mariners for a pinch-runner after his knee tightened up running the bases. Scheduled to undergo imaging April 12 to determine the extent of the injury."
       },
       {
         "playerName": "Tatsuya Imai",
@@ -523,6 +523,12 @@
       }
     ],
     "120": [
+      {
+        "playerName": "Ken Waldichuk",
+        "injury": "Left elbow",
+        "expectedReturn": "TBD, to undergo evaluation",
+        "status": "Pointed to left elbow and exited game on April 12 at Milwaukee. Previously underwent Tommy John surgery in 2024."
+      },
       {
         "playerName": "Josiah Gray",
         "injury": "Right flexor strain",
@@ -1068,6 +1074,12 @@
     ],
     "145": [
       {
+        "playerName": "Jonathan Cannon",
+        "injury": "Right hip irritation",
+        "expectedReturn": "TBD",
+        "status": "Cannon was called up from Triple-A Charlotte for bulk work in the series finale against the Royals on April 12. He faced three hitters, walked all three and then left due to injury."
+      },
+      {
         "playerName": "Everson Pereira",
         "injury": "Left ankle sprain",
         "expectedReturn": "Mid- to late April",
@@ -1124,16 +1136,16 @@
         "status": "Underwent core muscle surgery on Feb. 27. Sustained left groin injury during offseason workouts. Rested before arriving in Jupiter, where it flared up again."
       },
       {
+        "playerName": "Kyle Stowers",
+        "injury": "Grade 1 right hamstring strain",
+        "expectedReturn": "Mid April",
+        "status": "Played second rehab game with Triple-A Jacksonville April 12, getting three at-bats and playing eight innings in left field. Began rehab assignment April 10. Felt tightness on March 20 rounding third. Missed 1-2 weeks of spring with a strain of the same hamstring."
+      },
+      {
         "playerName": "Griffin Conine",
         "injury": "Left hamstring tear",
         "expectedReturn": "June",
         "status": "Will undergo left hamstring tendon excision week of April 13. Placed on IL on April 10. Felt discomfort after making diving attempt during Marlins' win over Reds on April 9."
-      },
-      {
-        "playerName": "Kyle Stowers",
-        "injury": "Grade 1 right hamstring strain",
-        "expectedReturn": "Mid April",
-        "status": "Began rehab assignment April 10 with Triple-A Jacksonville. Felt tightness on March 20 rounding third. Missed 1-2 weeks of spring with a strain of the same hamstring."
       },
       {
         "playerName": "Christopher Morel",
@@ -1194,10 +1206,16 @@
     ],
     "158": [
       {
+        "playerName": "Christian Yelich",
+        "injury": "Left hamstring tightness",
+        "expectedReturn": "TBD",
+        "status": "Was undergoing additional tests after getting hurt on April 12, but manager Pat Murphy said, \"We're most likely to get some bad news.\" (last updated: April 12)"
+      },
+      {
         "playerName": "Kyle Harrison",
         "injury": "Left knee",
         "expectedReturn": "Day to day",
-        "status": "Struck in the kneecap by first baseman Gary Sánchez's errant throw on April 11 and was scheduled for an MRI scan to rule out injury. (last updated: April 12)"
+        "status": "Struck in the kneecap by first baseman Gary Sánchez's errant throw on April 11 and had an MRI scan to rule out serious injury. Manager Pat Murphy said those results were encouraging. (last updated: April 12)"
       },
       {
         "playerName": "Brandon Sproat",
