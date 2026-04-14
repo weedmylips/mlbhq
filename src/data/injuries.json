@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-14T02:30:52.395Z",
+  "lastUpdated": "2026-04-14T07:44:43.696Z",
   "teams": {
     "108": [
       {
@@ -611,6 +611,12 @@
       }
     ],
     "133": [
+      {
+        "playerName": "Max Muncy",
+        "injury": "Left hand contusion",
+        "expectedReturn": "Day to day",
+        "status": "Hit on the left hand with a pitch from Nathan Eovaldi on April 13. Manager Mark Kotsay said postgame that Muncy may be out April 14, but not much longer."
+      },
       {
         "playerName": "Gunnar Hoglund",
         "injury": "Left hip impingement",
