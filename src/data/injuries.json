@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T02:29:22.048Z",
+  "lastUpdated": "2026-04-15T07:44:49.036Z",
   "teams": {
     "108": [
       {
@@ -586,6 +586,12 @@
     ],
     "121": [
       {
+        "playerName": "Juan Soto",
+        "injury": "Right calf strain",
+        "expectedReturn": "Late April",
+        "status": "Strained his calf running first to third on April 3 in San Francisco. Expected to miss 2-3 weeks. Began a running progression on April 14, according to team owner Steve Cohen."
+      },
+      {
         "playerName": "Joey Gerber",
         "injury": "Blister on right finger",
         "expectedReturn": "Late April",
@@ -596,12 +602,6 @@
         "injury": "Left knee discomfort",
         "expectedReturn": "TBD",
         "status": "Began feeling knee discomfort during an April 12 game against the Athletics. Underwent testing on April 14, the results of which will determine next steps."
-      },
-      {
-        "playerName": "Juan Soto",
-        "injury": "Right calf strain",
-        "expectedReturn": "Late April",
-        "status": "Strained his calf running first to third on April 3 in San Francisco. Expected to miss 2-3 weeks but was still not running as of April 13. Could undergo a second MRI if things don't improve."
       },
       {
         "playerName": "A.J. Minter",
@@ -884,6 +884,12 @@
     ],
     "140": [
       {
+        "playerName": "Luis Curvelo",
+        "injury": "Right biceps soreness",
+        "expectedReturn": "TBD",
+        "status": "Left April 14 game after throwing two pitches and feeling something in his arm. Will be reevaluated in the coming days."
+      },
+      {
         "playerName": "Cody Bradford",
         "injury": "Left UCL surgery",
         "expectedReturn": "Mid-May",
@@ -998,7 +1004,13 @@
     ],
     "143": [
       {
-        "playerName": "Aidan Miller (Phillies' No. 1 prospect, No. 19 overall)",
+        "playerName": "Zack Wheeler",
+        "injury": "Right upper extremity blood clot",
+        "expectedReturn": "April 24-26 in Atlanta",
+        "status": "Struck out nine over 5 2/3 innings in fourth rehab start on April 15. Scheduled to make another start for Double-A Reading on April 19."
+      },
+      {
+        "playerName": "Aidan Miller (Phillies' No. 1 prospect, No. 18 overall)",
         "injury": "Sore lower back",
         "expectedReturn": "TBD",
         "status": "Miller has started to \"increase his activity\" with rotational exercises, but there is no timetable for his return. As previously reported, Miller has not started to swing a bat."
@@ -1014,12 +1026,6 @@
         "injury": "Left oblique strain",
         "expectedReturn": "TBD",
         "status": "He is throwing bullpen sessions in Clearwater, Fla. Left Team Israel in the World Baseball Classic after feeling something in his abdomen/oblique."
-      },
-      {
-        "playerName": "Zack Wheeler",
-        "injury": "Right upper extremity blood clot",
-        "expectedReturn": "April 24-26 in Atlanta",
-        "status": "Struck out six over 4 1/3 innings in a third rehab start on April 8. Scheduled to make two more rehab starts for Double-A Reading on April 14 and April 19. If he makes both, could rejoin the Phillies’ rotation in Atlanta on April 24-26."
       }
     ],
     "144": [
