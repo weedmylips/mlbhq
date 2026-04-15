@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T13:23:25.152Z",
+  "lastUpdated": "2026-04-15T19:16:58.053Z",
   "teams": {
     "108": [
       {
@@ -137,7 +137,13 @@
         "playerName": "Willson Contreras",
         "injury": "Lower back tightness",
         "expectedReturn": "TBD",
-        "status": "Left Tuesday's game against the Twins in the fifth inning after being hit by a pitch in the fourth."
+        "status": "Left April 14 game with lower back tightness. Will rest April 15 and hopes to return April 17 for start of homestand."
+      },
+      {
+        "playerName": "Patrick Sandoval",
+        "injury": "Left UCL repair",
+        "expectedReturn": "May",
+        "status": "Struggled in second rehab start for Triple-A Worcester on April 14, giving up three hits, five runs, four walks and hitting three batters while striking out one in two innings."
       },
       {
         "playerName": "Triston Casas",
@@ -156,12 +162,6 @@
         "injury": "Right flexor strain",
         "expectedReturn": "No earlier than June",
         "status": "Consultation with Dr. Keith Meister revealed right flexor strain. Shut down from throwing for six weeks. Transferred to 60-day IL on April 14."
-      },
-      {
-        "playerName": "Patrick Sandoval",
-        "injury": "Left UCL repair",
-        "expectedReturn": "May",
-        "status": "Started for Triple-A Worcester in Nashville on April 14."
       },
       {
         "playerName": "Justin Slaten",
@@ -974,8 +974,8 @@
       {
         "playerName": "Royce Lewis",
         "injury": "Left knee sprain",
-        "expectedReturn": "April 20",
-        "status": "Twisted a cleat and needed attention from the trainer on April 9 but stayed in the game. Scratched from the lineup on April 10 and underwent an MRI that revealed the sprain."
+        "expectedReturn": "April 21",
+        "status": "Participating in all normal workout and baseball activities and expects to be activated the first day he is eligible, April 21 vs. the Mets in New York."
       },
       {
         "playerName": "Cody Laweryson",
