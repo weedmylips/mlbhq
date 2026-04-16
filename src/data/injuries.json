@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-16T13:28:53.765Z",
+  "lastUpdated": "2026-04-16T19:12:54.397Z",
   "teams": {
     "108": [
       {
@@ -249,7 +249,7 @@
         "playerName": "Emilio Pagán",
         "injury": "Tight left hamstring",
         "expectedReturn": "Day to day",
-        "status": "Underwent treatment and played catch. Pagán reported no bruising or issues beyond discomfort from tightness. His next steps are still being considered by the club."
+        "status": "Pagan threw a side bullpen session on April 16. While he is still feeling tightness, he appears to have dodged a more serious issue. His short-term availability is still uncertain."
       },
       {
         "playerName": "Jose Trevino",
@@ -331,15 +331,15 @@
     "116": [
       {
         "playerName": "Zach McKinstry",
-        "injury": "Bruised left hip",
+        "injury": "Bruised left hip, chest contusion",
         "expectedReturn": "Day to day",
-        "status": "Left game April 15 after tripping over Jac Caglianone while trying to field a ground ball. Not expected to play April 16."
+        "status": "Left game April 15 after tripping over Jac Caglianone while trying to field a ground ball. Not expected to play April 16. Will be further examined, according to manager A.J. Hinch."
       },
       {
         "playerName": "Justin Verlander",
         "injury": "Left hip inflammation",
         "expectedReturn": "Late April",
-        "status": "Threw a higher-intensity bullpen session on April 11. Was scheduled to throw another bullpen session on April 15. Will throw a rehab start or simulated game before being reinstated. Will not be reinstated when eligible on April 16."
+        "status": "Threw a bullpen session April 15 that went OK but not great, according to manager A.J. Hinch. Will travel with team to Boston and continue throwing."
       },
       {
         "playerName": "Parker Meadows",
@@ -466,12 +466,6 @@
     ],
     "118": [
       {
-        "playerName": "Isaac Collins",
-        "injury": "Right knee contusion",
-        "expectedReturn": "Possibly the weekend of April 18-19",
-        "status": "Exited in the first inning on April 14 after running into and tumbling over the left-field railing at Comerica Park. A stint on the injured list was not anticipated."
-      },
-      {
         "playerName": "Bailey Falter",
         "injury": "Left elbow inflammation",
         "expectedReturn": "Late April",
@@ -569,7 +563,7 @@
         "playerName": "Ken Waldichuk",
         "injury": "Left forearm tightness",
         "expectedReturn": "TBD, to undergo evaluation",
-        "status": "Pointed to left elbow and exited game on April 12 at Milwaukee. Previously underwent Tommy John surgery in 2024."
+        "status": "Pointed to left elbow and exited game on April 12 at Milwaukee. Previously underwent Tommy John surgery in 2024. Was placed on the 15-day IL on April 13 and transferred to the 60-day IL on April 16."
       },
       {
         "playerName": "Cole Henry",
@@ -689,13 +683,13 @@
         "playerName": "Jared Jones",
         "injury": "Right UCL sprain",
         "expectedReturn": "Late May/early June",
-        "status": "Jones “looked amazing” in his April 14 bullpen, per pitching coach Bill Murphy. Jones said he will face live hitters a couple more times before pitching for Single-A Bradenton."
+        "status": "Jones will soon enter the simulation-game phase of his rehab, per Todd Tomczyk, the Pirates’ senior director of sports medicine. Tomczyk said Jones could take part in up to six simulated games, including live BP, before considering starting his rehab assignment."
       },
       {
         "playerName": "Jared Triolo",
         "injury": "Right knee patellar tendon",
         "expectedReturn": "TBD",
-        "status": "General manager Ben Cherington said Triolo's return would be a matter of weeks, not days. Triolo was injured running the bases in the team’s home opener April 3."
+        "status": "Triolo “has resumed just about all baseball activities,” per Todd Tomczyk, the Pirates’ senior director of sports medicine. The infielder’s next step is to run the bases in Bradenton the week of April 20."
       }
     ],
     "135": [
@@ -803,7 +797,7 @@
         "playerName": "Jared Oliva",
         "injury": "Left wrist hamate fracture",
         "expectedReturn": "TBD",
-        "status": "Broke his hamate on a swing on April 14; expected to undergo surgery to remove the bone from his wrist."
+        "status": "Broke his hamate on a swing on April 14; currently weighing treatment options but could need surgery to remove the bone from his wrist."
       },
       {
         "playerName": "Harrison Bader",
@@ -1143,7 +1137,7 @@
         "playerName": "Kyle Teel",
         "injury": "Right hamstring strain",
         "expectedReturn": "Early May",
-        "status": "GM Chris Getz said Teel could go on a Minor League rehab assignment in about one week. There is no official date set for his departure."
+        "status": "Will be with the team in Sacramento, then go to Triple-A Charlotte to begin a rehab assignment on April 20. His last recovery component is running at 100 percent."
       },
       {
         "playerName": "Jonathan Cannon",
@@ -1243,19 +1237,19 @@
         "playerName": "Gerrit Cole",
         "injury": "Tommy John surgery recovery",
         "expectedReturn": "May/June",
-        "status": "Scheduled to begin a Minor League rehab assignment with a start for Double-A Somerset on April 17."
+        "status": "Scheduled to begin a Minor League rehab assignment with a start for Double-A Somerset on April 17. Cole is scheduled to throw approximately 40 pitches, manager Aaron Boone said."
+      },
+      {
+        "playerName": "Carlos Rodón",
+        "injury": "Left elbow surgery recovery",
+        "expectedReturn": "May",
+        "status": "Scheduled to throw live batting practice April 18 with Double-A Somerset, then would be cleared to pitch in Minor League games. Will need approximately three rehab starts. Threw three innings and 50 pitches in live BP on April 13."
       },
       {
         "playerName": "Anthony Volpe",
         "injury": "Left shoulder surgery recovery",
         "expectedReturn": "Possibly May",
         "status": "Began Double-A rehab assignment April 14. Scheduled to play April 16, 17 and 19, increasing to six or seven innings. Would then join Triple-A the following week. Goal is to log 55 at-bats, play shortstop consistently before MLB activation."
-      },
-      {
-        "playerName": "Carlos Rodón",
-        "injury": "Left elbow surgery recovery",
-        "expectedReturn": "May",
-        "status": "Scheduled to throw live batting practice April 18 with Double-A Somerset. Most recent live BP was April 13, three innings and 50 pitches."
       },
       {
         "playerName": "Clarke Schmidt",
