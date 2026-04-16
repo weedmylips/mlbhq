@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-16T02:36:05.223Z",
+  "lastUpdated": "2026-04-16T07:45:16.280Z",
   "teams": {
     "108": [
       {
@@ -1240,6 +1240,12 @@
     ],
     "147": [
       {
+        "playerName": "Gerrit Cole",
+        "injury": "Tommy John surgery recovery",
+        "expectedReturn": "May/June",
+        "status": "Scheduled to begin a Minor League rehab assignment with a start for Double-A Somerset on April 17."
+      },
+      {
         "playerName": "Anthony Volpe",
         "injury": "Left shoulder surgery recovery",
         "expectedReturn": "Possibly May",
@@ -1250,12 +1256,6 @@
         "injury": "Left elbow surgery recovery",
         "expectedReturn": "May",
         "status": "Scheduled to throw live batting practice April 18 with Double-A Somerset. Most recent live BP was April 13, three innings and 50 pitches."
-      },
-      {
-        "playerName": "Gerrit Cole",
-        "injury": "Tommy John surgery recovery",
-        "expectedReturn": "May/June",
-        "status": "Tossed a side session April 15 at Yankee Stadium. Next outing would be a Minor League game or live batting practice on April 17 with Double-A Somerset. Most recent live BP was April 13, three innings and 42 pitches."
       },
       {
         "playerName": "Clarke Schmidt",
