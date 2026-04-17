@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-16T19:12:54.397Z",
+  "lastUpdated": "2026-04-17T02:31:51.575Z",
   "teams": {
     "108": [
       {
@@ -54,16 +54,16 @@
     "109": [],
     "110": [
       {
+        "playerName": "Keegan Akin",
+        "injury": "Left groin strain",
+        "expectedReturn": "TBD",
+        "status": "Felt discomfort while warming up in bullpen on March 21. Struck out two batters in one scoreless inning to begin rehab assignment with Triple-A Norfolk on April 15."
+      },
+      {
         "playerName": "Jackson Holliday",
         "injury": "Right wrist soreness",
         "expectedReturn": "Potentially May",
         "status": "Played 11 rehab games for Triple-A Norfolk from March 27-April 12 after undergoing right hamate surgery. Pulled off assignment early. Will be evaluated before starting new rehab assignment."
-      },
-      {
-        "playerName": "Keegan Akin",
-        "injury": "Left groin strain",
-        "expectedReturn": "TBD",
-        "status": "Felt discomfort while warming up in bullpen on March 21. Scheduled to begin rehab assignment with Triple-A Norfolk on April 15."
       },
       {
         "playerName": "Andrew Kittredge",
@@ -129,7 +129,7 @@
         "playerName": "Colin Selby",
         "injury": "Right shoulder inflammation",
         "expectedReturn": "TBD",
-        "status": "Placed on the 60-day injured list on Feb. 14. No clear timeline for potential return yet."
+        "status": "Placed on the 60-day injured list on Feb. 14. No clear timeline for potential return."
       }
     ],
     "111": [
@@ -694,16 +694,28 @@
     ],
     "135": [
       {
-        "playerName": "Nick Pivetta",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "Midseason, potentially",
-        "status": "Exited April 12 start with elbow stiffness; shut down from throwing. MRI revealed flexor strain. Expected to pitch again this season, though manager Craig Stammen noted Pivetta's absence would last \"weeks and maybe months.\""
+        "playerName": "Freddy Fermin",
+        "injury": "Head contusion",
+        "expectedReturn": "Day to day",
+        "status": "Avoided a concussion after taking a foul ball to the mask and exiting the game on April 15. Was available off the bench April 16."
+      },
+      {
+        "playerName": "Jeremiah Estrada",
+        "injury": "Right elbow tendinitis",
+        "expectedReturn": "May or June",
+        "status": "Landed on the IL after feeling \"tightness\" in his elbow playing catch April 10. Resumed playing light catch a few days later. No timetable for his return to a mound."
       },
       {
         "playerName": "Matt Waldron",
         "injury": "Medical procedure",
-        "expectedReturn": "April 17 or 18",
-        "status": "Made three scoreless rehab starts with Triple-A El Paso. Slated to be activated either April 17 or 18 in Anaheim, taking Nick Pivetta's place in the rotation."
+        "expectedReturn": "April 17",
+        "status": "Made three scoreless rehab starts with Triple-A El Paso. Slated to be activated April 17 in Anaheim, taking Nick Pivetta's place in the rotation."
+      },
+      {
+        "playerName": "Nick Pivetta",
+        "injury": "Right elbow inflammation",
+        "expectedReturn": "Midseason, potentially",
+        "status": "Exited April 12 start with elbow stiffness; shut down from throwing. MRI revealed flexor strain. Expected to pitch again this season, though manager Craig Stammen noted Pivetta's absence would last \"weeks and maybe months.\""
       },
       {
         "playerName": "Griffin Canning",
@@ -712,22 +724,10 @@
         "status": "Has made two rehab appearances with Triple-A El Paso and threw a bullpen session at Petco Park on April 14. Expected to require a lengthy buildup, including at least two more rehab starts."
       },
       {
-        "playerName": "Jeremiah Estrada",
-        "injury": "Right elbow tendinitis",
-        "expectedReturn": "May or June",
-        "status": "Velocity down through seven outings this season. Landed on the IL after feeling \"tightness\" in his elbow playing catch April 10. Has resumed light work with plyometric balls."
-      },
-      {
         "playerName": "Yuki Matsui",
         "injury": "Left groin strain",
         "expectedReturn": "Mid-April",
         "status": "Missed World Baseball Classic due to the injury, then began the season on the IL. Began rehab stint with Triple-A El Paso April 4 and has made two scoreless appearances."
-      },
-      {
-        "playerName": "Sung-Mun Song",
-        "injury": "Right oblique tightness",
-        "expectedReturn": "Mid-April",
-        "status": "Sustained the injury during the offseason, then aggravated it during a game on March 5. Began a rehab stint with Triple-A El Paso on March 27."
       },
       {
         "playerName": "Joe Musgrove",
@@ -958,22 +958,22 @@
     ],
     "141": [
       {
+        "playerName": "José Berríos",
+        "injury": "Right elbow stress fracture",
+        "expectedReturn": "Late April or early May",
+        "status": "Threw 47 pitches over 2 2/3 innings April 16 in Single-A Dunedin for his first rehab start."
+      },
+      {
         "playerName": "Trey Yesavage",
         "injury": "Right shoulder impingement",
         "expectedReturn": "Potentially his next start",
-        "status": "Threw 71 pitches over 4 1/3 innings in a Triple-A rehab outing Wednesday and could return to the Blue Jays for his next start."
+        "status": "Threw 71 pitches over 4 1/3 innings in a Triple-A rehab outing April 15 and could return to the Blue Jays for his next start."
       },
       {
         "playerName": "Shane Bieber",
         "injury": "Right elbow inflammation",
         "expectedReturn": "Potentially mid-late May",
         "status": "Threw another bullpen April 14 in Dunedin as he continues to build up."
-      },
-      {
-        "playerName": "José Berríos",
-        "injury": "Right elbow stress fracture",
-        "expectedReturn": "Potentially early May",
-        "status": "Will make first rehab start April 16 with Single-A Dunedin, aiming for three innings and 50 pitches."
       },
       {
         "playerName": "Yimi García",
@@ -991,7 +991,7 @@
         "playerName": "Cody Ponce",
         "injury": "Right knee ACL sprain",
         "expectedReturn": "Likely to miss 2026 season",
-        "status": "Will undergo surgery on April 15 and is expected to miss six months, which likely ends his season."
+        "status": "Underwent surgery on April 15 and is expected to miss six months, which likely ends his season."
       },
       {
         "playerName": "Anthony Santander",
@@ -1078,16 +1078,16 @@
     ],
     "144": [
       {
-        "playerName": "Sean Murphy",
-        "injury": "Right hip labral tear",
-        "expectedReturn": "Second half of April",
-        "status": "Went hitless in two at-bats and caught four innings to begin his rehab appearance with High-A Rome on April 14. He'll stay with Rome through April 19 and then likely extend his assignment elsewhere."
-      },
-      {
         "playerName": "Spencer Strider",
         "injury": "Left oblique strain",
         "expectedReturn": "Early May",
-        "status": "Touched 95 mph in a live batting practice on April 11. Will begin a rehab assignment April 16. Expected to make three rehab starts before rejoining Atlanta's rotation."
+        "status": "Recorded three strikeouts, issued two walks and allowed just one hit over 3 1/3 scoreless innings in his first rehab start on April 16. Expected to make three rehab starts before rejoining Atlanta's rotation."
+      },
+      {
+        "playerName": "Sean Murphy",
+        "injury": "Right hip labral tear",
+        "expectedReturn": "Second half of April",
+        "status": "Went hitless in two at-bats and caught five innings in his second rehab appearance with High-A Rome on April 16. He'll stay with Rome through April 19 and then likely extend his assignment elsewhere."
       },
       {
         "playerName": "Danny Young",
