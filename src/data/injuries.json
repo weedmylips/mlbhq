@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-17T13:18:39.024Z",
+  "lastUpdated": "2026-04-17T18:59:47.743Z",
   "teams": {
     "108": [
       {
@@ -178,16 +178,28 @@
     ],
     "112": [
       {
+        "playerName": "Daniel Palencia",
+        "injury": "Left oblique strain",
+        "expectedReturn": "TBD",
+        "status": "Last pitched on April 12 against the Pirates. The Cubs closer had not given up a run through five appearances."
+      },
+      {
         "playerName": "Matthew Boyd",
         "injury": "Left biceps strain",
-        "expectedReturn": "Potentially April 22 or 23 vs. Phillies",
-        "status": "Threw bullpen session April 12. Will have a rehab outing with Triple-A Iowa on April 16 before likely activation April 22 at the earliest, per manager Craig Counsell."
+        "expectedReturn": "Potentially April 22 vs. Phillies",
+        "status": "Threw 64 pitches in 3 2/3 innings in a rehab start with Triple-A Iowa on April 16. Reported feeling good on April 17. On target for activation on April 22 to start vs. Phillies."
       },
       {
         "playerName": "Cade Horton",
         "injury": "Damaged UCL in right elbow",
         "expectedReturn": "2027",
-        "status": "Will undergo season-ending right elbow surgery on April 16. Cubs will have an update on the specifics of the surgery and expected timetable after the procedure is done."
+        "status": "Underwent a right UCL revision repair with an internal brace on April 16. Horton's timetable for return is estimated around 15-16 months, per manager Craig Counsell."
+      },
+      {
+        "playerName": "Phil Maton",
+        "injury": "Right knee tendinitis",
+        "expectedReturn": "TBD",
+        "status": "Last pitched on April 7 and experienced a velo drop. Has continued throwing. Manager Craig Counsell said Maton will have a \"diagnostic\" bullpen session on April 18."
       },
       {
         "playerName": "Porter Hodge",
@@ -200,12 +212,6 @@
         "injury": "Right triceps inflammation",
         "expectedReturn": "May",
         "status": "Did not recover well after each of the past two outings (April 3 and April 8). Manager Craig Counsell said Harvey will need more than 15 days to return."
-      },
-      {
-        "playerName": "Phil Maton",
-        "injury": "Right knee tendinitis",
-        "expectedReturn": "TBD",
-        "status": "Last pitched on April 7 and experienced a velo drop. Has continued throwing. Manager Craig Counsell said Maton is scheduled to throw a bullpen session next week."
       },
       {
         "playerName": "Jordan Wicks",
@@ -605,15 +611,15 @@
     "121": [
       {
         "playerName": "Jorge Polanco",
-        "injury": "Left Achilles bursitis",
+        "injury": "Left Achilles bursitis/right wrist soreness",
         "expectedReturn": "TBD",
-        "status": "Dealing with Achilles discomfort since late March, missing several games early in the season. Was out of lineup again on April 15 due to renewed pain. Will be reevaluated April 17; could go on IL at that time."
+        "status": "Now dealing with right wrist soreness that popped up postgame on April 14, in addition to Achilles discomfort since late March. Awaiting MRI results on wrist before making decision on whether IL stint is needed."
       },
       {
         "playerName": "Juan Soto",
         "injury": "Right calf strain",
         "expectedReturn": "Late April",
-        "status": "Strained his calf running first to third on April 3 in San Francisco. Began a running progression on April 14. Expected to return during the Mets' next homestand that runs from April 21-30."
+        "status": "Strained his calf running first to third on April 3 in San Francisco. Began a running progression on April 14 and did outfield drills on April 17. Expected to return during the Mets' next homestand that runs from April 21-30."
       },
       {
         "playerName": "Jared Young",
