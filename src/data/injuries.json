@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T02:22:46.265Z",
+  "lastUpdated": "2026-04-18T07:06:55.190Z",
   "teams": {
     "108": [
       {
@@ -398,6 +398,12 @@
     ],
     "117": [
       {
+        "playerName": "Joey Loperfido",
+        "injury": "Right quad tightness",
+        "expectedReturn": "Day to day",
+        "status": "Was removed from the game in the seventh inning April 17 after grounding out and running to first base."
+      },
+      {
         "playerName": "Bennett Sousa",
         "injury": "Left oblique strain",
         "expectedReturn": "April",
@@ -706,10 +712,16 @@
     ],
     "135": [
       {
+        "playerName": "Griffin Canning",
+        "injury": "Left Achilles tear",
+        "expectedReturn": "Late April or May",
+        "status": "Has made three rehab appearances with Triple-A El Paso, including one on April 16. Needs a buildup akin to a full Spring Training, per manager Craig Stammen."
+      },
+      {
         "playerName": "Freddy Fermin",
         "injury": "Head contusion",
         "expectedReturn": "Day to day",
-        "status": "Avoided a concussion after taking a foul ball to the mask and exiting the game on April 15. Was available off the bench April 16."
+        "status": "Avoided a concussion after taking a foul ball to the mask and exiting the game on April 15. Was available off the bench April 16 and 17 but did not play."
       },
       {
         "playerName": "Jeremiah Estrada",
@@ -722,12 +734,6 @@
         "injury": "Right elbow inflammation",
         "expectedReturn": "Midseason, potentially",
         "status": "Exited April 12 start with elbow stiffness; shut down from throwing. MRI revealed flexor strain. Expected to pitch again this season, though manager Craig Stammen noted Pivetta's absence would last \"weeks and maybe months.\""
-      },
-      {
-        "playerName": "Griffin Canning",
-        "injury": "Left Achilles tear",
-        "expectedReturn": "Late April or May",
-        "status": "Has made two rehab appearances with Triple-A El Paso and threw a bullpen session at Petco Park on April 14. Expected to require a lengthy buildup, including at least two more rehab starts."
       },
       {
         "playerName": "Yuki Matsui",
@@ -969,6 +975,12 @@
       }
     ],
     "141": [
+      {
+        "playerName": "Daulton Varsho",
+        "injury": "Left knee discomfort",
+        "expectedReturn": "Day to day",
+        "status": "Reported knee discomfort prior to the game and left in the third inning. No MRI is scheduled at this time."
+      },
       {
         "playerName": "Lazaro Estrada",
         "injury": "Right shoulder impingement",
