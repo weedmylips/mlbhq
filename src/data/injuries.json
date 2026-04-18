@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T13:01:13.878Z",
+  "lastUpdated": "2026-04-18T18:51:21.155Z",
   "teams": {
     "108": [
       {
@@ -187,7 +187,7 @@
         "playerName": "Cade Horton",
         "injury": "Damaged UCL in right elbow",
         "expectedReturn": "2027",
-        "status": "Underwent a right UCL revision repair with an internal brace on April 16. Horton's timetable for return is estimated around 15-16 months, per manager Craig Counsell."
+        "status": "Underwent a right UCL revision repair with an internal brace on April 16. Horton's timetable for return is estimated around 15-16 months, per manager Craig Counsell. Horton was transferred to the 60-day IL on April 18."
       },
       {
         "playerName": "Phil Maton",
@@ -623,9 +623,9 @@
     "121": [
       {
         "playerName": "Jorge Polanco",
-        "injury": "Left Achilles bursitis/right wrist soreness",
+        "injury": "Left Achilles bursitis/right wrist contusion",
         "expectedReturn": "TBD",
-        "status": "Now dealing with right wrist soreness that popped up postgame on April 14, in addition to Achilles discomfort since late March. Awaiting MRI results on wrist before making decision on whether IL stint is needed."
+        "status": "Wrist soreness popped up postgame on April 14 in addition to his Achilles discomfort, which he had been dealing with since late March. No timetable or rehab progression has been announced yet."
       },
       {
         "playerName": "Juan Soto",
@@ -1216,8 +1216,8 @@
       {
         "playerName": "Graham Pauley",
         "injury": "Right oblique discomfort",
-        "expectedReturn": "TBD",
-        "status": "Will undergo further evaluation after tweaking side while getting out of the way of an inside pitch during a seventh-inning plate appearance on April 17."
+        "expectedReturn": "Available off bench",
+        "status": "Performed baseball activities on April 18 and was available off the bench. Tweaked side while getting out of the way of an inside pitch during a seventh-inning plate appearance on April 17."
       },
       {
         "playerName": "Aiva Arquette (Marlins' No. 4 prospect, No. 42 overall)",
@@ -1228,20 +1228,20 @@
       {
         "playerName": "Kyle Stowers",
         "injury": "Grade 1 right hamstring strain",
-        "expectedReturn": "Soon",
-        "status": "Scheduled to play back-to-back games April 16-17 with Triple-A Jacksonville, and then club will determine if next step is rejoining Miami or a longer rehab stint. Began rehab assignment on April 10."
+        "expectedReturn": "Sunday",
+        "status": "Will be reinstated from the IL for his season debut on Sunday after playing nine innings on back-to-back days with Triple-A Jacksonville. Began rehab assignment on April 10."
       },
       {
         "playerName": "Esteury Ruiz",
         "injury": "High-grade left oblique strain",
         "expectedReturn": "Late April/early May",
-        "status": "Scheduled for seven innings on April 17. Began rehab assignment with Triple-A Jacksonville on April 15."
+        "status": "Has played two games since beginning a rehab assignment with Triple-A Jacksonville on April 15."
       },
       {
         "playerName": "Maximo Acosta",
         "injury": "Grade 1 left oblique strain",
         "expectedReturn": "Late April/early May",
-        "status": "Scheduled for seven innings on April 17. Began rehab assignment with Triple-A Jacksonville on April 15."
+        "status": "Has played two games since beginning a rehab assignment with Triple-A Jacksonville on April 15."
       },
       {
         "playerName": "Christopher Morel",
@@ -1273,19 +1273,19 @@
         "playerName": "Gerrit Cole",
         "injury": "Tommy John surgery recovery",
         "expectedReturn": "May/June",
-        "status": "Scheduled to begin a Minor League rehab assignment with a start for Double-A Somerset on April 17. Cole is scheduled to throw approximately 40 pitches, manager Aaron Boone said."
+        "status": "Tossed 44 pitches (36 strikes) over 4 1/3 innings to begin a Minor League rehab assignment with Double-A Somerset on April 17. Cole allowed three runs on three hits, with one walk and three strikeouts. His next outing will be with High-A Hudson Valley or Triple-A Scranton/Wilkes-Barre."
       },
       {
         "playerName": "Carlos Rodón",
         "injury": "Left elbow surgery recovery",
         "expectedReturn": "May",
-        "status": "Scheduled to throw live batting practice April 18 with Double-A Somerset, then would be cleared to pitch in Minor League games. Will need approximately three rehab starts. Threw three innings and 50 pitches in live BP on April 13."
+        "status": "Scheduled to throw 55 to 60 pitches in live batting practice on April 18 with Double-A Somerset, then would be cleared to pitch in Minor League games. Will need approximately three rehab starts. Threw three innings and 50 pitches in live BP on April 13."
       },
       {
         "playerName": "Anthony Volpe",
         "injury": "Left shoulder surgery recovery",
         "expectedReturn": "Possibly May",
-        "status": "Began Double-A rehab assignment April 14. Scheduled to play April 16, 17 and 19, increasing to six or seven innings. Would then join Triple-A the following week. Goal is to log 55 at-bats, play shortstop consistently before MLB activation."
+        "status": "Began Double-A rehab assignment April 14. Also played April 16 and 17, and is scheduled to join Triple-A Scranton/Wilkes-Barre the week of April 20. Goal is to log 55 plate appearances and play shortstop consistently before MLB activation."
       },
       {
         "playerName": "Clarke Schmidt",
