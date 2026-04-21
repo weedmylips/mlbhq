@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-21T02:32:46.881Z",
+  "lastUpdated": "2026-04-21T07:49:15.534Z",
   "teams": {
     "108": [
       {
@@ -385,6 +385,12 @@
       }
     ],
     "117": [
+      {
+        "playerName": "Taylor Trammell",
+        "injury": "Left groin",
+        "expectedReturn": "Day to day",
+        "status": "Trammell exited against the Guardians on April 20 with the injury. He will undergo further testing, and could potentially be placed on the IL."
+      },
       {
         "playerName": "Nick Allen",
         "injury": "Mid-back spasms",
