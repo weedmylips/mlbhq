@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-21T13:25:31.928Z",
+  "lastUpdated": "2026-04-21T19:10:55.520Z",
   "teams": {
     "108": [
       {
@@ -76,12 +76,6 @@
         "injury": "Left foot infection",
         "expectedReturn": "Potentially late April",
         "status": "Hospitalized in Pittsburgh during April 3-5 series. Received IV antibiotics for swelling. Began rehab assignment with Triple-A Norfolk on April 18, striking out two in scoreless inning."
-      },
-      {
-        "playerName": "Adley Rutschman",
-        "injury": "Left ankle inflammation",
-        "expectedReturn": "Potentially late April",
-        "status": "MRI showed encouraging results. Not expected to miss extended time. Ran, hit and caught bullpen session in Cleveland on April 17. Encouraged by recovery progress thus far."
       },
       {
         "playerName": "Tyler O'Neill",
@@ -1062,10 +1056,10 @@
     ],
     "142": [
       {
-        "playerName": "Royce Lewis",
-        "injury": "Left knee sprain",
-        "expectedReturn": "April 21",
-        "status": "Homered in first game of rehab assignment on April 18. Scheduled to play five innings at third base on April 19, and should still be on track to be activated when eligible."
+        "playerName": "Mick Abel",
+        "injury": "Right elbow inflammation",
+        "expectedReturn": "TBD",
+        "status": "It's unclear when he will next step on the mound. Last pitched on April 14, striking out 10 over seven."
       },
       {
         "playerName": "Matt Wallner",
@@ -1137,6 +1131,12 @@
       }
     ],
     "144": [
+      {
+        "playerName": "Raisel Iglesias",
+        "injury": "Right shoulder inflammation",
+        "expectedReturn": "Early May",
+        "status": "Iglesias slept on his shoulder wrong on Friday. When he made his next appearance, on Sunday, his velocity was slightly down. He’ll be eligible for activation on May 5."
+      },
       {
         "playerName": "Spencer Strider",
         "injury": "Left oblique strain",
