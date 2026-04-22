@@ -1,7 +1,25 @@
 {
-  "lastUpdated": "2026-04-22T13:25:58.388Z",
+  "lastUpdated": "2026-04-22T19:12:14.283Z",
   "teams": {
     "108": [
+      {
+        "playerName": "Kirby Yates",
+        "injury": "Left knee inflammation",
+        "expectedReturn": "Late April",
+        "status": "Started his rehab assignment with Single-A Rancho Cucamonga on April 17 and allowed one run in one inning. He was transferred to Triple-A Salt Lake and is scheduled to pitch on April 22 and April 24."
+      },
+      {
+        "playerName": "Ben Joyce",
+        "injury": "Right shoulder surgery",
+        "expectedReturn": "Early 2026 season",
+        "status": "Progressing well in throwing program. Has faced hitters twice and the Angels are determining how many more times he'll need to throw in simulated games before starting a rehab assignment."
+      },
+      {
+        "playerName": "Ryan Johnson",
+        "injury": "Viral infection",
+        "expectedReturn": "Late April/early May",
+        "status": "Made a rehab start in a Minor League game in Arizona but exited with hamstring discomfort after throwing two pitches on April 13. He's progressed to playing catch without any issues and is close to throwing a bullpen."
+      },
       {
         "playerName": "Alek Manoah",
         "injury": "Right middle finger contusion",
@@ -13,24 +31,6 @@
         "injury": "Right shoulder inflammation",
         "expectedReturn": "May",
         "status": "Threw bullpen sessions April 14 and April 17 before facing hitters for the first time April 20. Threw 30 pitches over two simulated innings and will continue to ramp up his pitch count."
-      },
-      {
-        "playerName": "Ben Joyce",
-        "injury": "Right shoulder surgery",
-        "expectedReturn": "Early 2026 season",
-        "status": "Progressing well in throwing program. Faced hitters for the first time on April 14 after progressing to throwing full bullpens, and is slated to face hitters again soon."
-      },
-      {
-        "playerName": "Ryan Johnson",
-        "injury": "Viral infection",
-        "expectedReturn": "Late April/early May",
-        "status": "Made a rehab start in a Minor League game in Arizona but exited with hamstring discomfort after throwing two pitches on April 13. He's progressed to playing catch without any issues."
-      },
-      {
-        "playerName": "Kirby Yates",
-        "injury": "Left knee inflammation",
-        "expectedReturn": "Late April",
-        "status": "Started his rehab assignment with Single-A Rancho Cucamonga on April 17 and allowed one run in one inning. He said he felt good but is still looking to regain weight and velocity so he'll need a few more appearances."
       },
       {
         "playerName": "Robert Stephenson",
@@ -242,8 +242,8 @@
       {
         "playerName": "Jose Trevino",
         "injury": "Thoracic spine strain",
-        "expectedReturn": "April 22",
-        "status": "Hit in a simulated game on April 21 and fared well. Trevino caught for Caleb Ferguson as he faced hitters on April 20. Activation appears close."
+        "expectedReturn": "April 26",
+        "status": "Will play five innings on a rehab assignment with High-A Dayton on April 24. Hit in a simulated game on April 21 and fared well. Trevino caught for Caleb Ferguson as he faced hitters on April 20."
       },
       {
         "playerName": "Nick Lodolo",
@@ -269,7 +269,7 @@
         "playerName": "Andrew Walters",
         "injury": "Right lat surgery rehab",
         "expectedReturn": "Potentially May",
-        "status": "Made fourth appearance of rehab assignment on April 17 with Triple-A Columbus"
+        "status": "Made fifth appearance of rehab assignment on April 21 with Triple-A Columbus"
       },
       {
         "playerName": "Gabriel Arias",
@@ -383,7 +383,25 @@
         "playerName": "Dustin Harris",
         "injury": "Bruised left hand",
         "expectedReturn": "Day to day",
-        "status": "Harris was filling in for Taylor Trammell when he was struck with a pitch by Cleveland's Parker Messick in the fifth inning and exited later in the frame."
+        "status": "Harris, who was hit by a pitch from Cleveland’s Parker Messick on April 21, took some swings before the game. “Hopefully, it’s not a long wait,” manager Joe Espada said."
+      },
+      {
+        "playerName": "Hunter Brown",
+        "injury": "Grade 2 right shoulder strain",
+        "expectedReturn": "Late May/Early June",
+        "status": "Brown has started to play catch from 75 feet in a throwing program. Manager Joe Espada said the team was “starting to get Hunter going.”"
+      },
+      {
+        "playerName": "Bennett Sousa",
+        "injury": "Left oblique strain",
+        "expectedReturn": "Late April",
+        "status": "Sousa threw a bullpen April 21 when Triple-A Sugar Land was rained out. He is scheduled to pitch for the Space Cowboys on April 22, which could be his final rehab outing."
+      },
+      {
+        "playerName": "Jeremy Peña",
+        "injury": "Grade 1 right hamstring strain",
+        "expectedReturn": "TBD",
+        "status": "Has resumed hitting and is doing some defensive work."
       },
       {
         "playerName": "Taylor Trammell",
@@ -408,18 +426,6 @@
         "injury": "Mid-back spasms",
         "expectedReturn": "TBD",
         "status": "Manger Joe Espada said Allen will “need some time” after his back didn’t respond to treatment."
-      },
-      {
-        "playerName": "Jeremy Peña",
-        "injury": "Grade 1 right hamstring strain",
-        "expectedReturn": "TBD",
-        "status": "Did some running on April 20 as he increases baseball activities."
-      },
-      {
-        "playerName": "Bennett Sousa",
-        "injury": "Left oblique strain",
-        "expectedReturn": "Late April",
-        "status": "Scheduled to pitch on April 21 for Triple-A Sugar Land. Most recently struck out all five batters he faced in an April 17 outing at Double-A Corpus Christi. He’s expected to pitch twice this week -- his final hurdle before being activated."
       },
       {
         "playerName": "Nate Pearson",
@@ -450,12 +456,6 @@
         "injury": "Grade 2 right oblique strain",
         "expectedReturn": "TBD",
         "status": "Exited game against Rockies on April 8 mid-plate appearance after a swing."
-      },
-      {
-        "playerName": "Hunter Brown",
-        "injury": "Grade 2 right shoulder strain",
-        "expectedReturn": "Late May/Early June",
-        "status": "Will “refrain from throwing for a few weeks,” according to the club, and will be reevaluated in two weeks. Manager Joe Espada said that the issue is muscular, with no evidence of damage to ligaments."
       },
       {
         "playerName": "Ronel Blanco",
