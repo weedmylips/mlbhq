@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T02:31:03.367Z",
+  "lastUpdated": "2026-04-22T07:46:26.047Z",
   "teams": {
     "108": [
       {
@@ -700,8 +700,8 @@
       {
         "playerName": "Spencer Horwitz",
         "injury": "Neck discomfort",
-        "expectedReturn": "TBA",
-        "status": "Horwitz was a late scratch with neck discomfort before the Pirates’ series opener at the Rangers on Tuesday."
+        "expectedReturn": "Day to day",
+        "status": "Horwitz was a late scratch with neck discomfort before the Pirates’ series opener at the Rangers on April 21. Will be reevaluated on April 22."
       },
       {
         "playerName": "Brandon Lowe",
@@ -921,7 +921,7 @@
         "playerName": "Jake Fraley",
         "injury": "Right lower leg contusion",
         "expectedReturn": "Day to day",
-        "status": "Exited the Rays' game against the Reds on April 21 after three innings. Fouled a ball off his right shin/lower leg while facing Chase Burns in the second and briefly went down in obvious discomfort."
+        "status": "Exited the Rays' game against the Reds on April 21 after three innings. Fouled a ball off his right shin/lower leg in the second and appeared to be favoring it in the outfield after that. X-rays were negative. Won't start April 22."
       },
       {
         "playerName": "Ryan Pepiot",
@@ -1117,6 +1117,12 @@
       }
     ],
     "143": [
+      {
+        "playerName": "José Alvarado",
+        "injury": "Mid back spasm",
+        "expectedReturn": "TBD",
+        "status": "Departed in the eighth inning of his April 21 appearance against the Cubs after experiencing spasms. Was evaluated after the game, with the team hoping to find out more April 22."
+      },
       {
         "playerName": "Zack Wheeler",
         "injury": "Right upper extremity blood clot",
