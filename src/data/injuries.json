@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-23T13:28:06.183Z",
+  "lastUpdated": "2026-04-23T19:07:25.867Z",
   "teams": {
     "108": [
       {
@@ -172,22 +172,22 @@
     ],
     "112": [
       {
-        "playerName": "Daniel Palencia",
-        "injury": "Left oblique strain",
-        "expectedReturn": "May",
-        "status": "MRI exam revealed left lat strain -- not an oblique injury. Might be cleared to resume throwing before end of homestand. Felt discomfort in lower back/side while doing conditioning/running after bullpen session on April 17."
-      },
-      {
         "playerName": "Phil Maton",
         "injury": "Right knee tendinitis",
         "expectedReturn": "Late April/early May",
-        "status": "Threw bullpen on April 18 and then live BP on April 21, with encouraging results. Cubs monitoring his recovery before deciding next step."
+        "status": "Will head to Triple-A Iowa for a rehab assignment April 24. Cubs will determine next steps after his first outing."
       },
       {
         "playerName": "Hunter Harvey",
         "injury": "Right triceps inflammation",
         "expectedReturn": "May",
-        "status": "Did not recover well after each of the past two outings (April 3 and April 8). Still in treatment phase, but tentatively slated to resume throwing on April 24."
+        "status": "Will resume throwing on April 24."
+      },
+      {
+        "playerName": "Daniel Palencia",
+        "injury": "Left oblique strain",
+        "expectedReturn": "May",
+        "status": "Feeling better, per bench coach Ryan Flaherty, but Palencia is not ready to resume a throwing program yet."
       },
       {
         "playerName": "Ethan Roberts",
@@ -818,6 +818,18 @@
     ],
     "137": [
       {
+        "playerName": "Sam Hentges",
+        "injury": "Left shoulder surgery/right knee surgery",
+        "expectedReturn": "First half",
+        "status": "Threw three scoreless innings in his first three rehab appearances with Triple-A Sacramento."
+      },
+      {
+        "playerName": "Joel Peguero",
+        "injury": "Grade 2 left hamstring strain",
+        "expectedReturn": "First half",
+        "status": "Has given up four runs over five innings in his first five rehab appearances with Triple-A Sacramento. Will make another appearance for Sacramento on April 23."
+      },
+      {
         "playerName": "Daniel Susac",
         "injury": "Right elbow ulnar neuritis",
         "expectedReturn": "May",
@@ -827,19 +839,7 @@
         "playerName": "José Buttó",
         "injury": "Right arm surgery",
         "expectedReturn": "September 2026 or '27",
-        "status": "Underwent a second surgery to repair an axillary artery in his upper right arm on April 17, which will sideline him for five to six months. Transferred to the 60-day IL on April 21."
-      },
-      {
-        "playerName": "Sam Hentges",
-        "injury": "Left shoulder surgery/right knee surgery",
-        "expectedReturn": "First half",
-        "status": "Threw two scoreless innings in his first two rehab appearances with Triple-A Sacramento. Will make a third outing on April 22."
-      },
-      {
-        "playerName": "Joel Peguero",
-        "injury": "Grade 2 left hamstring strain",
-        "expectedReturn": "First half",
-        "status": "Has given up four runs over four innings in his first four rehab appearances with Triple-A Sacramento. Will make back-to-back pitching appearances for Sacramento from April 22-23."
+        "status": "Underwent a second surgery to repair an axillary artery in his upper right arm on April 17, which will sideline him for five to six months."
       },
       {
         "playerName": "Reiver Sanmartin",
@@ -851,7 +851,7 @@
         "playerName": "Harrison Bader",
         "injury": "Left hamstring strain",
         "expectedReturn": "Late April or May",
-        "status": "Though eligible to return on April 22, he will continue rehabbing before being activated off the IL."
+        "status": "Sidelined with a hamstring issue that had been bothering him since the last week of Spring Training."
       },
       {
         "playerName": "Jared Oliva",
@@ -1115,7 +1115,7 @@
         "playerName": "J.T. Realmuto",
         "injury": "Back spasms",
         "expectedReturn": "Early May",
-        "status": "Lingering back issue flared up again fielding a wild pitch on April 21. Club maintains optimism that he will be ready to return at the end of the 10-day window."
+        "status": "Lingering back issue flared up again fielding a wild pitch on April 21. Returned to Philadelphia on April 23 to begin treatment. Club is optimistic he will be ready to return at the end of the 10-day window."
       },
       {
         "playerName": "José Alvarado",
@@ -1161,6 +1161,12 @@
       }
     ],
     "144": [
+      {
+        "playerName": "Dylan Dodd",
+        "injury": "Left thoracic spine inflammation",
+        "expectedReturn": "TBD",
+        "status": "The left-handed reliever felt discomfort after his April 21 appearance."
+      },
       {
         "playerName": "Spencer Strider",
         "injury": "Left oblique strain",
@@ -1224,22 +1230,22 @@
     ],
     "145": [
       {
-        "playerName": "Kyle Teel",
-        "injury": "Right hamstring strain",
-        "expectedReturn": "Early May",
-        "status": "Was with team in Sacramento before heading to Triple-A Charlotte to begin a rehab assignment on April 20. Last recovery component is running at 100 percent."
-      },
-      {
         "playerName": "Jonathan Cannon",
         "injury": "Right hip irritation",
         "expectedReturn": "TBD",
-        "status": "Called up from Triple-A Charlotte for bulk work in series finale against the Royals on April 12. Faced three hitters, walked all three and then left due to the injury."
+        "status": "Threw a bullpen on April 22. If he responds well, would soon begin an injury rehab assignment."
       },
       {
         "playerName": "Chris Murphy",
         "injury": "Left elbow impingement syndrome",
         "expectedReturn": "Late April/early May",
-        "status": "Pitched in six games as of April 9 and hadn't been able to recover, according to manager Will Venable, who also said the decision to go on the IL was made quickly."
+        "status": "Scheduled to begin an injury rehab assignment with Triple-A Charlotte on April 25."
+      },
+      {
+        "playerName": "Kyle Teel",
+        "injury": "Right hamstring strain",
+        "expectedReturn": "Early May",
+        "status": "Was with team in Sacramento before heading to Triple-A Charlotte to begin a rehab assignment on April 20. Last recovery component is running at 100 percent."
       },
       {
         "playerName": "Austin Hays",
@@ -1251,7 +1257,7 @@
         "playerName": "Mike Vasil",
         "injury": "Tommy John surgery",
         "expectedReturn": "12 to 18 months",
-        "status": "Underwent season-ending Tommy John surgery with the procedure performed by Dr. Keith Meister, but he was with the team for the home opener. Transferred to the 60-day IL on April 7."
+        "status": "Underwent season-ending Tommy John surgery with the procedure performed by Dr. Keith Meister, but was with the team for the home opener."
       },
       {
         "playerName": "Ky Bush",
@@ -1262,7 +1268,7 @@
       {
         "playerName": "Tim Elko",
         "injury": "Torn ACL in right knee",
-        "expectedReturn": "June-July 2026",
+        "expectedReturn": "June-July",
         "status": "Underwent successful surgery to repair the torn ACL on Oct. 28. Estimated recovery time is eight months, per the team."
       },
       {
