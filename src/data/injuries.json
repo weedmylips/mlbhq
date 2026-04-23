@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-23T02:34:12.579Z",
+  "lastUpdated": "2026-04-23T07:51:30.354Z",
   "teams": {
     "108": [
       {
@@ -519,19 +519,19 @@
         "playerName": "Blake Snell",
         "injury": "Left shoulder fatigue",
         "expectedReturn": "Late May",
-        "status": "Scheduled to begin a rehab assignment on April 22 with Single-A Ontario. He's expected to pitch three innings."
+        "status": "Threw 32 pitches across one-plus innings in his first rehab start with Single-A Ontario on April 22."
+      },
+      {
+        "playerName": "Edwin Díaz",
+        "injury": "Loose bodies in right elbow",
+        "expectedReturn": "Second half of 2026",
+        "status": "Had surgery on his elbow on April 22 and is expected to be out until after the All-Star break."
       },
       {
         "playerName": "Brock Stewart",
         "injury": "Recovery from right shoulder surgery",
         "expectedReturn": "Mid-May",
         "status": "After two strong outings with Single-A Ontario, Stewart is continuing his rehab assignment with Triple-A Oklahoma City."
-      },
-      {
-        "playerName": "Edwin Díaz",
-        "injury": "Loose bodies in right elbow",
-        "expectedReturn": "After All-Star break",
-        "status": "Imaging revealed the issue after April 19 outing. Scheduled to undergo surgery on April 22."
       },
       {
         "playerName": "Mookie Betts",
