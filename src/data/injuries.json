@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-23T19:07:25.867Z",
+  "lastUpdated": "2026-04-24T02:35:06.483Z",
   "teams": {
     "108": [
       {
@@ -48,10 +48,16 @@
     "109": [],
     "110": [
       {
+        "playerName": "Dean Kremer",
+        "injury": "Right quad strain",
+        "expectedReturn": "TBD",
+        "status": "Not yet clear when injury was sustained. Made scheduled start on April 18 in Cleveland, allowing three earned runs over six innings."
+      },
+      {
         "playerName": "Jackson Holliday",
         "injury": "Right hand discomfort",
         "expectedReturn": "TBD",
-        "status": "Exited first inning of new rehab assignment with Triple-A Norfolk due to right hand discomfort. Played 11 rehab games for Norfolk from March 27-April 12 after right hamate surgery."
+        "status": "Exited first inning of new rehab assignment with Triple-A Norfolk due to right hand discomfort. Played 11 rehab games for Norfolk from March 27-April 12 and two for High-A Frederick on April 18 and 19 after right hamate surgery."
       },
       {
         "playerName": "Yaramil Hiraldo",
@@ -124,20 +130,20 @@
       {
         "playerName": "Roman Anthony",
         "injury": "Back tightness",
-        "expectedReturn": "Thursday or Friday",
-        "status": "Anthony felt his back tighten up during Tuesday's loss and was out of the lineup Wednesday. Manager Alex Cora said the outfielder will \"hopefully\" start Thursday."
+        "expectedReturn": "At some point this weekend",
+        "status": "Anthony didn't start the final two games of a three-game series against the Yankees due to tightness in his back. The Red Sox are calling it a day-to-day injury."
+      },
+      {
+        "playerName": "Sonny Gray",
+        "injury": "Right hamstring strain",
+        "expectedReturn": "Early to mid-May",
+        "status": "The fact Gray might resume playing catch on April 24 is proof his hamstring injury isn't serious and he could miss close to the minimal time required by the 15-day injured list."
       },
       {
         "playerName": "Triston Casas",
         "injury": "Ruptured left patellar tendon/left abdominal strain",
         "expectedReturn": "June or July at earliest",
         "status": "Rehab from left knee surgery went well, but now has left abdominal strain that will prolong return to action."
-      },
-      {
-        "playerName": "Sonny Gray",
-        "injury": "Right hamstring strain",
-        "expectedReturn": "Early to mid-May",
-        "status": "Exited start on April 20 in the third inning after feeling hamstring grab. Underwent MRI on April 21."
       },
       {
         "playerName": "Kutter Crawford",
@@ -171,6 +177,12 @@
       }
     ],
     "112": [
+      {
+        "playerName": "Caleb Thielbar",
+        "injury": "Left hamstring tightness",
+        "expectedReturn": "TBD",
+        "status": "Removed in ninth inning of series finale against Phillies on April 23. Cubs anticipate finding out more about his status on April 24."
+      },
       {
         "playerName": "Phil Maton",
         "injury": "Right knee tendinitis",
@@ -628,6 +640,18 @@
     ],
     "121": [
       {
+        "playerName": "Francisco Lindor",
+        "injury": "Left calf strain",
+        "expectedReturn": "TBD",
+        "status": "Strained his calf in an April 22 game and is expected to miss significant time. Exact timeline could be a matter of weeks or months, but it won't be clear until Lindor begins ramping up activity."
+      },
+      {
+        "playerName": "Jared Young",
+        "injury": "Torn left knee meniscus",
+        "expectedReturn": "Late May or June",
+        "status": "Began feeling knee discomfort during an April 12 game against the Athletics. An April 14 MRI revealed a meniscus tear, requiring surgery. Had stitches removed the week of April 20."
+      },
+      {
         "playerName": "A.J. Minter",
         "injury": "Left lat surgery",
         "expectedReturn": "Early May",
@@ -638,12 +662,6 @@
         "injury": "Left Achilles bursitis/right wrist contusion",
         "expectedReturn": "TBD",
         "status": "Wrist soreness popped up postgame on April 14 in addition to his Achilles discomfort, which he had been dealing with since late March. No timetable or rehab progression has been announced yet."
-      },
-      {
-        "playerName": "Jared Young",
-        "injury": "Torn left knee meniscus",
-        "expectedReturn": "Late May or June",
-        "status": "Began feeling knee discomfort during an April 12 game against the Athletics. An April 14 MRI revealed a meniscus tear, requiring surgery."
       },
       {
         "playerName": "Joey Gerber",
@@ -968,16 +986,16 @@
     ],
     "140": [
       {
+        "playerName": "Robert Garcia",
+        "injury": "Left rotator cuff inflammation",
+        "expectedReturn": "Early May",
+        "status": "Examined by team doctors on April 20 for shoulder soreness and was placed on the IL on April 23."
+      },
+      {
         "playerName": "Wyatt Langford",
         "injury": "Grade 1 right flexor strain",
         "expectedReturn": "Late April-early May",
         "status": "Left an April 21 win over the Pirates with right forearm tightness and underwent an MRI the following morning, showing a mild strain. The Rangers expect him to miss the minimum amount of days."
-      },
-      {
-        "playerName": "Robert Garcia",
-        "injury": "Rotator cuff inflammation",
-        "expectedReturn": "Day to day",
-        "status": "Examined by team doctors on April 20 for shoulder soreness; could be available in series against Pirates."
       },
       {
         "playerName": "Carter Baumler",
@@ -1118,12 +1136,6 @@
         "status": "Lingering back issue flared up again fielding a wild pitch on April 21. Returned to Philadelphia on April 23 to begin treatment. Club is optimistic he will be ready to return at the end of the 10-day window."
       },
       {
-        "playerName": "José Alvarado",
-        "injury": "Mid back spasm",
-        "expectedReturn": "Day to day",
-        "status": "Departed in the eighth inning of his April 21 appearance against the Cubs after experiencing spasms. Threw a flat-ground session on April 22 and is not expected to hit the IL."
-      },
-      {
         "playerName": "Jonathan Bowlan",
         "injury": "Right groin strain",
         "expectedReturn": "Late April",
@@ -1230,6 +1242,12 @@
     ],
     "145": [
       {
+        "playerName": "Kyle Teel",
+        "injury": "Right hamstring strain",
+        "expectedReturn": "Early to mid-May",
+        "status": "Remained with the team during the six-game road trip to West Sacramento and Phoenix but has yet to depart for a rehab assignment. Will be re-evaluated in Chicago."
+      },
+      {
         "playerName": "Jonathan Cannon",
         "injury": "Right hip irritation",
         "expectedReturn": "TBD",
@@ -1240,12 +1258,6 @@
         "injury": "Left elbow impingement syndrome",
         "expectedReturn": "Late April/early May",
         "status": "Scheduled to begin an injury rehab assignment with Triple-A Charlotte on April 25."
-      },
-      {
-        "playerName": "Kyle Teel",
-        "injury": "Right hamstring strain",
-        "expectedReturn": "Early May",
-        "status": "Was with team in Sacramento before heading to Triple-A Charlotte to begin a rehab assignment on April 20. Last recovery component is running at 100 percent."
       },
       {
         "playerName": "Austin Hays",
@@ -1292,12 +1304,6 @@
         "status": "Began rehab assignment on April 21 with Triple-A Jacksonville. Initial timeline of 4-6 weeks after being placed on IL on March 28 (retroactive to March 25)."
       },
       {
-        "playerName": "Esteury Ruiz",
-        "injury": "High-grade left oblique strain",
-        "expectedReturn": "Late April/early May",
-        "status": "Has played four games since beginning a rehab assignment with Triple-A Jacksonville on April 15."
-      },
-      {
         "playerName": "Griffin Conine",
         "injury": "Left hamstring tear",
         "expectedReturn": "June",
@@ -1318,6 +1324,12 @@
     ],
     "147": [
       {
+        "playerName": "Anthony Volpe",
+        "injury": "Left shoulder surgery recovery",
+        "expectedReturn": "Possibly April 27-29 at Rangers",
+        "status": "Had his Minor League rehab assignment transferred to Triple-A Scranton/Wilkes-Barre on April 21 after going 4-for-11 (.364) with Double-A Somerset. Will play nine innings April 24 and 25, then DH on April 26."
+      },
+      {
         "playerName": "Gerrit Cole",
         "injury": "Tommy John surgery recovery",
         "expectedReturn": "May/June",
@@ -1328,12 +1340,6 @@
         "injury": "Left elbow surgery recovery",
         "expectedReturn": "May",
         "status": "Scheduled to make first Minor League rehab start April 24 for High-A Hudson Valley. Threw live batting practice April 18 with Double-A Somerset. Will need approximately three rehab starts."
-      },
-      {
-        "playerName": "Anthony Volpe",
-        "injury": "Left shoulder surgery recovery",
-        "expectedReturn": "Possibly May",
-        "status": "Had his Minor League rehab assignment transferred to Triple-A Scranton/Wilkes-Barre on April 21 after going 4-for-11 (.364) with Double-A Somerset. Goal is to log 55 plate appearances and play shortstop consistently before MLB activation."
       },
       {
         "playerName": "Clarke Schmidt",
@@ -1366,12 +1372,6 @@
         "injury": "Left groin strain",
         "expectedReturn": "Mid- to late-May",
         "status": "Suffered a second-degree left adductor strain in the Brewers' April 12 loss to the Nationals. (last updated: April 14)"
-      },
-      {
-        "playerName": "Craig Yoho",
-        "injury": "Right calf strain",
-        "expectedReturn": "Late April",
-        "status": "Was scheduled to pitch one inning in an extended spring training game on April 14 (last updated: April 14)"
       },
       {
         "playerName": "Rob Zastryzny",
