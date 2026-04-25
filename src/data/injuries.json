@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-25T02:24:59.575Z",
+  "lastUpdated": "2026-04-25T07:15:20.690Z",
   "teams": {
     "108": [
       {
@@ -241,15 +241,15 @@
     "113": [
       {
         "playerName": "Eugenio Suárez",
-        "injury": null,
+        "injury": "Left oblique strain",
         "expectedReturn": "TBD",
-        "status": "Was scratched from series opener against Detroit on April 24."
+        "status": "Was scratched from series opener against Detroit on April 24. Announced postgame that he would head to the IL with an oblique injury."
       },
       {
         "playerName": "Jose Trevino",
         "injury": "Thoracic spine strain",
         "expectedReturn": "April 26",
-        "status": "Will play five innings on a rehab assignment with High-A Dayton on April 24. Hit in a simulated game on April 21 and fared well. Trevino caught for Caleb Ferguson as he faced hitters on April 20."
+        "status": "Played five innings and went 2-for-2 with a walk with High-A Dayton on April 24."
       },
       {
         "playerName": "Nick Lodolo",
@@ -786,6 +786,12 @@
     ],
     "136": [
       {
+        "playerName": "Bryce Miller",
+        "injury": "Left side oblique inflammation",
+        "expectedReturn": "Tentatively May 17",
+        "status": "Miller made his second rehab start on April 24, throwing three scoreless innings for High-A Everett.More »"
+      },
+      {
         "playerName": "Brendan Donovan",
         "injury": "Left groin muscle strain",
         "expectedReturn": "Earliest eligible on April 28",
@@ -802,12 +808,6 @@
         "injury": "Right calf strain",
         "expectedReturn": "TBD",
         "status": "Suffered the injury while playing for Team Italy at World Baseball Classic. Began rehab assignment at Triple-A Tacoma on April 8, but was transferred to 60-day IL on April 20."
-      },
-      {
-        "playerName": "Bryce Miller",
-        "injury": "Left side oblique inflammation",
-        "expectedReturn": "Tentatively May 17",
-        "status": "Slated to begin rehab assignment at Triple-A Tacoma on April 18 and will require the full 30-day allotment, with workload buildup beginning at two innings and/or 30 pitches.More »"
       },
       {
         "playerName": "Victor Robles",
@@ -924,6 +924,12 @@
     ],
     "139": [
       {
+        "playerName": "Jacob Melton (Rays' No. 3 prospect)",
+        "injury": "Sprained left ankle",
+        "expectedReturn": "Late May to mid-June",
+        "status": "Sustained a Grade 2 left ankle sprain while running the bases for Triple-A Durham on April 22. Imaging revealed no fracture. Goal is to return to game action in four to six weeks."
+      },
+      {
         "playerName": "Jake Fraley",
         "injury": "Right lower leg contusion",
         "expectedReturn": "Day to day",
@@ -1035,6 +1041,12 @@
       }
     ],
     "141": [
+      {
+        "playerName": "Nathan Lukes",
+        "injury": "Left hamstring discomfort",
+        "expectedReturn": "Day to day",
+        "status": "Exited game on April 24 after legging out a first-inning double. Set to undergo an MRI on left hamstring on April 25."
+      },
       {
         "playerName": "Trey Yesavage",
         "injury": "Right shoulder impingement",
