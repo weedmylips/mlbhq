@@ -1,7 +1,13 @@
 {
-  "lastUpdated": "2026-04-26T02:39:52.884Z",
+  "lastUpdated": "2026-04-26T07:28:21.143Z",
   "teams": {
     "108": [
+      {
+        "playerName": "Logan O'Hoppe",
+        "injury": "Left wrist irritation",
+        "expectedReturn": "Day to day",
+        "status": "Was removed from game on April 25 an inning after taking a foul tip off his left wrist. Manager Kurt Suzuki said the move was precautionary and that O'Hoppe will be examined by the medical staff."
+      },
       {
         "playerName": "Grayson Rodriguez",
         "injury": "Right shoulder inflammation",
@@ -335,6 +341,12 @@
       }
     ],
     "116": [
+      {
+        "playerName": "Connor Seabold",
+        "injury": "Left ankle",
+        "expectedReturn": null,
+        "status": "TBD"
+      },
       {
         "playerName": "Justin Verlander",
         "injury": "Left hip inflammation",
