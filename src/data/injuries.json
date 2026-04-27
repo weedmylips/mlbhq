@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-04-26T18:54:13.785Z",
+  "lastUpdated": "2026-04-27T02:42:21.074Z",
   "teams": {
     "108": [
       {
         "playerName": "Logan O'Hoppe",
-        "injury": "Left wrist irritation",
-        "expectedReturn": "Day to day",
-        "status": "Was removed from game on April 25 an inning after taking a foul tip off his left wrist. Manager Kurt Suzuki said the move was precautionary and that O'Hoppe will be examined by the medical staff."
+        "injury": "Left wrist fracture",
+        "expectedReturn": "TBD",
+        "status": "Was removed from April 25 game after taking a foul tip off his left wrist. Testing revealed the fracture."
       },
       {
         "playerName": "Grayson Rodriguez",
@@ -160,22 +160,28 @@
     ],
     "112": [
       {
+        "playerName": "Riley Martin",
+        "injury": "Left elbow inflammation",
+        "expectedReturn": "TBD",
+        "status": "Felt some discomfort in April 23 outing and did not recover well, per manager Craig Counsell. Will fly back to Chicago for further testing."
+      },
+      {
         "playerName": "Phil Maton",
         "injury": "Right knee tendinitis",
-        "expectedReturn": "Likely April 26-27",
+        "expectedReturn": "During April 27-29 series at San Diego",
         "status": "Logged 25 pitches in one scoreless inning in a rehab outing with Triple-A Iowa on April 24. Rejoined Cubs in L.A. on April 25 and on target for activation soon."
       },
       {
         "playerName": "Daniel Palencia",
         "injury": "Left lat strain",
         "expectedReturn": "May",
-        "status": "Had a light \"touch and feel\" bullpen session on April 25. Cubs will monitor his recovery and determine next steps."
+        "status": "Had a light \"touch and feel\" bullpen session on April 25. Next step will be a higher-intensity mound workout on April 28 in San Diego."
       },
       {
         "playerName": "Ethan Roberts",
         "injury": "Right middle finger laceration",
         "expectedReturn": "Late April/early May",
-        "status": "Injured hand in an accident while working out April 13. Returned to game action with rehab outing for Triple-A Iowa on April 25 (23 pitches in one inning)."
+        "status": "Injured hand while working out April 13. Had rehab outing for Triple-A Iowa on April 25 (23 pitches in one inning). Will have at least one more rehab game."
       },
       {
         "playerName": "Jaxon Wiggins (Cubs' No. 1 prospect, No. 50 overall)",
@@ -484,34 +490,28 @@
     ],
     "118": [
       {
-        "playerName": "Maikel Garcia",
-        "injury": "Right elbow soreness",
-        "expectedReturn": "Day to day",
-        "status": "Exited April 22 game after feeling cramp in elbow. Out of lineup April 24 and 25 but feeling better and available off bench."
+        "playerName": "Carlos Estévez",
+        "injury": "Left foot contusion",
+        "expectedReturn": "May",
+        "status": "Hit by a comebacker March 28. Threw a two-up bullpen April 25 and is heading to Arizona to face hitters on April 28. Manager Matt Quatraro didn't have exact number but said velocity was into the 90s."
       },
       {
         "playerName": "Stephen Kolek",
         "injury": "Left oblique strain",
         "expectedReturn": "Early May",
-        "status": "Strained oblique Feb. 25. Began rehab assignment with Triple-A Omaha April 14. Threw 3 2/3 innings (74 pitches) April 24."
+        "status": "Strained oblique Feb. 25. Began rehab assignment with Triple-A Omaha April 14. Threw 3 2/3 innings (74 pitches) April 24 and is scheduled for another outing week of April 27."
+      },
+      {
+        "playerName": "Bailey Falter",
+        "injury": "Left elbow inflammation",
+        "expectedReturn": "Late April",
+        "status": "Has been battling valgus extension overload in elbow. Began rehab assignment with Triple-A Omaha April 15. Threw two scoreless innings April 25."
       },
       {
         "playerName": "Jonathan India",
         "injury": "Left shoulder subluxation",
         "expectedReturn": "TBD",
         "status": "Has dealt with similar injury before, but got worse in last week or so. Received injection to help with pain, but is seeing a specialist week of April 27 to determine next steps."
-      },
-      {
-        "playerName": "Bailey Falter",
-        "injury": "Left elbow inflammation",
-        "expectedReturn": "Late April",
-        "status": "Has been battling valgus extension overload in elbow. Began rehab assignment with Triple-A Omaha April 15. Threw 2 1/3 innings April 22 and is scheduled for another outing April 25."
-      },
-      {
-        "playerName": "Carlos Estévez",
-        "injury": "Left foot contusion",
-        "expectedReturn": "May",
-        "status": "Hit by a comebacker March 28. Battled an illness, which slowed throwing program, but has been throwing bullpens and scheduled for another April 25."
       },
       {
         "playerName": "James McArthur",
@@ -530,8 +530,8 @@
       {
         "playerName": "Will Smith",
         "injury": "Back tightness",
-        "expectedReturn": "April 26",
-        "status": "Got a game off one day earlier than planned due to back tightness. Manager Dave Roberts is not concerned and expects Smith to be back in the lineup on April 26."
+        "expectedReturn": "April 27",
+        "status": "Was out of the starting lineup in consecutive games from April 25-26. Manager Dave Roberts said Smith is day to day and could return to the lineup on April 27."
       },
       {
         "playerName": "Mookie Betts",
@@ -713,6 +713,12 @@
       }
     ],
     "133": [
+      {
+        "playerName": "J.T. Ginn",
+        "injury": "Right arm soreness",
+        "expectedReturn": "Day to day",
+        "status": "Exited in the middle of an at-bat after 3 1/3 scoreless on April 26 with what manager Mark Kotsay called \"some form of a stinger in the shoulder area.\""
+      },
       {
         "playerName": "Denzel Clarke",
         "injury": "Mid foot bone bruise in right foot",
@@ -1266,6 +1272,12 @@
     ],
     "145": [
       {
+        "playerName": "Jonathan Cannon",
+        "injury": "Right hip irritation",
+        "expectedReturn": "TBD",
+        "status": "Will begin a rehab assignment with Triple-A Charlotte on April 28."
+      },
+      {
         "playerName": "Kyle Teel",
         "injury": "Right hamstring strain",
         "expectedReturn": "Early to mid-May",
@@ -1276,12 +1288,6 @@
         "injury": "Right hamstring strain",
         "expectedReturn": "Early to mid May",
         "status": "Hays will begin an injury rehab assignment with Triple-A Charlotte on April 25."
-      },
-      {
-        "playerName": "Jonathan Cannon",
-        "injury": "Right hip irritation",
-        "expectedReturn": "TBD",
-        "status": "Threw a bullpen on April 22. If he responds well, would soon begin an injury rehab assignment."
       },
       {
         "playerName": "Chris Murphy",
@@ -1351,7 +1357,7 @@
         "playerName": "Giancarlo Stanton",
         "injury": "Right calf tightness",
         "expectedReturn": "Day to day",
-        "status": "Left the April 24 game in Houston for a pinch-runner after feeling tightness in calf. Remained out of lineup April 25."
+        "status": "Left the April 24 game in Houston for a pinch-runner after feeling tightness in calf. Remained out of lineup for the final two games of the series."
       },
       {
         "playerName": "Gerrit Cole",
