@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28T02:49:51.896Z",
+  "lastUpdated": "2026-04-28T08:24:08.600Z",
   "teams": {
     "108": [
       {
@@ -736,6 +736,12 @@
     ],
     "135": [
       {
+        "playerName": "Manny Machado",
+        "injury": "Left leg discomfort",
+        "expectedReturn": "TBD",
+        "status": "Was removed in the seventh inning April 27 after experiencing discomfort on slide into second base earlier in the game. Padres manager Craig Stammen said he was removed out of precaution."
+      },
+      {
         "playerName": "Jeremiah Estrada",
         "injury": "Right elbow tendinitis",
         "expectedReturn": "May or June",
@@ -1303,6 +1309,12 @@
       }
     ],
     "146": [
+      {
+        "playerName": "Pete Fairbanks",
+        "injury": "Right hand numbness",
+        "expectedReturn": "TBD",
+        "status": "Exited April 27 outing after issuing a third walk and experiencing diminished sensation in pitching hand."
+      },
       {
         "playerName": "Griffin Conine",
         "injury": "Left hamstring tear",
