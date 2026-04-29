@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-29T02:49:07.173Z",
+  "lastUpdated": "2026-04-29T08:16:46.082Z",
   "teams": {
     "108": [
       {
@@ -160,10 +160,10 @@
     ],
     "112": [
       {
-        "playerName": "Alex Bregman",
-        "injury": "Left foot",
+        "playerName": "Dansby Swanson",
+        "injury": "Left glute",
         "expectedReturn": "Day to day",
-        "status": "Held out of lineup on April 28 in San Diego as a precaution. Hit by a pitch on left foot on April 26 and was still sore on April 27. Expected back soon, per manager Craig Counsell."
+        "status": "Exited the Cubs' win over the Padres on April 28 with cramping after sliding on a stolen base in the second inning. Was feeling improved postgame, per manager Craig Counsell."
       },
       {
         "playerName": "Justin Steele",
@@ -336,6 +336,12 @@
     ],
     "116": [
       {
+        "playerName": "Casey Mize",
+        "injury": "Right groin tightness",
+        "expectedReturn": "Day to day",
+        "status": "Exited his April 28 start in the third inning. Reported gradual discomfort that did not improve between innings. Underwent initial testing with additional imaging scheduled."
+      },
+      {
         "playerName": "Beau Brieske",
         "injury": "Left adductor strain",
         "expectedReturn": "End of May",
@@ -490,28 +496,34 @@
     ],
     "118": [
       {
-        "playerName": "Carlos Estévez",
-        "injury": "Left foot contusion",
-        "expectedReturn": "May",
-        "status": "Hit by a comebacker March 28. Threw a two-up bullpen April 25 and is heading to Arizona to face hitters on April 28. Manager Matt Quatraro didn't have exact number but said velocity was into the 90s."
+        "playerName": "Vinnie Pasquantino",
+        "injury": "Low back tightness",
+        "expectedReturn": "Day to day",
+        "status": "Appeared to hurt his back on a swing in the top of the sixth inning on April 28. Exited in the middle of the inning."
+      },
+      {
+        "playerName": "Jonathan India",
+        "injury": "Left shoulder subluxation",
+        "expectedReturn": "2027",
+        "status": "Underwent left labral repair surgery on April 28, ending his season."
       },
       {
         "playerName": "Stephen Kolek",
         "injury": "Left oblique strain",
         "expectedReturn": "Early May",
-        "status": "Strained oblique Feb. 25. Began rehab assignment with Triple-A Omaha April 14. Threw 3 2/3 innings (74 pitches) April 24 and is scheduled for another outing week of April 27."
+        "status": "Strained oblique Feb. 25. Began rehab assignment with Triple-A Omaha April 14. Threw 3 2/3 innings (74 pitches) April 24 and is scheduled for another outing April 29."
       },
       {
         "playerName": "Bailey Falter",
         "injury": "Left elbow inflammation",
         "expectedReturn": "Late April",
-        "status": "Has been battling valgus extension overload in elbow. Began rehab assignment with Triple-A Omaha April 15. Threw two scoreless innings April 25."
+        "status": "Has been battling valgus extension overload in elbow. Began rehab assignment with Triple-A Omaha April 15. Threw two scoreless innings April 25 and is scheduled for another outing April 29."
       },
       {
-        "playerName": "Jonathan India",
-        "injury": "Left shoulder subluxation",
-        "expectedReturn": "TBD",
-        "status": "Has dealt with similar injury before, but got worse in last week or so. Received injection to help with pain, but is seeing a specialist week of April 27 to determine next steps."
+        "playerName": "Carlos Estévez",
+        "injury": "Left foot contusion",
+        "expectedReturn": "May",
+        "status": "Hit by a comebacker March 28. Threw a two-up bullpen April 25 and is heading to Arizona to face hitters on April 28. Manager Matt Quatraro didn't have exact number but said velocity was into the 90s."
       },
       {
         "playerName": "James McArthur",
@@ -528,16 +540,22 @@
     ],
     "119": [
       {
+        "playerName": "Blake Snell",
+        "injury": "Left shoulder fatigue",
+        "expectedReturn": "Late May",
+        "status": "Stretched out to 39 pitches (29 strikes) across three scoreless innings in his second rehab start with Single-A Ontario on April 28."
+      },
+      {
+        "playerName": "Landon Knack",
+        "injury": "Right intercostal strain",
+        "expectedReturn": "2026",
+        "status": "Tweaked his side while throwing in the bullpen on March 13. He will not begin a throwing program until he's pain-free."
+      },
+      {
         "playerName": "Edwin Díaz",
         "injury": "Loose bodies in right elbow",
         "expectedReturn": "Second half of 2026",
         "status": "Had surgery on his elbow on April 22. He thinks he will be able to start playing catch a couple weeks after the stitches are removed from his elbow."
-      },
-      {
-        "playerName": "Blake Snell",
-        "injury": "Left shoulder fatigue",
-        "expectedReturn": "Late May",
-        "status": "Threw 32 pitches across one-plus innings in his first rehab start with Single-A Ontario on April 22. His next start is scheduled for April 28 with Ontario."
       },
       {
         "playerName": "Mookie Betts",
@@ -574,12 +592,6 @@
         "injury": "Recovery from Tommy John surgery",
         "expectedReturn": "Second half of 2026",
         "status": "Underwent Tommy John surgery in June 2025 and could be a second-half option for the Dodgers."
-      },
-      {
-        "playerName": "Landon Knack",
-        "injury": "Right intercostal strain",
-        "expectedReturn": "2026",
-        "status": "Tweaked his side while throwing in the bullpen on March 13. He will not begin a throwing program until he's pain-free."
       },
       {
         "playerName": "Bobby Miller",
@@ -720,10 +732,10 @@
     ],
     "133": [
       {
-        "playerName": "Max Muncy",
-        "injury": "Left hand fifth metacarpal fracture",
-        "expectedReturn": "Mid-May",
-        "status": "Shut down from all baseball activities. No timetable for return."
+        "playerName": "Tyler Soderstrom",
+        "injury": "General soreness",
+        "expectedReturn": "Day to day",
+        "status": "Replaced by Carlos Cortes on defense in the sixth inning on April 28 out of precaution after landing awkwardly on a diving attempt for a catch one inning prior."
       },
       {
         "playerName": "Denzel Clarke",
