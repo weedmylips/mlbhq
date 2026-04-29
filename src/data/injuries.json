@@ -1,7 +1,13 @@
 {
-  "lastUpdated": "2026-04-29T13:54:42.574Z",
+  "lastUpdated": "2026-04-29T19:24:26.213Z",
   "teams": {
     "108": [
+      {
+        "playerName": "Ben Joyce",
+        "injury": "Right shoulder surgery",
+        "expectedReturn": "May",
+        "status": "Assigned to start a rehab assignment with Single-A Rancho Cucamonga on April 29. It came after he pitched in an extended Spring Training game on April 27."
+      },
       {
         "playerName": "Kirby Yates",
         "injury": "Left knee inflammation",
@@ -25,12 +31,6 @@
         "injury": "Viral infection",
         "expectedReturn": "May",
         "status": "Made a rehab start in a Minor League game in Arizona but exited with hamstring discomfort after throwing two pitches on April 13. He threw bullpens without any issues before progressing to facing hitters in an extended spring training game on April 27."
-      },
-      {
-        "playerName": "Ben Joyce",
-        "injury": "Right shoulder surgery",
-        "expectedReturn": "May",
-        "status": "Progressing well in throwing program. Faced hitters for a third time but this time it came in an extended Spring Training game on April 27."
       },
       {
         "playerName": "Grayson Rodriguez",
@@ -116,6 +116,12 @@
     ],
     "111": [
       {
+        "playerName": "Garrett Crochet",
+        "injury": "Left shoulder inflammation",
+        "expectedReturn": "Mid-May",
+        "status": "Felt fatigue in his shoulder during his start against Baltimore on April 25. Expects to be able to return when his IL stint is up."
+      },
+      {
         "playerName": "Sonny Gray",
         "injury": "Right hamstring strain",
         "expectedReturn": "May 6",
@@ -163,19 +169,19 @@
         "playerName": "Dansby Swanson",
         "injury": "Left glute",
         "expectedReturn": "Day to day",
-        "status": "Exited the Cubs' win over the Padres on April 28 with cramping after sliding on a stolen base in the second inning. Was feeling improved postgame, per manager Craig Counsell."
+        "status": "Feeling improved, but out of lineup April 29 as precaution. Made sense with off-day on April 30, per manager Craig Counsell. Exited April 28 game at Padres with cramping after sliding on a stolen base in the second inning."
+      },
+      {
+        "playerName": "Daniel Palencia",
+        "injury": "Left lat strain",
+        "expectedReturn": "During May 1-3 series vs. D-backs",
+        "status": "Felt good April 29, following two recent mound workouts (April 25 and April 28). Cubs discussing next step. Activation during May 1-3 series vs. D-backs a possibility."
       },
       {
         "playerName": "Justin Steele",
         "injury": "Left elbow",
         "expectedReturn": "Second half of 2026",
         "status": "Felt discomfort in recent bullpen session. Checkup with Dr. Keith Meister (who did Steele's UCL revision repair on April 18, 2025) showed a flexor strain. Shut down from throwing until asymptomatic, and will be rechecked in a month."
-      },
-      {
-        "playerName": "Daniel Palencia",
-        "injury": "Left lat strain",
-        "expectedReturn": "Possibly during next homestand",
-        "status": "Had a light \"touch and feel\" bullpen session on April 25 and a higher-intensity mound workout on April 28, plus agility/running tests. Cubs will monitor Palencia's recovery with goal of activating him soon."
       },
       {
         "playerName": "Ethan Roberts",
@@ -766,22 +772,16 @@
     ],
     "135": [
       {
-        "playerName": "Manny Machado",
-        "injury": "Left calf discomfort",
-        "expectedReturn": "Day to day",
-        "status": "Out of the lineup on April 28, a day after his early exit with calf cramps. Available off the bench, per manager Craig Stammen. \"I don't think we're worried,\" Stammen said."
-      },
-      {
         "playerName": "Jeremiah Estrada",
         "injury": "Right elbow tendinitis",
         "expectedReturn": "May or June",
-        "status": "Landed on the IL after feeling \"tightness\" in his elbow playing catch April 10. Began a rehab stint on April 24, pitching a scoreless inning with Single-A Lake Elsinore."
+        "status": "Landed on the IL after feeling \"tightness\" in his elbow playing catch April 10. Began a rehab stint on April 24 and has made two scoreless appearances."
       },
       {
         "playerName": "Griffin Canning",
         "injury": "Left Achilles tear",
         "expectedReturn": "May",
-        "status": "Has made four rehab appearances with Triple-A El Paso, including one on April 22. Needs a buildup akin to a full Spring Training, per manager Craig Stammen, which could put him on track for an early May return."
+        "status": "Has made five rehab appearances with Triple-A El Paso, including five innings of one-run ball on April 28. Will likely need at least one more rehab start, but could be approaching a return."
       },
       {
         "playerName": "Yuki Matsui",
@@ -960,12 +960,6 @@
     ],
     "139": [
       {
-        "playerName": "Junior Caminero",
-        "injury": "Right jaw contusion",
-        "expectedReturn": "Day to day",
-        "status": "Fouled a ball off his face in the first inning vs. Cleveland on April 28 and immediately went to the ground. Finished his at-bat after being checked out by trainers, but was replaced in the next half-inning.Read more >>"
-      },
-      {
         "playerName": "Garrett Cleavinger",
         "injury": "Right calf tightness",
         "expectedReturn": "Early May",
@@ -1028,6 +1022,12 @@
     ],
     "140": [
       {
+        "playerName": "Wyatt Langford",
+        "injury": "Grade 1 right flexor strain",
+        "expectedReturn": "Early May",
+        "status": "Manager Skip Schumaker said Langford will likely be activated the weekend of May 2 in Detroit, but weather in Texas could hinder the ability for him to go on a rehab assignment in Frisco or Round Rock before that. The club is working through options for him to get live at-bats."
+      },
+      {
         "playerName": "Cody Bradford",
         "injury": "Left UCL surgery",
         "expectedReturn": "Mid-May",
@@ -1044,12 +1044,6 @@
         "injury": "Left rotator cuff inflammation",
         "expectedReturn": "Early May",
         "status": "Examined by team doctors on April 20 for shoulder soreness and was placed on the IL on April 23."
-      },
-      {
-        "playerName": "Wyatt Langford",
-        "injury": "Grade 1 right flexor strain",
-        "expectedReturn": "Late April-early May",
-        "status": "Left an April 21 win over the Pirates with right forearm tightness and underwent an MRI the following morning, showing a mild strain. The Rangers expect him to miss the minimum amount of days."
       },
       {
         "playerName": "Chris Martin",
@@ -1078,6 +1072,12 @@
     ],
     "141": [
       {
+        "playerName": "José Berríos",
+        "injury": "Right elbow stress fracture",
+        "expectedReturn": "Early May",
+        "status": "Threw 70 pitches in Triple-A rehab outing on April 28. Team will now discuss next steps, whether Berríos returns or makes one more rehab start."
+      },
+      {
         "playerName": "Max Scherzer",
         "injury": "Right forearm tendinitis and left ankle inflammation",
         "expectedReturn": "Potentially mid-to-late May",
@@ -1094,12 +1094,6 @@
         "injury": "Rehab from 2025 right elbow surgery",
         "expectedReturn": "Potentially early-to-mid May",
         "status": "Transferred to 60-day IL on April 25 as he continues to build up slowly in Dunedin, Fla."
-      },
-      {
-        "playerName": "José Berríos",
-        "injury": "Right elbow stress fracture",
-        "expectedReturn": "Late April or early May",
-        "status": "Scheduled to pitch April 28 with Triple-A Buffalo in what could be his final rehab outing."
       },
       {
         "playerName": "Shane Bieber",
@@ -1284,16 +1278,22 @@
     ],
     "145": [
       {
-        "playerName": "Jonathan Cannon",
-        "injury": "Right hip irritation",
-        "expectedReturn": "TBD",
-        "status": "Will begin a rehab assignment with Triple-A Charlotte on April 28."
+        "playerName": "Everson Pereira",
+        "injury": "Right pectoral strain",
+        "expectedReturn": "Late May",
+        "status": "Manager Will Venable wasn’t sure when Pereira suffered the injury during an April 28 win over the Angels. But it was bothering Pereira both hitting and throwing."
       },
       {
         "playerName": "Kyle Teel",
         "injury": "Right hamstring strain",
-        "expectedReturn": "Early to mid-May",
-        "status": "Teel is making progress, but still has not crossed the final threshold for an injury rehab assignment."
+        "expectedReturn": "Late May",
+        "status": "Making progress and getting better every day, as he told MLB.com on April 29. But there’s still no set timetable for an injury rehab assignment."
+      },
+      {
+        "playerName": "Jonathan Cannon",
+        "injury": "Right hip irritation",
+        "expectedReturn": "TBD",
+        "status": "Will begin a rehab assignment with Triple-A Charlotte on April 28."
       },
       {
         "playerName": "Chris Murphy",
@@ -1354,6 +1354,12 @@
     ],
     "147": [
       {
+        "playerName": "Anthony Volpe",
+        "injury": "Left shoulder surgery recovery",
+        "expectedReturn": "Possibly May 1",
+        "status": "Will continue Minor League rehab assignment with Double-A Somerset on April 29. Could be activated May 1, though that decision hasn’t been made yet. Is 8-for-29 (.276) through nine rehab games."
+      },
+      {
         "playerName": "Angel Chivilli",
         "injury": "Right shoulder discomfort",
         "expectedReturn": "TBA",
@@ -1376,12 +1382,6 @@
         "injury": "Left elbow surgery recovery",
         "expectedReturn": "May",
         "status": "Made first rehab start on April 24 for High-A Hudson Valley, throwing 65 pitches (43 strikes) over 4 1/3 scoreless innings. Will make at least two more rehab starts. Next will be April 30 for Double-A Somerset."
-      },
-      {
-        "playerName": "Anthony Volpe",
-        "injury": "Left shoulder surgery recovery",
-        "expectedReturn": "Possibly May 1",
-        "status": "Will continue Minor League rehab assignment with Double-A Somerset on April 28-29. Could be activated May 1, though that decision hasn’t been made yet. Is 8-for-26 (.308) through eight rehab games."
       },
       {
         "playerName": "Clarke Schmidt",
