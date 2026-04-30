@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-30T13:52:44.963Z",
+  "lastUpdated": "2026-04-30T19:20:12.685Z",
   "teams": {
     "108": [
       {
@@ -60,22 +60,28 @@
     "109": [],
     "110": [
       {
-        "playerName": "Dean Kremer",
-        "injury": "Right quad strain",
-        "expectedReturn": "Potentially mid-May",
-        "status": "Injury was sustained in days after April 18 start in Cleveland. Expected to miss at least several weeks."
+        "playerName": "Trevor Rogers",
+        "injury": "Illness",
+        "expectedReturn": "Mid-May",
+        "status": "Dealing with a flu that has circulated around Orioles' clubhouse. Should be ready to go at end of IL stint."
       },
       {
         "playerName": "Jackson Holliday",
         "injury": "Right hand discomfort",
         "expectedReturn": "TBD",
-        "status": "Exited first inning of new rehab assignment with Triple-A Norfolk (his 14th overall rehab game) due to right hand discomfort. MRI, CT scans, X-rays all clean. Shut down to let inflammation subside."
+        "status": "Exited first inning of new rehab assignment with Triple-A Norfolk (his 14th overall rehab game) due to right hand discomfort on April 21. MRI, CT scans, X-rays all clean. Expects to return to rehab games week of May 4."
       },
       {
         "playerName": "Dietrich Enns",
         "injury": "Left foot infection",
         "expectedReturn": "Late April",
-        "status": "Hospitalized in Pittsburgh during April 3-5 series. Received IV antibiotics for swelling. Allowed two runs in 3 1/3 innings over three rehab outings for Triple-A Norfolk from April 18-24."
+        "status": "Hospitalized in Pittsburgh during April 3-5 series. Received IV antibiotics for swelling. Allowed four runs in 6 1/3 innings over five rehab outings for Triple-A Norfolk from April 18-29."
+      },
+      {
+        "playerName": "Dean Kremer",
+        "injury": "Right quad strain",
+        "expectedReturn": "Potentially mid-May",
+        "status": "Injury was sustained in days after April 18 start in Cleveland. Expected to miss at least several weeks."
       },
       {
         "playerName": "Heston Kjerstad",
@@ -255,7 +261,7 @@
         "playerName": "Brandon Williamson",
         "injury": "Left shoulder fatigue",
         "expectedReturn": "TBD",
-        "status": "Exited his April 29 start after three innings due to the issue. He was scheduled to undergo an MRI on April 30, per manager Terry Francona."
+        "status": "MRI showed no structural issues and Williamson received a cortisone injection. He exited his April 29 start after three innings due to the issue."
       },
       {
         "playerName": "Eugenio Suárez",
@@ -424,8 +430,8 @@
       {
         "playerName": "Jeremy Peña",
         "injury": "Grade 1 right hamstring strain",
-        "expectedReturn": "mid-May",
-        "status": "Faced Josh Hader in live BP on April 28. Will rejoin Astros in Baltimore on April 29 before going on a rehab assignment."
+        "expectedReturn": "Mid-May",
+        "status": "Joined the Astros in Baltimore on April 29 and will remain with the club May 1-3 in Boston before potentially starting a rehab assignment."
       },
       {
         "playerName": "Josh Hader",
@@ -438,12 +444,6 @@
         "injury": "Right arm fatigue",
         "expectedReturn": "May",
         "status": "Made his first rehab start April 28, allowing five runs on six hits in two-plus innings for Double-A Corpus Christi. He threw 59 pitches, 31 for strikes, with two strikeouts, three walks and a home run allowed."
-      },
-      {
-        "playerName": "Cody Bolton",
-        "injury": "Mid-back inflammation",
-        "expectedReturn": "Early May",
-        "status": "Allowed one run on two hits and a walk across two innings during a rehab appearance for Triple-A Sugar Land on April 26. Could return if and when RHP Ryan Weiss goes on the paternity list."
       },
       {
         "playerName": "Hunter Brown",
@@ -511,7 +511,7 @@
         "playerName": "Vinnie Pasquantino",
         "injury": "Low back tightness",
         "expectedReturn": "Day to day",
-        "status": "Has been dealing with low back tightness for \"a while,\" he said, and exited after a swing in the sixth inning April 28. Held out of lineup April 29 out of caution."
+        "status": "Has been dealing with low back tightness for \"a while,\" he said, and exited after a swing in the sixth inning April 28. Held out of lineup April 29 and April 30 but is feeling better and is available off the bench."
       },
       {
         "playerName": "Carlos Estévez",
@@ -671,9 +671,9 @@
     "121": [
       {
         "playerName": "Luis Robert Jr.",
-        "injury": "Lower back tightness",
-        "expectedReturn": "Day to day",
-        "status": "Missed his third consecutive game April 29 due to back tightness and underwent an MRI that day. The results of that testing will determine whether Robert must go on the injured list."
+        "injury": "Lumbar spine disc herniation",
+        "expectedReturn": "TBD",
+        "status": "Robert received an injection April 30 and will rest for seven to 10 days. He will be re-evaluated then to determine his potential return date."
       },
       {
         "playerName": "A.J. Minter",
@@ -767,13 +767,13 @@
         "playerName": "Jared Triolo",
         "injury": "Right knee patellar tendon injury",
         "expectedReturn": "Late May",
-        "status": "Went 3-for-4 with a home run, three RBIs and two runs scored in his first game with Double-A Altoona after getting his rehab assignment transferred from Single-A Bradenton, where he played in two games."
+        "status": "Will play in back-to-back games for the first time on April 30 and May 1. Went 3-for-4 with a home run, three RBIs and two runs scored in his first game with Double-A Altoona on April 28."
       },
       {
         "playerName": "Jared Jones",
         "injury": "Right UCL sprain",
         "expectedReturn": "Late May/early June",
-        "status": "General manager Ben Cherington said on a radio interview that Jones will begin a rehab assignment with Single-A Bradenton on April 29. He will make several outings there before his next steps are determined."
+        "status": "Threw three perfect innings (41 pitches) in first rehab start with Single-A Bradenton on April 29. He struck out five and his fastball reached 101 mph. Will throw a bullpen session before determining where he'll make next rehab start."
       }
     ],
     "135": [
@@ -951,12 +951,6 @@
       }
     ],
     "138": [
-      {
-        "playerName": "Hunter Dobbins",
-        "injury": "Torn right ACL",
-        "expectedReturn": "TBD",
-        "status": "Made fourth rehab start for Triple-A Memphis on April 25. Will start April 30 game against the Pirates."
-      },
       {
         "playerName": "Matt Pushard",
         "injury": "Right knee patellar tendinitis",
@@ -1192,20 +1186,20 @@
       {
         "playerName": "J.T. Realmuto",
         "injury": "Back spasms",
-        "expectedReturn": "Early May",
-        "status": "He is feeling better, Phillies manager Rob Thomson said on April 25. Realmuto is in Philadelphia getting treatment, including daily stints in the team’s hyperbaric chamber."
+        "expectedReturn": "Possibly this weekend in Miami",
+        "status": "He is doing everything at this point and feeling good, so it wouldn’t be a surprise to see the Phillies activate him from the IL in Miami."
+      },
+      {
+        "playerName": "Jhoan Duran",
+        "injury": "Left oblique strain",
+        "expectedReturn": "Mid-May",
+        "status": "He threw his first bullpen session on April 30 at Citizens Bank Park. The Phillies and Duran call his oblique injury “very mild.”"
       },
       {
         "playerName": "Max Lazar",
         "injury": "Left oblique strain",
         "expectedReturn": "TBD",
         "status": "Throwing bullpen sessions in Clearwater, Fla. Left Team Israel in the World Baseball Classic after feeling something in his abdomen/oblique. Transferred to 60-day IL on April 22."
-      },
-      {
-        "playerName": "Jhoan Duran",
-        "injury": "Left oblique strain",
-        "expectedReturn": "TBD",
-        "status": "The Phillies and Duran call his oblique injury “very mild.” He played catch for the first time April 21, noting afterwards that he was feeling much better."
       },
       {
         "playerName": "Aidan Miller (Phillies' No. 1 prospect, No. 18 overall)",
