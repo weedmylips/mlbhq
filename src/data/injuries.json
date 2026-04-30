@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-30T02:50:49.810Z",
+  "lastUpdated": "2026-04-30T08:21:21.135Z",
   "teams": {
     "108": [
       {
@@ -251,6 +251,12 @@
       }
     ],
     "113": [
+      {
+        "playerName": "Brandon Williamson",
+        "injury": "Left shoulder fatigue",
+        "expectedReturn": "TBD",
+        "status": "Exited his April 29 start after three innings due to the issue. He was scheduled to undergo an MRI on April 30, per manager Terry Francona."
+      },
       {
         "playerName": "Eugenio Suárez",
         "injury": "Left oblique strain",
@@ -1237,13 +1243,13 @@
         "playerName": "Dylan Dodd",
         "injury": "Left thoracic spine inflammation",
         "expectedReturn": "TBD",
-        "status": "The left-handed reliever felt discomfort after his April 21 appearance."
+        "status": "Felt discomfort after his April 21 appearance."
       },
       {
         "playerName": "Raisel Iglesias",
         "injury": "Right shoulder inflammation",
         "expectedReturn": "Early May",
-        "status": "Iglesias slept on his shoulder wrong on April 17. When he made his next appearance, on April 19, his velocity was slightly down. He’ll be eligible for activation on May 5."
+        "status": "Slept on his shoulder wrong on April 17. When he made his next appearance, on April 19, his velocity was slightly down. He’ll be eligible for activation on May 5."
       },
       {
         "playerName": "Danny Young",
