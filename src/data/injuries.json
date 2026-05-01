@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-30T19:20:12.685Z",
+  "lastUpdated": "2026-05-01T02:57:12.129Z",
   "teams": {
     "108": [
       {
@@ -428,6 +428,12 @@
     ],
     "117": [
       {
+        "playerName": "Tatsuya Imai",
+        "injury": "Right arm fatigue",
+        "expectedReturn": "May",
+        "status": "Made first rehab start April 28, allowing five runs on six hits in two-plus innings (59 pitches) for Double-A Corpus Christi. Will need one more rehab start before rejoining Astros."
+      },
+      {
         "playerName": "Jeremy Peña",
         "injury": "Grade 1 right hamstring strain",
         "expectedReturn": "Mid-May",
@@ -438,12 +444,6 @@
         "injury": "Left biceps tendinitis",
         "expectedReturn": "May 24",
         "status": "Threw a live BP on April 28, including against Jeremy Peña. He'll throw one more live BP before heading out on rehab."
-      },
-      {
-        "playerName": "Tatsuya Imai",
-        "injury": "Right arm fatigue",
-        "expectedReturn": "May",
-        "status": "Made his first rehab start April 28, allowing five runs on six hits in two-plus innings for Double-A Corpus Christi. He threw 59 pitches, 31 for strikes, with two strikeouts, three walks and a home run allowed."
       },
       {
         "playerName": "Hunter Brown",
@@ -743,6 +743,12 @@
       }
     ],
     "133": [
+      {
+        "playerName": "Jeffrey Springs",
+        "injury": "Right hip soreness",
+        "expectedReturn": "May 6 or 7",
+        "status": "Exited his start on April 30 following the third inning after feeling discomfort in his hip. A's are optimistic he will be able to make his next start against the Phillies, which currently lines up for May 6."
+      },
       {
         "playerName": "Tyler Soderstrom",
         "injury": "General soreness",
@@ -1078,22 +1084,28 @@
     ],
     "141": [
       {
+        "playerName": "Alejandro Kirk",
+        "injury": "Left thumb fracture",
+        "expectedReturn": "Potentially mid-to-late May",
+        "status": "Has started throwing. Next steps include catching and hitting, but Kirk is progressing on schedule."
+      },
+      {
         "playerName": "José Berríos",
         "injury": "Right elbow stress fracture",
         "expectedReturn": "Early May",
-        "status": "Threw 70 pitches in Triple-A rehab outing on April 28. Team will now discuss next steps, whether Berríos returns or makes one more rehab start."
+        "status": "Will throw his bullpen with Triple-A Buffalo on Friday, but it's still to be determined whether he'll make one more rehab start or be activated."
+      },
+      {
+        "playerName": "Nathan Lukes",
+        "injury": "Left hamstring discomfort",
+        "expectedReturn": "Potentially mid-to-late May",
+        "status": "Beginning rehab process at Florida complex and remains week to week."
       },
       {
         "playerName": "Max Scherzer",
         "injury": "Right forearm tendinitis and left ankle inflammation",
         "expectedReturn": "Potentially mid-to-late May",
         "status": "No further testing or anti-inflammatories needed. Will shut down for 5-7 days and reevaluate."
-      },
-      {
-        "playerName": "Nathan Lukes",
-        "injury": "Left hamstring discomfort",
-        "expectedReturn": "Potentially mid to late May",
-        "status": "\"Week to week\" after an MRI revealed a left hamstring strain from running the bases."
       },
       {
         "playerName": "Yimi García",
@@ -1126,12 +1138,6 @@
         "status": "Underwent surgery and is expected to miss the rest of 2026."
       },
       {
-        "playerName": "Alejandro Kirk",
-        "injury": "Left thumb fracture",
-        "expectedReturn": "Potentially mid-to-late May",
-        "status": "Underwent surgery on April 7 and had a screw inserted in his thumb. Expectation is a six-week recovery."
-      },
-      {
         "playerName": "Anthony Santander",
         "injury": "Left shoulder labral surgery",
         "expectedReturn": "Potentially by end of 2026 season",
@@ -1158,12 +1164,6 @@
         "status": "Placed on IL on April 28. Last pitched on April 25, allowing one run and striking out two."
       },
       {
-        "playerName": "Travis Adams",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "Early May",
-        "status": "Has advanced to Triple-A St. Paul as he continues rehab assignment. Will pitch multi-inning relief outings."
-      },
-      {
         "playerName": "David Festa",
         "injury": "Right shoulder impingement",
         "expectedReturn": "June",
@@ -1184,6 +1184,18 @@
     ],
     "143": [
       {
+        "playerName": "Max Lazar",
+        "injury": "Left oblique strain",
+        "expectedReturn": "TBD",
+        "status": "Began a rehab assignment on April 30 with High-A Jersey Shore. Left Team Israel in the World Baseball Classic after feeling something in his abdomen/oblique."
+      },
+      {
+        "playerName": "Kyle Backhus",
+        "injury": "Inflammation in left elbow",
+        "expectedReturn": "TBD",
+        "status": "He pitched five times in seven days from April 19-25, including Rob Thomson’s last win as Phillies manager on April 25."
+      },
+      {
         "playerName": "J.T. Realmuto",
         "injury": "Back spasms",
         "expectedReturn": "Possibly this weekend in Miami",
@@ -1194,12 +1206,6 @@
         "injury": "Left oblique strain",
         "expectedReturn": "Mid-May",
         "status": "He threw his first bullpen session on April 30 at Citizens Bank Park. The Phillies and Duran call his oblique injury “very mild.”"
-      },
-      {
-        "playerName": "Max Lazar",
-        "injury": "Left oblique strain",
-        "expectedReturn": "TBD",
-        "status": "Throwing bullpen sessions in Clearwater, Fla. Left Team Israel in the World Baseball Classic after feeling something in his abdomen/oblique. Transferred to 60-day IL on April 22."
       },
       {
         "playerName": "Aidan Miller (Phillies' No. 1 prospect, No. 18 overall)",
@@ -1403,6 +1409,12 @@
       }
     ],
     "158": [
+      {
+        "playerName": "Brandon Woodruff",
+        "injury": "TBD",
+        "expectedReturn": "Day to day",
+        "status": "Exited his April 30 start against the D-backs after 1 1/3 innings because of diminished velocity, and underwent an MRI scan to determine whether there is an injury."
+      },
       {
         "playerName": "Angel Zerpa",
         "injury": "Left forearm tightness",
