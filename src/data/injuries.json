@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-01T13:17:46.514Z",
+  "lastUpdated": "2026-05-01T19:11:10.473Z",
   "teams": {
     "108": [
       {
@@ -178,16 +178,16 @@
     ],
     "112": [
       {
-        "playerName": "Dansby Swanson",
-        "injury": "Left glute",
-        "expectedReturn": "Day to day",
-        "status": "Feeling improved, but out of lineup April 29 as precaution. Made sense with off-day on April 30, per manager Craig Counsell. Exited April 28 game at Padres with cramping after sliding on a stolen base in the second inning."
-      },
-      {
         "playerName": "Daniel Palencia",
         "injury": "Left lat strain",
-        "expectedReturn": "During May 1-3 series vs. D-backs",
-        "status": "Felt good April 29, following two recent mound workouts (April 25 and April 28). Cubs discussing next step. Activation during May 1-3 series vs. D-backs a possibility."
+        "expectedReturn": "During current homestand",
+        "status": "Felt good April 29 following mound workouts on April 25 and 28. Was set to have rehab outing with Triple-A Iowa on May 1."
+      },
+      {
+        "playerName": "Caleb Thielbar",
+        "injury": "Left hamstring strain",
+        "expectedReturn": "Early to mid-May",
+        "status": "Removed in ninth inning against Phillies on April 23. Has been throwing, and Cubs hope he will be able to return close to eligibility date."
       },
       {
         "playerName": "Justin Steele",
@@ -218,12 +218,6 @@
         "injury": "Right elbow inflammation",
         "expectedReturn": "TBD",
         "status": "Last pitched on April 4 for Iowa. Moved to Minor League IL out of caution. Has resumed playing catch, per president of baseball operations Jed Hoyer."
-      },
-      {
-        "playerName": "Caleb Thielbar",
-        "injury": "Left hamstring strain",
-        "expectedReturn": "Early to mid-May",
-        "status": "Removed in ninth inning of series finale against Phillies on April 23. Cubs hoping the lefty will be able to return close to eligibility date."
       },
       {
         "playerName": "Hunter Harvey",
