@@ -1,7 +1,13 @@
 {
-  "lastUpdated": "2026-05-02T02:38:17.663Z",
+  "lastUpdated": "2026-05-02T07:43:16.813Z",
   "teams": {
     "108": [
+      {
+        "playerName": "Walbert Ureña",
+        "injury": "Right knee contusion",
+        "expectedReturn": "Day to day",
+        "status": "Exited May 1 start after taking a 102.6 mph liner off the outside of his right knee. Was removed as a precaution and believes he can make his next start."
+      },
       {
         "playerName": "Yusei Kikuchi",
         "injury": "Left shoulder stiffness",
@@ -63,7 +69,7 @@
         "playerName": "Ryan Helsley",
         "injury": "Right elbow inflammation",
         "expectedReturn": "TBD",
-        "status": "Placed on IL prior to opener of four-game series at Yankee Stadium. The severity of the injury is not yet known, nor is when the ailment was sustained."
+        "status": "Placed on IL prior to opener of four-game series at Yankee Stadium. Imaging came back clean. Taking anti-inflammatory medication. Not expected to be a long-term issue."
       },
       {
         "playerName": "Trevor Rogers",
@@ -1140,6 +1146,12 @@
     ],
     "142": [
       {
+        "playerName": "Emmanuel Rodriguez (Twins No. 4 prospect, MLB No. 64)",
+        "injury": "Left thumb injury",
+        "expectedReturn": "TBD",
+        "status": "Injured the thumb sliding into first base on May 1 and was removed from the Saints' game vs. the Iowa Cubs."
+      },
+      {
         "playerName": "Mick Abel",
         "injury": "Right elbow inflammation",
         "expectedReturn": "TBD",
@@ -1397,6 +1409,12 @@
       }
     ],
     "158": [
+      {
+        "playerName": "Jacob Misiorowski",
+        "injury": "Right hamstring cramp",
+        "expectedReturn": "Day to day",
+        "status": "Exited May 1 start vs. the Nats after one out and one additional pitch in the sixth inning of a no-hit bid. Will undergo testing on May 2. Brewers are hopeful it's not a lingering issue. (last updated: May 1)"
+      },
       {
         "playerName": "Brandon Woodruff",
         "injury": "Right shoulder inflammation",
