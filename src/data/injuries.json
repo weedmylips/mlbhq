@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-02T13:09:54.802Z",
+  "lastUpdated": "2026-05-02T18:58:25.005Z",
   "teams": {
     "108": [
       {
@@ -82,12 +82,6 @@
         "injury": "Right hand discomfort",
         "expectedReturn": "TBD",
         "status": "Exited first inning of new rehab assignment with Triple-A Norfolk (his 14th overall rehab game) due to right hand discomfort on April 21. MRI, CT scans, X-rays all clean. Expects to return to rehab games week of May 4."
-      },
-      {
-        "playerName": "Dietrich Enns",
-        "injury": "Left foot infection",
-        "expectedReturn": "Late April",
-        "status": "Hospitalized in Pittsburgh during April 3-5 series. Received IV antibiotics for swelling. Allowed four runs in 6 1/3 innings over five rehab outings for Triple-A Norfolk from April 18-29."
       },
       {
         "playerName": "Dean Kremer",
@@ -193,13 +187,13 @@
         "playerName": "Nico Hoerner",
         "injury": "Neck tightness",
         "expectedReturn": "Day to day",
-        "status": "Exited after the top of the second inning against the Diamondbacks, but Hoerner is optimistic about the injury being short-term."
+        "status": "Held out of lineup May 2 due to lingering discomfort. Tightness flared pregame May 1 and Hoerner exited after the top of the second vs. D-backs."
       },
       {
         "playerName": "Daniel Palencia",
         "injury": "Left lat strain",
         "expectedReturn": "During current homestand",
-        "status": "Felt good April 29 following mound workouts on April 25 and 28. Was set to have rehab outing with Triple-A Iowa on May 1."
+        "status": "Averaged 100.4 mph (max velo 102 mph) on 13 fastballs in 19-pitch rehab outing (two-thirds of an inning) with Triple-A Iowa on May 1. Could be activated in next few days."
       },
       {
         "playerName": "Caleb Thielbar",
@@ -752,8 +746,8 @@
       {
         "playerName": "Jeffrey Springs",
         "injury": "Right hip soreness",
-        "expectedReturn": "May 6 or 7",
-        "status": "Exited his start on April 30 following the third inning after feeling discomfort in his hip. A's are optimistic he will be able to make his next start against the Phillies, which currently lines up for May 6."
+        "expectedReturn": "May 6",
+        "status": "Exited his start on April 30 following the third inning after feeling discomfort in his hip. Scheduled to make his next start on May 6 in Philadelphia."
       },
       {
         "playerName": "Denzel Clarke",
@@ -1146,16 +1140,22 @@
     ],
     "142": [
       {
+        "playerName": "Mick Abel",
+        "injury": "Right elbow inflammation",
+        "expectedReturn": "May",
+        "status": "Threw a bullpen session Saturday and was encouraged. Next steps TBD, but is progressing well."
+      },
+      {
+        "playerName": "Cole Sands",
+        "injury": "Mild right forearm strain",
+        "expectedReturn": "TBD",
+        "status": "Felt discomfort while warming up on April 30 and was placed on IL following MRI. Strain is considered to be mild."
+      },
+      {
         "playerName": "Emmanuel Rodriguez (Twins No. 4 prospect, MLB No. 64)",
         "injury": "Left thumb injury",
         "expectedReturn": "TBD",
         "status": "Injured the thumb sliding into first base on May 1 and was removed from the Saints' game vs. the Iowa Cubs."
-      },
-      {
-        "playerName": "Mick Abel",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "TBD",
-        "status": "Has begun playing catch and expects to throw a bullpen by the end of the week."
       },
       {
         "playerName": "Garrett Acton",
@@ -1340,16 +1340,16 @@
     ],
     "146": [
       {
+        "playerName": "Pete Fairbanks",
+        "injury": "Nerve irritation",
+        "expectedReturn": "Road series in Minnesota",
+        "status": "Scheduled to play catch on May 2. Exited April 27 outing after experiencing diminished sensation in pitching hand."
+      },
+      {
         "playerName": "Griffin Conine",
         "injury": "Left hamstring tear",
         "expectedReturn": "June",
         "status": "According to manager Clayton McCullough, Conine is running at 70 percent, is hitting and throwing. Trending toward a quicker timeline of return. Underwent left hamstring tendon excision week of April 13."
-      },
-      {
-        "playerName": "Pete Fairbanks",
-        "injury": "Nerve irritation",
-        "expectedReturn": "Around 15 days",
-        "status": "Exited April 27 outing after experiencing diminished sensation in pitching hand."
       },
       {
         "playerName": "Adam Mazur",
