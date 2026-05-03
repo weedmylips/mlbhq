@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-05-03T02:50:25.719Z",
+  "lastUpdated": "2026-05-03T08:00:55.735Z",
   "teams": {
     "108": [
       {
         "playerName": "Ryan Johnson",
         "injury": "Viral infection",
         "expectedReturn": "May",
-        "status": "Exited a Minor League rehab start in Arizona on April 13 with hamstring discomfort. Faced hitters in an extended Spring Training game on April 27. Begins rehab assignment with Single-A Rancho Cucamonga May 3."
+        "status": "Exited a Minor League rehab start in Arizona on April 13 with hamstring discomfort. Begins rehab assignment with Single-A Rancho Cucamonga May 3."
       },
       {
         "playerName": "Walbert Ureña",
@@ -30,25 +30,25 @@
         "playerName": "Kirby Yates",
         "injury": "Left knee inflammation",
         "expectedReturn": "Late April",
-        "status": "Continuing to build back up and has had no complications during rehab assignment, which was set to resume with Single-A Rancho Cucamonga on May 2. Still needs to improve his velocity."
+        "status": "Continuing to build back up and has had no complications during rehab assignment. Threw a scoreless inning with Single-A Rancho Cucamonga on May 2. Still needs to improve his velocity."
       },
       {
         "playerName": "Alek Manoah",
         "injury": "Right middle finger contusion",
         "expectedReturn": "May",
-        "status": "Right middle fingernail fell off after March 17 start. Threw four simulated innings to hitters on April 21 and five more on April 27. Set to begin rehab assignment with Single-A Rancho Cucamonga on May 2."
+        "status": "Right middle fingernail fell off after March 17 start. Began rehab outing by allowing five earned runs in 4 1/3 innings with Single-A Rancho Cucamonga on May 2."
+      },
+      {
+        "playerName": "Ben Joyce",
+        "injury": "Right shoulder surgery",
+        "expectedReturn": "May",
+        "status": "Began a rehab assignment with Single-A Rancho Cucamonga on April 29 by throwing a scoreless inning with a strikeout. Threw another scoreless inning with the Quakes on May 2."
       },
       {
         "playerName": "Grayson Rodriguez",
         "injury": "Right shoulder inflammation",
         "expectedReturn": "May",
         "status": "Threw on April 24 in Arizona and felt good. Progressed to throwing four simulated innings and 60 pitches on April 30."
-      },
-      {
-        "playerName": "Ben Joyce",
-        "injury": "Right shoulder surgery",
-        "expectedReturn": "May",
-        "status": "Began a rehab assignment with Single-A Rancho Cucamonga on April 29 by throwing a scoreless inning with a strikeout. Set to make another appearance on May 2."
       },
       {
         "playerName": "Robert Stephenson",
@@ -526,6 +526,12 @@
     ],
     "118": [
       {
+        "playerName": "Bailey Falter",
+        "injury": "Left elbow inflammation",
+        "expectedReturn": "May",
+        "status": "Threw 26 pitches (14 strikes) in his sixth rehab appearance with Triple-A Omaha on May 2, allowing a run on two hits and a walk."
+      },
+      {
         "playerName": "Carlos Estévez",
         "injury": "Left foot contusion",
         "expectedReturn": "May",
@@ -536,12 +542,6 @@
         "injury": "Left oblique strain",
         "expectedReturn": "Early May",
         "status": "Threw 72 pitches in 4 1/3 innings in his fourth rehab start with Triple-A Omaha on April 29, striking out four and allowing eight hits and three runs (one earned)."
-      },
-      {
-        "playerName": "Bailey Falter",
-        "injury": "Left elbow inflammation",
-        "expectedReturn": "Late April",
-        "status": "Struck out two in 1 1/3 innings in his fifth rehab appearance on April 29. Slated to pitch again May 2."
       },
       {
         "playerName": "Jonathan India",
@@ -681,6 +681,12 @@
       }
     ],
     "121": [
+      {
+        "playerName": "Ronny Mauricio",
+        "injury": "Fractured left thumb",
+        "expectedReturn": "June",
+        "status": "Fractured his thumb sliding into first base in May 2's loss to the Angels. Will be placed on the injured list on May 3 and likely miss around six weeks."
+      },
       {
         "playerName": "Jorge Polanco",
         "injury": "Left Achilles bursitis/right wrist contusion",
@@ -833,6 +839,18 @@
       }
     ],
     "136": [
+      {
+        "playerName": "Cal Raleigh",
+        "injury": "General soreness",
+        "expectedReturn": "TBD",
+        "status": "Scratched from May 2 lineup two hours before first pitch. Awaiting results of imaging, though manager Dan Wilson preferred not to specify what part of Raleigh's body is ailing."
+      },
+      {
+        "playerName": "Will Wilson",
+        "injury": "Fractured left thumb",
+        "expectedReturn": "TBD",
+        "status": "Placed on the IL before May 2 game vs. Royals."
+      },
       {
         "playerName": "Matt Brash",
         "injury": "Right lat inflammation",
@@ -1227,6 +1245,12 @@
       }
     ],
     "144": [
+      {
+        "playerName": "Ronald Acuña Jr.",
+        "injury": "Left hamstring tightness",
+        "expectedReturn": "Day to day",
+        "status": "Left May 2 game in Colorado after running out a grounder. Awaiting results of MRI."
+      },
       {
         "playerName": "Spencer Strider",
         "injury": "Left oblique strain",
