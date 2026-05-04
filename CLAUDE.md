@@ -128,7 +128,7 @@ Mirrors `server/routes/` for production. Uses a different cache pattern than the
 
 ### Injury data pipeline
 
-- **Build-time data**: `src/data/injuries.json` is committed to the repo and refreshed by GitHub Actions (`.github/workflows/scrape-injuries.yml`) every 6 hours
+- **Build-time data**: `src/data/injuries.json` is committed to the repo and refreshed by GitHub Actions (`.github/workflows/scrape-injuries.yml`) every 12 hours
 - **Script**: `scripts/scrapeInjuries.js` orchestrates scraping all 30 teams and writes the JSON
 - **Merging**: both `server/routes/roster.js` and `api/roster.js` call `mergeRosterData()` from `src/utils/rosterMerge.js`
 
