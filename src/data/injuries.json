@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-05T01:48:08.870Z",
+  "lastUpdated": "2026-05-05T13:08:33.419Z",
   "teams": {
     "108": [
       {
@@ -538,6 +538,12 @@
     ],
     "118": [
       {
+        "playerName": "Noah Cameron",
+        "injury": "Low back tightness",
+        "expectedReturn": "Day to day",
+        "status": "Scratched from May 5 start against Guardians, but is not expected to be a serious injury. Stephen Kolek scheduled to make spot start in Cameron's absence."
+      },
+      {
         "playerName": "Carlos Estévez",
         "injury": "Left foot contusion",
         "expectedReturn": "May",
@@ -802,28 +808,28 @@
     ],
     "135": [
       {
+        "playerName": "Yuki Matsui",
+        "injury": "Left groin strain",
+        "expectedReturn": "May 5",
+        "status": "Sustained the injury during a live BP in Spring Training. Joined the Padres on May 4, as his 30-day rehab stint was expiring. Expected to be activated May 5."
+      },
+      {
         "playerName": "Germán Márquez",
         "injury": "Right forearm nerve irritation",
         "expectedReturn": "TBD",
-        "status": "Márquez landed on the IL after a poor start on May 1. The team offered no specifics on the injury nor a timeline for his return."
+        "status": "Landed on the IL after a poor start on May 1. Will take several days to rest and recover before beginning a throwing program."
+      },
+      {
+        "playerName": "Joe Musgrove",
+        "injury": "Tommy John surgery",
+        "expectedReturn": "June or July",
+        "status": "Underwent surgery in October 2024. Was hopeful for an early season return but experienced a setback after making one start in Spring Training. Has played catch but has yet to throw off the mound."
       },
       {
         "playerName": "Will Wagner",
         "injury": "Right oblique strain",
         "expectedReturn": "Late May",
         "status": "Only appeared in five Cactus League games after sustaining the injury in early March. Began a rehab assignment with Triple-A El Paso on May 1."
-      },
-      {
-        "playerName": "Yuki Matsui",
-        "injury": "Left groin strain",
-        "expectedReturn": "Early May",
-        "status": "Missed World Baseball Classic due to the injury, then began the season on the IL. Began rehab stint with Triple-A El Paso April 4 and could be nearing a return."
-      },
-      {
-        "playerName": "Joe Musgrove",
-        "injury": "Tommy John surgery",
-        "expectedReturn": "June or July",
-        "status": "Underwent surgery in October 2024. Was hopeful for an early season return, but experienced a setback after making one start in Spring Training. Playing light catch but has yet to throw off the mound."
       },
       {
         "playerName": "Nick Pivetta",
@@ -1325,6 +1331,12 @@
       }
     ],
     "145": [
+      {
+        "playerName": "Austin Hays",
+        "injury": "Left calf strain",
+        "expectedReturn": "Late May",
+        "status": "Hays had just come back from an IL stint due to a Grade 1 right hamstring strain before first feeling this injury on the off-day of April 30."
+      },
       {
         "playerName": "Shane Smith",
         "injury": "Right rotator cuff strain",
