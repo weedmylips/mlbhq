@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-06T01:47:08.272Z",
+  "lastUpdated": "2026-05-06T13:26:55.636Z",
   "teams": {
     "108": [
       {
@@ -258,6 +258,12 @@
     ],
     "113": [
       {
+        "playerName": "Emilio Pagán",
+        "injury": "Left hamstring",
+        "expectedReturn": "TBD",
+        "status": "Pagán grabbed his hamstring after throwing his first pitch of the night vs. the Cubs on May 5. An MRI is scheduled to determine the severity of the injury."
+      },
+      {
         "playerName": "Caleb Ferguson",
         "injury": "Mild right oblique strain",
         "expectedReturn": "May",
@@ -440,22 +446,28 @@
         "status": "Was scratched prior to the May 4 game against the Dodgers after suffering an injury swinging the bat in BP and placed on IL."
       },
       {
+        "playerName": "Carlos Correa",
+        "injury": "Left ankle injury",
+        "expectedReturn": "Out indefinitely",
+        "status": "Was scratched prior to the May 5 game against the Dodgers after suffering an injury during batting practice and will be out weeks or months, per a source."
+      },
+      {
         "playerName": "Tatsuya Imai",
         "injury": "Right arm fatigue",
-        "expectedReturn": "May",
-        "status": "Was scheduled to make his second Minor League start on May 5 for Triple-A Sugar Land, after which he's expected to rejoin the Houston rotation."
+        "expectedReturn": "Mid-May",
+        "status": "Threw three innings in his second Minor League rehab start May 5 for Triple-A Sugar Land, allowing five walks, one run and one hit with three strikeouts while throwing 63 pitches (27 strikes)."
       },
       {
         "playerName": "Josh Hader",
         "injury": "Left biceps tendinitis",
         "expectedReturn": "May 24",
-        "status": "Was scheduled to make his first Minor League rehab appearance May 5 for Triple-A Sugar Land."
+        "status": "In first rehab outing May 5 for Triple-A Sugar Land, tossed a scoreless inning, allowing one walk with a strikeout and hitting 94.7 mph."
       },
       {
         "playerName": "Nate Pearson",
         "injury": "Right elbow surgery recovery",
-        "expectedReturn": "Mid May",
-        "status": "Was scheduled to make his first Minor League rehab appearance May 5 for Triple-A Sugar Land."
+        "expectedReturn": "Mid-May",
+        "status": "In first Minor League rehab appearance May 5 for Triple-A Sugar Land, threw two-thirds of an inning and allowed three runs (one earned) with three walks and two strikeouts (34 pitches)."
       },
       {
         "playerName": "Taylor Trammell",
@@ -619,6 +631,12 @@
       }
     ],
     "120": [
+      {
+        "playerName": "Max Kranick",
+        "injury": "Recovering from right elbow surgery",
+        "expectedReturn": "June",
+        "status": "Signed to a one-year Major League deal with a club option for the 2027 season on May 5, but likely won't be cleared to play for at least another month."
+      },
       {
         "playerName": "Clayton Beeter",
         "injury": "Right forearm soreness",
@@ -828,6 +846,24 @@
     ],
     "136": [
       {
+        "playerName": "Matt Brash",
+        "injury": "Right lat inflammation",
+        "expectedReturn": "May 15 at earliest",
+        "status": "Played catch for the first time since the issue first surfaced, on May 5. MRI revealed \"trace inflammation\" but no structural damage.More »"
+      },
+      {
+        "playerName": "Brendan Donovan",
+        "injury": "Left groin muscle strain",
+        "expectedReturn": "May 8",
+        "status": "Began two-game rehab assignment at Double-A Arkansas from on May 5, going 1-for-3 with one double and two walks. Will be activated on May 8 at White Sox at start of next road trip, if all goes well."
+      },
+      {
+        "playerName": "Gabe Speier",
+        "injury": "Left shoulder inflammation",
+        "expectedReturn": "TBD",
+        "status": "Placed on injured list on May 4, five days after his most recent appearance."
+      },
+      {
         "playerName": "Victor Robles",
         "injury": "Right pectoral strain",
         "expectedReturn": "Mid-May",
@@ -838,18 +874,6 @@
         "injury": "Fractured left thumb",
         "expectedReturn": "TBD",
         "status": "Placed on the IL before May 2 game vs. Royals."
-      },
-      {
-        "playerName": "Matt Brash",
-        "injury": "Right lat inflammation",
-        "expectedReturn": "May 15 at earliest",
-        "status": "Will not throw for 3-5 days then slowly build back up. MRI revealed \"trace inflammation\" but no structural damage.More »"
-      },
-      {
-        "playerName": "Brendan Donovan",
-        "injury": "Left groin muscle strain",
-        "expectedReturn": "May 8",
-        "status": "Slated for rehab assignment at Double-A Arkansas from May 5-6 then will be activated on May 8 at White Sox at start of next road trip, if all goes well."
       },
       {
         "playerName": "Bryce Miller",
