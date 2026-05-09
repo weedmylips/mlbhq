@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-09T01:50:17.740Z",
+  "lastUpdated": "2026-05-09T12:51:13.027Z",
   "teams": {
     "108": [
       {
@@ -348,6 +348,12 @@
     ],
     "116": [
       {
+        "playerName": "Troy Melton",
+        "injury": "Right elbow inflammation",
+        "expectedReturn": "End of May",
+        "status": "Tossed three perfect innings with five strikeouts on 27 pitches (22 strikes) in his second rehab start for Single-A Lakeland on May 8. Fastball sat at 95.4 mph, topped out at 96.4."
+      },
+      {
         "playerName": "Justin Verlander",
         "injury": "Left hip inflammation",
         "expectedReturn": "May",
@@ -381,7 +387,7 @@
         "playerName": "Connor Seabold",
         "injury": "Left ankle inflammation",
         "expectedReturn": "Mid-May",
-        "status": "Scheduled to make rehab appearance for Single-A Lakeland on May 8."
+        "status": "Tossed a scoreless inning on one hit with two strikeouts in his first rehab appearance for Single-A Lakeland on May 8."
       },
       {
         "playerName": "Casey Mize",
@@ -394,12 +400,6 @@
         "injury": "Mild left oblique strain",
         "expectedReturn": "Day to day",
         "status": "Left May 2 game with discomfort after sliding into home plate. Tests showed no structural damage, but he is still feeling some soreness."
-      },
-      {
-        "playerName": "Troy Melton",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "End of May",
-        "status": "Tossed 1 2/3 innings with two strikeouts in first rehab start for Single-A Lakeland on May 3. Fastball sat at 95-96 mph, topped out at 98-99. Scheduled to make another rehab start for Lakeland on May 8."
       },
       {
         "playerName": "Reese Olson",
@@ -553,27 +553,33 @@
     "119": [
       {
         "playerName": "Tyler Glasnow",
-        "injury": "Lower back pain",
-        "expectedReturn": "TBD",
-        "status": "Glasnow exited his May 6 start after one inning with lower back pain. He will undergo an MRI, but manager Dave Roberts said he doesn't think Glasnow will go on the IL."
+        "injury": "Lower back spasms",
+        "expectedReturn": "Late May",
+        "status": "Exited his May 6 start after one inning with lower back pain. An MRI revealed \"nothing really significant,\" per manager Dave Roberts."
       },
       {
         "playerName": "Blake Snell",
         "injury": "Left shoulder fatigue",
-        "expectedReturn": "Mid-May",
-        "status": "Manager Dave Roberts said Snell is scheduled to pitch on May 9 with Single-A Ontario due to proximity. If this start goes well, Roberts expects Snell to rejoin the Major League rotation immediately after."
+        "expectedReturn": "May 9",
+        "status": "Scheduled to make his season debut on May 9, rather than make one final rehab start."
+      },
+      {
+        "playerName": "Mookie Betts",
+        "injury": "Right oblique strain",
+        "expectedReturn": "Possibly May 11",
+        "status": "Went 1-for-3 and played five innings at shortstop in the first game of his rehab assignment with Triple-A Oklahoma City on May 8."
+      },
+      {
+        "playerName": "Ben Casparius",
+        "injury": "Right shoulder inflammation",
+        "expectedReturn": "2026",
+        "status": "Working through a throwing program at the Dodgers' complex in Arizona."
       },
       {
         "playerName": "Brusdar Graterol",
         "injury": "Recovery from right shoulder surgery",
         "expectedReturn": "June",
-        "status": "Graterol began a Minor League rehab assignment on May 2. Manager Dave Roberts noted that Graterol was fine following his initial work, but that he's still got some time before he is ready to be activated."
-      },
-      {
-        "playerName": "Mookie Betts",
-        "injury": "Right oblique strain",
-        "expectedReturn": "May",
-        "status": "Working on his bat speed and is scheduled to face live pitching in a simulated game on May 7, with possible rehab assignment to follow."
+        "status": "Began a Minor League rehab assignment on May 2. He will likely take close to the maximum 30 days allowed as he builds up his arm."
       },
       {
         "playerName": "Landon Knack",
@@ -586,12 +592,6 @@
         "injury": "Loose bodies in right elbow",
         "expectedReturn": "Second half of 2026",
         "status": "Had surgery on his elbow on April 22. He thinks he will be able to start playing catch a couple weeks after the stitches are removed from his elbow."
-      },
-      {
-        "playerName": "Ben Casparius",
-        "injury": "Right shoulder inflammation",
-        "expectedReturn": "2026",
-        "status": "Felt discomfort in his shoulder after his outing on April 12."
       },
       {
         "playerName": "Gavin Stone",
@@ -1445,6 +1445,12 @@
       }
     ],
     "158": [
+      {
+        "playerName": "Brandon Lockridge",
+        "injury": "Right knee laceration",
+        "expectedReturn": "TBD",
+        "status": "Slid into a concrete section of the wall while chasing a foul ball on May 8 against the Yankees. X-rays were negative, but he suffered a deep laceration that will require additional testing and treatment, per manager Pat Murphy. (last updated: May 8)"
+      },
       {
         "playerName": "Christian Yelich",
         "injury": "Left groin strain",
