@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-10T01:50:28.493Z",
+  "lastUpdated": "2026-05-10T12:52:14.274Z",
   "teams": {
     "108": [
       {
@@ -348,6 +348,12 @@
     ],
     "116": [
       {
+        "playerName": "Kerry Carpenter",
+        "injury": "Left shoulder soreness",
+        "expectedReturn": "TBD",
+        "status": "Left game May 9 after crashing into the wall chasing down a Bobby Witt Jr. inside-the-park home run. Was receiving further examination."
+      },
+      {
         "playerName": "Justin Verlander",
         "injury": "Left hip inflammation",
         "expectedReturn": "Late May",
@@ -558,22 +564,22 @@
     ],
     "119": [
       {
+        "playerName": "Mookie Betts",
+        "injury": "Right oblique strain",
+        "expectedReturn": "May 11",
+        "status": "Went 1-for-2 and played six innings at shortstop in his second rehab game with Triple-A Oklahoma City on May 9. He will rejoin the Dodgers on May 10."
+      },
+      {
         "playerName": "Brock Stewart",
         "injury": "Left foot bone spur",
-        "expectedReturn": "TBD",
-        "status": "After completing his rehab from September 2025 right shoulder surgery, Stewart made just two appearances for the Dodgers before landing back on the IL."
+        "expectedReturn": "June",
+        "status": "Aggravated the bone spur while covering first base on May 8. He is expected to miss at least three weeks."
       },
       {
         "playerName": "Tyler Glasnow",
         "injury": "Lower back spasms",
         "expectedReturn": "Late May",
         "status": "Exited his May 6 start after one inning with lower back pain. An MRI revealed \"nothing really significant,\" per manager Dave Roberts."
-      },
-      {
-        "playerName": "Mookie Betts",
-        "injury": "Right oblique strain",
-        "expectedReturn": "Possibly May 11",
-        "status": "Went 1-for-3 and played five innings at shortstop in the first game of his rehab assignment with Triple-A Oklahoma City on May 8."
       },
       {
         "playerName": "Ben Casparius",
