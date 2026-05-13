@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-13T01:59:37.601Z",
+  "lastUpdated": "2026-05-13T14:03:35.866Z",
   "teams": {
     "108": [
       {
@@ -299,7 +299,7 @@
         "playerName": "Shawn Armstrong",
         "injury": "Right groin strain",
         "expectedReturn": "May",
-        "status": "Set to throw one inning and around 20-25 pitches with Double-A Akron in rehab appearance on May 12."
+        "status": "Made first Minor League rehab appearance on May 12. Threw 19 pitches (11 strikes) over one inning with Double-A Akron."
       },
       {
         "playerName": "Andrew Walters",
@@ -375,7 +375,7 @@
         "playerName": "Justin Verlander",
         "injury": "Left hip inflammation",
         "expectedReturn": "End of May/early June",
-        "status": "Transferred to 60-day IL on Mah 10. Threw a two-inning, 38-pitch simulated game on May 9 in Kansas City. Will throw another, longer sim game next weekend in Detroit."
+        "status": "Transferred to 60-day IL on May 10. Threw a two-inning, 38-pitch simulated game on May 9 in Kansas City. Will throw another, longer sim game next weekend in Detroit."
       },
       {
         "playerName": "Troy Melton",
@@ -446,28 +446,28 @@
     ],
     "117": [
       {
+        "playerName": "Jeremy Peña",
+        "injury": "Grade 1 right hamstring strain",
+        "expectedReturn": "May 18",
+        "status": "Went 1-for-2 with a double and was hit by a pitch before being lifted for a pinch-runner in his first Minor League rehab assignment game with Double-A Corpus Christi on May 12."
+      },
+      {
         "playerName": "Hunter Brown",
         "injury": "Grade 2 right shoulder strain",
         "expectedReturn": "Late May/early June",
         "status": "Threw his second bullpen May 12 and is scheduled throw another one May 15."
       },
       {
-        "playerName": "Jeremy Peña",
-        "injury": "Grade 1 right hamstring strain",
-        "expectedReturn": "May 18",
-        "status": "Scheduled to begin a Minor League rehab assignment May 12 at Double-A Corpus Christi."
-      },
-      {
         "playerName": "Josh Hader",
         "injury": "Left biceps tendinitis",
         "expectedReturn": "May 24",
-        "status": "Scheduled to begin a Minor League rehab assignment May 12 at Double-A Corpus Christi."
+        "status": "Threw one one inning (16 pitches), striking out one and allowing one hit, in a Minor League rehab outing May 12 with Double-A Corpus Christi."
       },
       {
         "playerName": "Jake Meyers",
         "injury": "Grade 2 right oblique strain",
         "expectedReturn": "Mid-May",
-        "status": "Scheduled to begin a Minor League rehab assignment May 12 at Double-A Corpus Christi."
+        "status": "Went 0-for-4 in his first Minor League rehab assignment game May 12 with Double-A Corpus Christi."
       },
       {
         "playerName": "Nate Pearson",
@@ -762,6 +762,12 @@
     ],
     "133": [
       {
+        "playerName": "Brooks Kriske",
+        "injury": "Right shoulder soreness",
+        "expectedReturn": "Day to day",
+        "status": "Exited his outing on May 12 after experiencing tightness in his shoulder. A's will evaluate him further and have more information on May 13."
+      },
+      {
         "playerName": "Jacob Wilson",
         "injury": "Left shoulder subluxation",
         "expectedReturn": "TBD",
@@ -797,7 +803,7 @@
         "playerName": "Joey Bart",
         "injury": "Left foot infection",
         "expectedReturn": "TBD",
-        "status": "Sustained apparent injury on May 9 in San Francisco. Pirates are still evaluating the seriousness of the infection."
+        "status": "Sustained apparent injury on May 9 in San Francisco. Foot began swelling during flight to Pittsburgh on May 10. Pirates are still evaluating the seriousness of the infection."
       },
       {
         "playerName": "Jake Mangum",
@@ -1064,10 +1070,22 @@
     ],
     "140": [
       {
+        "playerName": "Brandon Nimmo",
+        "injury": "Left ankle sprain",
+        "expectedReturn": "Day to day",
+        "status": "Left a May 12 matchup with the Diamondbacks after landing awkwardly. X-rays were clear."
+      },
+      {
+        "playerName": "Nathan Eovaldi",
+        "injury": "Left side discomfort",
+        "expectedReturn": "Day to day",
+        "status": "Was scratched from his May 11 start against the Diamondbacks with left side tightness. Was sent for scans."
+      },
+      {
         "playerName": "Josh Smith",
         "injury": "Right glute strain",
         "expectedReturn": "Mid-May",
-        "status": "Had a flareup in his wrist while working back from his original injury. He’ll be working back from both “wrist inflammation” and the glute strain in the coming days."
+        "status": "Had a flare-up in his wrist while working back from his original injury. He’ll be working back from both “wrist inflammation” and the glute strain in the coming days."
       },
       {
         "playerName": "Cody Bradford",
