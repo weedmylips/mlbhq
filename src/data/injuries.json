@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-14T02:01:46.128Z",
+  "lastUpdated": "2026-05-14T13:26:55.260Z",
   "teams": {
     "108": [
       {
@@ -1179,19 +1179,55 @@
         "playerName": "Taj Bradley",
         "injury": "Right pectoralis muscle inflammation",
         "expectedReturn": "TBD",
-        "status": "Threw from 90 feet on May 12 and will build up his throwing program throughout the week."
+        "status": "Threw May 12 and May 13, second opinion from Dr. Keith Meister’s MRI showed no muscle strains or tears, just inflammation. Aiming for a bullpen over the weekend."
       },
       {
         "playerName": "Cole Sands",
         "injury": "Mild right forearm strain",
         "expectedReturn": "TBD",
-        "status": "Threw a bullpen session on May 12, his first since the injury"
+        "status": "Played catch on May 12 and May 13, aiming to build up over next week."
       },
       {
         "playerName": "Mick Abel",
         "injury": "Right elbow inflammation",
         "expectedReturn": "TBD",
-        "status": "Began Plyo ball workouts on May 12."
+        "status": "Was reviewed by Dr. Keith Meister, agreed with previous evaluations that only issue is from posterior elbow impingement. No forearm or UCL concerns. Started playing light catch on Wednesday."
+      },
+      {
+        "playerName": "Alan Roden (Triple-A St. Paul)",
+        "injury": "Right shoulder labrum tear",
+        "expectedReturn": "Mid-to-late June",
+        "status": "Taking light swings and aiming for throwing program May 18. Will have a three-week build-up before a rehab assignment is scheduled."
+      },
+      {
+        "playerName": "David Festa",
+        "injury": "Right shoulder impingement",
+        "expectedReturn": "TBD",
+        "status": "Had stem cell injection in right shoulder following a rehab setback, will be no throw for three weeks."
+      },
+      {
+        "playerName": "Cody Laweryson",
+        "injury": "Right forearm strain",
+        "expectedReturn": "TBD",
+        "status": "Threw a live BP May 13, will see how he recovers May 14, before making plans on rehab assignment."
+      },
+      {
+        "playerName": "Walker Jenkins (Twins No. 1 prospect)",
+        "injury": "Grade 2 AC joint sprain in left shoulder",
+        "expectedReturn": "3-4 weeks",
+        "status": "Reporting improvements daily, could resume light baseball activity in a week, pending how each day goes."
+      },
+      {
+        "playerName": "Emmanuel Rodriguez (Twins No. 4 prospect)",
+        "injury": "Left thumb injury",
+        "expectedReturn": "Early/mid-May",
+        "status": "Continues to report improvements in muscle strain, but will not resume baseball activities until muscle strain is fully cleared out."
+      },
+      {
+        "playerName": "Charlee Soto (Twins No. 9 prospect)",
+        "injury": "Wrist ligament sprain",
+        "expectedReturn": "TBD",
+        "status": "Began throwing last week as far as 105 feet, and could be throwing on a mound again for evaluation by May 17."
       },
       {
         "playerName": "Joe Ryan",
@@ -1200,34 +1236,16 @@
         "status": "Threw bullpen session on May 6 and is expected to take his turn as scheduled on May 9 in Cleveland."
       },
       {
-        "playerName": "Emmanuel Rodriguez (Twins No. 4 prospect)",
-        "injury": "Left thumb injury",
-        "expectedReturn": "Early/mid-May",
-        "status": "Had been considered day to day, but was placed on the injured list with a muscle strain in his thumb."
-      },
-      {
-        "playerName": "Cody Laweryson",
-        "injury": "Right forearm strain",
+        "playerName": "Garrett Acton",
+        "injury": "Right shoulder strain",
         "expectedReturn": "TBD",
-        "status": "Threw a bullpen session May 2, and next step will be another bullpen. Targeting mid-May for a rehabilitation assignment."
-      },
-      {
-        "playerName": "David Festa",
-        "injury": "Right shoulder impingement",
-        "expectedReturn": "TBD",
-        "status": "Suffered renewed discomfort after his third live batting practice session and is being evaluated for next steps."
+        "status": "Placed on IL on April 28. Last pitched on April 25, allowing one run and striking out two."
       },
       {
         "playerName": "Pablo López",
         "injury": "“Significant tearing” in UCL in right elbow",
         "expectedReturn": "2027",
         "status": "Underwent surgery on Feb. 25 to repair, rather than reconstruct, the UCL and will miss the season.More >"
-      },
-      {
-        "playerName": "Garrett Acton",
-        "injury": "Right shoulder strain",
-        "expectedReturn": "TBD",
-        "status": "Placed on IL on April 28. Last pitched on April 25, allowing one run and striking out two."
       }
     ],
     "143": [
@@ -1370,16 +1388,10 @@
     ],
     "146": [
       {
-        "playerName": "Pete Fairbanks",
-        "injury": "Nerve irritation",
-        "expectedReturn": "Wednesday",
-        "status": "Threw live batting practice on May 10 and will be reinstated when his 15 days are up on May 13. Exited April 27 outing after experiencing diminished sensation in pitching hand."
-      },
-      {
-        "playerName": "Owen Caissie",
-        "injury": "Left triceps soreness",
-        "expectedReturn": "Upcoming road trip",
-        "status": "Expected to return to lineup in Minnesota, per manager Clayton McCullough. Scratched from May 10 game after being banged up from outfield wall collision on May 9."
+        "playerName": "Robby Snelling (Marlins No. 2 prospect, No. 28 overall)",
+        "injury": "Sprained left UCL",
+        "expectedReturn": "TBD",
+        "status": "Scratched from a start in Minnesota after reporting soreness during a bullpen session May 12. Initial MRI revealed ligament sprain."
       },
       {
         "playerName": "Kevin Defrank (Marlins No. 5 prospect, No. 98 overall)",
@@ -1451,6 +1463,12 @@
       }
     ],
     "158": [
+      {
+        "playerName": "Jacob Misiorowski",
+        "injury": "Right quad cramping",
+        "expectedReturn": "Day to day",
+        "status": "Experienced leg cramping for the second time in the span of three starts on May 13 against the Padres, but expects to make his next start on schedule. (last updated: May 13)"
+      },
       {
         "playerName": "Christian Yelich",
         "injury": "Minor back tightness",
