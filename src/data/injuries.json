@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-15T02:00:43.520Z",
+  "lastUpdated": "2026-05-15T13:26:04.621Z",
   "teams": {
     "108": [
       {
@@ -564,6 +564,12 @@
     ],
     "119": [
       {
+        "playerName": "Tyler Glasnow",
+        "injury": "Lower back spasms",
+        "expectedReturn": "Possibly late May",
+        "status": "MRI revealed \"nothing really significant\" after early exit May 6. Working on core and back strengthening and has been playing catch but isn't expected to be activated immediately following expiration of 15-day IL stint."
+      },
+      {
         "playerName": "Edwin Díaz",
         "injury": "Loose bodies in right elbow",
         "expectedReturn": "Second half of 2026",
@@ -574,12 +580,6 @@
         "injury": "Left foot bone spur",
         "expectedReturn": "June",
         "status": "Aggravated the bone spur while covering first base on May 8. He is expected to miss at least three weeks."
-      },
-      {
-        "playerName": "Tyler Glasnow",
-        "injury": "Lower back spasms",
-        "expectedReturn": "Late May",
-        "status": "Exited his May 6 start after one inning with lower back pain. An MRI revealed \"nothing really significant,\" per manager Dave Roberts."
       },
       {
         "playerName": "Ben Casparius",
