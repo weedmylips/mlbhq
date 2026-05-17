@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-17T01:56:08.606Z",
+  "lastUpdated": "2026-05-17T12:53:49.347Z",
   "teams": {
     "108": [
       {
@@ -243,7 +243,7 @@
         "playerName": "Jose Trevino",
         "injury": "Left hamstring",
         "expectedReturn": "TBD",
-        "status": "Trevino left the May 16 game vs. the Guardians when he was pulled for a pinch-hitter."
+        "status": "Trevino was injured running out a sacrifice bunt in the fifth inning on May 16 vs. the Guardians. He will undergo an MRI."
       },
       {
         "playerName": "Caleb Ferguson",
@@ -284,16 +284,16 @@
     ],
     "114": [
       {
+        "playerName": "Shawn Armstrong",
+        "injury": "Right groin strain",
+        "expectedReturn": "May",
+        "status": "Made second Minor League rehab appearance on May 15. Threw nine pitches (eight strikes) over one scoreless inning with Double-A Akron."
+      },
+      {
         "playerName": "Andrew Walters",
         "injury": "Right lat surgery rehab",
         "expectedReturn": "Potentially May",
         "status": "Resumed rehab assignment with Triple-A Columbus on May 12. Previously paused due to viral illness that caused him not to pitch since April 24."
-      },
-      {
-        "playerName": "Shawn Armstrong",
-        "injury": "Right groin strain",
-        "expectedReturn": "May",
-        "status": "Made first Minor League rehab appearance on May 12. Threw 19 pitches (11 strikes) over one inning with Double-A Akron."
       },
       {
         "playerName": "Gabriel Arias",
@@ -434,6 +434,24 @@
     ],
     "117": [
       {
+        "playerName": "Jose Altuve",
+        "injury": "Left side pain",
+        "expectedReturn": "TBD",
+        "status": "Exited May 16 game with pain in left side after a swing. Will undergo MRI May 17."
+      },
+      {
+        "playerName": "Jeremy Peña",
+        "injury": "Grade 1 right hamstring strain",
+        "expectedReturn": "May 18",
+        "status": "Went 1-for-4 with a double while playing shortstop for Double-A Corpus Christi in his second Minor League rehab game May 16."
+      },
+      {
+        "playerName": "Jake Meyers",
+        "injury": "Grade 2 right oblique strain",
+        "expectedReturn": "Mid-May",
+        "status": "Went 0-for-4 with a run in his third Minor League rehab assignment game May 16 with Double-A Corpus Christi and is scheduled to play again May 17."
+      },
+      {
         "playerName": "Nate Pearson",
         "injury": "Right elbow surgery recovery",
         "expectedReturn": "Mid-May",
@@ -450,18 +468,6 @@
         "injury": "Left biceps tendinitis",
         "expectedReturn": "Early June",
         "status": "Scheduled to throw an inning May 15 in a Minor League rehab outing with Double-A Corpus Christi and will need five more outings before returning."
-      },
-      {
-        "playerName": "Jeremy Peña",
-        "injury": "Grade 1 right hamstring strain",
-        "expectedReturn": "May 18",
-        "status": "Went 0-for-5 with three strikeouts and played shortstop for Double-A Corpus Christi in a May 15 rehab start after missing two rehab games with a sore neck. Collided with a runner May 12."
-      },
-      {
-        "playerName": "Jake Meyers",
-        "injury": "Grade 2 right oblique strain",
-        "expectedReturn": "Mid-May",
-        "status": "Went 0-for-4 in his second Minor League rehab assignment game May 14 with Double-A Corpus Christi. Is scheduled to play on May 16 and May 17."
       },
       {
         "playerName": "Joey Loperfido",
