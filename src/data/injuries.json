@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-19T02:07:16.306Z",
+  "lastUpdated": "2026-05-19T14:32:54.188Z",
   "teams": {
     "108": [
       {
@@ -546,28 +546,46 @@
     ],
     "119": [
       {
-        "playerName": "Jack Dreyer",
-        "injury": "Left shoulder discomfort",
-        "expectedReturn": "June",
-        "status": "An MRI revealed inflammation, but no structural damage. The hope is that he won't miss much longer than the minimum 15 days."
-      },
-      {
-        "playerName": "Brusdar Graterol",
-        "injury": "Recovery from right shoulder surgery",
-        "expectedReturn": "2026",
-        "status": "His Minor League rehab assignment has been paused due to a setback."
-      },
-      {
         "playerName": "Blake Snell",
         "injury": "Loose bodies in left elbow",
-        "expectedReturn": "2026",
-        "status": "Set to undergo surgery to remove the loose bodies from his elbow on May 19. The Dodgers are still determining which type of procedure Snell will have, but they're hopeful for a quick recovery and a return before season's end."
+        "expectedReturn": "Possibly July",
+        "status": "Expected to undergo the NanoNeedle Scope procedure on May 18, which should allow for a faster return."
       },
       {
         "playerName": "Tyler Glasnow",
         "injury": "Lower back spasms",
-        "expectedReturn": "Possibly late May",
-        "status": "Working on core and back strengthening and has been playing catch, but isn't expected to be activated immediately following expiration of 15-day IL stint."
+        "expectedReturn": "Possibly June",
+        "status": "Shut down from throwing after his back flared up on him again."
+      },
+      {
+        "playerName": "Brusdar Graterol",
+        "injury": "Recovery from right shoulder surgery, lower back injury",
+        "expectedReturn": "TBD",
+        "status": "Injured his lower back while on a rehab assignment and surgery could be on the table, per general manager Brandon Gomes."
+      },
+      {
+        "playerName": "Brock Stewart",
+        "injury": "Left foot bone spur",
+        "expectedReturn": "June",
+        "status": "Has resumed throwing and could return around three weeks after landing on the IL if all goes as planned."
+      },
+      {
+        "playerName": "Ben Casparius",
+        "injury": "Right shoulder inflammation",
+        "expectedReturn": "2026",
+        "status": "Rehabbing at the Dodgers' complex in Arizona."
+      },
+      {
+        "playerName": "Gavin Stone",
+        "injury": "Right shoulder inflammation",
+        "expectedReturn": "2026",
+        "status": "Working through the early stages of a throwing program at the Dodgers' complex in Arizona."
+      },
+      {
+        "playerName": "Jack Dreyer",
+        "injury": "Left shoulder discomfort",
+        "expectedReturn": "June",
+        "status": "An MRI revealed inflammation, but no structural damage. The hope is that he won't miss much longer than the minimum 15 days."
       },
       {
         "playerName": "Edwin Díaz",
@@ -576,28 +594,10 @@
         "status": "Thinks he will be able to start playing catch a couple weeks after the stitches are removed from his elbow."
       },
       {
-        "playerName": "Brock Stewart",
-        "injury": "Left foot bone spur",
-        "expectedReturn": "June",
-        "status": "Aggravated the bone spur while covering first base on May 8. Expected to miss at least three weeks."
-      },
-      {
-        "playerName": "Ben Casparius",
-        "injury": "Right shoulder inflammation",
-        "expectedReturn": "2026",
-        "status": "Working through a throwing program at the Dodgers' complex in Arizona."
-      },
-      {
         "playerName": "Landon Knack",
         "injury": "Right intercostal strain",
         "expectedReturn": "2026",
-        "status": "Tweaked his side while throwing in the bullpen on March 13. He will not begin a throwing program until he's pain-free."
-      },
-      {
-        "playerName": "Gavin Stone",
-        "injury": "Right shoulder inflammation",
-        "expectedReturn": "First half of 2026",
-        "status": "Imaging revealed inflammation, but not structural damage, in his shoulder. Has started a throwing program and essentially has an entire Spring Training ramp-up ahead."
+        "status": "Rehabbing at the Dodgers' complex in Arizona."
       },
       {
         "playerName": "Jake Cousins",
@@ -609,16 +609,28 @@
         "playerName": "Bobby Miller",
         "injury": "Right shoulder soreness",
         "expectedReturn": "2026",
-        "status": "Progressed to throwing off the mound by the end of Spring Training, but the team is building him up slowly."
+        "status": "Rehabbing at the Dodgers' complex in Arizona."
       },
       {
         "playerName": "Evan Phillips",
         "injury": "Recovery from Tommy John surgery",
         "expectedReturn": "Second half of 2026",
-        "status": "Started throwing full bullpen sessions in mid-March."
+        "status": "Working through a throwing program at the Dodgers' complex in Arizona."
       }
     ],
     "120": [
+      {
+        "playerName": "Jacob Young",
+        "injury": "Left rib contusion",
+        "expectedReturn": "Day to day",
+        "status": "X-rays were negative after Young was hit by a pitch in the second inning of the Nats' loss to the Mets on May 18."
+      },
+      {
+        "playerName": "Joey Wiemer",
+        "injury": "Left hand contusion",
+        "expectedReturn": "Day to day",
+        "status": "Wiemer was hit on the left hand in the bottom of the ninth inning on May 18 vs. the Mets. X-rays were negative."
+      },
       {
         "playerName": "Clayton Beeter",
         "injury": "Right forearm soreness",
@@ -900,12 +912,6 @@
         "status": "Injured left groin during a rehab assignment and was shut down on April 18. Is now targeting mid-June to begin fresh rehab assignment."
       },
       {
-        "playerName": "Patrick Wisdom",
-        "injury": "Left oblique strain",
-        "expectedReturn": "TBD",
-        "status": "Could finish rehab assignment during weekend of May 15-17. Would likely be then optioned back to Triple-A Tacoma."
-      },
-      {
         "playerName": "Will Wilson",
         "injury": "Fractured left thumb",
         "expectedReturn": "June",
@@ -926,16 +932,28 @@
     ],
     "137": [
       {
-        "playerName": "Heliot Ramos",
-        "injury": "Right quad strain",
-        "expectedReturn": "Possibly June",
-        "status": "Hurt his quad on a sliding catch attempt on May 15. Expected to miss \"at least a couple of weeks and probably more than that,\" per manager Tony Vitello."
+        "playerName": "Jung Hoo Lee",
+        "injury": "Back spasms",
+        "expectedReturn": "Day to day",
+        "status": "Removed out of precaution in the fourth inning on May 18 vs. Arizona. Will undergo full assessment May 19 to evaluate severity."
+      },
+      {
+        "playerName": "Willy Adames",
+        "injury": "Right thumb contusion",
+        "expectedReturn": "Day to day",
+        "status": "Exited after fifth inning on May 18 vs. Arizona as a result of taking a ball off his thumb. Manager Tony Vitello revealed a contusion but no structural damage."
       },
       {
         "playerName": "Logan Webb",
         "injury": "Right knee bursitis",
         "expectedReturn": "Late May",
-        "status": "Threw a bullpen session at Sutter Health Park on May 16."
+        "status": "Scheduled to throw another bullpen on May 19."
+      },
+      {
+        "playerName": "Heliot Ramos",
+        "injury": "Right quad strain",
+        "expectedReturn": "Possibly June",
+        "status": "Hurt his quad on a sliding catch attempt on May 15. Expected to miss \"at least a couple of weeks and probably more than that,\" per manager Tony Vitello."
       },
       {
         "playerName": "Reiver Sanmartin",
@@ -1217,6 +1235,12 @@
       }
     ],
     "142": [
+      {
+        "playerName": "Ryan Jeffers",
+        "injury": "Left wrist sprain",
+        "expectedReturn": "TBD",
+        "status": "Suffered injury on a foul ball in the eighth inning on May 18 and was removed from the game. Will undergo imaging on May 19."
+      },
       {
         "playerName": "Byron Buxton",
         "injury": "Right hip flexor soreness",
