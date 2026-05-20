@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-20T02:05:31.503Z",
+  "lastUpdated": "2026-05-20T14:32:24.187Z",
   "teams": {
     "108": [
       {
@@ -348,6 +348,12 @@
     ],
     "116": [
       {
+        "playerName": "Troy Melton",
+        "injury": "Right elbow inflammation",
+        "expectedReturn": "Last week of May",
+        "status": "Tossed five innings of one-run ball with six strikeouts in a rehab start May 19 for Single-A Lakeland, moved from Triple-A Toledo due to weather concerns. Fastball averaged 96.5 miles per hour, topped out at 98.1."
+      },
+      {
         "playerName": "Gleyber Torres",
         "injury": "Mild left oblique strain",
         "expectedReturn": "Late May",
@@ -370,12 +376,6 @@
         "injury": "Left shoulder sprain",
         "expectedReturn": "TBD",
         "status": "Cleared for more baseball activity this week, including defensive work. Left game May 9 after crashing into the wall. Diagnosed with AC joint sprain but no structural damage."
-      },
-      {
-        "playerName": "Troy Melton",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "End of May",
-        "status": "Will make next rehab start May 19 for Single-A Lakeland, moved from Triple-A Toledo due to weather concerns. Will stretch out to four innings and 65-75 pitches. Tossed two-plus scoreless innings May 15 for Toledo."
       },
       {
         "playerName": "Tarik Skubal",
@@ -1404,16 +1404,16 @@
     ],
     "145": [
       {
-        "playerName": "Austin Hays",
-        "injury": "Left calf strain",
-        "expectedReturn": "Late May",
-        "status": "Began a rehab assignment on May 19 with Triple-A Charlotte, going 1-for-3 with a home run in five innings."
-      },
-      {
         "playerName": "Kyle Teel",
         "injury": "Right hamstring strain",
         "expectedReturn": "Mid-May",
         "status": "Sprained lateral collateral ligament in his right knee on May 16 during rehab assignment with Triple-A Charlotte. Expected to require 3-6 weeks of rest and rehabilitation before he can return to play."
+      },
+      {
+        "playerName": "Austin Hays",
+        "injury": "Left calf strain",
+        "expectedReturn": "Late May",
+        "status": "Began a rehab assignment on May 19 with Triple-A Charlotte, going 1-for-3 with a home run in five innings."
       },
       {
         "playerName": "Prelander Berroa",
