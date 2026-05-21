@@ -1,12 +1,18 @@
 {
-  "lastUpdated": "2026-05-20T14:32:24.187Z",
+  "lastUpdated": "2026-05-21T02:05:06.075Z",
   "teams": {
     "108": [
+      {
+        "playerName": "Yusei Kikuchi",
+        "injury": "Left shoulder inflammation",
+        "expectedReturn": "Possibly late July",
+        "status": "Left April 29 outing before the start of the third inning. Targeting to start throwing program in late May/early June with a return date shortly after the All-Star break."
+      },
       {
         "playerName": "Ben Joyce",
         "injury": "Right shoulder surgery",
         "expectedReturn": "Possibly June",
-        "status": "Made four rehab appearances for Single-A Rancho Cucamonga before being shut down. MRI came back clean May 15, and he's eligible to return from the 60-day IL May 26. He's rehabbing at the club's complex in Arizona"
+        "status": "Made four rehab appearances before being shut down. MRI came back clean May 15. Eligible to return from the 60-day IL May 26. Rehabbing at the club's complex in Arizona."
       },
       {
         "playerName": "Travis d'Arnaud",
@@ -19,12 +25,6 @@
         "injury": "Left elbow inflammation",
         "expectedReturn": "Late May/early June",
         "status": "Manager Kurt Suzuki said Pomeranz’s placement on the IL was the Angels being “cautious.” Pomeranz said on May 15 that it's a minor injury and he expects to be back once he's eligible."
-      },
-      {
-        "playerName": "Yusei Kikuchi",
-        "injury": "Left shoulder inflammation",
-        "expectedReturn": "Possibly midseason",
-        "status": "Left his outing before the start of the third inning on April 29. Underwent an MRI, will be shut down for 3-4 weeks before starting a throwing program."
       },
       {
         "playerName": "Robert Stephenson",
@@ -116,28 +116,28 @@
     ],
     "111": [
       {
-        "playerName": "Carlos Narváez",
-        "injury": "Right third finger pain",
-        "expectedReturn": "May 19",
-        "status": "Exited game on May 17 because he was having trouble gripping the ball, but X-rays were negative. Narváez was feeling much better a day later and is aiming for a return on May 19."
-      },
-      {
-        "playerName": "Danny Coulombe",
-        "injury": "Cervical spasms",
-        "expectedReturn": "Possibly start of homestand on May 22",
-        "status": "Will continue his Minor League rehab assignment with an outing at Triple-A Worcester on May 19. Could be ready to return a couple of days after that."
+        "playerName": "Garrett Crochet",
+        "injury": "Left shoulder inflammation",
+        "expectedReturn": "First or second week in June",
+        "status": "Threw his third side session in the span of a week, this time two innings, on May 20. Will throw one more short bullpen before facing hitters at some point early next week."
       },
       {
         "playerName": "Trevor Story",
         "injury": "Sports hernia",
         "expectedReturn": "Will miss several weeks",
-        "status": "Placed on IL with injury that has nagged him in recent weeks. If Story has surgery, he could be out six to 10 weeks."
+        "status": "Went to Philadelphia to seek a third opinion from Dr. William Meyers on the best source of action for his sports hernia injury. If Story has surgery, he could be out six to 10 weeks."
       },
       {
-        "playerName": "Garrett Crochet",
-        "injury": "Left shoulder inflammation",
-        "expectedReturn": "Late May/early June",
-        "status": "Threw his second side session in four days on May 16, bumping up to 35 pitches. Likely to have an up-and-down side session on May 20."
+        "playerName": "Danny Coulombe",
+        "injury": "Cervical spasms",
+        "expectedReturn": "Possibly start of homestand on May 22",
+        "status": "Made second appearance of Minors rehab assignment on May 19, allowing a hit and a run over two-thirds of an inning for Triple-A Worcester."
+      },
+      {
+        "playerName": "Johan Oviedo",
+        "injury": "Right flexor strain",
+        "expectedReturn": "No earlier than July",
+        "status": "Will soon start forearm strengthening exercises with an eye toward throwing by mid-June."
       },
       {
         "playerName": "Patrick Sandoval",
@@ -162,15 +162,15 @@
         "injury": "Left abdominal strain",
         "expectedReturn": "June or July at earliest",
         "status": "Expected to visit a doctor soon to gauge if any progress is being made."
-      },
-      {
-        "playerName": "Johan Oviedo",
-        "injury": "Right flexor strain",
-        "expectedReturn": "No earlier than mid to late June",
-        "status": "Will soon have consultation with Dr. Keith Meister to get better idea of where he's at."
       }
     ],
     "112": [
+      {
+        "playerName": "Edward Cabrera",
+        "injury": "Right middle finger blister",
+        "expectedReturn": "Day to day",
+        "status": "Exited start against Brewers on May 20 after throwing one pitch in the fourth inning due to blister issue on pitching hand."
+      },
       {
         "playerName": "Matthew Boyd",
         "injury": "Left meniscus",
@@ -228,6 +228,12 @@
     ],
     "113": [
       {
+        "playerName": "Rhett Lowder",
+        "injury": "Right shoulder pain",
+        "expectedReturn": "June",
+        "status": "Threw another side session on May 19, reporting no problems. Manager Terry Francona said Lowder would throw in the bullpen again on May 22, after which he could begin facing hitters a few days later."
+      },
+      {
         "playerName": "Jose Trevino",
         "injury": "Left hamstring",
         "expectedReturn": "TBD",
@@ -244,18 +250,6 @@
         "injury": "Right elbow surgery",
         "expectedReturn": "July",
         "status": "Throwing out to 150 feet in Arizona. First bullpen session scheduled for May 26. If all goes well, will rejoin the team on May 29 to continue his rehab."
-      },
-      {
-        "playerName": "Rhett Lowder",
-        "injury": "Right shoulder pain",
-        "expectedReturn": "June",
-        "status": "Met with team officials on May 13 and manager Terry Francona indicated he is making good progress to the point where he resumed throwing on May 14."
-      },
-      {
-        "playerName": "Brady Singer",
-        "injury": "Right foot bruise",
-        "expectedReturn": "May 17 for his next start vs. Cleveland",
-        "status": "X-rays came back negative after taking a Daylen Lile 106.7 mph liner off the outside of his right foot. Manager Terry Francona said the team is \"hopeful\" Singer will make his next start."
       },
       {
         "playerName": "Emilio Pagán",
@@ -280,6 +274,30 @@
     ],
     "115": [
       {
+        "playerName": "Chase Dollander",
+        "injury": "Right elbow sprain",
+        "expectedReturn": "TBD",
+        "status": "Left his May 14 start in the second inning with elbow tightness. Manager Warren Schaeffer said Dollander will be shut down from throwing for two to three weeks."
+      },
+      {
+        "playerName": "Brenton Doyle",
+        "injury": "Left oblique contusion",
+        "expectedReturn": "TBD",
+        "status": "Injured his left side while diving for a ball against the Rangers on May 19. He was scheduled to be re-evaluated on May 20."
+      },
+      {
+        "playerName": "Victor Vodnik",
+        "injury": "Right ulnar nerve inflammation",
+        "expectedReturn": "TBD",
+        "status": "Placed on the IL after struggling to an 8.00 ERA over his first 18 appearances of the season."
+      },
+      {
+        "playerName": "Jeff Criswell",
+        "injury": "Torn right elbow ligament",
+        "expectedReturn": "May",
+        "status": "Allowed one run on two hits and struck out one May 19 in his third Triple-A Albuquerque injury rehab appearance and seventh overall."
+      },
+      {
         "playerName": "Ryan Feltner",
         "injury": "Right ulnar nerve inflammation",
         "expectedReturn": "Late May",
@@ -298,22 +316,10 @@
         "status": "Was cleared to throw in Arizona but had a right elbow flare-up and was shut down for a couple of weeks; joined the Rockies in Denver to resume throwing."
       },
       {
-        "playerName": "Jeff Criswell",
-        "injury": "Torn right elbow ligament",
-        "expectedReturn": "May",
-        "status": "Allowed three runs on two hits and a walk in his second Triple-A Albuquerque injury rehab appearance and sixth overall on May 15."
-      },
-      {
         "playerName": "Jordan Beck",
         "injury": "Left hamstring strain",
         "expectedReturn": "May 28",
         "status": "Sustained the injury during practice before May 16 game vs. Diamondbacks while practicing catching fly balls in the outfield."
-      },
-      {
-        "playerName": "Chase Dollander",
-        "injury": "Right elbow sprain",
-        "expectedReturn": "TBD",
-        "status": "Dollander left his May 14 start in the second inning with elbow tightness as he extended his arm on his fastball and changeup. An MRI showed inflammation in his elbow."
       },
       {
         "playerName": "Jimmy Herget",
@@ -348,40 +354,40 @@
     ],
     "116": [
       {
+        "playerName": "Tarik Skubal",
+        "injury": "Loose body in left elbow",
+        "expectedReturn": "June",
+        "status": "Rejoined team for second mound session May 18 at Comerica Park. Will remain in Detroit and settle into five-day bullpen routine. Will require a rehab start before returning, according to manager A.J. Hinch."
+      },
+      {
         "playerName": "Troy Melton",
         "injury": "Right elbow inflammation",
-        "expectedReturn": "Last week of May",
-        "status": "Tossed five innings of one-run ball with six strikeouts in a rehab start May 19 for Single-A Lakeland, moved from Triple-A Toledo due to weather concerns. Fastball averaged 96.5 miles per hour, topped out at 98.1."
+        "expectedReturn": "Possibly May 23",
+        "status": "Returning to Detroit for between-starts work and evaluation to determine whether he needs another rehab start. Tossed five innings of one-run ball with six strikeouts in a rehab start May 19 for Single-A Lakeland, moved from Triple-A Toledo due to weather concerns. Fastball averaged 96.5 mph, topped out at 98.1."
       },
       {
         "playerName": "Gleyber Torres",
         "injury": "Mild left oblique strain",
-        "expectedReturn": "Late May",
-        "status": "Worked out at Comerica Park on May 19. Could begin rehab assignment with Triple-A Toledo later this week."
+        "expectedReturn": "Possibly end of May",
+        "status": "Running and playing defense at full strength but not yet swinging at full speed, according to manager A.J. Hinch. Could begin rehab assignment with Triple-A Toledo later this week."
       },
       {
         "playerName": "Justin Verlander",
         "injury": "Left hip inflammation",
-        "expectedReturn": "End of May/early June",
-        "status": "Will throw a four-inning simulated game on May 20 at Comerica Park. Threw a 50-pitch, three-inning simulated game on May 15 at Comerica Park. Showed improvement in pitch quality and fastball velocity."
+        "expectedReturn": "Early June",
+        "status": "Threw a 62-pitch, four-inning simulated game on May 20 at Comerica Park, where he struck out three batters and gave up three home runs. Fastball sat 92-93 mph, topping out at 94.6."
       },
       {
         "playerName": "Beau Brieske",
         "injury": "Left adductor strain",
         "expectedReturn": "Last week of May",
-        "status": "Scheduled to pitch Wednesday and Thursday on rehab assignment for Triple-A Toledo. Tossed two innings and 25 pitches in second appearance for Toledo on May 15. Fastball averaged 95.9 mph, topping out at 97.2."
+        "status": "Threw a 21-pitch inning for Triple-A Toledo on May 20 with a home run allowed, a walk and a strikeout. Fastball averaged 95.8 mph, topping out at 96.9. Scheduled to pitch again May 21 for Toledo before being evaluated."
       },
       {
         "playerName": "Kerry Carpenter",
         "injury": "Left shoulder sprain",
         "expectedReturn": "TBD",
         "status": "Cleared for more baseball activity this week, including defensive work. Left game May 9 after crashing into the wall. Diagnosed with AC joint sprain but no structural damage."
-      },
-      {
-        "playerName": "Tarik Skubal",
-        "injury": "Loose body in left elbow",
-        "expectedReturn": "June",
-        "status": "Rejoined team in Detroit for second mound session May 18 at Comerica Park. Will remain in Detroit and settle into five-day bullpen routine."
       },
       {
         "playerName": "Ty Madden",
@@ -422,6 +428,36 @@
     ],
     "117": [
       {
+        "playerName": "Hunter Brown",
+        "injury": "Grade 2 right shoulder strain",
+        "expectedReturn": "Mid June",
+        "status": "Threw 22 pitches of live BP on May 19, topping out at 96 mph. If he bounces back well from that session, Brown will begin a Minor League rehab assignment over the weekend."
+      },
+      {
+        "playerName": "Taylor Trammell",
+        "injury": "Grade 2 left groin strain",
+        "expectedReturn": "TBD",
+        "status": "Began a Minor League rehab assignment at Double-A Corpus Christi on May 19."
+      },
+      {
+        "playerName": "Joey Loperfido",
+        "injury": "Right quad strain",
+        "expectedReturn": "May",
+        "status": "Continuing to progress in his throwing routine and baseball activity. Felt good running the bases on May 19. Nearing a Minor League rehab assignment."
+      },
+      {
+        "playerName": "Josh Hader",
+        "injury": "Left biceps tendinitis",
+        "expectedReturn": "Early June",
+        "status": "Threw an inning May 19 in a Minor League rehab outing with Double-A Corpus Christi and will need four more outings before returning."
+      },
+      {
+        "playerName": "Yainer Diaz",
+        "injury": "Left oblique strain",
+        "expectedReturn": "Early June",
+        "status": "Has begun running and swinging, building toward hitting off a tee next."
+      },
+      {
         "playerName": "Lance McCullers Jr.",
         "injury": "Right shoulder inflammation",
         "expectedReturn": "June",
@@ -434,42 +470,6 @@
         "status": "Exited May 16 game with pain in left side after a swing. An MRI on May 17 revealed the severity of the injury."
       },
       {
-        "playerName": "Nate Pearson",
-        "injury": "Right elbow surgery recovery",
-        "expectedReturn": "Mid-May",
-        "status": "Pitched final rehab outing May 17 for Triple-A Sugar Land before joining the team in Minneapolis. Is expected to be activated sometime during the series against the Twins."
-      },
-      {
-        "playerName": "Jake Meyers",
-        "injury": "Grade 2 right oblique strain",
-        "expectedReturn": "May 18",
-        "status": "Went 0-for-4 with a run in his third Minor League rehab assignment game May 16 with Double-A Corpus Christi and is scheduled to play again May 17. There's a \"strong possbility\" he will join team in Minneapolis this week."
-      },
-      {
-        "playerName": "Hunter Brown",
-        "injury": "Grade 2 right shoulder strain",
-        "expectedReturn": "Mid June",
-        "status": "Scheduled to throw final live BP on May 19 before heading out on a Minor League rehab assignment."
-      },
-      {
-        "playerName": "Josh Hader",
-        "injury": "Left biceps tendinitis",
-        "expectedReturn": "Early June",
-        "status": "Scheduled to throw an inning May 15 in a Minor League rehab outing with Double-A Corpus Christi and will need five more outings before returning."
-      },
-      {
-        "playerName": "Joey Loperfido",
-        "injury": "Right quad strain",
-        "expectedReturn": "May",
-        "status": "Continuing to progress in his throwing routine and baseball activity. Could be nearing a Minor League rehab assignment the week of May 18."
-      },
-      {
-        "playerName": "Taylor Trammell",
-        "injury": "Grade 2 left groin strain",
-        "expectedReturn": "TBD",
-        "status": "Is running, hitting and throwing and could be nearing a Minor League rehab assignment during the week of May 18."
-      },
-      {
         "playerName": "Bennett Sousa",
         "injury": "Left elbow inflammation",
         "expectedReturn": "May",
@@ -480,12 +480,6 @@
         "injury": "Left ankle tendon",
         "expectedReturn": "2027",
         "status": "Underwent peroneus brevis tendon repair surgery on his left ankle May 11. He will be out for the remainder of the 2026 season."
-      },
-      {
-        "playerName": "Yainer Diaz",
-        "injury": "Left oblique strain",
-        "expectedReturn": "Early June",
-        "status": "Was scratched prior to the May 4 game against the Dodgers after suffering an injury swinging the bat in BP and placed on IL."
       },
       {
         "playerName": "Cristian Javier",
@@ -768,6 +762,12 @@
     ],
     "133": [
       {
+        "playerName": "Gunnar Hoglund",
+        "injury": "Left hip impingement",
+        "expectedReturn": "Out for season",
+        "status": "Underwent season-ending left hip surgery on May 19. Will rehab the rest of this season in hopes of being ready for 2027 Spring Training."
+      },
+      {
         "playerName": "Denzel Clarke",
         "injury": "Mid-foot bone bruise in right foot",
         "expectedReturn": "Late May",
@@ -790,12 +790,6 @@
         "injury": "Right shoulder impingement",
         "expectedReturn": "Late June",
         "status": "Shut down from throwing for a minimum of three weeks from the date of May 18."
-      },
-      {
-        "playerName": "Gunnar Hoglund",
-        "injury": "Left hip impingement",
-        "expectedReturn": "Unknown",
-        "status": "Shut down from throwing activities at this time due to increase in symptoms. No timetable for return."
       }
     ],
     "134": [
@@ -820,6 +814,12 @@
     ],
     "135": [
       {
+        "playerName": "Luis Campusano",
+        "injury": "Left big toe fracture",
+        "expectedReturn": "Late May or June",
+        "status": "Fouled a ball off his toe on May 5, sustaining what the team said was a small fracture. Making notable progress -- is taking swings in the cage and catching a pitching machine."
+      },
+      {
         "playerName": "Germán Márquez",
         "injury": "Right forearm nerve irritation",
         "expectedReturn": "June, potentially",
@@ -830,12 +830,6 @@
         "injury": "Right brachialis strain",
         "expectedReturn": "June or July",
         "status": "Placed on the injured list one day after working two scoreless innings in relief at Milwaukee. Has not resumed throwing. Could return as a reliever."
-      },
-      {
-        "playerName": "Luis Campusano",
-        "injury": "Left big toe fracture",
-        "expectedReturn": "Late May or June",
-        "status": "Fouled a ball off his toe on May 5, sustaining what the team said was a small fracture. Has resumed baseball activities. Will likely require a short rehab stint, per manager Craig Stammen."
       },
       {
         "playerName": "Jhony Brito",
@@ -886,12 +880,6 @@
         "injury": "Left groin strain",
         "expectedReturn": "June",
         "status": "Received a PRP injection for a groin strain, as well as a different injection for an adductor injury. Mariners hope he can return to baseball activities by early June. (last updated: May 17) More »"
-      },
-      {
-        "playerName": "Matt Brash",
-        "injury": "Right lat inflammation",
-        "expectedReturn": "Late May",
-        "status": "Making his second rehab appearance with Triple-A Tacoma on May 17. Manager Dan Wilson said they'll see how he feels coming out of it before determining if he's ready to rejoin the club."
       },
       {
         "playerName": "Cal Raleigh",
@@ -994,42 +982,36 @@
     ],
     "138": [
       {
-        "playerName": "Masyn Winn",
-        "injury": "Left knee discomfort",
-        "expectedReturn": "Day to day",
-        "status": "Out of lineup for May 19 opener vs. the Pirates. Scheduled to undergo an MRI scan. Was removed in the bottom of the seventh on May 17 after legging out a force out."
-      },
-      {
         "playerName": "Ramón Urías",
         "injury": "Right elbow lateral epicondylitis",
         "expectedReturn": "TBD",
-        "status": "Oliver Marmol said that Urías will be retested after taking ground balls on May 17 before beginning his plyo program."
+        "status": "Manager Oliver Marmol said May 20 he anticipates Urías beginning his plyo program May 21 before progressing into additional baseball activities."
       },
       {
         "playerName": "Lars Nootbaar",
         "injury": "Surgery on both heels",
         "expectedReturn": "Early/mid-June",
-        "status": "Began his rehab assignment with Single-A Palm Beach on May 15, homering in his first at-bat and drawing a walk in his second, batting second and playing left field vs. Daytona."
+        "status": "Nootbaar’s rehab shifted to Triple-A Memphis, where he took three at-bats as a designated hitter May 19 at Iowa. Scheduled rest day May 20."
       }
     ],
     "139": [
       {
-        "playerName": "Steven Matz",
-        "injury": "Left elbow inflammation",
-        "expectedReturn": "May 20",
-        "status": "Felt soreness in sixth inning of May 3 start. Underwent MRI on May 4 that revealed no structural issues. Took a few days off throwing, worked off mound. Should be ready to start May 20 vs. the Orioles."
+        "playerName": "Yandy Díaz",
+        "injury": "Sore/bruised hands",
+        "expectedReturn": "Possibly May 22",
+        "status": "Exited after being hit by a pitch in both hands in the eighth inning on May 19. Imaging came back negative, but out of lineup on May 20. Hope is for a May 22 return after consecutive days off."
       },
       {
         "playerName": "Ben Williamson",
-        "injury": "Back tightness",
-        "expectedReturn": "Day to day",
-        "status": "Sidelined by unspecified issue in his back. Did not start against a left-handed pitcher May 18. Felt soreness May 19, but doing better. Unclear if he will need an IL stint."
+        "injury": "Low back strain",
+        "expectedReturn": "Late May/early June",
+        "status": "Felt a spasm in his back while fielding a ground ball in his last appearance on May 16. Did not start against a left-hander on May 18, but Rays waited until May 20 to place him on the IL, hoping he will only need the minimum stint."
       },
       {
         "playerName": "Jake Fraley",
         "injury": "Hernia",
         "expectedReturn": "Possibly July",
-        "status": "Was scratched from May 16 lineup and placed on the IL one day later. Manager Kevin Cash said he could require 6-8 weeks of recovery after surgery."
+        "status": "Scratched from May 16 lineup and placed on the IL one day later. Manager Kevin Cash said he could require 6-8 weeks of recovery after surgery."
       },
       {
         "playerName": "Cole Sulser",
@@ -1130,18 +1112,6 @@
         "status": "Examined by team doctors on April 20 for shoulder soreness and was placed on the IL on April 23."
       },
       {
-        "playerName": "Chris Martin",
-        "injury": "Right shoulder impingement",
-        "expectedReturn": "May",
-        "status": "Only threw one inning in an April 14 loss to the A’s due to arm fatigue that was eventually classified as shoulder impingement."
-      },
-      {
-        "playerName": "Luis Curvelo",
-        "injury": "Right biceps soreness",
-        "expectedReturn": "May",
-        "status": "Left an April 14 appearance after throwing two pitches due to feeling something in his arm. Scans showed minimal issues, though he will be down for at least two weeks."
-      },
-      {
         "playerName": "Cody Freeman",
         "injury": "Lumbar stress reaction",
         "expectedReturn": "May",
@@ -1155,6 +1125,30 @@
       }
     ],
     "141": [
+      {
+        "playerName": "José Berríos",
+        "injury": "Right elbow stress fracture",
+        "expectedReturn": "Potentially late 2027",
+        "status": "Underwent full Tommy John surgery on May 20 and will miss 12 to 18 months."
+      },
+      {
+        "playerName": "Shane Bieber",
+        "injury": "Right elbow inflammation",
+        "expectedReturn": "Potentially late June",
+        "status": "Could pitch in rehab games by late in the week of May 25."
+      },
+      {
+        "playerName": "Nathan Lukes",
+        "injury": "Left hamstring discomfort",
+        "expectedReturn": "Late May",
+        "status": "Will play rehab game with Single-A Dunedin on May 20."
+      },
+      {
+        "playerName": "Addison Barger",
+        "injury": "Right elbow inflammation",
+        "expectedReturn": "Late May",
+        "status": "Expected to receive clearance to throw and hit later this week."
+      },
       {
         "playerName": "Joe Mantiply",
         "injury": "Left knee inflammation",
@@ -1180,34 +1174,10 @@
         "status": "Expected to throw another bullpen session May 19 as he slowly builds up."
       },
       {
-        "playerName": "Addison Barger",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "Late May",
-        "status": "Meeting with doctor May 19 to get clearance to begin throwing and hitting."
-      },
-      {
         "playerName": "Max Scherzer",
         "injury": "Right forearm tendinitis and left ankle inflammation",
         "expectedReturn": "Early to mid June",
         "status": "Threw 22-pitch bullpen May 18 in New York and will throw again May 20."
-      },
-      {
-        "playerName": "Shane Bieber",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "Potentially early June",
-        "status": "Will throw to hitters May 19 in Florida, simulating two innings and 30 pitches."
-      },
-      {
-        "playerName": "Nathan Lukes",
-        "injury": "Left hamstring discomfort",
-        "expectedReturn": "Late May",
-        "status": "Will play rehab game with Single-A Dunedin on May 19."
-      },
-      {
-        "playerName": "José Berríos",
-        "injury": "Right elbow stress fracture",
-        "expectedReturn": "TBD",
-        "status": "Will undergo surgery May 20 to clean up elbow and \"loose bodies,\" but this could also include ligament repair once doctors get a better look."
       },
       {
         "playerName": "Ricky Tiedemann (Blue Jays' No. 5 prospect)",
@@ -1242,16 +1212,16 @@
     ],
     "142": [
       {
+        "playerName": "Taj Bradley",
+        "injury": "Right pectoralis muscle inflammation",
+        "expectedReturn": "Late May",
+        "status": "Threw bullpen session on May 20, next steps TBD."
+      },
+      {
         "playerName": "Ryan Jeffers",
         "injury": "Left wrist sprain",
         "expectedReturn": "July",
         "status": "Will undergo surgery on May 20, expected to miss approximately 6-8 weeks."
-      },
-      {
-        "playerName": "Taj Bradley",
-        "injury": "Right pectoralis muscle inflammation",
-        "expectedReturn": "Late May",
-        "status": "Scheduled to throw a bullpen session on Wednesday."
       },
       {
         "playerName": "Emmanuel Rodriguez (Twins No. 4 prospect)",
@@ -1492,6 +1462,18 @@
     ],
     "147": [
       {
+        "playerName": "José Caballero",
+        "injury": "Fractured right middle finger",
+        "expectedReturn": "Possibly May 22",
+        "status": "Manager Aaron Boone suggested Caballero could miss the minimum 10 days. Resumed playing catch May 18. Hit and threw May 20 and said he should be ready by May 22."
+      },
+      {
+        "playerName": "Jasson Domínguez",
+        "injury": "Left shoulder AC joint sprain",
+        "expectedReturn": "Possibly June",
+        "status": "Injured shoulder while crashing into wall making a catch May 7. Received PRP injection May 11. Advanced from pool and weight room activities to hitting off a tee May 20."
+      },
+      {
         "playerName": "Gerrit Cole",
         "injury": "Tommy John surgery recovery",
         "expectedReturn": "Possibly May 21",
@@ -1504,22 +1486,10 @@
         "status": "Underwent testing May 11 to gauge healing. Manager Aaron Boone said imaging showed the injury \"still lingering there.\" Has continued hitting and is performing plyometric exercises but is not yet running as of May 19."
       },
       {
-        "playerName": "José Caballero",
-        "injury": "Fractured right middle finger",
-        "expectedReturn": "Possibly May 22",
-        "status": "Manager Aaron Boone suggested Caballero could miss the minimum 10 days. Resumed playing catch May 18. Has vowed to be ready by May 22."
-      },
-      {
         "playerName": "Max Fried",
         "injury": "Left elbow bone bruise",
         "expectedReturn": "TBD",
         "status": "Shut down from throwing for a few weeks. Dr. Neal ElAttrache and team physician Dr. Chris Ahmad agreed on diagnosis and treatment, team spokesperson said May 16. Repeat imaging will be performed when asymptomatic."
-      },
-      {
-        "playerName": "Jasson Domínguez",
-        "injury": "Left shoulder AC joint sprain",
-        "expectedReturn": "Possibly June",
-        "status": "Injured shoulder while crashing into wall making a catch May 7. Received PRP injection May 11. Has been able to swing in a pool and perform weight room activities as of May 16."
       },
       {
         "playerName": "Luis Gil",
