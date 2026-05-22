@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-22T02:07:21.327Z",
+  "lastUpdated": "2026-05-22T14:13:04.443Z",
   "teams": {
     "108": [
       {
@@ -1312,6 +1312,12 @@
     ],
     "144": [
       {
+        "playerName": "Ronald Acuña Jr.",
+        "injury": "Left thumb bone bruise",
+        "expectedReturn": "Day to day",
+        "status": "Exited game on May 22 against Miami after experiencing difficulty moving his left thumb. X-rays were negative, and Braves manager Walt Weiss said Acuña was diagnosed with a left thumb bone bruise."
+      },
+      {
         "playerName": "Hurston Waldrep",
         "injury": "Right elbow inflammation",
         "expectedReturn": "Summer 2026",
@@ -1468,6 +1474,12 @@
     ],
     "147": [
       {
+        "playerName": "Gerrit Cole",
+        "injury": "Tommy John surgery recovery",
+        "expectedReturn": "May 22",
+        "status": "Made sixth rehab start May 16, striking out six over 5 1/3 innings. Threw 86 pitches, 56 for strikes. Will return May 22 against the Rays."
+      },
+      {
         "playerName": "José Caballero",
         "injury": "Fractured right middle finger",
         "expectedReturn": "Possibly May 22",
@@ -1478,12 +1490,6 @@
         "injury": "Left shoulder AC joint sprain",
         "expectedReturn": "Possibly June",
         "status": "Injured shoulder while crashing into wall making a catch May 7. Received PRP injection May 11. Advanced from pool and weight room activities to hitting off a tee May 20."
-      },
-      {
-        "playerName": "Gerrit Cole",
-        "injury": "Tommy John surgery recovery",
-        "expectedReturn": "Possibly May 21",
-        "status": "Made sixth rehab start May 16, striking out six over 5 1/3 innings. Threw 86 pitches, 56 for strikes. Will return May 22 against the Rays."
       },
       {
         "playerName": "Giancarlo Stanton",
