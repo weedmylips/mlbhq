@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-23T01:56:06.704Z",
+  "lastUpdated": "2026-05-23T12:56:59.004Z",
   "teams": {
     "108": [
       {
@@ -379,9 +379,9 @@
     "116": [
       {
         "playerName": "Brant Hurter",
-        "injury": "Left leg",
+        "injury": "Back soreness",
         "expectedReturn": "TBD",
-        "status": "Exited Detroit’s May 22 game at Baltimore in the fifth inning favoring his left leg following a pitch that resulted in Tyler O’Neill’s flyout to right."
+        "status": "Exited Detroit’s May 22 game at Baltimore in the fifth inning following a pitch that resulted in Tyler O’Neill’s flyout to right. Manager A.J. Hinch said Hurter complained of back soreness upon a mound visit."
       },
       {
         "playerName": "Burch Smith",
@@ -950,16 +950,16 @@
     ],
     "137": [
       {
+        "playerName": "Logan Webb",
+        "injury": "Right knee bursitis",
+        "expectedReturn": "Late May",
+        "status": "Gave up one unearned run over 3 1/3 innings in his first rehab start for Triple-A Sacramento on May 22."
+      },
+      {
         "playerName": "Jung Hoo Lee",
         "injury": "Mid-back strain",
         "expectedReturn": "Late May or June",
         "status": "Missed two games with back spasms before landing on the IL on May 22. Will be eligible to return on May 29."
-      },
-      {
-        "playerName": "Logan Webb",
-        "injury": "Right knee bursitis",
-        "expectedReturn": "Late May",
-        "status": "Scheduled to throw approximately 60 pitches in a rehab start for Triple-A Sacramento on May 22."
       },
       {
         "playerName": "Heliot Ramos",
