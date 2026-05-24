@@ -1,7 +1,13 @@
 {
-  "lastUpdated": "2026-05-24T02:03:41.237Z",
+  "lastUpdated": "2026-05-24T12:57:02.482Z",
   "teams": {
     "108": [
+      {
+        "playerName": "Nolan Schanuel",
+        "injury": "Left calf tightness",
+        "expectedReturn": "Day to day",
+        "status": "Exited in the seventh inning on May 23 after experiencing calf tightness while coming off first base on a throw from Zach Neto in the fifth. The issue has bothered him throughout the season, though he hopes he'll be able to play through it."
+      },
       {
         "playerName": "Drew Pomeranz",
         "injury": "Left elbow inflammation",
@@ -1099,6 +1105,12 @@
       }
     ],
     "140": [
+      {
+        "playerName": "Josh Jung",
+        "injury": "Left shoulder soreness",
+        "expectedReturn": "Day to day",
+        "status": "Exited in the fourth inning on May 23 after alerting staff to shoulder discomfort following a defensive play. Manual tests were negative, and the team will continue evaluating him following further assessment by the medical staff."
+      },
       {
         "playerName": "Corey Seager",
         "injury": "Back inflammation/spasms",
