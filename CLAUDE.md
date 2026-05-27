@@ -75,7 +75,7 @@ Mirrors `server/routes/` for production. Uses a different cache pattern than the
 | `context/TeamContext.jsx` | Global team selection, CSS var injection, localStorage persistence |
 | `hooks/useTeamData.js` | All React Query hooks: `useGames`, `useLiveGame`, `useScoreboard`, `useRoster`, `useNews`, `useTransactions`, `useTeamStats`, `useStandings`, `useTeamLeaders`, `useLeagueLeaders`, `useHotCold`, `useAnalytics`, `useSituational`, `useBullpen`, `useVsDivisions`, `useBoxScore`, `useH2H`, `useHighlights`, `useMatchup`, `usePlayerDetail`, `useBvp`, `useHasLiveGame`, `useGameEndRefresh` |
 | `data/teams.js` | Static data for all 30 teams: colors, stadium coords, division, logo URL |
-| `data/injuries.json` | Updated by GitHub Actions cron every 6h via `scripts/scrapeInjuries.js` |
+| `data/injuries.json` | Updated by GitHub Actions cron every 24h via `scripts/scrapeInjuries.js` |
 | `utils/rosterMerge.js` | `mergeRosterData()` — merges MLB API roster with scraped injury data |
 
 #### Components (`src/components/`)
@@ -128,7 +128,7 @@ Mirrors `server/routes/` for production. Uses a different cache pattern than the
 
 ### Injury data pipeline
 
-- **Build-time data**: `src/data/injuries.json` is committed to the repo and refreshed by GitHub Actions (`.github/workflows/scrape-injuries.yml`) every 12 hours
+- **Build-time data**: `src/data/injuries.json` is committed to the repo and refreshed by GitHub Actions (`.github/workflows/scrape-injuries.yml`) every 24 hours
 - **Script**: `scripts/scrapeInjuries.js` orchestrates scraping all 30 teams and writes the JSON
 - **Merging**: both `server/routes/roster.js` and `api/roster.js` call `mergeRosterData()` from `src/utils/rosterMerge.js`
 
