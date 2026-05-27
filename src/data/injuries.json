@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-27T02:11:23.003Z",
+  "lastUpdated": "2026-05-27T14:52:57.532Z",
   "teams": {
     "108": [
       {
@@ -301,7 +301,7 @@
         "playerName": "TJ Rumfield",
         "injury": "Right hand contusion",
         "expectedReturn": "Day to day",
-        "status": "Exited in the first inning May 25 after a hit-by-pitch on his right hand. X-rays were negative; set for further testing May 26."
+        "status": "Exited in the first inning May 25 after a hit-by-pitch on his right hand. X-rays were negative, and Rumfield was also absent from the Rockies' starting lineup May 26."
       },
       {
         "playerName": "Jose Quintana",
@@ -584,8 +584,8 @@
       {
         "playerName": "Max Muncy",
         "injury": "Hit by pitch on right wrist",
-        "expectedReturn": "Possibly May 27",
-        "status": "Took batting practice on the field on May 26. If he comes out of it well, he could return to the starting lineup on May 27."
+        "expectedReturn": "May 27",
+        "status": "Came away feeling good after taking batting practice and playing an inning at third base on May 26, so he will return to the starting lineup on May 27."
       },
       {
         "playerName": "Evan Phillips",
@@ -912,12 +912,6 @@
         "status": "Reportedly began baseball activity with light catch on May 25, but will likely remain in Arizona rehabbing. MRI revealed Grade 1 strain.More »"
       },
       {
-        "playerName": "Gabe Speier",
-        "injury": "Left shoulder inflammation",
-        "expectedReturn": "Any day",
-        "status": "Rejoined big league club in West Sacramento on May 25, after making two Minors rehab outings. Club wanted to see how he bounced back before activation."
-      },
-      {
         "playerName": "Brendan Donovan",
         "injury": "Left groin strain",
         "expectedReturn": "June",
@@ -933,7 +927,7 @@
         "playerName": "Will Wilson",
         "injury": "Fractured left thumb",
         "expectedReturn": "June",
-        "status": "Recent X-rays showed positive healing, which would lead him to ramp up baseball activity in early June."
+        "status": "X-rays showed positive healing, which would lead him to ramp up baseball activity in early June."
       },
       {
         "playerName": "Carlos Vargas",
@@ -1327,6 +1321,12 @@
       }
     ],
     "143": [
+      {
+        "playerName": "Brandon Marsh",
+        "injury": "Right middle finger sprain",
+        "expectedReturn": "Day to day",
+        "status": "Left the game on May 26 after injuring his finger while diving back toward first base on a pickoff play. Interim manager Don Mattingly called it a \"day-to-day\" thing after the game."
+      },
       {
         "playerName": "Aidan Miller (Phillies' No. 1 prospect)",
         "injury": "Lower back injury",
