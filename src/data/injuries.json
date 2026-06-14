@@ -1,18 +1,18 @@
 {
-  "lastUpdated": "2026-06-13T04:14:18.789Z",
+  "lastUpdated": "2026-06-14T04:41:43.273Z",
   "teams": {
     "108": [
       {
         "playerName": "Vaughn Grissom",
         "injury": "Left oblique strain",
         "expectedReturn": "Possibly July",
-        "status": "Has progressed to taking light swings and participating in light baseball activities."
+        "status": "Has progressed to taking light swings and participating in light baseball activities. Took batting practice on the field June 13."
       },
       {
         "playerName": "Adam Frazier",
         "injury": "Right elbow inflammation",
         "expectedReturn": "Possibly late June",
-        "status": "Elbow soreness flared and required a stint on the IL. Not considered a serious injury and participated in light baseball activities on June 12."
+        "status": "Elbow soreness flared, requiring a stint on the IL. Not considered a serious injury. Participated in light baseball activities on June 12 and hit on the field June 12 and 13."
       },
       {
         "playerName": "Yusei Kikuchi",
@@ -75,7 +75,13 @@
         "playerName": "Ryan Helsley",
         "injury": "Right elbow inflammation",
         "expectedReturn": "Late June",
-        "status": "Began rehab assignment with Triple-A Norfolk on June 11, collecting three strikeouts in a scoreless inning. Scheduled for another outing on June 13."
+        "status": "Began rehab assignment with Triple-A Norfolk on June 11, collecting three strikeouts in a scoreless inning. Worked a 1-2-3 inning featuring two strikeouts in second outing on June 13."
+      },
+      {
+        "playerName": "Ryan Mountcastle",
+        "injury": "Left foot fracture",
+        "expectedReturn": "July or later",
+        "status": "Exited April 11 game vs. Giants after stumbling between first and second and sliding awkwardly into the bag on a double. Broke fourth metatarsal on left foot. Running in Sarasota as of June 13."
       },
       {
         "playerName": "Dylan Beavers",
@@ -118,12 +124,6 @@
         "injury": "Tommy John surgery",
         "expectedReturn": "2027",
         "status": "Underwent season-ending Tommy John surgery on May 13. Expected to recover in time to return during the early part of the 2027 season."
-      },
-      {
-        "playerName": "Ryan Mountcastle",
-        "injury": "Left foot fracture",
-        "expectedReturn": "July or later",
-        "status": "Exited April 11 game vs. Giants after stumbling between first and second and sliding awkwardly into the bag on a double. Broke fourth metatarsal on left foot. Expected to miss substantial time."
       },
       {
         "playerName": "Zach Eflin",
@@ -193,7 +193,7 @@
         "playerName": "Matthew Boyd",
         "injury": "Left meniscus",
         "expectedReturn": "June",
-        "status": "Played catch and long toss on June 12 with no issues. Cubs will monitor Boyd in coming days with hope he can progress \"rapidly,\" per manager Craig Counsell."
+        "status": "Played catch and long toss on June 12 with no issues. Manager Craig Counsell said Boyd will likely throw a bullpen early next week, with hope he can progress \"rapidly.\""
       },
       {
         "playerName": "Jaxon Wiggins (Cubs' No. 3 prospect, No. 86 overall)",
@@ -253,6 +253,24 @@
     "113": [],
     "114": [
       {
+        "playerName": "José Ramírez",
+        "injury": "Left hamate fracture",
+        "expectedReturn": "Mid-to-late July",
+        "status": "Suffered injury on popout in fifth inning on June 13. Team sorting through next steps logistically, but expected to go on the injured list."
+      },
+      {
+        "playerName": "Chase DeLauter",
+        "injury": "Right rib cage contusion",
+        "expectedReturn": "TBD",
+        "status": "Team was awaiting results of scans postgame June 13 after he crashed into right-field wall trying to make leaping catch in top of first inning. Exited after hitting single in bottom of first."
+      },
+      {
+        "playerName": "Angel Martínez",
+        "injury": "Left foot contusion",
+        "expectedReturn": "Day to day",
+        "status": "Fouled pitch from Tarik Skubal off left foot in first inning on June 13. Received attention from training staff but stayed in game. Eventually exited entering the third inning. Previously missed game on May 31 with left mid-foot strain."
+      },
+      {
         "playerName": "Erik Sabrowski",
         "injury": "Left elbow inflammation",
         "expectedReturn": "Late June or early July",
@@ -270,19 +288,25 @@
         "playerName": "Ezequiel Tovar",
         "injury": "Left calf soreness",
         "expectedReturn": "Day to day",
-        "status": "Hit his calf with foul ball on June 11. Scratched from starting lineup against the A’s on June 12, but was available to pinch-hit if needed."
-      },
-      {
-        "playerName": "Tyler Freeman",
-        "injury": "Head injury",
-        "expectedReturn": "June 16",
-        "status": "Hit in the helmet by a 98.2 mph pitch from Milwaukee's Jacob Misiorowski on June 6. Should return when eligible on June 16, per manager Warren Schaeffer."
+        "status": "Was available to come off the bench on June 13 against the Athletics, per manager Warren Schaeffer."
       },
       {
         "playerName": "Chase Dollander",
         "injury": "Right elbow sprain",
         "expectedReturn": "TBD",
         "status": "Set for pre-op appointment in mid-June. Looking like he may need UCL surgery, per manager Warren Schaeffer.More >"
+      },
+      {
+        "playerName": "Tanner Gordon",
+        "injury": "Right hip impingement",
+        "expectedReturn": "Late June",
+        "status": "Ramping up throwing activities on the field, but still without a return date."
+      },
+      {
+        "playerName": "Tyler Freeman",
+        "injury": "Head injury",
+        "expectedReturn": "June 16",
+        "status": "Hit in the helmet by a 98.2 mph pitch from Milwaukee's Jacob Misiorowski on June 6. Should return when eligible on June 16, per manager Warren Schaeffer."
       },
       {
         "playerName": "Mickey Moniak",
@@ -301,12 +325,6 @@
         "injury": "Right shoulder impingement",
         "expectedReturn": "June",
         "status": "Next rehab outing with Triple-A Albuquerque scheduled for June 13. Could return during series against Cubs beginning on June 15."
-      },
-      {
-        "playerName": "Tanner Gordon",
-        "injury": "Right hip impingement",
-        "expectedReturn": null,
-        "status": "Has continued his throwing program since being scratched from a June 6 start, and expects to throw a full bullpen session soon."
       },
       {
         "playerName": "Brenton Doyle",
@@ -365,6 +383,12 @@
     ],
     "116": [
       {
+        "playerName": "Jack Flaherty",
+        "injury": "Left peroneal strain",
+        "expectedReturn": "TBD",
+        "status": "Left game June 12 at Cleveland after feeling discomfort following slip on mound. Played light catch on June 13."
+      },
+      {
         "playerName": "Casey Mize",
         "injury": "Right groin tightness",
         "expectedReturn": "June 14",
@@ -387,12 +411,6 @@
         "injury": "Left hip inflammation",
         "expectedReturn": "Possibly next week",
         "status": "Allowed four runs, all on solo homers, on five hits in six innings in his second rehab start with Triple-A Toledo on June 10 vs. St. Paul."
-      },
-      {
-        "playerName": "Tarik Skubal",
-        "injury": "Loose body in left elbow",
-        "expectedReturn": "June 13",
-        "status": "Will start June 13 at Cleveland, manager A.J. Hinch announced. Threw five scoreless innings with six strikeouts in a rehab start for High-A West Michigan on June 7."
       },
       {
         "playerName": "Burch Smith",
@@ -427,28 +445,34 @@
     ],
     "117": [
       {
+        "playerName": "Ronel Blanco",
+        "injury": "Torn ulnar collateral ligament in right elbow",
+        "expectedReturn": "Second half 2026",
+        "status": "Threw 40 pitches in a simulated game June 13 and is set to start a Minor League rehab outing in the FCL."
+      },
+      {
+        "playerName": "Cristian Javier",
+        "injury": "Grade 2 right shoulder strain",
+        "expectedReturn": "Late June",
+        "status": "Will make his third Minor League start on June 14 at Triple-A Sugar Land"
+      },
+      {
         "playerName": "Hunter Brown",
         "injury": "Grade 2 right shoulder strain",
         "expectedReturn": "June 15-17 series vs. Tigers",
         "status": "Struck out seven batters in five innings (78 pitches) and allowed three hits, two walks and one earned in final rehab start June 10 for Triple-A Sugar Land. Topped out at 98.6 mph."
       },
       {
-        "playerName": "Cristian Javier",
-        "injury": "Grade 2 right shoulder strain",
-        "expectedReturn": "Late June",
-        "status": "Retired all nine batters he faced, striking out three, in his second Minor League rehab start June 9, which came at Triple-A Sugar Land. He topped out at 94 mph and threw 44 pitches (29 strikes)."
+        "playerName": "Yainer Diaz",
+        "injury": "Left oblique strain",
+        "expectedReturn": "June 15",
+        "status": "Diaz is 2-for-11 in four games during his Minor League rehab start and will catch nine innings June 14 at Triple-A, which could be his final rehab before rejoining the Astros."
       },
       {
         "playerName": "LaMonte Wade Jr.",
         "injury": "Right hamstring soreness",
         "expectedReturn": "Second half",
         "status": "Expected to miss extended time after sustaining injury in June 8 win over Angels."
-      },
-      {
-        "playerName": "Yainer Diaz",
-        "injury": "Left oblique strain",
-        "expectedReturn": "Mid-June",
-        "status": "Started at catcher and went 1-for-3 with a run scored in his first Minor League rehab game June 9 at Triple-A Sugar Land."
       },
       {
         "playerName": "Nick Allen",
@@ -481,12 +505,6 @@
         "status": "Has started a throwing progression. He first experienced soreness during his throwing program on May 8 and was sent home to Houston to see doctors."
       },
       {
-        "playerName": "Ronel Blanco",
-        "injury": "Torn ulnar collateral ligament in right elbow",
-        "expectedReturn": "Second half 2026",
-        "status": "Has progressed to throwing live batting practice in West Palm Beach, Fla. after undergoing Tommy John surgery to repair the ulnar collateral ligament with an internal brace as well as a repair of the flexor tendon in his forearm on June 6, 2025."
-      },
-      {
         "playerName": "Hayden Wesneski",
         "injury": "Torn ulnar collateral ligament in right elbow",
         "expectedReturn": "Second half 2026",
@@ -501,22 +519,28 @@
     ],
     "118": [
       {
-        "playerName": "Seth Lugo",
-        "injury": "Head",
-        "expectedReturn": "Day to day",
-        "status": "Landed on seven-day concussion IL Friday after being hit by 106.6 mph liner on the head in June 10 start against Rangers. CT scan was clear but developed headache a couple days after injury."
-      },
-      {
-        "playerName": "Kris Bubic",
-        "injury": "Left elbow soreness",
-        "expectedReturn": "June",
-        "status": "Sustained a setback with a shoulder issue arising after he began rehab assignment with Triple-A Omaha on June 9, allowing six runs (five earned) on eight hits in 1 1/3 innings. Will see a doctor this weekend to determine next steps."
+        "playerName": "Vinnie Pasquantino",
+        "injury": "Left hand/hamate injury",
+        "expectedReturn": "TBD",
+        "status": "Exited after showing visible discomfort after popping up a ball to third base. Will undergo further testing."
       },
       {
         "playerName": "Cole Ragans",
         "injury": "Left elbow impingement (valgus extension overload)",
-        "expectedReturn": "June",
-        "status": "Threw second bullpen session on June 12 after throwing 23 pitches in first bullpen on June 10. Will determine next steps on how he feels this weekend."
+        "expectedReturn": "TBD",
+        "status": "Threw a 23-pitch bullpen session June 10 but woke up with discomfort June 12, cutting a throwing session short. Will get more testing."
+      },
+      {
+        "playerName": "Seth Lugo",
+        "injury": "Concussion",
+        "expectedReturn": "TBD",
+        "status": "Hit by 106.6 mph liner on the head in June 10 start against Rangers. CT scan was clear but Lugo developed headache a couple days after injury."
+      },
+      {
+        "playerName": "Kris Bubic",
+        "injury": "Left elbow soreness",
+        "expectedReturn": "TBD",
+        "status": "Sustained a setback with a shoulder issue arising after he began rehab assignment with Triple-A Omaha on June 9, allowing six runs (five earned) on eight hits in 1 1/3 innings. Will see a doctor this weekend to determine next steps."
       },
       {
         "playerName": "Carlos Estévez",
@@ -557,10 +581,10 @@
     ],
     "119": [
       {
-        "playerName": "Shohei Ohtani",
-        "injury": "Left knee inflammation",
-        "expectedReturn": "June 13-14",
-        "status": "Was out of the starting lineup on June 12, one day after exiting early due to a sore knee. The hope is that he'll return to action during the weekend series in Chicago."
+        "playerName": "Miguel Rojas",
+        "injury": "Unknown",
+        "expectedReturn": "TBD",
+        "status": "Appeared to tweak something during his final plate appearance on June 13 and was checked on by a trainer. He was removed for a pinch-runner after drawing a walk."
       },
       {
         "playerName": "Tyler Glasnow",
@@ -590,7 +614,7 @@
         "playerName": "Evan Phillips",
         "injury": "Recovery from Tommy John surgery",
         "expectedReturn": "July",
-        "status": "Joined Triple-A Oklahoma to begin a rehab assignment on June 4. Will likely take the maximum 30 days to build up."
+        "status": "Joined Triple-A Oklahoma City to begin a rehab assignment on June 4. Will likely take the maximum 30 days to build up."
       },
       {
         "playerName": "Gavin Stone",
@@ -799,6 +823,18 @@
     ],
     "134": [
       {
+        "playerName": "Konnor Griffin",
+        "injury": "Right forearm strain",
+        "expectedReturn": "Late June",
+        "status": "Saw Dr. Keith Meister in Dallas on June 2. Began throwing plyometric balls on June 7. Began throwing from 90 feet on June 10. Will head to Florida to rehab on June 14."
+      },
+      {
+        "playerName": "Wilber Dotel",
+        "injury": "Right lat muscle strain",
+        "expectedReturn": "Late June",
+        "status": "Placed on the IL on June 13 after allowing four runs in 1 2/3 innings in relief on June 12."
+      },
+      {
         "playerName": "Joey Bart",
         "injury": "Left foot infection",
         "expectedReturn": "TBD",
@@ -811,12 +847,6 @@
         "status": "Recurrent left-hand discomfort after a hard slide in Atlanta over the weekend. Has been receiving treatment from the club’s medical staff. Diagnosed with non-displaced fractures."
       },
       {
-        "playerName": "Konnor Griffin",
-        "injury": "Right forearm strain",
-        "expectedReturn": "Mid-June",
-        "status": "Experienced elbow soreness, diagnosed with minor right forearm strain on May 27. Saw Dr. Keith Meister in Dallas on June 2. Began throwing plyometric balls on June 7. Began throwing from 90 feet on June 10."
-      },
-      {
         "playerName": "Chris Devenski",
         "injury": "Undisclosed illness",
         "expectedReturn": "Maybe mid-June",
@@ -824,6 +854,24 @@
       }
     ],
     "135": [
+      {
+        "playerName": "Xander Bogaerts",
+        "injury": "Neck spasm",
+        "expectedReturn": "TBD",
+        "status": "Left June 13 game in sixth inning after being hit on helmet with pitch in fifth inning. Manager Craig Stammen said postgame that Bogaerts' removal was precautionary and that he will be reevaluated."
+      },
+      {
+        "playerName": "Freddy Fermin",
+        "injury": "Evaluated for concussion",
+        "expectedReturn": "TBD",
+        "status": "Left June 13 game after being hit by a warmup pitch from Yuki Matsui before the start of the bottom of the sixth inning. Manager Craig Stammen said the Padres will \"be careful\" with Fermin as he was previously removed from an April 15 game after being hit in the catcher's mask."
+      },
+      {
+        "playerName": "Miguel Andujar",
+        "injury": "left hamstring strain",
+        "expectedReturn": "June 21",
+        "status": "Manager Craig Stammen decided he did not want Andujar to push too hard with a tender hamstring, so they will give him 10 days to rest and recover."
+      },
       {
         "playerName": "Luis Campusano",
         "injury": "Left big toe fracture",
@@ -886,6 +934,12 @@
       }
     ],
     "136": [
+      {
+        "playerName": "Randy Arozarena",
+        "injury": "Left hamstring soreness",
+        "expectedReturn": "Day to day",
+        "status": "Exited June 12 game with the issue, but went through strength tests and did not necessitate imaging. Out of the lineup June 13, but appears to have avoided a significant injury.More »"
+      },
       {
         "playerName": "J.P. Crawford",
         "injury": "Right hand contusion",
@@ -1049,12 +1103,6 @@
         "status": "Sustained a Grade 2 left ankle sprain while running the bases for Triple-A Durham on April 22. Imaging revealed no fracture. Began a rehab assignment with the Rookie-level FCL Rays on June 11, going 2-for-3 with a steal, so still on track for a mid-June return to Triple-A."
       },
       {
-        "playerName": "Craig Kimbrel",
-        "injury": "Right wrist strain",
-        "expectedReturn": "Mid-June",
-        "status": "Felt stiffness in wrist while playing catch on May 29. Resumed playing catch June 3, threw a bullpen session on June 6 and faced hitters in a 25-pitch live BP session on June 9. Next step to be determined, but should return when eligible June 12 or soon after."
-      },
-      {
         "playerName": "Jonny DeLuca",
         "injury": "Right hamstring strain",
         "expectedReturn": "Possibly late June",
@@ -1111,10 +1159,22 @@
     ],
     "140": [
       {
+        "playerName": "Michael Helman",
+        "injury": "Multiple fractures on right hand",
+        "expectedReturn": "TBD",
+        "status": "Was hit on the right hand with a pitch on June 13 at Fenway Park and suffered multiple fractures in at least one finger."
+      },
+      {
+        "playerName": "Evan Carter",
+        "injury": "Right oblique strain",
+        "expectedReturn": "Late June",
+        "status": "Suffered the injury after making a diving catch and landing awkwardly in June 12 game at Fenway Park."
+      },
+      {
         "playerName": "Corey Seager",
         "injury": "Ribs, jaw soreness",
         "expectedReturn": "Day to day",
-        "status": "The shortstop was held out of the lineup in Boston on June 12 after feeling soreness in his jaw and ribs, the result of a home plate collision suffered in Kansas City a day prior."
+        "status": "Manager Skip Schumaker said Seager felt better on June 13 but remained out of the lineup for a second straight day."
       },
       {
         "playerName": "Jalen Beeks",
@@ -1166,6 +1226,12 @@
       }
     ],
     "141": [
+      {
+        "playerName": "Vladimir Guerrero Jr.",
+        "injury": "Lower back tightness",
+        "expectedReturn": "June 14",
+        "status": "Guerrero’s back tightened up June 12 against the Yankees. The club opted to give him an off-day to recover June 13."
+      },
       {
         "playerName": "Daulton Varsho",
         "injury": "Left wrist inflammation",
@@ -1335,6 +1401,18 @@
     ],
     "144": [
       {
+        "playerName": "Spencer Strider",
+        "injury": "Right elbow inflammation",
+        "expectedReturn": "TBD",
+        "status": "Exited fourth inning of June 12 start after velocity decreased each inning. Went back to Atlanta for MRI imaging on June 13, which revealed the elbow inflammation."
+      },
+      {
+        "playerName": "Joe Jiménez",
+        "injury": "Left knee surgery",
+        "expectedReturn": "2026",
+        "status": "Missed 2025 while recovering from left knee surgery and he had a cleanup procedure in November. Was in New York on June 13 for a doctor's visit when Atlanta played the Mets."
+      },
+      {
         "playerName": "Drake Baldwin",
         "injury": "Strained right oblique muscle",
         "expectedReturn": "June 16",
@@ -1381,12 +1459,6 @@
         "injury": "Torn right ACL",
         "expectedReturn": "2027",
         "status": "Will miss the 2026 season after tearing his right ACL during a collision at first base during a Grapefruit League game on March 8."
-      },
-      {
-        "playerName": "Joe Jiménez",
-        "injury": "Left knee surgery",
-        "expectedReturn": "2026",
-        "status": "Missed 2025 while recovering from left knee surgery and he had a cleanup procedure in November. There is no timetable for his return."
       }
     ],
     "145": [
@@ -1533,16 +1605,22 @@
     ],
     "147": [
       {
+        "playerName": "Trent Grisham",
+        "injury": "Right hamstring strain",
+        "expectedReturn": "TBD",
+        "status": "Sustained injury running bases June 12 at Toronto. Performed light on-field agility exercises June 13. Expected to undergo imaging in New York on June 15."
+      },
+      {
+        "playerName": "Giancarlo Stanton",
+        "injury": "Right calf strain",
+        "expectedReturn": "Possibly June",
+        "status": "Experienced setback running bases on June 11, Aaron Boone said on June 13. Had been expected to rejoin team during next homestand; that is now “in jeopardy.” Additional imaging could take place."
+      },
+      {
         "playerName": "Max Fried",
         "injury": "Left elbow bone bruise",
         "expectedReturn": "Possibly July",
         "status": "MRI showed healing, manager Aaron Boone said June 12. Expected to throw from mound June 13 for “touch and feel” session. Has been throwing at 120 feet and is said to be asymptomatic."
-      },
-      {
-        "playerName": "Jasson Domínguez",
-        "injury": "Left shoulder AC joint sprain",
-        "expectedReturn": "Possibly June",
-        "status": "Played right field with Triple-A Scranton/Wilkes-Barre for the first time this season (second in his career) on June 9. Will continue in Minors at least through June 13, manager Aaron Boone said."
       },
       {
         "playerName": "Austin Wells",
@@ -1555,12 +1633,6 @@
         "injury": "Stress fracture of first rib on right side",
         "expectedReturn": "Possibly August",
         "status": "After a period of rest and recovery, will be evaluated again in 4-6 weeks (approximately July 3-July 17) to determine level of healing and appropriate next steps."
-      },
-      {
-        "playerName": "Giancarlo Stanton",
-        "injury": "Right calf strain",
-        "expectedReturn": "Possibly June",
-        "status": "Has been performing agility exercises and running lightly. “He’s continuing to rehab and get ready,” manager Aaron Boone said June 12."
       },
       {
         "playerName": "Clarke Schmidt",
@@ -1577,16 +1649,22 @@
     ],
     "158": [
       {
-        "playerName": "Coleman Crow",
-        "injury": "Right forearm flexor strain",
-        "expectedReturn": "TBD",
-        "status": "Threw two scoreless innings in relief on June 9 before landing on the IL three days later. (last updated: June 12)"
-      },
-      {
         "playerName": "Brandon Woodruff",
         "injury": "Right shoulder inflammation",
         "expectedReturn": "June",
-        "status": "Threw 68 pitches in 3 2/3 innings in an Arizona Complex League game on June 9 and rejoined the Brewers in Milwaukee to decide if a Major League start is next. (last updated: June 12)"
+        "status": "Threw 68 pitches in 3 2/3 innings in Arizona Complex League game on June 9 and will pitch again in the Minors, tentatively on June 16, before the Brewers decide if he's ready to rejoin their rotation. (last updated: June 13)"
+      },
+      {
+        "playerName": "Brandon Lockridge",
+        "injury": "Right knee laceration",
+        "expectedReturn": "Late June",
+        "status": "Underwent platelet-rich plasma injection in his knee on June 11 after experiencing several flare-ups following high-intensity workouts. Prior to that setback, Lockridge had been close to a rehab assignment with Triple-A Nashville. (last updated: June 13)"
+      },
+      {
+        "playerName": "Coleman Crow",
+        "injury": "Right forearm flexor strain",
+        "expectedReturn": "Late June",
+        "status": "MRI scan on June 12 showed that Crow's forearm injury is on the mild side. He had been experiencing some minor discomfort between outings all the way back to Spring Training, and when that began to happen in games, he spoke up. (last updated: June 13)"
       },
       {
         "playerName": "Quinn Priester",
@@ -1617,12 +1695,6 @@
         "injury": "Left upper trap strain",
         "expectedReturn": "Late June/early July",
         "status": "Returned from the IL on May 31 only to feel discomfort during a pregame throwing session and land back on the IL. MRI scan showed trap strain. Will see a specialist to further pinpoint a diagnosis. (last updated: June 3)"
-      },
-      {
-        "playerName": "Brandon Lockridge",
-        "injury": "Right knee laceration",
-        "expectedReturn": "Late June",
-        "status": "Took live at-bats against rehabbing Brewers starter Brandon Woodruff on June 3 and is nearing a rehab assignment with Triple-A Nashville, manager Pat Murphy said. (last updated: June 3)"
       },
       {
         "playerName": "Logan Henderson",
