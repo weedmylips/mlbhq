@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-13T03:27:07.346Z",
+  "lastUpdated": "2026-07-14T02:49:45.457Z",
   "teams": {
     "108": [
       {
@@ -438,6 +438,12 @@
       }
     ],
     "117": [
+      {
+        "playerName": "Mike Burrows",
+        "injury": "Right elbow neuritis",
+        "expectedReturn": "TBD",
+        "status": "Had been optioned to Triple-A Sugar Land on July 7, but that option was nullified when he was placed on IL. Injury follows a start in which he allowed 10 runs (seven earned) to the Nationals."
+      },
       {
         "playerName": "Brice Matthews",
         "injury": "Left knee injury",
