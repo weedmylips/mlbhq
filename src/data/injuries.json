@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T02:49:45.457Z",
+  "lastUpdated": "2026-07-15T02:48:16.210Z",
   "teams": {
     "108": [
       {
@@ -498,7 +498,7 @@
         "playerName": "Nick Mears",
         "injury": "Right shoulder impingement",
         "expectedReturn": "July",
-        "status": "Most recent setback occurred on July 6 with continued soreness after a live BP. Had another scan done July 11 and was awaiting results to determine next steps."
+        "status": "Most recent setback occurred on July 6 with continued soreness after a live BP. Had another scan done July 11 and was awaiting results to determine next steps. Transferred from 15-day to 60-day IL on July 14."
       },
       {
         "playerName": "Kyle Isbel",
@@ -1631,22 +1631,16 @@
         "status": "MRI scan revealed a new anterior capsule injury, the same injury that required shoulder surgery in October 2023. Dr. Keith Meister will offer a second opinion."
       },
       {
-        "playerName": "Kyle Harrison",
-        "injury": "Left forearm tightness",
-        "expectedReturn": "Late July or August",
-        "status": "Will recover and rest during All-Star break. Harrison is confident injury isn't long-term issue and that he can return quickly."
-      },
-      {
         "playerName": "Rob Zastryzny",
         "injury": "Left upper trap strain",
         "expectedReturn": "Late July",
         "status": "Sent for a rehab assignment July 3 to the Arizona Complex League. Moved rehab July 10 to Triple-A Nashville."
       },
       {
-        "playerName": "Logan Henderson",
-        "injury": "Low back strain",
-        "expectedReturn": "July 9",
-        "status": "On track to come off the IL on July 9 to start the Brewers' series finale against the Cardinals."
+        "playerName": "Kyle Harrison",
+        "injury": "Left forearm tightness",
+        "expectedReturn": "Late July or August",
+        "status": "Will recover and rest during All-Star break. Harrison is confident injury isn't long-term issue and that he can return quickly."
       },
       {
         "playerName": "David Hamilton",
@@ -1671,12 +1665,6 @@
         "injury": "Left pectoral strain",
         "expectedReturn": "Late July",
         "status": "Currently throwing bullpens. First live batting practice is scheduled for July 16."
-      },
-      {
-        "playerName": "Carlos Rodriguez",
-        "injury": "Right shoulder impingement",
-        "expectedReturn": "Mid-July",
-        "status": "Had been optioned to Triple-A Nashville, but that was reversed when he reported discomfort. Rehab assignment moved from the Arizona Complex League to Nashville on July 7, and is scheduled for his next outing on July 12 (60 pitches)."
       },
       {
         "playerName": "Brandon Lockridge",
