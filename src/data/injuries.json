@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T02:48:16.210Z",
+  "lastUpdated": "2026-07-16T02:54:59.085Z",
   "teams": {
     "108": [
       {
@@ -1625,16 +1625,16 @@
     ],
     "158": [
       {
-        "playerName": "Brandon Woodruff",
-        "injury": "Right shoulder inflammation",
-        "expectedReturn": "Possibly September",
-        "status": "MRI scan revealed a new anterior capsule injury, the same injury that required shoulder surgery in October 2023. Dr. Keith Meister will offer a second opinion."
-      },
-      {
         "playerName": "Rob Zastryzny",
         "injury": "Left upper trap strain",
         "expectedReturn": "Late July",
         "status": "Sent for a rehab assignment July 3 to the Arizona Complex League. Moved rehab July 10 to Triple-A Nashville."
+      },
+      {
+        "playerName": "Brandon Woodruff",
+        "injury": "Right shoulder inflammation",
+        "expectedReturn": "Possibly September",
+        "status": "MRI scan revealed a new anterior capsule injury, the same injury that required shoulder surgery in October 2023. Dr. Keith Meister will offer a second opinion."
       },
       {
         "playerName": "Kyle Harrison",
@@ -1653,12 +1653,6 @@
         "injury": "Right rotator cuff tendinopathy",
         "expectedReturn": "Late July or early August",
         "status": "Acquired from the A's in June, made 10 Brewers appearances in various roles before going down with injury."
-      },
-      {
-        "playerName": "Coleman Crow",
-        "injury": "Right forearm flexor strain",
-        "expectedReturn": "Mid- to late July",
-        "status": "Next scheduled rehab outing is July 10 for Triple-A Nashville (four innings, 70-75 pitches). (last updated: July 8)"
       },
       {
         "playerName": "DL Hall",
