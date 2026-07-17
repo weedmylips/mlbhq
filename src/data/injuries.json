@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-16T02:54:59.085Z",
+  "lastUpdated": "2026-07-17T02:57:16.297Z",
   "teams": {
     "108": [
       {
@@ -87,7 +87,7 @@
         "playerName": "Chris Bassitt",
         "injury": "Lower back tightness",
         "expectedReturn": "TBD",
-        "status": "Received facet injection to lower back on June 12. Then underwent minor procedure to have bone spur removed shortly after. Set to be re-evaluated within couple weeks, as of June 27."
+        "status": "Received facet injection to lower back on June 12. Then underwent minor procedure to have bone spur removed shortly after. Set to be re-evaluated within couple of weeks, as of June 27."
       },
       {
         "playerName": "Jordan Westburg",
@@ -693,22 +693,16 @@
     ],
     "121": [
       {
-        "playerName": "Bo Bichette",
-        "injury": "General leg and right ankle soreness",
-        "expectedReturn": "Thursday",
-        "status": "Out of the starting lineup July 10-12 but was available off the bench and made a pinch-hit appearance on July 11. Is expected to be back to full strength after the All-Star break."
-      },
-      {
-        "playerName": "Marcus Semien",
-        "injury": "Left hip flexor strain",
-        "expectedReturn": "Late July",
-        "status": "Began a rehab assignment July 12 at Double-A Binghamton, playing second base. Due to a lack of Minor League games, will not continue his assignment until after the All-Star break."
+        "playerName": "Clay Holmes",
+        "injury": "Fractured right fibula",
+        "expectedReturn": "August",
+        "status": "Threw live batting practice for the first time on July 10, firing 40 pitches without issue, and pitched again against Minor Leaguers with Brooklyn over the All-Star break. Is nearing rehab assignment."
       },
       {
         "playerName": "Luis Robert Jr.",
         "injury": "Lumbar spine disc herniation",
         "expectedReturn": "Mid- to late July",
-        "status": "Began a Minor League rehab assignment on June 30 and was nearing activation in the days leading up to the All-Star break. Will likely need a day or two of prep following the break before returning."
+        "status": "Began a Minor League rehab assignment on June 30 and will continue it at least through July 17. Could be activated shortly after playing for Triple-A Syracuse that night."
       },
       {
         "playerName": "Dedniel Núñez",
@@ -721,12 +715,6 @@
         "injury": "Fractured right hand",
         "expectedReturn": "Late August",
         "status": "Struck on the right hand by a 92.2 mph Michael Wacha sinker on July 9. Will not require surgery but is expected to miss six to eight weeks."
-      },
-      {
-        "playerName": "Clay Holmes",
-        "injury": "Fractured right fibula",
-        "expectedReturn": "August",
-        "status": "Threw live batting practice for the first time on July 10, firing 40 pitches without issue. Will need to build up further before beginning a rehab assignment."
       },
       {
         "playerName": "Austin Warren",
@@ -1327,10 +1315,16 @@
     ],
     "143": [
       {
-        "playerName": "Justin Crawford",
-        "injury": "Left knee soreness",
+        "playerName": "Brad Keller",
+        "injury": "UCL tear in right elbow",
+        "expectedReturn": "Out for season",
+        "status": "Will get a second opinion from Dr. Keith Meister before deciding on potential surgery. Interim manager Don Mattingly said he expects Keller to miss the rest of the season."
+      },
+      {
+        "playerName": "Tanner Banks",
+        "injury": "Left forearm strain",
         "expectedReturn": "TBD",
-        "status": "Scratched from July 10 lineup after slipping on field pregame. Manager Don Mattingly said that Crawford was \"borderline yesterday” and was better on July 12. Crawford didn't have swelling, and went through a pre-game workout."
+        "status": "Landed on the IL after allowing five runs over 1 1/3 innings in his first two appearances after being recalled from Triple-A Lehigh Valley on July 4. He has a 7.14 ERA this season."
       },
       {
         "playerName": "Lou Trivino",
