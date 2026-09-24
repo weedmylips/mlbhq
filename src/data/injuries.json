@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-23T04:05:40.993Z",
+  "lastUpdated": "2026-09-24T04:01:24.680Z",
   "teams": {
     "108": [
       {
@@ -60,22 +60,28 @@
     "109": [],
     "110": [
       {
-        "playerName": "Jackson Holliday",
-        "injury": "Left wrist inflammation",
-        "expectedReturn": "Likely 2027",
-        "status": "Met with wrist doctor on Sept. 19 in Baltimore. Still gathering information, as of Sept. 21. Unlikely to play again in 2026."
+        "playerName": "Samuel Basallo",
+        "injury": "Concussion",
+        "expectedReturn": "Spring Training 2027",
+        "status": "Took foul tip to catcher's mask in Sept. 21 game vs. Toronto. Showed concussion symptoms later that night."
       },
       {
-        "playerName": "Ryan Helsley",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "2027",
-        "status": "Threw a scoreless inning for Triple-A Norfolk on Sept. 12. Then shut down as team did not want to force him back too quickly."
+        "playerName": "Jackson Holliday",
+        "injury": "Left wrist inflammation",
+        "expectedReturn": "Spring Training 2027",
+        "status": "Diagnosed with partial TFCC (triangular fibrocartilage complex) tear. Scheduled to undergo surgery during week of Sept. 28."
       },
       {
         "playerName": "Tyler O'Neill",
         "injury": "Right shoulder inflammation",
-        "expectedReturn": "2027",
-        "status": "Shoulder did not respond well to activity in early September. Transferred to 60-day IL on Sept. 19, ending his season."
+        "expectedReturn": "Spring Training 2027",
+        "status": "Shoulder did not respond well to activity in early September. Received platelet-rich plasma injection later in month."
+      },
+      {
+        "playerName": "Ryan Helsley",
+        "injury": "Right elbow inflammation",
+        "expectedReturn": "Spring Training 2027",
+        "status": "Threw a scoreless inning for Triple-A Norfolk on Sept. 12. Then shut down as team did not want to force him back too quickly."
       },
       {
         "playerName": "Kyle Bradish",
@@ -116,34 +122,28 @@
       {
         "playerName": "Zach Eflin",
         "injury": "Tommy John surgery",
-        "expectedReturn": "2027",
+        "expectedReturn": "Mid-2027",
         "status": "Exited 2026 debut on March 31 due to right elbow discomfort. After getting imaging and a second opinion, underwent Tommy John surgery on April 8."
       }
     ],
     "111": [
       {
-        "playerName": "Garrett Crochet",
-        "injury": "Left shoulder inflammation",
-        "expectedReturn": "Late season/early postseason at best",
-        "status": "Took an important step on Sept. 22, throwing live batting practice for the first time in nearly four months, and hitting 96 mph. Will throw again in a few days."
+        "playerName": "Ceddanne Rafaela",
+        "injury": "Right hamstring tightness",
+        "expectedReturn": "TBD",
+        "status": "Rafaela tweaked his right hamstring on a single to left field in his first at-bat back from the IL on Sept. 23 and exited the game in the third inning. He will get precautionary imaging on Sept. 24."
       },
       {
         "playerName": "Willson Contreras",
         "injury": "Bruised knuckle on right hand",
         "expectedReturn": "Shooting for final homestand",
-        "status": "Making solid progress; swung aggressively in the cage on Sept. 22."
+        "status": "Swung aggressively in the cage on Sept. 22, and felt some soreness on Sept. 23. Unclear when he will return."
       },
       {
-        "playerName": "Aroldis Chapman",
-        "injury": "Lat tightness",
-        "expectedReturn": "Sept. 23-24",
-        "status": "Chapman is \"very close\" to returning, per manager Chad Tracy."
-      },
-      {
-        "playerName": "Ceddanne Rafaela",
-        "injury": "Right quad strain",
-        "expectedReturn": "Sept. 23-24",
-        "status": "Doing \"much better,\" according to manager Chad Tracy, and is expected to be activated any day."
+        "playerName": "Garrett Crochet",
+        "injury": "Left shoulder inflammation",
+        "expectedReturn": "Aiming for postseason",
+        "status": "Expected to throw second live batting practice of week on Sept. 26."
       },
       {
         "playerName": "Tanner Houck",
@@ -217,7 +217,7 @@
         "playerName": "Alex Bregman",
         "injury": "Left cheek injury",
         "expectedReturn": "TBD",
-        "status": "Multiple fractures in left cheek, but no surgery required. Resumed light activity on Sept. 22. Cubs are not ruling out a return before end of regular season, per manager Craig Counsell."
+        "status": "Multiple fractures in left cheek, but no surgery required. Planned on hitting off a high-velocity machine on Sept. 23. Cubs are not ruling out a return before end of regular season, per manager Craig Counsell."
       },
       {
         "playerName": "Justin Steele",
@@ -292,19 +292,13 @@
         "playerName": "Colin Holderman",
         "injury": "Right wrist inflammation",
         "expectedReturn": "Late September",
-        "status": "Received injection in wrist on Sept. 19. Expected to resume throwing on Sept. 21. Exited rehab appearance with Triple-A Columbus on Sept. 17 due to wrist issue."
-      },
-      {
-        "playerName": "Shawn Armstrong",
-        "injury": "Left calf strain",
-        "expectedReturn": "Late September",
-        "status": "Made rehab appearances with Triple-A Columbus on Sept. 11, 15, 17 and 20. On track for activation week of Sept. 21."
+        "status": "Received injection in wrist on Sept. 19. Was expected to resume throwing on Sept. 21. Exited rehab appearance with Triple-A Columbus on Sept. 17 due to wrist issue."
       },
       {
         "playerName": "Rhys Hoskins",
         "injury": "Lower back inflammation",
         "expectedReturn": "Potentially September",
-        "status": "Set to continue baseball activities on Sept. 22."
+        "status": "Was set to continue baseball activities on Sept. 22."
       },
       {
         "playerName": "Khal Stephen (Guardians' No. 11 prospect)",
@@ -359,6 +353,18 @@
     ],
     "116": [
       {
+        "playerName": "Jack Flaherty",
+        "injury": "Right flexor inflammation",
+        "expectedReturn": "Hopefully Sept. 27",
+        "status": "Threw a bullpen session on Sept. 23 in hopes of pitching in Detroit this weekend. Could piggyback on Sept. 27."
+      },
+      {
+        "playerName": "Kerry Carpenter",
+        "injury": "Left foot plantar fasciitis",
+        "expectedReturn": "2027",
+        "status": "Completing a running and hitting progression."
+      },
+      {
         "playerName": "Troy Melton",
         "injury": "Right arm fatigue",
         "expectedReturn": "2027",
@@ -381,18 +387,6 @@
         "injury": "Left groin inflammation",
         "expectedReturn": "2027",
         "status": "Placed on 15-day injured list after reporting discomfort following back-to-back outings at Toronto. Tried to pitch through issue until he believed he was hurting the team. Will recover without surgery."
-      },
-      {
-        "playerName": "Jack Flaherty",
-        "injury": "Right flexor inflammation",
-        "expectedReturn": "Possibly Sept. 25 or 27",
-        "status": "Will throw a bullpen session on Sept. 23 in hopes of pitching in Detroit next weekend. Will not piggyback with Justin Verlander on Sept. 26."
-      },
-      {
-        "playerName": "Kerry Carpenter",
-        "injury": "Left foot plantar fasciitis",
-        "expectedReturn": "Possibly late September",
-        "status": "Completing a running and hitting progression in hopes of returning this season."
       },
       {
         "playerName": "Parker Meadows",
@@ -445,6 +439,30 @@
     ],
     "117": [
       {
+        "playerName": "Cristian Javier",
+        "injury": "Grade 2 right groin strain",
+        "expectedReturn": "2027",
+        "status": "Will miss rest of season after suffering a Grade 2 groin strain Sept. 22 pitching in Seattle."
+      },
+      {
+        "playerName": "Jeremy Peña",
+        "injury": "Right forearm soreness",
+        "expectedReturn": "Day to day",
+        "status": "Removed from Sept. 22 game in Seattle after being hit by a pitch and was out of lineup Sept. 23."
+      },
+      {
+        "playerName": "Daulton Varsho",
+        "injury": "Left wrist soreness",
+        "expectedReturn": "Day to day",
+        "status": "Was out of the lineup for the second consecutive game Sept. 23 but is slowly progressing."
+      },
+      {
+        "playerName": "Brice Matthews",
+        "injury": "Left knee inflammation",
+        "expectedReturn": "TBA",
+        "status": "Injured knee making a sliding catch in the second inning Sept. 22, but no structural damage."
+      },
+      {
         "playerName": "Mike Burrows",
         "injury": "Right elbow neuritis/right shoulder inflammation",
         "expectedReturn": "Possibly postseason",
@@ -480,19 +498,13 @@
         "playerName": "James McArthur",
         "injury": "Right elbow inflammation",
         "expectedReturn": "2027",
-        "status": "Has yielded three runs over 2 2/3 innings across three rehab appearances between Double-A Northwest Arkansas and Triple-A Omaha."
-      },
-      {
-        "playerName": "Tony Gonsolin",
-        "injury": "Right elbow internal brace surgery",
-        "expectedReturn": "September",
-        "status": "Allowed three runs in five innings to go with three strikeouts on Sept. 17 in fourth rehab start with Triple-A Omaha."
+        "status": "Has thrown three straight scoreless frames (three games) between Double-A Northwest Arkansas and Triple-A Omaha after allowing three runs in two-thirds of an inning in his first game action since 2024."
       },
       {
         "playerName": "Connor Seabold",
         "injury": "Right lat strain",
-        "expectedReturn": "September",
-        "status": "Has logged three scoreless innings over three rehab outings with Triple-A Omaha."
+        "expectedReturn": "September or 2027",
+        "status": "Has logged four scoreless innings over four rehab outings with Triple-A Omaha."
       },
       {
         "playerName": "Carlos Estévez",
@@ -544,12 +556,6 @@
       }
     ],
     "119": [
-      {
-        "playerName": "Shohei Ohtani",
-        "injury": "Left knee, right biceps",
-        "expectedReturn": "Sept. 23 at earliest as hitter, 2027 as pitcher",
-        "status": "Set to be activated once eligible on Sept. 23."
-      },
       {
         "playerName": "Blake Snell",
         "injury": "Left groin tightness",
@@ -660,7 +666,7 @@
         "playerName": "Christian Scott",
         "injury": "Left knee inflammation",
         "expectedReturn": "2027",
-        "status": "Began feeling discomfort during a Sept. 19 game against the Phillies. Underwent an MRI that revealed inflammation but no structural damage. Will be fine for the start of next season."
+        "status": "Began feeling discomfort during a Sept. 19 game against the Phillies. Does not appear to have suffered any structural damage. Should be fine for the start of next season."
       },
       {
         "playerName": "Jared Young",
@@ -775,6 +781,12 @@
     ],
     "134": [
       {
+        "playerName": "Mitch Keller",
+        "injury": "Right arm teres major muscle injury",
+        "expectedReturn": "2027",
+        "status": "Felt the injury during/after his start on Aug. 2. After imaging on Aug. 3, placed on IL to end his season. Won’t need surgery. As of Sept. 23, Keller feels fully healthy and expects to start throwing in late October."
+      },
+      {
         "playerName": "Braxton Ashcraft",
         "injury": "Right arm discomfort",
         "expectedReturn": "2027",
@@ -797,12 +809,6 @@
         "injury": "Left oblique strain",
         "expectedReturn": "TBD",
         "status": "Projected to be out six to eight weeks with a more serious strain, likely ending his 2026 season due to the MiLB schedule."
-      },
-      {
-        "playerName": "Mitch Keller",
-        "injury": "Right arm teres major muscle injury",
-        "expectedReturn": "2027",
-        "status": "Felt the injury during/after his start on Aug. 2. After imaging on Aug. 3, placed on IL to end his season. Won’t need surgery."
       }
     ],
     "135": [
@@ -811,12 +817,6 @@
         "injury": "Right wrist fracture",
         "expectedReturn": "Late September",
         "status": "Sustained fracture when he was hit by a pitch on July 19 in Kansas City. Began a rehab stint with Triple-A El Paso on Sept. 8 and took live at-bats at Petco Park Sept. 21."
-      },
-      {
-        "playerName": "Jason Adam",
-        "injury": "Right shoulder strain",
-        "expectedReturn": "Sept. 23",
-        "status": "Made three rehab appearances with Triple-A El Paso, then threw a live BP at Petco Park on Sept. 21. Expected to be activated during the season's final week, potentially Sept. 23."
       },
       {
         "playerName": "Joe Musgrove",
@@ -927,8 +927,14 @@
       {
         "playerName": "Blade Tidwell",
         "injury": "UCL sprain in right elbow",
-        "expectedReturn": "2027",
-        "status": "Diagnosed with a \"high-grade sprain\" of the ulnar collateral ligament in his pitching elbow. Will meet with Dr. Ken Akizuki to discuss his treatment plan."
+        "expectedReturn": "2028",
+        "status": "Recommended to undergo surgery after being diagnosed with a \"moderate to high-grade sprain\" of the ulnar collateral ligament in his pitching elbow."
+      },
+      {
+        "playerName": "Osleivis Basabe",
+        "injury": "Left hamstring tightness",
+        "expectedReturn": "Day to day",
+        "status": "Departed the Giants' 3-2 loss to the Twins on Sept. 22 in the bottom of the ninth after experiencing hamstring tightness while running the bases."
       },
       {
         "playerName": "Jung Hoo Lee",
@@ -1091,28 +1097,28 @@
     ],
     "139": [
       {
-        "playerName": "Manuel Rodríguez",
-        "injury": "Low back strain",
-        "expectedReturn": "Late September",
-        "status": "Began a rehab assignment with Triple-A Durham on Sept. 13 and made three appearances before Durham's season ended. Joined the Rays at Yankee Stadium on Sept. 22 but was not activated."
+        "playerName": "Shane McClanahan",
+        "injury": "Left forearm tightness",
+        "expectedReturn": "Possibly the ALCS",
+        "status": "Exited Sept. 3 start with tightness after the fifth inning. Playing catch. Manager Kevin Cash said he likely won't be a rotation option in the ALDS."
       },
       {
         "playerName": "Tyler Wells",
         "injury": "Right forearm tightness",
         "expectedReturn": "Postseason",
-        "status": "Felt some tightness in forearm after pitching on Sept. 12. Underwent imaging on Sept. 14. Reported \"no structural damage.\" Expects minimum stint that will have him healthy for the playoffs. Resumed playing catch on Sept. 19."
-      },
-      {
-        "playerName": "Shane McClanahan",
-        "injury": "Left forearm tightness",
-        "expectedReturn": "Possibly late September",
-        "status": "Exited Sept. 3 start with tightness after the fifth inning. Played \"light\" catch on Sept. 11 and had \"a good day\" playing catch on Sept. 18."
+        "status": "Felt some tightness in forearm after pitching on Sept. 12. Reported \"no structural damage.\" Expects minimum stint and a postseason return. Resumed playing catch on Sept. 19. Throwing bullpen sessions."
       },
       {
         "playerName": "Garrett Cleavinger",
         "injury": "Left forearm tightness",
-        "expectedReturn": "Possibly late September",
-        "status": "Was unsuccessfully trying to pitch through the condition, surrendering 10 runs over his last 8 2/3 innings. Should begin mound work on Sept. 19 before progressing to bullpen sessions."
+        "expectedReturn": "Possibly postseason",
+        "status": "Was unsuccessfully trying to pitch through the condition, surrendering 10 runs over his last 8 2/3 innings. Has progressed to throwing bullpen sessions."
+      },
+      {
+        "playerName": "Manuel Rodríguez",
+        "injury": "Low back strain",
+        "expectedReturn": "Late September",
+        "status": "Began a rehab assignment with Triple-A Durham on Sept. 13 and made three appearances before Durham's season ended. Joined the Rays at Yankee Stadium on Sept. 22 but was not activated."
       },
       {
         "playerName": "Jacob Melton",
@@ -1159,12 +1165,6 @@
         "status": "Left Sept. 19 start with right lat tightness. Additional scans showed a strain. Was placed on 60-day IL on Sept 22. Will be ineligible for a potential postseason run."
       },
       {
-        "playerName": "Brandon Nimmo",
-        "injury": "Illness",
-        "expectedReturn": "Day to day",
-        "status": "Scratched from series finale vs. Toronto on Sept. 20, though it appears to be unrelated to the viral illness that landed reliever Michel Otañez on the injured list the previous day."
-      },
-      {
         "playerName": "Michel Otañez",
         "injury": "Viral illness",
         "expectedReturn": "TBD",
@@ -1209,22 +1209,16 @@
     ],
     "141": [
       {
+        "playerName": "Dylan Cease",
+        "injury": "Right shoulder inflammation",
+        "expectedReturn": "Out for season, but expected to have normal offseason",
+        "status": "MRI showed inflammation, but no surgery is needed. Placed on IL after club was eliminated from postseason contention."
+      },
+      {
         "playerName": "Brett Bateman",
         "injury": "Right hip discomfort",
         "expectedReturn": "Day to day",
-        "status": "Jammed right knee in grad sliding for a ball on Sept. 21 in Baltimore and injured his hip. Initial X-rays were negative and there was no injury to the knee or ankle, John Schneider said. More tests to come."
-      },
-      {
-        "playerName": "Vladimir Guerrero Jr.",
-        "injury": "Left lower back tightness",
-        "expectedReturn": "Day to day",
-        "status": "Out of the lineup Sept. 21 in Baltimore, but Blue Jays remain optimistic he will play this season."
-      },
-      {
-        "playerName": "Dylan Cease",
-        "injury": "Right shoulder inflammation",
-        "expectedReturn": "Potentially by end of season",
-        "status": "Will not make his scheduled start in Baltimore after MRI showed inflammation, but there is no structural damage and club is not yet closing the door on him pitching again."
+        "status": "Jammed right knee in grass sliding for a ball on Sept. 21 in Baltimore and injured his hip. X-rays were negative and an MRI didn't show any further damage, so it's still possible he plays during the final series at home."
       },
       {
         "playerName": "Anthony Santander",
@@ -1235,19 +1229,19 @@
       {
         "playerName": "Shane Bieber",
         "injury": "Right teres major inflammation",
-        "expectedReturn": "Potentially early in postseason",
-        "status": "Threw a side session on Sept. 19 in Texas and will continue to build up, hoping to be available if Blue Jays reach postseason."
+        "expectedReturn": "Out for season, but expected to have normal offseason",
+        "status": "Threw a side session on Sept. 19 in Texas and will continue to build up."
       },
       {
         "playerName": "Rudy Martin Jr.",
         "injury": "Left hamstring strain",
-        "expectedReturn": "Potentially by postseason",
+        "expectedReturn": "Out for season, but expected to have normal offseason",
         "status": "Tweaked hamstring running and reinjured it in pregame workouts the next day. Currently being evaluated further."
       },
       {
         "playerName": "Jameson Taillon",
         "injury": "Right elbow inflammation",
-        "expectedReturn": "Potentially out for season",
+        "expectedReturn": "Out for season",
         "status": "Club is waiting for Dr. Keith Meister to interpret MRI results, manager John Schneider said Sept. 7. While Schneider didn't want to close the door completely, Taillon's season is likely over."
       },
       {
@@ -1307,6 +1301,12 @@
     ],
     "142": [
       {
+        "playerName": "Kaelen Culpepper",
+        "injury": "Mild left hamstring strain",
+        "expectedReturn": "Late September or 2027",
+        "status": "Has begun baseball activities and is scheduled to take live batting practice on Sept 24. Could still be activated for season’s final two days."
+      },
+      {
         "playerName": "Byron Buxton",
         "injury": "Right hip impingement",
         "expectedReturn": "2027",
@@ -1317,12 +1317,6 @@
         "injury": "Left wrist sprain",
         "expectedReturn": "Late September",
         "status": "Placed on 10-day IL after inflammation failed to clear up quickly enough. Remains eligible to return before season ends."
-      },
-      {
-        "playerName": "Kaelen Culpepper",
-        "injury": "Mild left hamstring strain",
-        "expectedReturn": "Late September or 2027",
-        "status": "Left Sept. 15 game against Yankees after trying to beat out a double play in the bottom of the sixth. Club hopes he can return before season is over."
       },
       {
         "playerName": "Pablo López",
@@ -1366,13 +1360,13 @@
         "playerName": "Jesús Luzardo",
         "injury": "Left shoulder inflammation",
         "expectedReturn": "Hopefully ready for postseason",
-        "status": "Scratched from Sept. 12 start, then landed on IL after shoulder did not improve. Eligible to return for final game of regular season. Played catch for third consecutive day on Sept. 22. Phillies interim manager Don Mattingly said Luzardo is progressing well."
+        "status": "Scratched from Sept. 12 start, then landed on IL after shoulder did not improve. Eligible to return for final game of regular season. Played catch for fourth consecutive day on Sept. 23. Phillies interim manager Don Mattingly said Luzardo is progressing well."
       },
       {
         "playerName": "Jonathan Bowlan",
         "injury": "Mild right groin strain",
         "expectedReturn": "TBD (day to day)",
-        "status": "Hasn't pitched since Sept. 17, when he suffered the injury. Bowlan and the Phillies are optimistic that he might pitch again before the end of the regular season, or at the very least be ready by the postseason. He played catch on Sept. 22."
+        "status": "Hasn't pitched since Sept. 17, when he suffered the injury. Bowlan and the Phillies are optimistic that he might pitch again before the end of the regular season, or at the very least be ready by the postseason. He threw off the mound on Sept. 23."
       },
       {
         "playerName": "Caleb Kilian",
@@ -1400,12 +1394,6 @@
       }
     ],
     "144": [
-      {
-        "playerName": "Robert Suarez",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "Sept. 23",
-        "status": "Expected to throw an inning on Sept. 23 and another during the regular season’s final weekend. The hope is he’ll be on Atlanta’s Wild Card Series roster."
-      },
       {
         "playerName": "Bryce Elder",
         "injury": "Right knee surgery",
@@ -1551,34 +1539,40 @@
     ],
     "147": [
       {
+        "playerName": "Clarke Schmidt",
+        "injury": "Sore right biceps",
+        "expectedReturn": "Day to day",
+        "status": "Sept. 22 was a “better” day for Schmidt, who felt discomfort while warming up Sept. 20 at Arizona. If Schmidt is unable to pitch Sept. 24, the Yankees may shut him down."
+      },
+      {
+        "playerName": "Giancarlo Stanton",
+        "injury": "Left calf strain",
+        "expectedReturn": "Possibly postseason",
+        "status": "Was seen performing on-field running between games of Sept. 22 doubleheader. Took live at-bats Sept. 23 in Bridgewater, N.J., hitting a home run, according to manager Aaron Boone."
+      },
+      {
+        "playerName": "Trent Grisham",
+        "injury": "Right hamstring strain",
+        "expectedReturn": "Postseason",
+        "status": "Is said to be \"pretty deep into his running progression\" and has been hitting along with other baseball activities. Took live at-bats Sept. 23 in Bridgewater, N.J."
+      },
+      {
+        "playerName": "Fernando Cruz",
+        "injury": "Partially torn right ulnar collateral ligament",
+        "expectedReturn": "TBD",
+        "status": "Imaging performed on Aug. 26 revealed a partial tear of Cruz’s right UCL. Has thrown from the bullpen mound once and is scheduled to do so again on Sept. 24."
+      },
+      {
         "playerName": "Aaron Judge",
         "injury": "Strained right calf",
         "expectedReturn": "Possibly October",
         "status": "MRI taken Sept. 17 in Phoenix revealed strain to soleus muscle, sustained Sept. 16 in Minnesota. Received a platelet-poor plasma (PPP) injection Sept. 21. Has a “moderate grade” strain and is not expected to be active for an AL Wild Card Series, manager Aaron Boone confirmed Sept. 22."
       },
       {
-        "playerName": "Giancarlo Stanton",
-        "injury": "Left calf strain",
-        "expectedReturn": "TBD",
-        "status": "Not officially out for the season. Has continued hitting and was seen performing on-field running between games of Sept. 22 doubleheader."
-      },
-      {
         "playerName": "Ryan Weathers",
         "injury": "Left forearm flexor strain",
         "expectedReturn": "Possibly postseason",
         "status": "Unlikely to get into a Major League game before the end of the season, manager Aaron Boone said Sept. 18. Has been throwing from a mound. Scheduled to throw side session Sept. 22."
-      },
-      {
-        "playerName": "Trent Grisham",
-        "injury": "Right hamstring strain",
-        "expectedReturn": "Postseason",
-        "status": "Could be \"in play at some point\" during the postseason, manager Aaron Boone said Sept. 20. Is said to be \"pretty deep into his running progression\" and has been hitting along with other baseball activities."
-      },
-      {
-        "playerName": "Fernando Cruz",
-        "injury": "Partially torn right ulnar collateral ligament",
-        "expectedReturn": "TBD",
-        "status": "Imaging performed on Aug. 26 revealed a partial tear of Cruz’s right UCL. Met with Dr. Keith Meister, who advised a conservative approach for now. Has not yet resumed throwing, Aaron Boone said Sept. 13."
       },
       {
         "playerName": "Kervin Castro",
@@ -1595,15 +1589,21 @@
     ],
     "158": [
       {
-        "playerName": "Grant Anderson",
-        "injury": "Right biceps inflammation",
-        "expectedReturn": "turn: Day to day",
-        "status": "Rejoined the Brewers in Philadelphia but was not immediately activated off the IL."
+        "playerName": "Brandon Woodruff",
+        "injury": "Right shoulder capsule",
+        "expectedReturn": "Potentially late 2026",
+        "status": "Expects to undergo more imaging of his shoulder on Sept. 25 before conferring with the doctors about whether to try throwing off the mound."
       },
       {
         "playerName": "Bryse Wilson",
         "injury": "Low back strain",
-        "expectedReturn": "Day to day",
+        "expectedReturn": "Possibly Sept. 24",
+        "status": "Is a leading contender to come off the IL and start the Brewers’ final regular-season road game on Sept. 24."
+      },
+      {
+        "playerName": "Grant Anderson",
+        "injury": "Right biceps inflammation",
+        "expectedReturn": "turn: Day to day",
         "status": "Rejoined the Brewers in Philadelphia but was not immediately activated off the IL."
       },
       {
@@ -1611,12 +1611,6 @@
         "injury": "Left hand sprain",
         "expectedReturn": "2027",
         "status": "Had only one at-bat between July 7 and the end of the Triple-A season because of injury."
-      },
-      {
-        "playerName": "Brandon Woodruff",
-        "injury": "Right shoulder capsule",
-        "expectedReturn": "Potentially late 2026",
-        "status": "Has a \"low possibility\" of potentially returning in 2026 but is giving it a try. Throwing at 105 feet and is scheduled to be evaluated for a return to the mound at the end of September."
       },
       {
         "playerName": "Brian Fitzpatrick",
