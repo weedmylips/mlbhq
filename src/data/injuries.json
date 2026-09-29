@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-28T04:37:46.540Z",
+  "lastUpdated": "2026-09-29T05:06:03.376Z",
   "teams": {
     "108": [
       {
@@ -30,6 +30,18 @@
     "109": [],
     "110": [
       {
+        "playerName": "Kyle Bradish",
+        "injury": "Lower abdominal discomfort",
+        "expectedReturn": "2027",
+        "status": "Scheduled to undergo sports hernia surgery on Sept. 29. Not yet clear whether he'll be ready for start of Spring Training."
+      },
+      {
+        "playerName": "Jordan Westburg",
+        "injury": "Tommy John surgery",
+        "expectedReturn": "Spring Training 2027",
+        "status": "Underwent season-ending Tommy John surgery on May 13. Began hitting progression during week of Sept. 28."
+      },
+      {
         "playerName": "Jackson Holliday",
         "injury": "Left wrist inflammation",
         "expectedReturn": "Spring Training 2027",
@@ -48,12 +60,6 @@
         "status": "Threw a scoreless inning for Triple-A Norfolk on Sept. 12. Then shut down as team did not want to force him back too quickly."
       },
       {
-        "playerName": "Kyle Bradish",
-        "injury": "Lower abdominal discomfort",
-        "expectedReturn": "2027",
-        "status": "Diagnosed with a sports hernia. Going through potential options, which could include surgery."
-      },
-      {
         "playerName": "Ryan Mountcastle",
         "injury": "Left oblique strain",
         "expectedReturn": "Spring Training 2027",
@@ -70,12 +76,6 @@
         "injury": "Tommy John surgery",
         "expectedReturn": "Late 2027/early 2028",
         "status": "Underwent Tommy John surgery on left elbow on July 15. Procedure was performed by Dr. Keith Meister in Arlington, Texas."
-      },
-      {
-        "playerName": "Jordan Westburg",
-        "injury": "Tommy John surgery",
-        "expectedReturn": "2027",
-        "status": "Underwent season-ending Tommy John surgery on May 13. Optimistic he'll be ready for start of Spring Training 2027."
       },
       {
         "playerName": "Zach Eflin",
@@ -549,6 +549,12 @@
     ],
     "121": [
       {
+        "playerName": "Tylor Megill",
+        "injury": "Recovery from Tommy John surgery",
+        "expectedReturn": "2027",
+        "status": "Missed all of 2026 recovering from surgery but threw live BP sessions in September and should return to Spring Training at full strength, as a rotation depth option."
+      },
+      {
         "playerName": "Reed Garrett",
         "injury": "Recovery from Tommy John surgery",
         "expectedReturn": "2027",
@@ -558,13 +564,7 @@
         "playerName": "Jorge Polanco",
         "injury": "Left ankle bursitis",
         "expectedReturn": "2027",
-        "status": "Underwent season-ending surgery on Aug. 26. Will be in \"a baseball progression\" at the start of Spring Training, according to interim manager Andy Green, meaning the Mets expect to take him slowly."
-      },
-      {
-        "playerName": "Tylor Megill",
-        "injury": "Recovery from Tommy John surgery",
-        "expectedReturn": "2027",
-        "status": "Will miss all of 2026 recovering from surgery but is under team control through 2027."
+        "status": "Underwent season-ending surgery on Aug. 26. Will be in \"a baseball progression\" at the start of Spring Training, according to interim manager Andy Green, meaning the Mets expect to take him along slowly."
       }
     ],
     "133": [
@@ -665,8 +665,8 @@
       {
         "playerName": "Miguel Andujar",
         "injury": "Right wrist fracture",
-        "expectedReturn": "Late September",
-        "status": "Began a rehab stint with Triple-A El Paso on Sept. 8 and took live at-bats at Petco Park Sept. 21. Is ready to be activated, but Padres weighing options for postseason roster."
+        "expectedReturn": "Wild Card Series, potentially",
+        "status": "Took live at-bats against JP Sears at Petco Park on Sept. 28. Is a candidate to be activated for the Wild Card Series roster."
       },
       {
         "playerName": "Joe Musgrove",
@@ -1089,22 +1089,22 @@
     ],
     "144": [
       {
+        "playerName": "Bryce Elder",
+        "injury": "Right knee surgery",
+        "expectedReturn": "Mid-October",
+        "status": "Threw live batting practice on Sept. 28. He has responded well to the Sept. 9 procedure that removed bone fragments from his right knee. Being ready for a potential NLCS seems possible, but the NLDS seems optimistic."
+      },
+      {
         "playerName": "Martín Pérez",
         "injury": "Lower back inflammation",
         "expectedReturn": "TBD",
-        "status": "Felt something in Sept. 20 start that didn't clear up with treatment. Unlikely to be available until after the NL Division Series."
+        "status": "Played catch in the outfield on Sept. 28. Eligible to be activated on Oct. 6, which is when Game 3 of the NLDS is scheduled. So he may not be an option until the NLCS, should they get there."
       },
       {
         "playerName": "Hurston Waldrep",
         "injury": "Right arm discomfort",
         "expectedReturn": "2027",
         "status": "Had Tommy John surgery on Sept. 15."
-      },
-      {
-        "playerName": "Bryce Elder",
-        "injury": "Right knee surgery",
-        "expectedReturn": "Late September or early October",
-        "status": "Threw off mound with reduced effort on Sept. 19. He's still aiming to be available during the early portion of the postseason."
       },
       {
         "playerName": "Reynaldo López",
@@ -1242,7 +1242,7 @@
         "playerName": "Aaron Judge",
         "injury": "Strained right calf",
         "expectedReturn": "Possibly AL Wild Card Series",
-        "status": "Has a “moderate grade” strain of his right soleus muscle and may not be active for AL Wild Card Series. Judge said Sept. 23 he intends to be active for postseason. Had not resumed hitting as of Sept. 24. Aaron Boone said Judge has performed plyometrics and treadmill work, but otherwise “not a whole lot yet.”"
+        "status": "Has a \"moderate grade\" strain of his right soleus muscle and may not be active for AL Wild Card Series. Judge said he intends to be active for postseason. Had hit and thrown indoors as of Sept. 28, including running on anti-gravity treadmill. Scheduled to participate in on-field workout Sept. 28."
       },
       {
         "playerName": "Ryan Weathers",
