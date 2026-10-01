@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-30T04:52:22.093Z",
+  "lastUpdated": "2026-10-01T05:05:22.388Z",
   "teams": {
     "108": [
       {
@@ -98,12 +98,6 @@
         "status": "Underwent a successful Lisfranc repair on right foot on Sept. 22. The procedure was performed by Dr. Martin O’Malley at the Hospital for Special Surgery in New York."
       },
       {
-        "playerName": "Curtis Mead",
-        "injury": "Left wrist fracture",
-        "expectedReturn": "Postseason or 2027",
-        "status": "Advanced from tee work to overhand batting practice on Sept. 22."
-      },
-      {
         "playerName": "Kutter Crawford",
         "injury": "Right flexor irritation",
         "expectedReturn": "2027",
@@ -153,12 +147,6 @@
       }
     ],
     "112": [
-      {
-        "playerName": "Kevin Gausman",
-        "injury": "Left shoulder soreness",
-        "expectedReturn": "TBD",
-        "status": "Threw off a mound Sept. 29 in San Diego. Has been \"trending up,\" per manager Craig Counsell, who said Gausman is available for the Wild Card Series (game/role TBD). Is still being monitored daily."
-      },
       {
         "playerName": "Trent Thornton",
         "injury": "Left ankle sprain",
@@ -225,14 +213,14 @@
       {
         "playerName": "Colin Holderman",
         "injury": "Right wrist inflammation",
-        "expectedReturn": "Late September or postseason",
-        "status": "Set to throw bullpen on Sept. 26 at \"stay ready camp\" in Columbus. Received injection on Sept. 19. Exited rehab appearance with Triple-A Columbus on Sept. 17 due to issue."
+        "expectedReturn": "Potentially the ALDS",
+        "status": "Has been throwing bullpen sessions. Availability for opening weekend of ALDS still TBD. Received injection on Sept. 19. Exited rehab appearance with Triple-A Columbus on Sept. 17 due to issue."
       },
       {
         "playerName": "Rhys Hoskins",
         "injury": "Lower back inflammation",
-        "expectedReturn": "Potentially September or postseason",
-        "status": "Doing baseball activities at \"stay ready camp\" in Columbus, including hitting in on-field batting practice."
+        "expectedReturn": "Potentially the ALDS",
+        "status": "Participating in team's simulated game action in workouts ahead of ALDS. Availability for opening weekend of ALDS still TBD."
       },
       {
         "playerName": "Khal Stephen (Guardians' No. 11 prospect)",
@@ -349,46 +337,22 @@
     ],
     "117": [
       {
-        "playerName": "Mike Burrows",
-        "injury": "Right elbow neuritis/right shoulder inflammation",
-        "expectedReturn": "TBA",
-        "status": "Was not on the team's AL Wild Card Series roster."
-      },
-      {
-        "playerName": "Steven Okert",
-        "injury": "Right hamstring strain",
-        "expectedReturn": "Perhaps in playoffs",
-        "status": "Has resumed throwing off the mound but not was on the AL Wild Card Series roster."
-      },
-      {
-        "playerName": "Daulton Varsho",
-        "injury": "Left wrist inflammation",
-        "expectedReturn": "Likely 2027",
-        "status": "Has been dealing with cysts in his wrist for three months, but pain has become too much to play. Set to see a hand specialist Sept. 29."
-      },
-      {
-        "playerName": "Cristian Javier",
-        "injury": "Grade 2 right groin strain",
-        "expectedReturn": "2027",
-        "status": "Will miss rest of season after suffering a Grade 2 groin strain Sept. 22 pitching in Seattle."
-      },
-      {
-        "playerName": "Brice Matthews",
-        "injury": "Left knee inflammation",
-        "expectedReturn": "TBA",
-        "status": "Injured knee making a sliding catch in the second inning Sept. 22, but no structural damage."
-      },
-      {
-        "playerName": "Enyel De Los Santos",
-        "injury": "Right knee tendinitis",
-        "expectedReturn": "Possibly postseason",
-        "status": "The injury happened during his throwing program and is behind his leg/hamstring area."
-      },
-      {
         "playerName": "Carlos Correa",
         "injury": "Peroneus brevis tendon repair surgery on left ankle",
         "expectedReturn": "2027",
-        "status": "Was rehabbing at the team’s facility in West Palm Beach, Fla., but decided Sept. 15 to not push for a return this year and focus on returning in 2027."
+        "status": "Expected to make a full recovery and return for spring 2027."
+      },
+      {
+        "playerName": "Mike Burrows",
+        "injury": "Right elbow neuritis/right shoulder inflammation",
+        "expectedReturn": "2017",
+        "status": "Was healthy and available to pitch in the postseason, but wasn't on the playoff roster."
+      },
+      {
+        "playerName": "Jake Meyers",
+        "injury": "Left kneecap",
+        "expectedReturn": "2027",
+        "status": "Fouled a ball off his knee Sept. 11 at Triple-A and missed the rest of the season. Posted a .580 OPS in 52 games with the Astros this year."
       },
       {
         "playerName": "Brandon Walter",
@@ -1070,6 +1034,12 @@
       }
     ],
     "144": [
+      {
+        "playerName": "Lane Thomas",
+        "injury": "Left intercostal strain",
+        "expectedReturn": "Mid-October",
+        "status": "Sidelined since Sept. 7, Thomas took batting practice on the field before Game 2 of the NL Wild Card Series. There’s a chance he could be ready for the NL Division Series."
+      },
       {
         "playerName": "Bryce Elder",
         "injury": "Right knee surgery",
