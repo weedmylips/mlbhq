@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-01T05:05:22.388Z",
+  "lastUpdated": "2026-10-02T04:55:03.909Z",
   "teams": {
     "108": [
       {
@@ -86,18 +86,6 @@
     ],
     "111": [
       {
-        "playerName": "Tyron Guerrero",
-        "injury": "Right shoulder strain",
-        "expectedReturn": "2027",
-        "status": "Felt some “discomfort’’ during a warmup session, manager Chad Tracy said, and the pain was severe enough to warrant an IL stint."
-      },
-      {
-        "playerName": "Eli White",
-        "injury": "Ligament damage in right foot",
-        "expectedReturn": "2027",
-        "status": "Underwent a successful Lisfranc repair on right foot on Sept. 22. The procedure was performed by Dr. Martin O’Malley at the Hospital for Special Surgery in New York."
-      },
-      {
         "playerName": "Kutter Crawford",
         "injury": "Right flexor irritation",
         "expectedReturn": "2027",
@@ -106,106 +94,46 @@
       {
         "playerName": "Johan Oviedo",
         "injury": "Right flexor strain",
-        "expectedReturn": "Late season at best",
+        "expectedReturn": "2027",
         "status": "Pitched 2 1/3 innings in a rehab outing with Triple-A Worcester on Sept 17. He allowed one run on two hits and one walk with four strikeouts."
-      },
-      {
-        "playerName": "Anthony Seigler",
-        "injury": "Right wrist discomfort",
-        "expectedReturn": "TBD",
-        "status": "Removed from Sept. 12 game after feeling pain in his right wrist during fourth-inning at-bat. Initial fluoroscan negative, issue described as inflammation due to bony abscess in wrist. Will be reassessed in a week."
       },
       {
         "playerName": "Justin Slaten",
         "injury": "Right elbow inflammation",
         "expectedReturn": "2027",
-        "status": "Season is over after doctors found degenerative changes in his right flexor mass. Will receive a PRP injection and rehab the injury."
-      },
-      {
-        "playerName": "Masataka Yoshida",
-        "injury": "Left hamstring strain",
-        "expectedReturn": "Postseason or next season",
-        "status": "Is walking on a treadmill and not close to a return."
-      },
-      {
-        "playerName": "Zack Kelly",
-        "injury": "Stress reaction, right elbow",
-        "expectedReturn": "Late September at earliest",
-        "status": "Has progressed to throwing live batting practice in Fort Myers, Fla."
-      },
-      {
-        "playerName": "Eduardo Rivera",
-        "injury": "Lumbar strain",
-        "expectedReturn": "2027",
-        "status": "Had been on 7-day IL in Minors since Aug. 13. Was recalled on Sept. 1 and placed on 60-day IL to open a 40-man roster spot."
+        "status": "Season ended early after doctors found degenerative changes in his right flexor mass. Will receive a PRP injection and rehab the injury."
       },
       {
         "playerName": "Triston Casas",
         "injury": "Left abdominal strain",
         "expectedReturn": "2027",
-        "status": "Underwent arthroscopic surgery on his left wrist and is likely out for the season."
+        "status": "Underwent arthroscopic surgery on his left wrist and is out for the season."
       }
     ],
     "112": [
       {
-        "playerName": "Trent Thornton",
-        "injury": "Left ankle sprain",
-        "expectedReturn": "TBD",
-        "status": "Has remained with the Cubs' travel squad. Has resumed throwing off a mound. Cubs continuing to monitor his progress and keep him in mind, if a need arises."
-      },
-      {
-        "playerName": "Justin Steele",
-        "injury": "Left elbow flexor strain",
-        "expectedReturn": "TBD",
-        "status": "Club decided not to activate him before the end of the regular season, but manager Craig Counsell said he is staying ready as a depth piece for the playoffs."
-      },
-      {
-        "playerName": "Riley Martin",
-        "injury": "Left flexor strain (elbow)",
+        "playerName": "Ben Brown",
+        "injury": "Stress reaction (neck)",
         "expectedReturn": "2027",
-        "status": "Threw live BP at Wrigley Field on Sept. 16. Logged one inning with Triple-A Iowa on Sept. 20, marking his first game action since April 23."
-      },
-      {
-        "playerName": "Shelby Miller",
-        "injury": "Right elbow surgery",
-        "expectedReturn": "2027",
-        "status": "Appeared in 13 Minor League games after a comeback from right elbow surgery. Miller is healthy, but the Cubs decided to shut him down with the goal of having him ready for '27."
-      },
-      {
-        "playerName": "Hunter Harvey",
-        "injury": "Stress reaction near right triceps/shoulder",
-        "expectedReturn": "2027",
-        "status": "Tried to come back in-season, but struggled with recovery between appearances. Cubs have shut him down."
+        "status": "Following a comeback attempt, Brown was shut down for the final month of the season to allow more time for his neck injury to heal."
       },
       {
         "playerName": "Phil Maton",
         "injury": "Right knee tendinitis",
         "expectedReturn": "2027",
-        "status": "Scheduled to have a right knee debridement. Was dealing with a partially torn patellar tendon."
-      },
-      {
-        "playerName": "Ben Brown",
-        "injury": "Stress reaction (neck)",
-        "expectedReturn": "2027",
-        "status": "Experienced a recurrence of symptoms after a two-inning bridge game appearance on Aug. 25 in Arizona."
+        "status": "Had right knee surgery in September to address an issue that plagued his ‘26 season. Signed a two-year deal with Cubs last offseason."
       },
       {
         "playerName": "Cade Horton",
         "injury": "Damaged UCL in right elbow",
         "expectedReturn": "2027",
-        "status": "Underwent a right UCL revision repair with an internal brace on April 16. Timetable for return is estimated around 15-16 months."
+        "status": "Underwent right UCL revision repair with an internal brace on April 16. Timetable for return was estimated around 15-16 months."
       },
       {
         "playerName": "Porter Hodge",
         "injury": "Right flexor strain",
         "expectedReturn": "2027",
-        "status": "Underwent reconstruction of ulnar collateral ligament with an internal brace April 20 via Dr. Keith Meister. Initial timetable for return is 12-14 months."
-      },
-      {
-        "playerName": "Tyler Austin",
-        "injury": "Right knee",
-        "expectedReturn": "TBD",
-        "status": "Underwent a right patellar tendon debridement on Feb. 24."
+        "status": "Underwent reconstruction of ulnar collateral ligament with an internal brace April 20 via Dr. Keith Meister. Initial timetable for return was 12-14 months."
       }
     ],
     "113": [],
@@ -213,8 +141,8 @@
       {
         "playerName": "Colin Holderman",
         "injury": "Right wrist inflammation",
-        "expectedReturn": "Potentially the ALDS",
-        "status": "Has been throwing bullpen sessions. Availability for opening weekend of ALDS still TBD. Received injection on Sept. 19. Exited rehab appearance with Triple-A Columbus on Sept. 17 due to issue."
+        "expectedReturn": "2027",
+        "status": "Will not return for postseason due to wrist issue. Intends to undergo surgery in coming weeks."
       },
       {
         "playerName": "Rhys Hoskins",
