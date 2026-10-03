@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-02T04:55:03.909Z",
+  "lastUpdated": "2026-10-03T04:37:53.428Z",
   "teams": {
     "108": [
       {
@@ -933,14 +933,14 @@
       {
         "playerName": "Luis Arraez",
         "injury": "Left ankle sprain",
-        "expectedReturn": "No earlier than NLDS",
+        "expectedReturn": "2027",
         "status": "Exited Sept. 24 game after injuring his ankle attempting to avoid a tag at first base. An MRI exam showed a serious ankle sprain, and he was not on the Phillies' NL Wild Card Series roster."
       },
       {
         "playerName": "Caleb Kilian",
         "injury": "Left oblique strain",
-        "expectedReturn": "Out for regular season",
-        "status": "Resumed throwing after three weeks of being shut down, but was moved to 60-day IL on Sept. 17, ending any chance he returns before the postseason."
+        "expectedReturn": "2027",
+        "status": "Resumed throwing after three weeks of being shut down, but was moved to 60-day IL on Sept. 17."
       },
       {
         "playerName": "Brad Keller",
@@ -957,7 +957,7 @@
       {
         "playerName": "Adolis García",
         "injury": "Right latissimus dorsi repair surgery",
-        "expectedReturn": "Out for season",
+        "expectedReturn": "2027",
         "status": "Injured on June 10 after attempting to throw out a runner at the plate. Underwent season-ending surgery on June 24. A free agent at season's end, García is expected to be fully ready for 2027 season."
       }
     ],
