@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-06T05:41:38.824Z",
+  "lastUpdated": "2026-10-07T05:12:22.002Z",
   "teams": {
     "108": [
       {
@@ -334,6 +334,12 @@
       }
     ],
     "119": [
+      {
+        "playerName": "Miguel Rojas",
+        "injury": "Lower left back/hip pain",
+        "expectedReturn": "Day to day",
+        "status": "Exited NLDS Game 3 on Oct. 6 mid at-bat after aggravating his lower back and hip area on a diving play on defense. Unlikely to play in Game 4 on Oct. 7."
+      },
       {
         "playerName": "Will Klein",
         "injury": "Right elbow discomfort",
