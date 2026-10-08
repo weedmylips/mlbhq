@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07T05:12:22.002Z",
+  "lastUpdated": "2026-10-08T05:22:36.202Z",
   "teams": {
     "108": [
       {
@@ -338,7 +338,7 @@
         "playerName": "Miguel Rojas",
         "injury": "Lower left back/hip pain",
         "expectedReturn": "Day to day",
-        "status": "Exited NLDS Game 3 on Oct. 6 mid at-bat after aggravating his lower back and hip area on a diving play on defense. Unlikely to play in Game 4 on Oct. 7."
+        "status": "Exited NLDS Game 3 on Oct. 6 mid-at-bat after aggravating his lower back and hip area on a diving play on defense. Unavailable for Game 4 but will remain on the active roster."
       },
       {
         "playerName": "Will Klein",
@@ -933,28 +933,10 @@
     ],
     "144": [
       {
-        "playerName": "Bryce Elder",
-        "injury": "Right knee surgery",
-        "expectedReturn": "Mid-October",
-        "status": "Threw live batting practice on Sept. 28. Being ready for potential NLCS seems possible; was not on the NLDS roster."
-      },
-      {
-        "playerName": "Martín Pérez",
-        "injury": "Lower back inflammation",
-        "expectedReturn": "TBD",
-        "status": "Played catch in the outfield on Sept. 28. Eligible to be activated on Oct. 6, which is when Game 3 of the NLDS is scheduled. Might not be an option until the NLCS, should they get there."
-      },
-      {
         "playerName": "Hurston Waldrep",
         "injury": "Right arm discomfort",
         "expectedReturn": "2027",
         "status": "Had Tommy John surgery on Sept. 15."
-      },
-      {
-        "playerName": "Reynaldo López",
-        "injury": "Right shoulder discomfort",
-        "expectedReturn": "TBD",
-        "status": "Revealed he has battled shoulder discomfort throughout the season after lasting just three innings against the Cubs on Sept 14."
       },
       {
         "playerName": "Joe Jiménez",
@@ -971,8 +953,8 @@
       {
         "playerName": "Spencer Strider",
         "injury": "Right elbow inflammation",
-        "expectedReturn": "TBD",
-        "status": "Cleared to begin a throwing program on Aug. 10. Questionable to return in 2026."
+        "expectedReturn": "2027",
+        "status": "Cleared to begin a throwing program on Aug. 10."
       },
       {
         "playerName": "Joey Wentz",
