@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-08T05:22:36.202Z",
+  "lastUpdated": "2026-10-09T05:26:10.870Z",
   "teams": {
     "108": [
       {
@@ -1003,6 +1003,18 @@
     ],
     "146": [
       {
+        "playerName": "Jakob Marsee",
+        "injury": "Left elbow discomfort",
+        "expectedReturn": "April/May",
+        "status": "Scheduled for UCL repair with an internal brace on Oct. 12. Return-to-play timeline is six months."
+      },
+      {
+        "playerName": "Tyler Zuber",
+        "injury": "Right elbow sprain",
+        "expectedReturn": "2028",
+        "status": "Will undergo a UCL repair with an internal brace of his right elbow on Oct. 12. Estimated return to play is 10-12 months."
+      },
+      {
         "playerName": "Max Meyer",
         "injury": "Neck strain",
         "expectedReturn": "Spring Training 2027",
@@ -1027,12 +1039,6 @@
         "status": "Will continue rehab in Jupiter, Fla. After first attempting to rehab a stress reaction in his right shin, opted for season-ending surgery on Sept. 23. Expected to be 100 percent by Spring Training."
       },
       {
-        "playerName": "Jakob Marsee",
-        "injury": "Left elbow discomfort",
-        "expectedReturn": "TBD",
-        "status": "Visiting Dr. Keith Meister to determine severity. Experienced the discomfort at the end of the season, per president of baseball operations Peter Bendix."
-      },
-      {
         "playerName": "Robby Snelling (Marlins' No. 3 prospect; No. 50 overall)",
         "injury": "Left elbow UCL repair surgery with an internal brace",
         "expectedReturn": "Spring Training 2027",
@@ -1043,12 +1049,6 @@
         "injury": "UCL reconstruction with an internal brace (hybrid)",
         "expectedReturn": "Spring Training 2027",
         "status": "Continuing rehab in Minnesota. Expected to throw off mound at Spring Training and return to game action in April/May."
-      },
-      {
-        "playerName": "Tyler Zuber",
-        "injury": "Right elbow sprain",
-        "expectedReturn": "2027",
-        "status": "Will visit Dr. Keith Meister for right elbow discomfort. Had bouts of tightness, pain and soreness off and on. Got to the point he had to stop pitching."
       },
       {
         "playerName": "Pete Fairbanks",
@@ -1073,8 +1073,20 @@
       {
         "playerName": "Aaron Judge",
         "injury": "Strained right calf",
-        "expectedReturn": "Possibly AL Championship Series",
-        "status": "Has a \"moderate grade\" strain of his right soleus muscle and was not active for AL Wild Card Series or Division Series. Has been taking at-bats, including against live pitching, but has not resumed running the bases as of Oct. 3. Could be activated if Yankees advance to AL Championship Series."
+        "expectedReturn": "2027",
+        "status": "Has a \"moderate grade\" strain of his right soleus muscle and was not active for AL Wild Card Series or Division Series."
+      },
+      {
+        "playerName": "Clarke Schmidt",
+        "injury": "Right biceps neuritis",
+        "expectedReturn": "2027",
+        "status": "Shut down from throwing as of Sept. 24. Felt discomfort in his right biceps while warming up Sept. 20 at Arizona."
+      },
+      {
+        "playerName": "Angel Chivilli",
+        "injury": "Bone spur in right elbow",
+        "expectedReturn": "2027",
+        "status": "Resumed throwing in late August."
       },
       {
         "playerName": "Fernando Cruz",
@@ -1087,18 +1099,6 @@
         "injury": "Right elbow neuritis",
         "expectedReturn": "2027",
         "status": "Will enter the offseason hoping to avoid surgery. Landed on injured list after Aug. 9 appearance and explored surgery in consultation with Dr. Keith Meister in late August."
-      },
-      {
-        "playerName": "Clarke Schmidt",
-        "injury": "Right biceps neuritis",
-        "expectedReturn": "2027",
-        "status": "Shut down from throwing as of Sept. 24. Felt discomfort in his right biceps while warming up Sept. 20 at Arizona. Is unavailable until at least a potential ALCS, and unlikely to return during the postseason."
-      },
-      {
-        "playerName": "Angel Chivilli",
-        "injury": "Bone spur in right elbow",
-        "expectedReturn": "2027",
-        "status": "Resumed throwing in late August but has not been part of the Yankees’ postseason plans."
       }
     ],
     "158": [
