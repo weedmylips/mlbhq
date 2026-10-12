@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-11T04:59:55.169Z",
+  "lastUpdated": "2026-10-12T05:14:17.555Z",
   "teams": {
     "108": [
       {
@@ -335,12 +335,6 @@
     ],
     "119": [
       {
-        "playerName": "Miguel Rojas",
-        "injury": "Lower left back/hip pain",
-        "expectedReturn": "Day to day",
-        "status": "Rojas went through an \"encouraging\" workout on Oct. 9, manager Dave Roberts said, but the Dodgers are still determining whether he is healthy enough to carry on the NLCS roster."
-      },
-      {
         "playerName": "Will Klein",
         "injury": "Right elbow discomfort",
         "expectedReturn": "Possibly October",
@@ -545,38 +539,20 @@
       {
         "playerName": "Jeremiah Estrada",
         "injury": "Right shoulder impingement",
-        "expectedReturn": "Doubtful for postseason",
-        "status": "On the IL for a third time this season -- with three different injuries. Rehabbing at the team's complex in Arizona."
-      },
-      {
-        "playerName": "Lucas Giolito",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "Doubtful for postseason",
-        "status": "Is building up at the team's complex in Arizona, but he's unlikely to factor in postseason plans."
-      },
-      {
-        "playerName": "Casey Mize",
-        "injury": "Right ankle sprain",
-        "expectedReturn": "Later rounds of postseason or 2027",
-        "status": "Pitched through an ankle injury he sustained while falling on the dugout stairs. Ruled out for Wild Card Series and Division Series due to IL placement."
-      },
-      {
-        "playerName": "Ramón Laureano",
-        "injury": "Right hip inflammation",
-        "expectedReturn": "Possibly October, likely 2027",
-        "status": "Underwent surgery to repair a torn labrum in his right hip on June 5. Has taken swings off a tee and played catch but \"not close to playing,\" per manager Craig Stammen."
+        "expectedReturn": "2027",
+        "status": "Missed final month of the season, unclear if injury could linger into 2027."
       },
       {
         "playerName": "Yu Darvish",
         "injury": "Right UCL internal brace surgery",
         "expectedReturn": "2027",
-        "status": "Underwent an internal brace procedure on his right elbow last October. Will miss the 2026 season and was placed on the restricted list on March 25. Has progressed to throwing bullpens."
+        "status": "Spent the '26 season on the restricted list. Has progressed to throwing bullpens. Still unclear if he plans to return in '27."
       },
       {
         "playerName": "Bryan Hoeing",
         "injury": "Right elbow flexor tendon",
-        "expectedReturn": "2027",
-        "status": "Underwent surgery to repair the flexor tendon in his right elbow on March 17 and will miss the 2026 season."
+        "expectedReturn": "Early in 2027",
+        "status": "Underwent surgery to repair the flexor tendon in his right elbow on March 17 and missed the 2026 season."
       }
     ],
     "136": [
@@ -1094,7 +1070,7 @@
         "playerName": "Brandon Woodruff",
         "injury": "Right shoulder capsule",
         "expectedReturn": "Potentially World Series",
-        "status": "Cleared by shoulder surgeon to attempt throwing off a mound soon. “I know the clock is ticking against me,” Woodruff  said. “But I’m trying, that’s for sure.”"
+        "status": "Threw off a mound during NLDS vs. Padres and again on Oct. 10 before Milwaukee's pre-NLCS workout. Hoping to return as a reliever if Brewers advance to World Series."
       },
       {
         "playerName": "Luis Peña (Brewers' No. 2 prospect)",
