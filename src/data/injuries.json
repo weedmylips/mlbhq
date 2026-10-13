@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-12T05:14:17.555Z",
+  "lastUpdated": "2026-10-13T06:13:02.888Z",
   "teams": {
     "108": [
       {
@@ -725,10 +725,16 @@
     ],
     "139": [
       {
+        "playerName": "Junior Caminero",
+        "injury": "Headache",
+        "expectedReturn": "Oct. 13",
+        "status": "Primarily struck in the chest during a collision with Jonny DeLuca in the ALCS opener. After DeLuca popped back up, Caminero was tended to while seated on the ground before remaining in the game. He said he felt \"OK\" afterward."
+      },
+      {
         "playerName": "Shane McClanahan",
         "injury": "Left forearm tightness",
-        "expectedReturn": "Possibly the ALCS",
-        "status": "Exited Sept. 3 start with tightness after the fifth inning. Playing catch. Wasn't on the Rays' ALDS roster, as expected."
+        "expectedReturn": "2027",
+        "status": "Exited Sept. 3 start with tightness after the fifth inning. Wasn't on Rays' ALDS roster and officially shut down -- but in good health -- before ALCS Game 1."
       },
       {
         "playerName": "Jacob Melton",
