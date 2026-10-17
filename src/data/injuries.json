@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-16T03:54:30.974Z",
+  "lastUpdated": "2026-10-17T03:44:25.193Z",
   "teams": {
     "108": [
       {
@@ -325,14 +325,20 @@
       {
         "playerName": "Will Klein",
         "injury": "Right elbow discomfort",
-        "expectedReturn": "Possibly October",
-        "status": "Has progressed to facing hitters and will be a depth option if the Dodgers need him this postseason."
+        "expectedReturn": "2027",
+        "status": "Had progressed to facing hitters ahead of the Dodgers' postseason run."
       },
       {
-        "playerName": "Blake Treinen",
-        "injury": "Right shoulder inflammation",
-        "expectedReturn": "Likely 2027",
-        "status": "Injured his shoulder while warming up in the bullpen on Sept. 26. President of baseball operations Andrew Friedman did not rule him out for a postseason return, but it is unlikely."
+        "playerName": "Eric Lauer",
+        "injury": "Left elbow inflammation",
+        "expectedReturn": "2027",
+        "status": "Was ineligible to be activated from the IL before the end of the season and is set to become a free agent."
+      },
+      {
+        "playerName": "Brusdar Graterol",
+        "injury": "Recovery from right shoulder surgery, lower back surgery",
+        "expectedReturn": "TBD",
+        "status": "Underwent a surgical procedure on his back, he shared on social media. Set to become a free agent."
       },
       {
         "playerName": "Gavin Stone",
@@ -351,18 +357,6 @@
         "injury": "Right shoulder inflammation",
         "expectedReturn": "2027",
         "status": "Finished the Triple-A season on a rehab assignment with Oklahoma City."
-      },
-      {
-        "playerName": "Eric Lauer",
-        "injury": "Left elbow inflammation",
-        "expectedReturn": "2027",
-        "status": "Ineligible to be activated from the IL before the end of the season."
-      },
-      {
-        "playerName": "Brusdar Graterol",
-        "injury": "Recovery from right shoulder surgery, lower back surgery",
-        "expectedReturn": "TBD",
-        "status": "Underwent a surgical procedure on his back, he shared on social media."
       }
     ],
     "120": [
