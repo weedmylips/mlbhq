@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-21T04:00:37.501Z",
+  "lastUpdated": "2026-10-22T04:01:40.630Z",
   "teams": {
     "108": [
       {
@@ -323,10 +323,16 @@
     ],
     "119": [
       {
+        "playerName": "Dalton Rushing",
+        "injury": "Partial tear in right UCL",
+        "expectedReturn": "2027",
+        "status": "Had surgery on his elbow Oct. 21. Timeline to return to catching is nine months, although he will be ready as a hitter before then."
+      },
+      {
         "playerName": "Will Klein",
         "injury": "Right elbow discomfort",
         "expectedReturn": "2027",
-        "status": "Had progressed to facing hitters ahead of the Dodgers' postseason run."
+        "status": "Had surgery to remove bone chips and clean up spurs in his elbow on Oct. 21. Expected to be ready in time for Spring Training."
       },
       {
         "playerName": "Eric Lauer",
