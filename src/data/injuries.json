@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-29T05:05:04.241Z",
+  "lastUpdated": "2026-10-30T05:04:27.622Z",
   "teams": {
     "108": [
       {
@@ -254,7 +254,7 @@
       },
       {
         "playerName": "Carlos Correa",
-        "injury": "Peroneus brevis tendon repair surgery on left ankle",
+        "injury": "Tendon repair surgery on left ankle",
         "expectedReturn": "2027",
         "status": "Expected to make a full recovery and return for spring 2027."
       },
@@ -272,7 +272,7 @@
       },
       {
         "playerName": "Brandon Walter",
-        "injury": "Torn ulnar collateral ligament in left elbow",
+        "injury": "Torn UCL in left elbow",
         "expectedReturn": "2027",
         "status": "Underwent Tommy John surgery on Sept. 23, 2025."
       }
@@ -348,7 +348,7 @@
       },
       {
         "playerName": "Brusdar Graterol",
-        "injury": "Recovery from right shoulder surgery, lower back surgery",
+        "injury": "Right shoulder surgery, lower back surgery",
         "expectedReturn": "TBD",
         "status": "Underwent a surgical procedure on his back, he shared on social media. Set to become a free agent."
       },
@@ -360,7 +360,7 @@
       },
       {
         "playerName": "Jake Cousins",
-        "injury": "Recovery from Tommy John surgery",
+        "injury": "Tommy John surgery",
         "expectedReturn": "2027",
         "status": "Finished the Triple-A season on a rehab assignment with Oklahoma City."
       },
@@ -521,14 +521,7 @@
         "status": "Underwent season-ending left hip surgery on May 19. Expected to be ready for Spring Training."
       }
     ],
-    "134": [
-      {
-        "playerName": "Mitch Keller",
-        "injury": "Right arm teres major muscle injury",
-        "expectedReturn": "2027",
-        "status": "Felt the injury during/after his start on Aug. 2. After imaging on Aug. 3, placed on IL to end his season. Won’t need surgery. As of Sept. 23, Keller feels fully healthy and expects to start throwing in late October."
-      }
-    ],
+    "134": [],
     "135": [
       {
         "playerName": "Jeremiah Estrada",
@@ -616,19 +609,19 @@
         "playerName": "Blade Tidwell",
         "injury": "UCL sprain in right elbow",
         "expectedReturn": "2028",
-        "status": "Will undergo surgery in mid-October with Dr. Keith Meister to repair his UCL."
+        "status": "Underwent surgery in mid-October with Dr. Keith Meister to repair his UCL."
       },
       {
         "playerName": "Randy Rodríguez",
         "injury": "Tommy John surgery",
         "expectedReturn": "2027",
-        "status": "Will pitch in the Arizona Fall League in October."
+        "status": "Pitched in the Arizona Fall League in October."
       },
       {
         "playerName": "José Buttó",
         "injury": "Right arm surgery",
         "expectedReturn": "2027",
-        "status": "Scheduled to pitch in an instructional league game in Arizona on Sept. 30. Will have a normal offseason and be ready by Spring Training."
+        "status": "Will have a normal offseason and be ready by Spring Training."
       },
       {
         "playerName": "Carson Whisenhunt",
@@ -647,12 +640,6 @@
         "injury": "Right flexor strain",
         "expectedReturn": "2027",
         "status": "Continuing physical therapy at home. Will start his normal throwing program and be ready by Spring Training."
-      },
-      {
-        "playerName": "Matt Gage",
-        "injury": "Left elbow strain",
-        "expectedReturn": "2027",
-        "status": "Fully cleared and will have a normal offseason."
       },
       {
         "playerName": "Casey Schmitt",
@@ -949,8 +936,8 @@
       {
         "playerName": "Ky Bush",
         "injury": "Tommy John surgery/left lat strain",
-        "expectedReturn": "2027",
-        "status": "Shut down for the season due to the left lat strain."
+        "expectedReturn": null,
+        "status": null
       },
       {
         "playerName": "Jordan Leasure",
@@ -964,13 +951,13 @@
         "playerName": "Jakob Marsee",
         "injury": "Left elbow discomfort",
         "expectedReturn": "April/May",
-        "status": "Scheduled for UCL repair with an internal brace on Oct. 12. Return-to-play timeline is six months."
+        "status": "Underwent UCL repair with an internal brace on Oct. 12. Return-to-play timeline is six months."
       },
       {
         "playerName": "Tyler Zuber",
         "injury": "Right elbow sprain",
         "expectedReturn": "2028",
-        "status": "Will undergo a UCL repair with an internal brace of his right elbow on Oct. 12. Estimated return to play is 10-12 months."
+        "status": "Underwent UCL repair with an internal brace of his right elbow on Oct. 12. Estimated return to play is 10-12 months."
       },
       {
         "playerName": "Max Meyer",
@@ -1007,12 +994,6 @@
         "injury": "UCL reconstruction with an internal brace (hybrid)",
         "expectedReturn": "Spring Training 2027",
         "status": "Continuing rehab in Minnesota. Expected to throw off mound at Spring Training and return to game action in April/May."
-      },
-      {
-        "playerName": "Pete Fairbanks",
-        "injury": "Thoracic outlet syndrome",
-        "expectedReturn": "Mid-2027",
-        "status": "Will undergo surgery on Oct. 8."
       },
       {
         "playerName": "William Kempner",
