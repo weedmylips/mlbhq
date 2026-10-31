@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-30T05:04:27.622Z",
+  "lastUpdated": "2026-10-31T04:51:39.477Z",
   "teams": {
     "108": [
       {
@@ -7,24 +7,6 @@
         "injury": "Right elbow inflammation",
         "expectedReturn": "Possibly late 2027",
         "status": "MRI exam on June 8 revealed a torn ulnar collateral ligament. Underwent successful season-ending Tommy John surgery and will rehab this offseason."
-      },
-      {
-        "playerName": "Robert Stephenson",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "2027",
-        "status": "Was evaluated by Dr. Keith Meister in Texas and underwent season-ending ligament and flexor tendon repair surgery, the club announced April 8. He's set to be a free agent."
-      },
-      {
-        "playerName": "Yoán Moncada",
-        "injury": "Right knee inflammation",
-        "expectedReturn": "2027",
-        "status": "Participated in light on-field activity in early June, but ultimately decided to undergo right knee surgery. Is set to be a free agent."
-      },
-      {
-        "playerName": "Anthony Rendon",
-        "injury": "Left hip surgery",
-        "expectedReturn": "Expected retirement",
-        "status": "Didn't play in 2026 and had the last year of his contract deferred over several years. He's expected to retire."
       }
     ],
     "109": [],
@@ -33,7 +15,13 @@
         "playerName": "Kyle Bradish",
         "injury": "Lower abdominal discomfort",
         "expectedReturn": "2027",
-        "status": "Scheduled to undergo sports hernia surgery on Sept. 29. Not yet clear whether he'll be ready for start of Spring Training."
+        "status": "Underwent sports hernia surgery on Sept. 29. Not yet clear whether he'll be ready for start of Spring Training."
+      },
+      {
+        "playerName": "Jackson Holliday",
+        "injury": "Left wrist inflammation",
+        "expectedReturn": "Spring Training 2027",
+        "status": "Diagnosed with partial TFCC (triangular fibrocartilage complex) tear. Underwent surgery on Sept. 29."
       },
       {
         "playerName": "Jordan Westburg",
@@ -42,46 +30,16 @@
         "status": "Underwent season-ending Tommy John surgery on May 13. Began hitting progression during week of Sept. 28."
       },
       {
-        "playerName": "Jackson Holliday",
-        "injury": "Left wrist inflammation",
-        "expectedReturn": "Spring Training 2027",
-        "status": "Diagnosed with partial TFCC (triangular fibrocartilage complex) tear. Scheduled to undergo surgery during week of Sept. 28."
-      },
-      {
         "playerName": "Tyler O'Neill",
         "injury": "Right shoulder inflammation",
         "expectedReturn": "Spring Training 2027",
         "status": "Shoulder did not respond well to activity in September. Received platelet-rich plasma injection. Rehabbing into offseason."
       },
       {
-        "playerName": "Ryan Helsley",
-        "injury": "Right elbow inflammation",
-        "expectedReturn": "Spring Training 2027",
-        "status": "Threw a scoreless inning for Triple-A Norfolk on Sept. 12. Then shut down as team did not want to force him back too quickly."
-      },
-      {
-        "playerName": "Ryan Mountcastle",
-        "injury": "Left oblique strain",
-        "expectedReturn": "Spring Training 2027",
-        "status": "Sustained \"pretty significant\" oblique strain on July 28. Began hitting progression at Camden Yards on Sept. 8."
-      },
-      {
         "playerName": "Colin Selby",
         "injury": "Right shoulder surgery",
         "expectedReturn": "2027",
         "status": "Underwent season-ending surgery on his right shoulder on July 28. The procedure, which was performed on labrum/rotator cuff, was done by Dr. Neal ElAttrache in Los Angeles."
-      },
-      {
-        "playerName": "Keegan Akin",
-        "injury": "Tommy John surgery",
-        "expectedReturn": "Late 2027/early 2028",
-        "status": "Underwent Tommy John surgery on left elbow on July 15. Procedure was performed by Dr. Keith Meister in Arlington, Texas."
-      },
-      {
-        "playerName": "Zach Eflin",
-        "injury": "Tommy John surgery",
-        "expectedReturn": "Mid-2027",
-        "status": "Exited 2026 debut on March 31 due to right elbow discomfort. After getting imaging and a second opinion, underwent Tommy John surgery on April 8."
       }
     ],
     "111": [
@@ -212,13 +170,7 @@
         "playerName": "Matt Vierling",
         "injury": "Left adductor strain, left heel soreness",
         "expectedReturn": "2027",
-        "status": "Had rehab progression slowed by left heel soreness. Transferred to 60-day injured list on Sept. 6, effectively ending his season."
-      },
-      {
-        "playerName": "Burch Smith",
-        "injury": "Right shoulder inflammation",
-        "expectedReturn": "2027",
-        "status": "Underwent arthroscopic surgery."
+        "status": "Had rehab progression slowed by left heel soreness."
       },
       {
         "playerName": "Reese Olson",
@@ -339,36 +291,6 @@
         "injury": "Right elbow discomfort",
         "expectedReturn": "2027",
         "status": "Had surgery to remove bone chips and clean up spurs in his elbow on Oct. 21. Expected to be ready in time for Spring Training."
-      },
-      {
-        "playerName": "Eric Lauer",
-        "injury": "Left elbow inflammation",
-        "expectedReturn": "2027",
-        "status": "Was ineligible to be activated from the IL before the end of the season and is set to become a free agent."
-      },
-      {
-        "playerName": "Brusdar Graterol",
-        "injury": "Right shoulder surgery, lower back surgery",
-        "expectedReturn": "TBD",
-        "status": "Underwent a surgical procedure on his back, he shared on social media. Set to become a free agent."
-      },
-      {
-        "playerName": "Gavin Stone",
-        "injury": "Right shoulder inflammation",
-        "expectedReturn": "2027",
-        "status": "Finished the Triple-A season on a rehab assignment with Oklahoma City."
-      },
-      {
-        "playerName": "Jake Cousins",
-        "injury": "Tommy John surgery",
-        "expectedReturn": "2027",
-        "status": "Finished the Triple-A season on a rehab assignment with Oklahoma City."
-      },
-      {
-        "playerName": "Ben Casparius",
-        "injury": "Right shoulder inflammation",
-        "expectedReturn": "2027",
-        "status": "Finished the Triple-A season on a rehab assignment with Oklahoma City."
       }
     ],
     "120": [
@@ -377,12 +299,6 @@
         "injury": "Left index finger fracture",
         "expectedReturn": "2027",
         "status": "Underwent surgery to repair fracture on his catching hand, will recover in the offseason."
-      },
-      {
-        "playerName": "Matt Waldron",
-        "injury": "Chest inflammation",
-        "expectedReturn": "2027",
-        "status": "Experienced chest pain and was shut down from playing. Working through a light throwing program."
       },
       {
         "playerName": "PJ Poulin",
@@ -407,12 +323,6 @@
         "injury": "Left forearm tightness",
         "expectedReturn": "2027",
         "status": "Underwent Tommy John surgery and internal brace procedure on April 20 to repair flexor tendon and UCL; will continue rehab and recovery in the offseason."
-      },
-      {
-        "playerName": "Orlando Ribalta",
-        "injury": "Right forearm inflammation",
-        "expectedReturn": "2027",
-        "status": "Progressed to playing catch with increased intensity; MRI results came back clean, did not show further damage."
       }
     ],
     "121": [
@@ -420,7 +330,7 @@
         "playerName": "Tylor Megill",
         "injury": "Recovery from Tommy John surgery",
         "expectedReturn": "2027",
-        "status": "Missed all of 2026 recovering from surgery but threw live BP sessions in September and should return to Spring Training at full strength, as a rotation depth option."
+        "status": "Missed all of 2026 recovering from surgery but threw live BP sessions in October, reaching 98 mph. Should return to Spring Training at full strength as a rotation depth option."
       },
       {
         "playerName": "Reed Garrett",
@@ -708,20 +618,20 @@
       {
         "playerName": "Shane McClanahan",
         "injury": "Left forearm tightness",
-        "expectedReturn": "2027",
-        "status": "Exited Sept. 3 start with tightness after the fifth inning. Wasn't on Rays' ALDS roster and officially shut down -- but in good health -- before ALCS Game 1."
+        "expectedReturn": "Spring Training 2027",
+        "status": "Exited Sept. 3 start with tightness after the fifth inning. Wasn't on Rays' ALDS roster and officially shut down before ALCS Game 1. Finished the season in good health and will be ready for Spring Training."
+      },
+      {
+        "playerName": "Ryan Pepiot",
+        "injury": "Right hip inflammation",
+        "expectedReturn": "Spring Training 2027",
+        "status": "Underwent season-ending surgery on May 13. Multiple exams revealed \"normal\" wear and tear on labrum and femoroacetabular impingement, which limited his leg's range of motion. \"Graduated\" from rehab by the time the Rays' postseason run ended, ensuring a normal offseason and an on-time start next spring."
       },
       {
         "playerName": "Jacob Melton",
         "injury": "Right hamstring strain",
         "expectedReturn": "2027",
         "status": "Having dealt with injuries without playing in the Majors all season, Melton was recalled and transferred to the 60-day IL to clear a 40-man roster spot on Sept. 15 after going on the Minor League IL on Sept. 9."
-      },
-      {
-        "playerName": "Gavin Lux",
-        "injury": "Left shoulder inflammation",
-        "expectedReturn": "2027",
-        "status": "Taking part in baseball activities and hit live BP on Sept. 11."
       },
       {
         "playerName": "Edwin Uceta",
@@ -734,12 +644,6 @@
         "injury": "Right elbow stress reaction",
         "expectedReturn": "TBD",
         "status": "After being designated for assignment on May 29 following an outing on May 27, was returned to the roster on June 2 due to an injury he suffered while active with the Rays and placed on IL."
-      },
-      {
-        "playerName": "Ryan Pepiot",
-        "injury": "Right hip inflammation",
-        "expectedReturn": "Spring Training 2027",
-        "status": "Underwent season-ending surgery on May 13. Multiple exams revealed \"normal\" wear and tear on labrum and femoroacetabular impingement, which limited his leg's range of motion. Expecting a six-month recovery followed by a full offseason to be ready for Spring Training."
       }
     ],
     "140": [
@@ -814,6 +718,12 @@
     ],
     "142": [
       {
+        "playerName": "Jeff Hoffman",
+        "injury": "Right forearm inflammation",
+        "expectedReturn": "2027",
+        "status": "Underwent surgery Oct. 27 to perform a debridement and remove a bone chip in his elbow. Should be able to start throwing in late December and be ready for Opening Day."
+      },
+      {
         "playerName": "Mick Abel",
         "injury": "Right elbow inflammation",
         "expectedReturn": "2027",
@@ -848,12 +758,6 @@
         "injury": "Right shoulder impingement",
         "expectedReturn": "2027",
         "status": "Underwent surgery on July 29 to address impingement in his shoulder and recurrence of some thoracic outlet syndrome symptoms."
-      },
-      {
-        "playerName": "Anthony Banda",
-        "injury": "Left lat strain",
-        "expectedReturn": "2027",
-        "status": "Underwent surgery to repair injured lat."
       }
     ],
     "143": [
@@ -952,12 +856,6 @@
         "injury": "Left elbow discomfort",
         "expectedReturn": "April/May",
         "status": "Underwent UCL repair with an internal brace on Oct. 12. Return-to-play timeline is six months."
-      },
-      {
-        "playerName": "Tyler Zuber",
-        "injury": "Right elbow sprain",
-        "expectedReturn": "2028",
-        "status": "Underwent UCL repair with an internal brace of his right elbow on Oct. 12. Estimated return to play is 10-12 months."
       },
       {
         "playerName": "Max Meyer",
