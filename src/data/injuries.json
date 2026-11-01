@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-31T04:51:39.477Z",
+  "lastUpdated": "2026-11-01T05:16:43.685Z",
   "teams": {
     "108": [
       {
@@ -34,12 +34,6 @@
         "injury": "Right shoulder inflammation",
         "expectedReturn": "Spring Training 2027",
         "status": "Shoulder did not respond well to activity in September. Received platelet-rich plasma injection. Rehabbing into offseason."
-      },
-      {
-        "playerName": "Colin Selby",
-        "injury": "Right shoulder surgery",
-        "expectedReturn": "2027",
-        "status": "Underwent season-ending surgery on his right shoulder on July 28. The procedure, which was performed on labrum/rotator cuff, was done by Dr. Neal ElAttrache in Los Angeles."
       }
     ],
     "111": [
@@ -830,24 +824,6 @@
         "injury": "Right shoulder impingement",
         "expectedReturn": "2027",
         "status": "Castillo struggled mightily after coming to the White Sox, posting an 8.42 ERA over nine appearances."
-      },
-      {
-        "playerName": "Mike Vasil",
-        "injury": "Tommy John surgery",
-        "expectedReturn": "2027",
-        "status": "Threw 20 pitches from 45 feet for the first time since Tommy John surgery in April. His teammates watched Vasil as he threw to catcher Kyle Teel."
-      },
-      {
-        "playerName": "Ky Bush",
-        "injury": "Tommy John surgery/left lat strain",
-        "expectedReturn": null,
-        "status": null
-      },
-      {
-        "playerName": "Jordan Leasure",
-        "injury": "Right flexor strain",
-        "expectedReturn": "2028",
-        "status": "Underwent successful surgery on Aug. 17 to repair a UCL tear in his right elbow. Expected to be ready for Spring Training 2028."
       }
     ],
     "146": [
