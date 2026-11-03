@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-02T05:16:13.493Z",
+  "lastUpdated": "2026-11-03T05:58:02.796Z",
   "teams": {
     "108": [
       {
@@ -13,13 +13,13 @@
     "110": [
       {
         "playerName": "Kyle Bradish",
-        "injury": "Lower abdominal discomfort",
+        "injury": "Core muscle surgery",
         "expectedReturn": "2027",
-        "status": "Underwent sports hernia surgery on Sept. 29. Not yet clear whether he'll be ready for start of Spring Training."
+        "status": "Underwent core muscle surgery on Sept. 29. Not yet clear whether he'll be ready for start of Spring Training."
       },
       {
         "playerName": "Jackson Holliday",
-        "injury": "Left wrist inflammation",
+        "injury": "Left wrist surgery",
         "expectedReturn": "Spring Training 2027",
         "status": "Diagnosed with partial TFCC (triangular fibrocartilage complex) tear. Underwent surgery on Sept. 29."
       },
@@ -211,12 +211,6 @@
         "status": "Was healthy and available to pitch in the postseason, but wasn't on the playoff roster."
       },
       {
-        "playerName": "Jake Meyers",
-        "injury": "Left kneecap",
-        "expectedReturn": "2027",
-        "status": "Fouled a ball off his knee Sept. 11 at Triple-A and missed the rest of the season. Posted a .580 OPS in 52 games with the Astros this year."
-      },
-      {
         "playerName": "Brandon Walter",
         "injury": "Torn UCL in left elbow",
         "expectedReturn": "2027",
@@ -288,12 +282,6 @@
       }
     ],
     "120": [
-      {
-        "playerName": "Drew Millas",
-        "injury": "Left index finger fracture",
-        "expectedReturn": "2027",
-        "status": "Underwent surgery to repair fracture on his catching hand, will recover in the offseason."
-      },
       {
         "playerName": "PJ Poulin",
         "injury": "Left flexor strain",
@@ -522,12 +510,6 @@
         "status": "Pitched in the Arizona Fall League in October."
       },
       {
-        "playerName": "José Buttó",
-        "injury": "Right arm surgery",
-        "expectedReturn": "2027",
-        "status": "Will have a normal offseason and be ready by Spring Training."
-      },
-      {
         "playerName": "Carson Whisenhunt",
         "injury": "Left elbow sprain",
         "expectedReturn": "2028",
@@ -696,12 +678,6 @@
         "injury": "Left shoulder labral surgery",
         "expectedReturn": "Will be ready for Spring Training",
         "status": "Santander simply ran out of time. He got into Triple-A games in September, but didn't have enough runway. He'll be ready for Spring Training."
-      },
-      {
-        "playerName": "Jake Bloss",
-        "injury": "Teres major strain",
-        "expectedReturn": "Will be ready for Spring Training",
-        "status": "This delayed Bloss' return after rehabbing from Tommy John surgery, but it is not expected to impact his 2027 season and he will compete for a rotation depth spot."
       },
       {
         "playerName": "Bowden Francis",
