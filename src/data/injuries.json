@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-03T05:58:02.796Z",
+  "lastUpdated": "2026-11-04T05:36:32.530Z",
   "teams": {
     "108": [
       {
@@ -177,12 +177,6 @@
         "injury": "Right elbow stress fracture",
         "expectedReturn": "2027",
         "status": "Underwent hip surgery on Aug. 11 following surgery on July 29 to repair a stress fracture of the olecranon, a bone at the tip of the elbow."
-      },
-      {
-        "playerName": "Bailey Horn",
-        "injury": "Left UCL construction",
-        "expectedReturn": "2027",
-        "status": "Underwent left UCL reconstruction surgery with Dr. Keith Meister on July 15."
       },
       {
         "playerName": "Trey Sweeney",
@@ -592,34 +586,22 @@
     ],
     "139": [
       {
+        "playerName": "Edwin Uceta",
+        "injury": "Right shoulder impingement, subscapularis strain",
+        "expectedReturn": "Possibly June 2027",
+        "status": "Underwent an arthroscopic procedure to “clean up” his shoulder in October, president of baseball operations Erik Neander said, after not pitching all season. Likely won’t be ready to pitch until midway through next year."
+      },
+      {
         "playerName": "Shane McClanahan",
         "injury": "Left forearm tightness",
         "expectedReturn": "Spring Training 2027",
-        "status": "Exited Sept. 3 start with tightness after the fifth inning. Wasn't on Rays' ALDS roster and officially shut down before ALCS Game 1. Finished the season in good health and will be ready for Spring Training."
+        "status": "Wasn’t on Rays' ALDS roster and officially shut down before ALCS Game 1. Will be ready for Spring Training after a “full-go” offseason."
       },
       {
         "playerName": "Ryan Pepiot",
         "injury": "Right hip inflammation",
         "expectedReturn": "Spring Training 2027",
-        "status": "Underwent season-ending surgery on May 13. Multiple exams revealed \"normal\" wear and tear on labrum and femoroacetabular impingement, which limited his leg's range of motion. \"Graduated\" from rehab by the time the Rays' postseason run ended, ensuring a normal offseason and an on-time start next spring."
-      },
-      {
-        "playerName": "Jacob Melton",
-        "injury": "Right hamstring strain",
-        "expectedReturn": "2027",
-        "status": "Having dealt with injuries without playing in the Majors all season, Melton was recalled and transferred to the 60-day IL to clear a 40-man roster spot on Sept. 15 after going on the Minor League IL on Sept. 9."
-      },
-      {
-        "playerName": "Edwin Uceta",
-        "injury": "Right shoulder impingement, subscapularis strain",
-        "expectedReturn": "2027",
-        "status": "Had a PRP injection in July after setback while playing catch. Resumed throwing but felt his symptoms return, so he was sent for another MRI. \"Not ideal for him,\" manager Kevin Cash said."
-      },
-      {
-        "playerName": "Jonathan Heasley",
-        "injury": "Right elbow stress reaction",
-        "expectedReturn": "TBD",
-        "status": "After being designated for assignment on May 29 following an outing on May 27, was returned to the roster on June 2 due to an injury he suffered while active with the Rays and placed on IL."
+        "status": "Underwent season-ending surgery on May 13. Multiple exams revealed \"normal\" wear and tear on labrum and femoroacetabular impingement, which limited his leg's range of motion. Threw a multi-inning bullpen session in October, officially “graduating” from his rehab program heading into the offseason."
       }
     ],
     "140": [
@@ -834,7 +816,7 @@
         "status": "Will continue rehab in Jupiter, Fla. After first attempting to rehab a stress reaction in his right shin, opted for season-ending surgery on Sept. 23. Expected to be 100 percent by Spring Training."
       },
       {
-        "playerName": "Robby Snelling (Marlins' No. 3 prospect; No. 50 overall)",
+        "playerName": "Robby Snelling",
         "injury": "Left elbow UCL repair surgery with an internal brace",
         "expectedReturn": "Spring Training 2027",
         "status": "Expected to throw off mound in Spring Training with a return to game action in May/June. Underwent surgery on May 22."
