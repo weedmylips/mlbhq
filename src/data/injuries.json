@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T06:42:43.301Z",
+  "lastUpdated": "2026-11-11T05:29:05.495Z",
   "teams": {
     "108": [
       {
@@ -67,7 +67,7 @@
         "playerName": "Ben Brown",
         "injury": "Stress reaction (neck)",
         "expectedReturn": "2027",
-        "status": "Following a comeback attempt, Brown was shut down for the final month of the season to allow more time for his neck injury to heal."
+        "status": "Underwent cervical spine surgery on Nov. 9; expected to resume throwing early 2027 and return to game action in the first half of '27."
       },
       {
         "playerName": "Phil Maton",
@@ -277,28 +277,10 @@
     ],
     "120": [
       {
-        "playerName": "PJ Poulin",
-        "injury": "Left flexor strain",
-        "expectedReturn": "2027",
-        "status": "Will continue rehab and recovery in the offseason."
-      },
-      {
-        "playerName": "Mitchell Parker",
-        "injury": "Grade 3 UCL sprain",
-        "expectedReturn": "Second half 2027",
-        "status": "Underwent Tommy John surgery on July 29; will continue rehab and recovery in the offseason."
-      },
-      {
         "playerName": "Travis Sykora (Nationals' No. 2 prospect)",
         "injury": "Right UCL reconstruction",
         "expectedReturn": "2027",
         "status": "Will continue rehab and recovery in the offseason."
-      },
-      {
-        "playerName": "Ken Waldichuk",
-        "injury": "Left forearm tightness",
-        "expectedReturn": "2027",
-        "status": "Underwent Tommy John surgery and internal brace procedure on April 20 to repair flexor tendon and UCL; will continue rehab and recovery in the offseason."
       }
     ],
     "121": [
@@ -670,10 +652,40 @@
     ],
     "142": [
       {
+        "playerName": "Byron Buxton",
+        "injury": "Right hip impingement",
+        "expectedReturn": "2027",
+        "status": "Underwent successful hip labrum repair scope by Dr. Larson on Sept. 18. \"Feeling great, no issues,\" per general manager Jeremy Zoll at the General Managers Meetings."
+      },
+      {
         "playerName": "Jeff Hoffman",
         "injury": "Right forearm inflammation",
         "expectedReturn": "2027",
-        "status": "Underwent surgery Oct. 27 to perform a debridement and remove a bone chip in his elbow. Should be able to start throwing in late December and be ready for Opening Day."
+        "status": "Underwent surgery Oct. 27 to perform a debridement and remove a bone chip in his elbow. \"Tracking well\" for Spring Training and is expected to begin throwing off a mound in mid-January, per GM Jeremy Zoll."
+      },
+      {
+        "playerName": "Walker Jenkins",
+        "injury": "Right elbow surgery",
+        "expectedReturn": "2027",
+        "status": "Had surgery to quell discomfort that had been bothering him for a while. Should be \"full go\" for Spring Training, per GM Jeremy Zoll."
+      },
+      {
+        "playerName": "Pablo López",
+        "injury": "“Significant tearing” in UCL in right elbow",
+        "expectedReturn": "2027",
+        "status": "Expected to begin throwing off a mound in mid-November, with a bullpen session expected on or about Nov. 20."
+      },
+      {
+        "playerName": "Zebby Matthews",
+        "injury": "Right elbow strain",
+        "expectedReturn": "2027",
+        "status": "Received PRP injection and is \"progressing well,\" per GM Jeremy Zoll."
+      },
+      {
+        "playerName": "Cole Sands",
+        "injury": "Right elbow strain",
+        "expectedReturn": "2027",
+        "status": "Underwent arthroscopic surgery and a PRP injection on Aug. 4."
       },
       {
         "playerName": "Mick Abel",
@@ -682,28 +694,10 @@
         "status": "Underwent surgery July 1. Began playing catch from 60 feet the week of Aug. 24. Threw a light bullpen session to a standing catcher on Sept. 26."
       },
       {
-        "playerName": "Byron Buxton",
-        "injury": "Right hip impingement",
-        "expectedReturn": "2027",
-        "status": "Underwent successful hip labrum repair scope by Dr. Larson on Sept. 18."
-      },
-      {
-        "playerName": "Pablo López",
-        "injury": "“Significant tearing” in UCL in right elbow",
-        "expectedReturn": "2027",
-        "status": "Expected to begin throwing off a mound in November."
-      },
-      {
         "playerName": "Mike Paredes",
         "injury": "Left oblique strain",
         "expectedReturn": "TBD",
         "status": "Started a throwing program on the field throwing from 60 feet."
-      },
-      {
-        "playerName": "Cole Sands",
-        "injury": "Right elbow strain",
-        "expectedReturn": "2027",
-        "status": "Underwent arthroscopic surgery and a PRP injection on Aug. 4."
       },
       {
         "playerName": "David Festa",
