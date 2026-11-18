@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T07:18:21.309Z",
+  "lastUpdated": "2026-11-18T06:42:45.418Z",
   "teams": {
     "108": [
       {
@@ -474,16 +474,16 @@
     ],
     "137": [
       {
+        "playerName": "Randy Rodríguez",
+        "injury": "Tommy John surgery",
+        "expectedReturn": "2027",
+        "status": "Pitched in the Arizona Fall League but was shut down after only three appearances due to elbow pain."
+      },
+      {
         "playerName": "Blade Tidwell",
         "injury": "UCL sprain in right elbow",
         "expectedReturn": "2028",
         "status": "Underwent surgery in mid-October with Dr. Keith Meister to repair his UCL."
-      },
-      {
-        "playerName": "Randy Rodríguez",
-        "injury": "Tommy John surgery",
-        "expectedReturn": "2027",
-        "status": "Pitched in the Arizona Fall League in October."
       },
       {
         "playerName": "Carson Whisenhunt",
@@ -544,12 +544,6 @@
         "injury": "Grade 2 right forearm/UCL sprain",
         "expectedReturn": "2027",
         "status": "Underwent Tommy John surgery with Dr. Keith Meister on March 25. Started his throwing program in late September and will continue it all offseason."
-      },
-      {
-        "playerName": "Rowan Wick",
-        "injury": "Tommy John surgery",
-        "expectedReturn": "2027",
-        "status": "Currently in Arizona throwing two sides per week. Will transition to throwing live BPs in October."
       }
     ],
     "138": [
