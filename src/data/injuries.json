@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T06:42:45.418Z",
+  "lastUpdated": "2026-11-19T06:44:21.179Z",
   "teams": {
     "108": [
       {
@@ -161,12 +161,6 @@
         "status": "Still dealing with issues regarding eyesight."
       },
       {
-        "playerName": "Matt Vierling",
-        "injury": "Left adductor strain, left heel soreness",
-        "expectedReturn": "2027",
-        "status": "Had rehab progression slowed by left heel soreness."
-      },
-      {
         "playerName": "Reese Olson",
         "injury": "Right shoulder surgery",
         "expectedReturn": "Spring Training 2027",
@@ -177,12 +171,6 @@
         "injury": "Right elbow stress fracture",
         "expectedReturn": "2027",
         "status": "Underwent hip surgery on Aug. 11 following surgery on July 29 to repair a stress fracture of the olecranon, a bone at the tip of the elbow."
-      },
-      {
-        "playerName": "Trey Sweeney",
-        "injury": "Right shoulder strain",
-        "expectedReturn": "2027",
-        "status": "Underwent season-ending shoulder surgery."
       }
     ],
     "117": [
@@ -262,6 +250,12 @@
       }
     ],
     "119": [
+      {
+        "playerName": "Seth Halvorsen",
+        "injury": "Recovery from Tommy John surgery",
+        "expectedReturn": "2028",
+        "status": "Had surgery on his right elbow on Nov. 17. Expected to miss the entire 2027 season, per the Dodgers."
+      },
       {
         "playerName": "Dalton Rushing",
         "injury": "Partial tear in right UCL",
