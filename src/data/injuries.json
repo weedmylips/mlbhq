@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-25T07:47:04.713Z",
+  "lastUpdated": "2026-11-26T07:38:39.290Z",
   "teams": {
     "108": [
       {
@@ -250,6 +250,12 @@
       }
     ],
     "119": [
+      {
+        "playerName": "Ben Casparius",
+        "injury": "Recovery from Tommy John surgery",
+        "expectedReturn": "2028",
+        "status": "Underwent surgery on his right elbow on Nov. 25 and is expected to miss the 2027 season, per the Dodgers."
+      },
       {
         "playerName": "Seth Halvorsen",
         "injury": "Recovery from Tommy John surgery",
